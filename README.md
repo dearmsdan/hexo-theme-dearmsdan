@@ -9,7 +9,6 @@ HEXO 主题 暗色调，高逼格给人一种空灵的感觉
 
 ​		npm install hexo-wordcount --save  
 ​		npm install hexo-toc --save  
-​		npm install hexo-toc --save  
 ​		npm install hexo-generator-search --save  
 ​		npm install hexo-generator-searchdb --save  
  
