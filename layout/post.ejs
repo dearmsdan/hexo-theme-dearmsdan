@@ -1,0 +1,41 @@
+<%#- 文章页 %>
+<div class="dearmsdan">
+	<div class="dearmsdan-post" id="dearmsdanPost">
+		<div class="dearmsdan-title">
+			<h1><%= page.title %></h1>
+		</div>
+	  <div id="post" class="dearmsdan-post-Statistics">
+		<a><%- date(page.date, "YYYY年MM月DD日") %></a>
+		<a><%= wordcount(page.content) %> 字</a>
+		<a>大概花费 <%= min2read(page.content, {cn: 250, en: 160}) %> 分钟阅读</a>
+		<% if (page.categories && page.categories.length){ %>
+		  <%- list_categories(page.categories, {
+			show_count: false,
+			class: ' ',
+			style: 'none',
+			separator: ''
+		  }) %>
+		<% } %>
+		<% if (page.tags && page.tags.length){ %>
+		  <%- list_tags(page.tags, {
+			show_count: false,
+			class: ' ',
+			style: 'none',
+			separator: ' '
+		  }) %>
+		<% } %>
+	  </div>
+		
+		<div data-toc="#toc">
+			  <article>
+				<%- page.content %>
+			  </article>
+		</div>
+		
+		
+	  <% if (!page.reprint){ %>
+	<%#文章页脚版权声明- %>
+		<%- partial('_partial/copyright') %>
+	  <% } %>
+	</div>
+</div>

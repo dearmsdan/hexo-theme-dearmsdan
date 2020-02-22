@@ -1,0 +1,81 @@
+<%# 侧边栏 %>
+<div id="sidebar-nav" class="sidebar">
+		<div class="sidebar-scroll">
+			<div class="sidebar-author">
+				<a href="/">
+					<% if (theme.VideoHead){ %>
+						<video loop="" autoplay="" preload="" muted="" x-webkit-airplay="true" airplay="allow" webkit-playsinline="true" playsinline="true" id="home-video">
+								<source src="<%= theme.VideoHead %>">
+							<!--
+								<source src="https://cdn.zhd99.cn/Pexels.mp4">
+								<source src="/Pexels.mp4">
+								<source src="https://flv.cndns.com/cn/webnew/images/cndns-banner-video-3.mp4">
+								<source src="https://www.tencent.com/video/index-video.mp4">
+							-->
+						</video>
+					<%}  else{ %>
+						<img src="<%= theme.PhotoHead %>">
+					<% } %>
+				</a>
+			</div>
+			<nav>
+				<%# 首页统计 文章数 %>
+				<div class="dearmsdan-count">
+					<span><%= __('count.articles') %></span><%= site.posts.length %>
+					<span><%= __('count.tags') %></span><%= site.tags.length %>
+					<span><%= __('count.categories') %></span><%= site.categories.length %>
+				</div>		
+			<div class="social-btns">
+				
+				<% for (name in theme.socialbtn) { %>
+					<a class="btn <%= name %>" href="<%- url_for(theme.socialbtn[name][0]) -%>" target="_blank">
+						
+            		<i class="DearMsDanIconFont <% if (theme.socialbtn[name][1]){ %><%= theme.socialbtn[name][1] %><%} else{ %><%= 'icon-cuowu' %><% } %>"></i>
+						
+        			</a>
+				<% } %>
+				</div>
+				<%# 搜索工具 %>
+					<%- partial('_partial/search') %>
+				<ul class="nav">	
+					<li>
+						<a target="_self" href="/" class="iframe_link active"><span>首页</span>
+						</a>
+					</li>
+					
+					
+					<%# 遍历 _side（归档小部件）文件 的全部ejs 文件 %>
+
+					  <% theme.sides.forEach(function(side){ %>
+					  <%- partial('_side/' + side) %>
+					  <% }) %>
+					
+					<%# 界面目录自定义 %>
+				<% for (name in theme.Catalog) { %>
+					<li>
+						<a href="javascript:;" class="nav-togg" target="_self" title="<%= name %>"><%= name %></a>
+						<div>
+							<ul>
+								<li>
+									<div>
+									<% for (name_son in theme.Catalog_son) { %>
+										<div>
+											<a href="<%- url_for(theme.Catalog_son[name_son][0]) -%>" class="nav-togg" target="_self" title="<%= name_son %>"><%= name_son %></a>
+										</div>
+										
+									<% } %>	
+									</div>
+								</li>
+							</ul>
+						</div>
+					</li>
+				<% } %>	
+					
+					
+				</ul>
+			</nav>
+		</div>
+</div>
+
+
+
