@@ -27,7 +27,13 @@ npm install hexo-generator-searchdb --save
 ```
     highlight:false;  // 如果出现高亮多层 在总体的配置文件config设置false
 ```
-        检查总体的配置文件config 语言是否是 language: zh-CN
+        检查总体的配置文件config 语言是否是 language: zh-CN  //主题只支持中文
+
+```
+    在编写 Markdown 文章的时候 首页中展示的 一部分文章内容 概述
+    需要在文中添加 <!--more--> 则该标记之前的部分就会成为该文章的概述，显示在首页		里
+```
+
 
 
 主题在测试中，如果有问题请 [Issues](https://github.com/ZHD99/hexo-theme-dearmsdan/issues) 哦...
