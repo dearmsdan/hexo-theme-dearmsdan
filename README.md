@@ -8,7 +8,7 @@ dearmsdan 与其他主题一样的安装
 首先 把本主题 拉到自己电脑上的 主题目录
 
 ```
-git clone https://github.com/ZHD99/hexo-theme-dearmsdan.git
+git clone https://github.com/ZHD99/hexo-theme-dearmsdan.git dearmsdan
 ```
 
  必要插件： (如果没有安装会报错)
@@ -30,5 +30,5 @@ npm install hexo-generator-searchdb --save
         检查总体的配置文件config 语言是否是 language: zh-CN
 
 
-主题在测试中，如果有问题请 Issues 哦...
+主题在测试中，如果有问题请 [Issues](https://github.com/ZHD99/hexo-theme-dearmsdan/issues) 哦...
 
