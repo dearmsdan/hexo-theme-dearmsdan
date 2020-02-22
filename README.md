@@ -31,3 +31,4 @@ npm install hexo-generator-searchdb --save
 
 
 主题在测试中，如果有问题请 [Issues](https://github.com/ZHD99/hexo-theme-dearmsdan/issues) 哦...
+
