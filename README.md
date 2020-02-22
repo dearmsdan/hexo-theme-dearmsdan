@@ -12,3 +12,4 @@ HEXO 主题 暗色调，高逼格给人一种空灵的感觉
 ​		npm install hexo-generator-search --save  
 ​		npm install hexo-generator-searchdb --save  
  
+主题在测试中，如果有问题请 Issues 哦...
