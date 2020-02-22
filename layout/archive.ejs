@@ -1,0 +1,51 @@
+<%# 归档页- %>
+<div class="dearmsdan">
+	
+	<section class="dearmsdan-posts">
+    <% page.posts.each(function (page) { %>
+    <div class="dearmsdan-post">
+        <a href="<%- url_for(page.path) %>">
+            <div class="dearmsdan-title"> 
+				<%= page.title %>
+            </div>
+        </a>
+		
+        <article>
+            <% if(page.excerpt) {%>
+            <%- page.excerpt %>
+            <%}  else{ %>
+            <%- page.content %>
+            <% } %>
+        </article>
+        <div class="dearmsdan-post-Statistics">
+            <a><i></i><%- date(page.date, "YYYY年MM月DD日") %></a>
+            <a><i></i><%= wordcount(page.content) %> 字</a>
+            <a><i></i>大概花费 <%= min2read(page.content, {cn: 250, en: 160}) %> 分钟阅读</a>
+            <% if (page.categories && page.categories.length){ %>
+                <%- list_categories(page.categories, {
+                    show_count: false,
+                    class: '',
+                    style: 'none',
+                    separator: ''
+                }) %>
+            <% } %>
+            <% if (page.tags && page.tags.length){ %>
+                <%- list_tags(page.tags, {
+                    show_count: false,
+                    class: '',
+                    style: 'none',
+                    separator: ' '
+                }) %>
+            <% } %>
+        </div>
+    </div>
+    <% }) %>
+  </section>
+
+<%#分页- %>
+  <%- partial('_partial/paginator') %>
+	
+	
+	
+	
+</div>

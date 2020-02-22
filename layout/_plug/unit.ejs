@@ -1,0 +1,40 @@
+<%#= 公共插件聚集地， 与其他模板无影响 %>
+
+
+<%#- 版本检测 %>
+<%- partial('_plug/judge.ejs') %>
+
+<%#- 偷窥代码提示 %>
+<%- partial('_plug/debug.ejs') %>
+
+<%#- 音乐插件 audio player %>
+<%- partial('_plug/meuplayer') %>
+
+
+<%#- 加载loading %>
+<div id="loading">
+	<div></div>
+	<div></div>
+	<span></span>
+</div>
+
+<%#- 返回顶部 %>
+<script src="<%= theme.top.js %>"></script>
+<a style="border-radius: 8px;display: none; padding: 0 10px; color: #fff; background-color: rgb(0, 84, 188);cursor: pointer; position: fixed; right: 15px; bottom: 30px; display: inline;" class="to-top">TOP</a>
+<script>
+	$('.to-top').toTop();
+</script>
+
+
+
+<%#- 移动端自适应修改 %>
+　<script type="text/javascript">
+if ((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
+}else{
+	// 懒得去改音乐播放自适应，移动设备关闭
+	$('#jp_container_N').css('display','block');
+}
+</script>
+
+
+	
