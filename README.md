@@ -27,7 +27,8 @@ npm install hexo-generator-searchdb --save
 ```
     highlight:false;  // 如果出现高亮多层 在总体的配置文件config设置false
 ```
-    检查 语言是否是 language: zh-CN
+        检查总体的配置文件config 语言是否是 language: zh-CN
 
 
 主题在测试中，如果有问题请 Issues 哦...
+
