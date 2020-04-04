@@ -1,6 +1,10 @@
 # hexo-theme-dearmsdan
-HEXO 主题 暗色调，高逼格给人一种空灵的感觉 
-view： [dearmsdan](https://dearmsdan.com/)
+ HEXO 主题 暗色调，高逼格给人一种空灵的感觉 
+  view： [dearmsdan](https://dearmsdan.com/)
+  语言支持：  
+
+  - [x] 中文
+
 
 # 安装
 
