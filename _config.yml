@@ -27,6 +27,7 @@ aliiconfont: //at.alicdn.com/t/font_1605171_frpek6nqy3j.css
 jquery:
   js: #https://libs.baidu.com/jquery/2.1.4/jquery.min.js 
     one: /js/jquery1.10.2.min.js
+    two: https://libs.baidu.com/jquery/2.1.4/jquery.min.js 
 # bootstrap
 bootstrap:
   css: /css/bootstrap-3.3.4.css
@@ -64,6 +65,11 @@ preview:
   min: /resources/preview-photo/preview-photo.js
 # valine 评论插件
 valine: /js/valine.js
+# 工具库
+jQtools:
+  # 缓存
+  cookie: https://cdn.jsdelivr.net/npm/js-cookie@beta/dist/js.cookie.min.js
+
 
 # ---------------------------------------------------------------
 #  header.ejs 导航栏

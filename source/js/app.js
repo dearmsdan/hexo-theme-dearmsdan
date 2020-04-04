@@ -91,14 +91,7 @@ $(".header-anchor").each(function() {
 });
 	
 	
-	
-		// 可能是文章自动生成目录及侧边栏目录滚动特效的插件toc-helper
-		//new TocHelper().reload();
-	new TocHelper().reset();
-	
-	
 });
-
 
 
 

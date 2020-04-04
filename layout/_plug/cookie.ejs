@@ -1,0 +1,15 @@
+
+<script>
+	// 存 cookie
+	var expires=new Date();
+	expires.setTime(expires.getTime()+24*60*60*365*1000);
+	var flag="demo_Cookie="+'demo';
+    document.cookie=flag+";expires="+expires.toGMTString();
+	
+	// 删除cookie 
+	Cookies.remove('demo_Cookie');
+	
+	// 取 cookie 
+	Cookies.get('demo_Cookie');
+	
+</script>

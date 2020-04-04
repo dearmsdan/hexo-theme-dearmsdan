@@ -1,0 +1,65 @@
+
+<%#- 节日判断 %>
+<script>
+<%- partial('_plug/_diy/utils') %>
+</script>
+	
+<%#- 设置节日 或 季节 及重要日子 diy  %>
+<script>
+	var day = new Date();
+	day.setTime(day.getTime());
+    var demo = day.getFullYear()+"-" + (day.getMonth()+1) + "-" + day.getDate();
+
+	// 月
+	var month = day.getMonth()+1;
+	// 日
+	var date = day.getDate();
+	//alert(month+'+'+date);
+	if ((month == 1) && (date == 1)){
+		alert("简单的弹窗，祝你元旦快乐");
+	};
+	// 春节
+	if(GetResult(time) == 't'){
+	   alert("春节");
+	}
+	
+	if ((month == 2) && (date == 14)){
+		alert("情人节快乐");
+	};
+
+	if ((month == 3) && (date == 8)){
+		alert("妇女节");
+	};
+
+	if ((month == 3) && (date == 12)){
+		alert("植树节");
+	};
+
+	if ((month == 4) && (date == 1)){
+		alert("愚人节");
+	};
+
+	// 清明节
+	if ((month == 4) && ((date == 4) || (date == 5) || (date == 6))){
+		$('html').css({"filter":"grayscale(100%)"}/* IE 6-9 */);
+		$('.sidebar-author video').css("display","none");
+		$('.sidebar-author a').prepend("<img src='https://cdn.dearmsdan.com/festival/4.4.jpg' />");
+	} 
+
+	if ((month == 6) && (date == 1)){
+		alert("儿童节");
+	};
+
+	if ((month == 10) && (date == 1)){
+		alert("国庆");
+	};
+
+	if ((month == 11) && (date == 25)){
+		alert("圣诞节");
+	};
+
+
+</script>
+
+
+

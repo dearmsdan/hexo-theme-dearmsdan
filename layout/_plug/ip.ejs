@@ -1,0 +1,101 @@
+
+<%#- 检测ip 存储 %>
+
+<!-- 存储服务 -->
+<!-- 存储服务 -->
+<script src="//cdn.jsdelivr.net/npm/leancloud-storage@4.2.0/dist/av-min.js"></script>
+<!-- 即时通讯服务 -->
+<script src="//cdn.jsdelivr.net/npm/leancloud-realtime@5.0.0-beta.2/dist/realtime-browser.min.js"></script>
+
+
+<script src="http://pv.sohu.com/cityjson?ie=utf-8"></script> 
+<script type="text/javascript">  
+		
+AV.init({
+  appId: "jNrzXxvqR3NhebnE7swyQBFp-gzGzoHsz",
+  appKey: "iqXsTlkThMqeaKdhYcgajztG",
+  serverURLs: "http://server.dearmsdan.com/"
+});
+ 
+		
+		var cip = returnCitySN["cip"];
+		var cid = returnCitySN["cid"];
+		var cname = returnCitySN["cname"];
+		
+       /* alert('IP地址:' + returnCitySN["cip"] + ', CID:' + returnCitySN["cid"] + ', 地区:' + returnCitySN["cname"]+",浏览器版本:"+getBrowserInfo());*/
+        function getBrowserInfo()
+{
+    var agent = navigator.userAgent.toLowerCase();
+    var regStr_ie = /msie [\d.]+;/gi ;
+    var regStr_ff = /firefox\/[\d.]+/gi
+    var regStr_chrome = /chrome\/[\d.]+/gi ;
+    var regStr_saf = /safari\/[\d.]+/gi ;
+    
+    //IE
+    if(agent.indexOf("msie") > 0)
+    {
+        return agent.match(regStr_ie) ;
+    }
+
+    //firefox
+    if(agent.indexOf("firefox") > 0)
+    {
+        return agent.match(regStr_ff) ;
+    }
+
+    //Chrome
+    if(agent.indexOf("chrome") > 0)
+    {
+        return agent.match(regStr_chrome) ;
+    }
+
+    //Safari
+    if(agent.indexOf("safari") > 0 && agent.indexOf("chrome") < 0)
+    {
+        return agent.match(regStr_saf) ;
+    }
+
+}
+		
+		
+		
+// 声明 class
+var Todo = AV.Object.extend('Todo');
+
+// 构建对象
+var todo = new Todo();
+
+// 为属性赋值
+todo.set('ip',  cid);
+todo.set('content', cip);
+		
+
+var cookip = Cookies.get('ip');
+// 存 cookie
+	var expires=new Date();
+	expires.setTime(expires.getTime()+24*60*60*365*1000);
+	var flag="ip="+cip;
+	if(cookip == null){
+		document.cookie=flag+";expires="+expires.toGMTString();	
+	   }
+
+// 取 cookie
+	if(cookip == cip){
+	  // alert("已入库");
+	}else{
+		
+// 将对象保存到云端
+todo.save().then(function (todo) {
+  // 成功保存之后，执行其他逻辑
+  console.log('云端保存成功。objectId：' + todo.id);
+	
+}, function (error) {
+  // 异常处理
+  console.log('ip存储问题。objectId：' + todo.id);
+});	/**/
+		
+	}
+		
+
+		
+</script>

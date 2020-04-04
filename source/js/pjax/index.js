@@ -3,11 +3,12 @@ $(document).pjax('a[target!=_blank]', '.main', {fragment: '.main',timeout: 8000}
     $(document).on('pjax:send', function() {
 		/* 预加载函数 */
     $(".loading").css("display", "block");
-	
 		
 });
 
 $(document).on('pjax:complete', function() {
+	
+	
 	
 		/* 回调函数解决文章页代码不高亮的问题*/
 	   $(".dearmsdan-post pre,.dearmsdan pre").addClass("prettyprint linenums");
@@ -22,10 +23,9 @@ $(document).on('pjax:complete', function() {
 		photo();
 		links();
 	
-	
 		/* 可能是文章自动生成目录及侧边栏目录滚动特效的插件toc-helper */
 		/* new TocHelper().reload();*/
-		new TocHelper().reset();
+		//new TocHelper().reset();
 
 		/* $("img[src$=jpg],img[src$=jpeg],img[src$=png],img[src$=gif]").parent("a[class!=noview]").addClass("swipebox");
 		*/
@@ -54,20 +54,18 @@ function links(){
 	
 }
 
-
-
-
-
-	/* 图片放大 */
+// 图片放大
 function photo(){
 	$(".dearmsdan-post img").each(function() {
 		$('.dearmsdan-post img').attr("data-preview-src","");
 	});
 	window.PreviewPhoto();
 }
-
-
 $(function(){
 	photo();
 	links();
 });
+$(document).on('ready pjax:end', function(event) {
+	links();
+	
+})
