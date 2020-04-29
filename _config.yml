@@ -101,12 +101,12 @@ menu:
 # ---------------------------------------------------------------
 
 
-# 您可以选择视频 或者 图片设置为头像（＞▽＜）
-#  适合窄长视频 和 同比例图片
-# 样式在source/css/style.css 中 741,731行 左右
-# （设置其中一个的值即可）设置图片不动的配置在title_qiaoba中
-PhotoHead: /resources/qiaoba.png
-VideoHead: /Pexels.mp4
+# 样式在source/css/avatar_user.css 中 5行 左右
+# 设置图片不动的配置在 title_qiaoba 中
+# 填写一个即可，另一个备用(第二个有抖动特效)   任意一个都可以为空
+# 尽可能选择正比例图片！！！，比例差距大可以修改 ejs 模板源文件 sidebar.ejs 5~ 10行左右
+dearHead: Pexels.gif # 初始头像
+PhotoHead: /resources/qiaoba.png  # 备用头像 
 
 # 社交按钮配置
 socialbtn:

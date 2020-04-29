@@ -739,19 +739,6 @@ background:#FF0BEE;
     -moz-transition: -moz-transform 1.5s ease-out;
     transition: transform 1.5s ease-out;
 }
-.sidebar-author video{
-	width: 126%;
-    position: relative;
-    top: -85px;
-    right: 30px;
-    border-radius: 80px;
-    -webkit-border-radius: 80px;
-    -moz-border-radius: 80px;
-    box-shadow: inset 0 -1px 0 #333 sf;
-    -webkit-transition: -webkit-transform 1.5s ease-out;
-    -moz-transition: -moz-transform 1.5s ease-out;
-    transition: transform 1.5s ease-out;
-}
 .social-search{
 	margin-bottom: 25px;
 	text-align: center;

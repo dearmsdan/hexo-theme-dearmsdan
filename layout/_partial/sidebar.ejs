@@ -3,18 +3,10 @@
 		<div class="sidebar-scroll">
 			<div class="sidebar-author">
 				<a href="/">
-					<% if (theme.VideoHead){ %>
-						<video loop="" autoplay="" preload="" muted="" x-webkit-airplay="true" airplay="allow" webkit-playsinline="true" playsinline="true" id="home-video">
-								<source src="<%= theme.VideoHead %>">
-							<!--
-								<source src="https://cdn.zhd99.cn/Pexels.mp4">
-								<source src="/Pexels.mp4">
-								<source src="https://flv.cndns.com/cn/webnew/images/cndns-banner-video-3.mp4">
-								<source src="https://www.tencent.com/video/index-video.mp4">
-							-->
-						</video>
+					<% if (theme.dearHead){ %>
+						<img src="<%= theme.dearHead %>">
 					<%}  else{ %>
-						<img src="<%= theme.PhotoHead %>">
+						<img class="sidebar-author-d" src="<%= theme.PhotoHead %>">
 					<% } %>
 				</a>
 			</div>
