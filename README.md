@@ -2,16 +2,30 @@
 HEXO 主题 暗色调，高逼格给人一种空灵的感觉 
 view： [dearmsdan](https://dearmsdan.com/)
 
-# 安装
 
-dearmsdan 与其他主题一样的安装  
-首先 把本主题 拉到自己电脑上的 主题目录
+
+
+# 大家有什么建议和反馈都可以 [issues](https://github.com/ZHD99/hexo-theme-dearmsdan/issues)告诉我
+
+# 现在主题进行非插件性的更改，UI 和 文章 排列展示的修改  
+
+# 本主题仅供参观
+
+
+
+
+
+
+#~~安装~~
+
+ ~~dearmsdan 与其他主题一样的安装~~  
+~~首先 把本主题 拉到自己电脑上的 主题目录~~
 
 ```
 git clone https://github.com/ZHD99/hexo-theme-dearmsdan.git dearmsdan
 ```
 
- 必要插件： (如果没有安装会报错)
+ ~~必要插件： (如果没有安装会报错)~~
 ```
 npm install hexo-wordcount --save  
 npm install hexo-toc --save  
@@ -19,10 +33,10 @@ npm install hexo-generator-search --save
 npm install hexo-generator-searchdb --save  
 ```
 
-主题集合了hexo 许多插件，需要添加以上 ↑↑↑目录、搜索、统计插件 才能正常运行  
-（ [全部插件](https://github.com/ZHD99/hexo-theme-dearmsdan/blob/master/package.json)
+~~主题集合了hexo 许多插件，需要添加以上 ↑↑↑目录、搜索、统计插件 才能正常运行~~ 
+~~（ [全部插件](https://github.com/ZHD99/hexo-theme-dearmsdan/blob/master/package.json)~~
 
-注意:    
+~~注意:~~
 
 ```
     highlight:false;  // 如果出现高亮多层 在总体的配置文件config设置false
