@@ -16,7 +16,7 @@ dearmsdan 与其他主题一样的安装
 本主题 拉到自己电脑上的 主题目录 下 
 
 ```
-git clone https://github.com/ZHD99/hexo-theme-dearmsdan.git --branch 1.0
+git clone https://github.com/ZHD99/hexo-theme-dearmsdan.git --branch 1.0 dearmsdan
 ```
 
 ## 测试
