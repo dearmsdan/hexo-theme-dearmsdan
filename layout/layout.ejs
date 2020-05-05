@@ -1,0 +1,22 @@
+<%#- 程序主入口 %>
+
+<!DOCTYPE html>
+<html>
+    <!-- Head -->
+	<%#- css、js、头部信息 %>
+    <%- partial('_partial/head') %>
+    <body>
+		<!-- Header -->
+		<%#- 可变化导航栏 %>
+		<%- partial('_partial/header') %>
+		
+		<%#- 中心 %>
+		<main class="dearmsdan">
+			<%- partial('_partial/nav') %>
+			<%#- index.ejs入口 %>
+			<%- body %>
+		</main>
+
+		<!-- footer -->
+    </body>
+</html>

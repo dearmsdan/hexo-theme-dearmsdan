@@ -1,0 +1,16 @@
+<%# 最新文章归档  %>
+
+<% if (site.posts.length){ %>
+  <div>
+    <h3><%= __('recent_posts') %></h3>
+    <div>
+      <ul>
+        <% site.posts.sort('date', -1).limit(5).each(function(post){ %>
+          <li>
+            <a href="<%- url_for(post.path) %>"><%= post.title || '(no title)' %></a>
+          </li>
+        <% }) %>
+      </ul>
+    </div>
+  </div>
+<% } %>

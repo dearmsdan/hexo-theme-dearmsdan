@@ -1,0 +1,14 @@
+<%# 分页块 %>
+<% if (page.total > 1){ %>
+    <nav>
+      <%- paginator({
+        prev_text: '&lt;',
+        next_text: '&gt;'
+      }) %>
+    </nav>
+  <% } %>
+
+<!-- 
+        prev_text: '←',
+        next_text: '→'
+-->

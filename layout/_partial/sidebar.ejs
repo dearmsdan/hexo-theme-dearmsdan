@@ -1,0 +1,6 @@
+<%# 遍历 _side（归档小部件）文件 的全部ejs 文件 %>
+<aside>
+  <% theme.sides.forEach(function(side){ %>
+  <%- partial('_side/' + side) %>
+  <% }) %>
+</aside>

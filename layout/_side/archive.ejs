@@ -1,0 +1,9 @@
+<%# 标签归档  %>
+<% if (site.posts.length){ %>
+  <div>
+    <h3><%= __('archive') %></h3>
+    <div>
+      <%- list_archives({show_count: theme.show_count, type: theme.archive_type}) %>
+    </div>
+  </div>
+<% } %>

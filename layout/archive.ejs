@@ -1,0 +1,14 @@
+<%# 归档页- %>
+<section>
+    <ul>
+      <% page.posts.each(function (post) { %>
+        <li>
+          <span><%= date(post.date, "YYYY-MM-DD") %></span>
+          <a href="<%- url_for(post.path) %>"><%= post.title %></a>
+        </li>
+      <% }) %>
+    </ul>
+  </section>
+
+<%#分页- %>
+  <%- partial('_partial/paginator') %>

@@ -1,0 +1,22 @@
+<%# 首页导航 nav %>
+<div class="nav">
+	<%# 首页统计 文章、标签、分类 nav %>
+    <div class="dearmsdan-count">
+        <span><%= __('count.articles') %></span><%= site.posts.length %>
+        <span><%= __('count.tags') %></span><%= site.tags.length %>
+        <span><%= __('count.categories') %></span><%= site.categories.length %>
+    </div>
+		<%# 回到首页、 关于博客、 友情链接 nav %>
+		<ul>
+			<% for (name in theme.menu) { %>
+			<a href="<%- url_for(theme.menu[name][0]) -%>" title="<%= name %>">
+				<div>
+					<%= name %>
+				</div>
+			</a>
+			<% } %>
+		</ul>
+		<%# 首页简介 文章分类、标签、文章归档、最新文章 nav %>
+		<%- partial('_partial/sidebar') %>
+		
+</div>

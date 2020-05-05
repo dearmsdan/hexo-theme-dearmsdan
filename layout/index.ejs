@@ -1,0 +1,45 @@
+<%#- 首页展示文章内容页 %>
+<div class="right">
+	<section>
+    <% page.posts.each(function (page) { %>
+    <div>
+        <a href="<%- url_for(page.path) %>">
+            <div> 
+				<%= page.title %>
+            </div>
+        </a>
+		
+        <article>
+            <% if(page.excerpt) {%>
+            <%- page.excerpt %>
+            <%}  else{ %>
+            <%- page.content %>
+            <% } %>
+        </article>
+        <div>
+            <a><i></i><%- date(page.date, "YYYY年MM月DD日") %></a>
+            <a><i></i><%= wordcount(page.content) %> 字</a>
+            <a><i></i>大概 <%= min2read(page.content, {cn: 250, en: 160}) %> 分钟</a>
+            <% if (page.categories && page.categories.length){ %>
+                <%- list_categories(page.categories, {
+                    show_count: false,
+                    class: '',
+                    style: 'none',
+                    separator: ''
+                }) %>
+            <% } %>
+            <% if (page.tags && page.tags.length){ %>
+                <%- list_tags(page.tags, {
+                    show_count: false,
+                    class: '',
+                    style: 'none',
+                    separator: ' '
+                }) %>
+            <% } %>
+        </div>
+    </div>
+    <% }) %>
+</section>
+	<%#- 分页 %>
+<%- partial('_partial/paginator') %>
+</div>

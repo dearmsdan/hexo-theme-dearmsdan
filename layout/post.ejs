@@ -1,0 +1,35 @@
+<%#- 文章页 %>
+
+<div>
+    <div>
+        <h1><%= page.title %></h1>
+    </div>
+  <div>
+    <a><i></i><%- date(page.date, "YYYY年MM月DD日") %></a>
+    <a><i></i><%= wordcount(page.content) %> 字</a>
+    <a><i></i>大概 <%= min2read(page.content, {cn: 250, en: 160}) %> 分钟</a>
+    <% if (page.categories && page.categories.length){ %>
+      <%- list_categories(page.categories, {
+        show_count: false,
+        class: ' ',
+        style: 'none',
+        separator: ''
+      }) %>
+    <% } %>
+    <% if (page.tags && page.tags.length){ %>
+      <%- list_tags(page.tags, {
+        show_count: false,
+        class: ' ',
+        style: 'none',
+        separator: ' '
+      }) %>
+    <% } %>
+  </div>
+  <article>
+    <%- page.content %>
+  </article>
+  <% if (!page.reprint){ %>
+<%#文章页脚版权声明- %>
+    <%- partial('_partial/copyright') %>
+  <% } %>
+</div>

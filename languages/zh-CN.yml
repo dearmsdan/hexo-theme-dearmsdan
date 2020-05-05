@@ -1,0 +1,13 @@
+﻿archive: 文章归档
+recent_posts: 最新文章
+categories: 文章分类
+tagcloud: 标签 
+
+count:
+  articles: 文章
+  tags: 标签
+  categories: 分类
+
+copyright:
+  author: 本文作者
+  permalink: 本文链接
