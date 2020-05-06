@@ -34,7 +34,7 @@ theme: dearmsdan
 <summary>展开查看</summary>
 <pre><code>
 
-![anz](https://github.com/ZHD99/hexo-theme-dearmsdan/blob/source/img/anz.gif)
+![anz](/ph/anz.gif)
 
 </code></pre>
 </details>
