@@ -34,7 +34,7 @@ theme: dearmsdan
 <summary>展开查看</summary>
 <pre><code>
 
-![anz](/ph/anz.gif)
+![anz](http://link.dearmsdan.com/anz.gif)
 
 </code></pre>
 </details>
