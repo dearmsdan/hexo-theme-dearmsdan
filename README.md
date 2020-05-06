@@ -34,7 +34,8 @@ theme: dearmsdan
 <summary>展开查看</summary>
 <pre><code>
 哦 上帝，gif只能显示一部分，可以点链接看安装方法
-http://link.dearmsdan.com/anz.gif
+<a src="http://link.dearmsdan.com/anz.gif">安装方法gif</a>
+
 
 ![anz](http://link.dearmsdan.com/anz.gif)
 </code></pre>
