@@ -5,10 +5,18 @@ $(document).pjax('a[target!=_blank]', '.main', {fragment: '.main',timeout: 8000}
 		
 		links();
 		tocs();
-		// 当前刷新目录产生
-		$(".second").pageslide();
+		pagegun();
 		dearzoom();
 		
+});
+
+
+$(function(){
+	
+	links();
+	tocs();
+	pagegun();
+	dearzoom();
 });
 
 $(document).on('pjax:complete', function() {
@@ -16,8 +24,7 @@ $(document).on('pjax:complete', function() {
 		links();
 		tocs();
 	    copycodes();
-		// 当前刷新目录产生
-		$(".second").pageslide();
+		pagegun();
 		dearzoom();
 	 
 		/* 右侧布的高度，相当于左侧高度*/
@@ -32,21 +39,11 @@ $(document).on('pjax:complete', function() {
    		/* pjax加载结束的回调函数 解决js无法定位的问题*/
 });
 
-$(function(){
-	
-	links();
-	tocs();
-	// 当前刷新目录产生
-    $(".second").pageslide();
-	dearzoom();
-});
-
 $(document).on('ready pjax:end', function(event) {
 	links();
 	tocs();
 	copycodes();
-	// 当前刷新目录产生
-    $(".second").pageslide(); 
+	pagegun();
 	dearzoom();
 		$(".main-content").delay(300).addClass("wrapShow");
 	
@@ -76,6 +73,10 @@ function links(){
 	
 }
 
+	// 当前刷新目录产生
+function pagegun(){
+	$(".second").pageslide();
+}
 
 	// 目录 被点击
 	
