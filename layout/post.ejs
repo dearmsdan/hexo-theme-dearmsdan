@@ -5,9 +5,7 @@
 			<h1><%= page.title %></h1>
 		</div>
 	  <div id="post" class="dearmsdan-post-Statistics">
-		<a><%- date(page.date, "YYYY年MM月DD日") %></a>
-		<a><%= wordcount(page.content) %> 字</a>
-		<a>大概花费 <%= min2read(page.content, {cn: 250, en: 160}) %> 分钟阅读</a>
+            <a><%- date(page.date, "YYYY年MM月DD日") %></a>
 		<% if (page.categories && page.categories.length){ %>
 		  <%- list_categories(page.categories, {
 			show_count: false,
@@ -26,32 +24,17 @@
 		<% } %>
 	  </div>
 		
-		<div data-toc="#toc">
+		<%- partial('_partial/toc') %>
+		<div>
 			  <article>
 				<%- page.content %>
 			  </article>
 		</div>
-<script>
-$(function(){
-	
-	
-		// 可能是文章自动生成目录及侧边栏目录滚动特效的插件toc-helper
-		//new TocHelper().reload();
-	    new TocHelper().reset();
-	
-	
-});
-	
-$(document).on('ready pjax:end', function(event) {
-  new TocHelper().reset();
-})
-
-</script>
 		
 		
 	  <% if (!page.reprint){ %>
 	<%#文章页脚版权声明- %>
-		<%- partial('_partial/copyright') %>
+		<%- partial('_partial/_body/copyright') %>
 	  <% } %>
 	</div>
 </div>

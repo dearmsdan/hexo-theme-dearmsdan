@@ -21,7 +21,7 @@
     line-height: 1.6;
     color: #fff;
     border-radius: 4px;
-    background: #130519de
+    background: #13051978;
 }
 
 .jp-controls-holder {
@@ -210,7 +210,7 @@
 }
 
 .jp-volume-bar-value {
-    background-color: #6646a1;
+    background-color: #d6c5f4;
     width: 0;
     height: 5px
 }
@@ -331,7 +331,7 @@ div.jp-type-playlist div.jp-playlist a {
 }
 
 div.jp-type-playlist div.jp-playlist a.jp-playlist-current,div.jp-type-playlist div.jp-playlist a:hover,div.jp-type-playlist div.jp-playlist li.jp-playlist-current span.jp-artist,div.jp-type-playlist div.jp-playlist a:hover span {
-    color: #665975
+    color: #e8e0f1;
 }
 
 div.jp-type-playlist div.jp-playlist a.jp-playlist-item-remove {
@@ -432,7 +432,7 @@ span.jp-artist {
     right: -20px;
     top: 5px;
     border: none;
-    background: #111;
+    background: #1110;
     cursor: pointer;
     padding: 0;
     margin: 0

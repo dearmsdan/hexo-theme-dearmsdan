@@ -1,15 +1,19 @@
 "use strict"
 $(window).on("load", function () {
 	
-	
 	//加载中...................
-	$("#loading").css('zIndex','99999');
-	$("#loading").delay(1000).fadeIn();
-	$("#dearmsdan").delay(3000).addClass("wrapShow");
+	$("#dearmsdan").delay(400).addClass("wrapShow");
 
 	
-
 	
+	
+	
+	
+	// 加载条
+	$('.toping').headBand({
+		'background':'#57abf8cc',
+		'height':"3"
+	});
 	
 	
 	
@@ -47,12 +51,13 @@ $(window).on("load", function () {
     //PC和移动端响应以及经过后
 	$('.btn-toggle-fullwidth').on('click', function () {
 		if (!$('body').hasClass('layout-fullwidth')) {
-			$('body').addClass('layout-fullwidth');
+			$('body').addClass('layout-fullwidth');    // 初始出现
 
 		} else {
 			$('body').removeClass('layout-fullwidth');
 			$('body').removeClass('layout-default'); // also remove default behaviour if set
 		}
+		
 
 		if ($(window).innerWidth() < 1025) {
 			if (!$('body').hasClass('offcanvas-active')) {
@@ -62,6 +67,8 @@ $(window).on("load", function () {
 			}
 		}
 	});
+		
+		
 	// 这里是一边导航栏的滚动条slimScroll.min.js
 	if ($('.sidebar-scroll').length > 0) {
 		$('.sidebar-scroll').slimScroll({
@@ -78,20 +85,16 @@ $(window).on("load", function () {
 		window.scrollTo(0, 1);
 	}
 
-});
+	
+	
+	
+	
+	
+	
+	
 
-$(function(){
-	
-		// 乔巴
-$(".header-anchor").each(function() {
-  //var element = document.createElement("span");
- // $(element).attr("class", "");
- // $(element).html("<img class='qiaobaMove' src='' />");
-  $(this).text("___");
-});
-	
-	
-});
 
+
+});
 
 

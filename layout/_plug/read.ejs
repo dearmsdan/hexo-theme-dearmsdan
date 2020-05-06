@@ -1,0 +1,135 @@
+<style>
+.vditor-speech {    
+	position: absolute;
+    display: none;
+    background-color: #1d2125;
+    border: 1px solid #2ca9e6;
+    box-shadow: 0 0.3rem 2rem rgba(0, 255, 149, 0.6);
+    border-radius: 3px;
+    padding: 6px;
+    cursor: pointer;
+    color: #b9b9b9;
+        }
+.vditor-speech--current, .vditor-speech:hover {
+            color: #fff
+        }
+.vditor-speech svg {
+            height: 14px;
+            width: 14px;
+            fill: currentColor;
+            display: block;
+            stroke-width: 0;
+            stroke: currentColor;
+        }
+</style>
+<script>
+
+        (function(){try{var videos=document.getElementsByTagName('video');if(""!=videos&&videos.length>0){const players=Array.from(videos).map(p=>new Plyr(p));}
+$.getJSON("https://api.heycmm.cn/all/",function(data){const ap=new APlayer({container:document.getElementById("aplayer"),fixed:true,lrcType:3,preload:"auto",order:"random",listFolded:true,listMaxHeight:"165px",theme:"#e9e9e9",audio:data})});var days=parseInt((new Date().getTime()-new Date(document.querySelector(".published").innerText.replace(/ /g,"").replace(/-/g,"/")).getTime())/1000/60/60/24,10);days>90&&document.querySelector("#post-content").insertAdjacentHTML("afterBegin",['<blockquote style="border: 1px solid #6a737d;border-left: 5px solid #6a737d;line-height: 36px;">本文最后更新于 <code style="color: #FF5722;vertical-align: middle;">',days,"</code> 天前，其中的信息可能已经不够准确，请您酌情参考！</blockquote>"].join(""))}catch(e){}})();
+function speak(text){if(!isBlank(text)){var src="https://api.heycmm.cn/speak/"+text;if(src.length<=2083){var n=document.querySelector(".Audio-speech");if(!n){(n=document.createElement("AUDIO")).className="Audio-speech";}else{document.getElementById("audios").style.display="block";}
+n.setAttribute("id","audios");n.setAttribute("src",src);n.setAttribute("controls","controls");n.play()}}else{document.getElementById("audios").pause();document.getElementById("audios").style.display="none"}}
+function trim(str){if(str==null){return""}
+return str.toString().replace(/(^\s*)|(\s*$)|\r|\n/g,"")}
+function isBlank(str){if(str==null||trim(str)==""){return true}
+return false}
+var play_svg_1='<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">\n'+'<path d="M6 0v32l20-15.977-20-16.023z"></path>\n'+'</svg>\n';var pause_svg_1='<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">\n'+'<path d="M11 0h-6c-0.553 0-1 0.448-1 1v30c0 0.553 0.447 1 1 1h6c0.553 0 1-0.447 1-1v-30c0-0.552-0.447-1-1-1zM27 0h-6c-0.553 0-1 0.448-1 1v30c0 0.553 0.447 1 1 1h6c0.553 0 1-0.447 1-1v-30c0-0.552-0.447-1-1-1z"></path>\n'+'</svg>\n';var speechDom=document.querySelector(".vditor-speech");if(!speechDom){speechDom=document.createElement("div");speechDom.className="vditor-speech";document.body.insertAdjacentElement("beforeend",speechDom);speechDom.onclick=function(){if(speechDom.className==="vditor-speech"){var utterThis=speechDom.getAttribute("data-text");speak(utterThis);speechDom.className="vditor-speech vditor-speech--current";speechDom.innerHTML=pause_svg_1;}
+var selection=window.getSelection();selection.removeAllRanges();selection.addRange(window.vditorSpeechRange);};document.body.addEventListener("click",function(){if(getSelection().toString().trim()===""&&speechDom.style.display==="block"){speechDom.className="vditor-speech";speechSynthesis.cancel();speechDom.style.display="none";}});}
+document.addEventListener("mouseup",function(event){var text=getSelection().toString().trim();speechSynthesis.cancel();if(getSelection().toString().trim()===""){if(speechDom.style.display==="block"){speechDom.className="vditor-speech";speechDom.style.display="none";}
+return;}
+window.vditorSpeechRange=getSelection().getRangeAt(0).cloneRange();var rect=getSelection().getRangeAt(0).getBoundingClientRect();speechDom.innerHTML=play_svg_1;speechDom.style.display="block";speechDom.style.top=(rect.top+rect.height+document.querySelector("html").scrollTop-20)+"px";speechDom.style.left=(event.screenX+2)+"px";speechDom.setAttribute("data-text",text);});
+	
+	
+	// 。。。
+	
+/*	
+	   var play_svg_1 = '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">\n' +
+       '<path d="M6 0v32l20-15.977-20-16.023z"></path>\n' +
+       '</svg>\n';
+   var pause_svg_1 = '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">\n' +
+       '<path d="M11 0h-6c-0.553 0-1 0.448-1 1v30c0 0.553 0.447 1 1 1h6c0.553 0 1-0.447 1-1v-30c0-0.552-0.447-1-1-1zM27 0h-6c-0.553 0-1 0.448-1 1v30c0 0.553 0.447 1 1 1h6c0.553 0 1-0.447 1-1v-30c0-0.552-0.447-1-1-1z"></path>\n' +
+       '</svg>\n';
+    var speechDom = document.querySelector(".vditor-speech");
+    var lang = "zh_CN";
+    if (!speechDom) {
+        speechDom = document.createElement("div");
+        speechDom.className = "vditor-speech";
+        document.body.insertAdjacentElement("beforeend", speechDom);
+        var getVoice = function () {
+            var voices = speechSynthesis.getVoices();
+            var currentVoice;
+            var defaultVoice;
+            voices.forEach(function (item) {
+              if (item.lang === lang.replace("_", "-")) {
+                    currentVoice = item;
+                }
+                if (item["default"]) {
+                    defaultVoice = item;
+                }
+            });
+            if (!currentVoice) {
+                currentVoice = defaultVoice;
+            }
+            return currentVoice;
+        };
+        if (speechSynthesis.onvoiceschanged !== undefined) {
+            speechSynthesis.onvoiceschanged = getVoice;
+        }
+        var voice_1 = getVoice();
+        speechDom.onclick = function () {
+            if (speechDom.className === "vditor-speech") {
+                var utterThis = new SpeechSynthesisUtterance(speechDom.getAttribute("data-text"));
+                utterThis.voice = voice_1;
+                utterThis.onend = function () {
+                    speechDom.className = "vditor-speech";
+                    speechSynthesis.cancel();
+                    speechDom.innerHTML = play_svg_1;
+                };
+                speechSynthesis.speak(utterThis);
+                speechDom.className = "vditor-speech vditor-speech--current";
+                speechDom.innerHTML = pause_svg_1;
+            }
+            else {
+                if (speechSynthesis.speaking) {
+                    if (speechSynthesis.paused) {
+                        speechSynthesis.resume();
+                        speechDom.innerHTML = pause_svg_1;
+                    }
+                    else {
+                        speechSynthesis.pause();
+                        speechDom.innerHTML = play_svg_1;
+                    }
+                }
+            }
+            var selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(window.vditorSpeechRange);
+        };
+        document.body.addEventListener("click", function () {
+            if (getSelection().toString().trim() === "" && speechDom.style.display === "block") {
+                speechDom.className = "vditor-speech";
+                speechSynthesis.cancel();
+                speechDom.style.display = "none";
+            }
+        });
+    }
+   document.addEventListener("mouseup", function (event) {
+        var text = getSelection().toString().trim();
+        speechSynthesis.cancel();
+        if (getSelection().toString().trim() === "") {
+            if (speechDom.style.display === "block") {
+                speechDom.className = "vditor-speech";
+                speechDom.style.display = "none";
+            }
+            return;
+        }
+        window.vditorSpeechRange = getSelection().getRangeAt(0).cloneRange();
+        var rect = getSelection().getRangeAt(0).getBoundingClientRect();
+        speechDom.innerHTML = play_svg_1;
+        speechDom.style.display = "block";
+        speechDom.style.top = (rect.top + rect.height + document.querySelector("html").scrollTop - 20) + "px";
+        speechDom.style.left = (event.screenX + 2) + "px";
+        speechDom.setAttribute("data-text", text);
+    });*/
+</script>
+
+

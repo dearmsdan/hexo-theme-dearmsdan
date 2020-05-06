@@ -1,10 +1,13 @@
 # ---------------------------------------------------------------
 # ---------------------------------------------------------------
 #  配置文件 大纲
-#  head.ejs   头部    |  header.ejs 导航栏
-#  sidebar.ejs侧边栏   | header.ejs 导航栏
-#  footer.ejs jio部   | unit.ejs其他功能插件
-#  post.ejs   文章页  |  可能新增配置
+#  head.ejs   头部     | header.ejs 导航栏
+#  sidebar.ejs侧边栏   | unit.ejs 新增无影响其他功能插件
+#  footer.ejs jio部   |  *.ejs 其他功能 推出中...
+#  post.ejs   文章页   |  第三方插件配置，如需开启 ：true
+#
+#  第三方插件
+#  
 #     
 # ---------------------------------------------------------------
 # ---------------------------------------------------------------
@@ -17,11 +20,11 @@
 
 # 网站小图标
 favicon: 
-  href: /favicon.png # 网站图标
+  href: /logo.png # 网站图标
   type: image/png # 图标类型，可能的值有(image/png, image/vnd.microsoft.icon, image/x-icon, image/gif)
   
 # 阿里 图标库 
-aliiconfont: //at.alicdn.com/t/font_1605171_frpek6nqy3j.css
+aliiconfont: //at.alicdn.com/t/font_1605171_vyrb401junl.css
 
 # jq库
 jquery:
@@ -46,25 +49,27 @@ social:
 loadingBar:
   pace: /resources/loadingBar/pace.min.js
   pink: /resources/loadingBar/flash.css
+  band: /js/headBand.min.js
   #pace: https://cdn.bootcss.com/pace/1.0.2/pace.min.js
   #pink: https://cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css
 # pjax配置
 jquerypjax:
+  app: /js/pjax/app.js
   index: /js/pjax/index.js
   pjax: /js/pjax/jquery.pjax.js
 link:
   css: /resources/dearmsdan_link/link.css
-# 代码高亮
-prettyPrint:
-  css: /resources/prettyPrint/css/prettify.css
-  js: /resources/prettyPrint/js/prettify.js
-# 图片放大功能
-preview:
-  css: /resources/preview-photo/index.css
-  js: /resources/preview-photo/index.js
-  min: /resources/preview-photo/preview-photo.js
+toc:
+  css: /resources/toc/toc.css
+  pageslide: /resources/toc/jquery.pageslide.js
+# 图片放大
+zoom:
+  js: /resources/zoom/zoom.js
 # valine 评论插件
 valine: /js/valine.js
+#  
+copycode: 
+  lib: /js/copycode/clipboard.min.js
 # 工具库
 jQtools:
   # 缓存
@@ -79,12 +84,12 @@ jQtools:
 dearmsdan:
   logo:  #logo图标设置（设置其中之一就好了
     ico: DearMsDanIconFont icon-zh    #这里将logo设置 图标库ICO
-    png: 							  #这里将logo设置图片
+    png: 						      #这里将logo设置图片
     size: 50px # 设置logo大小
   title: 
     size: 20px # 设置网站名字大小
 
-# 顶部
+# 顶部菜单
 menu:
   首页:
     - /
@@ -105,8 +110,10 @@ menu:
 # 设置图片不动的配置在 title_qiaoba 中
 # 填写一个即可，另一个备用(第二个有抖动特效)   任意一个都可以为空
 # 尽可能选择正比例图片！！！，比例差距大可以修改 ejs 模板源文件 sidebar.ejs 5~ 10行左右
-dearHead: Pexels.gif # 初始头像
+dearHead: /Pexels.gif # 初始头像
+dearHeadlogo: /logo.png # 遮罩 logo
 PhotoHead: /resources/qiaoba.png  # 备用头像 
+
 
 # 社交按钮配置
 socialbtn:
@@ -114,7 +121,7 @@ socialbtn:
     - https://github.com/ZHD99/
     - icon-git
   email:
-    - mailto:dearmsdan@outlook.com
+    - /outlook.html
     - icon-youxiang
   netease:
     - https://music.163.com/
@@ -139,20 +146,27 @@ Catalog_son:
     - /链接
   地址3...:
     - /链接
+	
+# 统计
+count:
+  articles: 文章
+  tags: 标签
+  categories: 分类
 
-
+# 文章类
+side:
+  archive: 文章归档
+  recent_posts: 最新文章
+  categories: 文章分类
+  tagcloud: 标签 
+  
+  
+# 文章迭代
 sides:  
 - category #文章分类
 - tagcloud #标签
 - archive #文章归档
 - recent_posts #最新文章
-
-
-# 搜索插件
-# 请安装 ↓ 插件才能使用全文搜索
-# npm install hexo-generator-search  --save
-# npm install hexo-generator-searchdb --save
-searchbtn: /js/s.js
 
 
 
@@ -208,15 +222,14 @@ footer:
 #  post.ejs 
 # ---------------------------------------------------------------
 
-# 可能是文章自动生成目录及侧边栏目录滚动特效的插件toc-helper
-tochelper:
-  css: /resources/tochelper/toc-helper.min.css
-  js: /resources/tochelper/toc-helper.min.js
+
 
 # 页脚  版权设置
-copyright: '<strong>版权声明：</strong>本文采用 <a>....</a> 协议进行许可'
-
-
+copyright:
+  author: 本文作者
+  permalink: 本文链接
+  author_: dearmsdan
+  permalink_: https://www.dearmsdan.com/ # 可不填, 自动设置为您的 网站(site) 设置
 
 
 
@@ -229,3 +242,36 @@ copyright: '<strong>版权声明：</strong>本文采用 <a>....</a> 协议进�
 # 背景设置
 background: https://img.xjh.me/random_img.php?type=bg&ctype=nature&return=302
 
+
+# ---------------------------------------------------------------
+#  第三方插件 均为关闭状态
+# ---------------------------------------------------------------
+
+
+# 搜索插件
+# 请安装 ↓ 插件才能使用全文搜索,
+# npm install hexo-generator-search  --save
+# npm install hexo-generator-searchdb --save
+# 然后在全局 config 设置 ↓ 如果不懂（https://github.com/theme-next/hexo-generator-search）
+# search:
+# path: search.xml
+
+search:
+  enable: false #true 开启， 默认不启用，没安装插件启用会报错
+  searchjs: /js/s.js
+  
+pjax:
+  enable: true #true 开启,默认启用,本主题基于pjax 制作
+  
+#关闭 与 pjax 功能 无缝连接
+  
+ 
+  
+  
+  
+  
+  
+  
+  # pjax 看个人需求，pjax 会极大影响SEO 
+  
+  

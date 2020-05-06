@@ -23,7 +23,7 @@
     font-weight: 400;
     text-align: center;
     margin-bottom: 40px;
-	    color: aliceblue;
+	    color: #565656;
 }
 
 .cloud-header h3 em {
@@ -98,7 +98,7 @@
 
 .cloud-card-image-title {
     width: 100%;
-    color: #fff;
+    color: #748169;
     text-align: center;
     font-size: 24px;
     line-height: 200px;

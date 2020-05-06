@@ -1,5 +1,53 @@
-﻿/** 
-	avatar头像 css
+﻿
+/** 
+	avatar遮罩头像 css
+**/	
+
+
+.sidebar-author img:last-of-type:not(:only-of-type) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+	opacity: 0.85;
+    background-color: aliceblue;
+    -webkit-transform: translateY(110%);
+    -ms-transform: translateY(110%);
+    transform: translateY(110%);
+    -webkit-transition: -webkit-transform cubic-bezier(.3,.6,.5,.81) 225ms;
+    transition: -webkit-transform cubic-bezier(.3,.6,.5,.81) 225ms;
+    -o-transition: transform cubic-bezier(.3,.6,.5,.81) 225ms;
+    transition: transform cubic-bezier(.3,.6,.5,.81) 225ms;
+    transition: transform cubic-bezier(.3,.6,.5,.81) 225ms,-webkit-transform cubic-bezier(.3,.6,.5,.81) 225ms;
+}
+
+.sidebar-author:hover {
+    cursor: crosshair!important;
+}
+
+.sidebar-author:hover img:last-of-type:not(:only-of-type) {
+	/* Rotate div */
+	transform:rotate(7deg);
+	-ms-transform:rotate(7deg); /* IE 9 */
+	-webkit-transform:rotate(7deg); /* Safari and Chrome */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/** 
+	avatar乔巴头像 抖动css
 **/	
 
 .sidebar-author .sidebar-author-d{

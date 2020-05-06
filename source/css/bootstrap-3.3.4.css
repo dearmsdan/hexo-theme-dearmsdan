@@ -60,10 +60,6 @@ strong {
 dfn {
   font-style: italic;
 }
-h1 {
-  margin: .67em 0;
-  font-size: 2em;
-}
 mark {
   color: #000;
   background: #ff0;
@@ -131,7 +127,7 @@ input[type="submit"] {
 }
 button[disabled],
 html input[disabled] {
-  cursor: default;
+  /*cursor: default;*/
 }
 button::-moz-focus-inner,
 input::-moz-focus-inner {
@@ -181,9 +177,29 @@ table {
   border-spacing: 0;
   border-collapse: collapse;
 }
-td,
-th {
+figure td,
+figure th {
   padding: 0;
+}
+figure tr:first-child{
+  display: -webkit-box;
+}
+figure td:first-child{
+  display: block;
+}
+figure td pre{
+  /*height: 391px;*/
+	max-height: 391px;
+}
+figure td:nth-child(2){
+  display: grid;    
+	position: relative;
+    left: -50px;
+}
+figure td:nth-child(2) pre{
+    padding: 9.5px 0px;
+    position: relative;
+    left: 50px;
 }
 /*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */
 @media print {
@@ -225,16 +241,6 @@ th {
   }
   img {
     max-width: 100% !important;
-  }
-  p,
-  h2,
-  h3 {
-    orphans: 3;
-    widows: 3;
-  }
-  h2,
-  h3 {
-    page-break-after: avoid;
   }
   select {
     background: #fff !important;
@@ -1171,125 +1177,6 @@ hr {
 [role="button"] {
   cursor: pointer;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-.h1,
-.h2,
-.h3,
-.h4,
-.h5,
-.h6 {
-  font-family: inherit;
-  font-weight: 500;
-  line-height: 1.1;
-  color: inherit;
-}
-h1 small,
-h2 small,
-h3 small,
-h4 small,
-h5 small,
-h6 small,
-.h1 small,
-.h2 small,
-.h3 small,
-.h4 small,
-.h5 small,
-.h6 small,
-h1 .small,
-h2 .small,
-h3 .small,
-h4 .small,
-h5 .small,
-h6 .small,
-.h1 .small,
-.h2 .small,
-.h3 .small,
-.h4 .small,
-.h5 .small,
-.h6 .small {
-  font-weight: normal;
-  line-height: 1;
-  color: #777;
-}
-h1,
-.h1,
-h2,
-.h2,
-h3,
-.h3 {
-	margin-top: 5px;
-    margin-bottom: 5px;
-    padding-top: 3px;
-}
-h1 small,
-.h1 small,
-h2 small,
-.h2 small,
-h3 small,
-.h3 small,
-h1 .small,
-.h1 .small,
-h2 .small,
-.h2 .small,
-h3 .small,
-.h3 .small {
-  font-size: 65%;
-}
-h4,
-.h4,
-h5,
-.h5,
-h6,
-.h6 {
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-h4 small,
-.h4 small,
-h5 small,
-.h5 small,
-h6 small,
-.h6 small,
-h4 .small,
-.h4 .small,
-h5 .small,
-.h5 .small,
-h6 .small,
-.h6 .small {
-  font-size: 75%;
-}
-h1,
-.h1 {
-  font-size: 36px;
-}
-h2,
-.h2 {
-  font-size: 30px;
-}
-h3,
-.h3 {
-  font-size: 24px;
-}
-h4,
-.h4 {
-  font-size: 18px;
-}
-h5,
-.h5 {
-  font-size: 14px;
-}
-h6,
-.h6 {
-  font-size: 12px;
-}
-p {
-  margin: 0 0 10px;
-}
 .lead {
   margin-bottom: 20px;
   font-size: 16px;
@@ -1468,9 +1355,9 @@ abbr[data-original-title] {
 blockquote {
   padding: 10px 20px;
   margin: 0 0 20px;
-  font-size: 17.5px;
-  border-left: 5px solid #eee;
-	background-color: #414952!important;
+  font-size: 17.5px;    
+  border-left: 6px solid #e6e6e6;
+  background-color: #c7d1da!important;
 }
 blockquote p:last-child,
 blockquote ul:last-child,
@@ -1528,8 +1415,8 @@ samp {
 code {
   padding: 2px 4px;
   font-size: 90%;
-  color: #c7254e;
-  background-color: #f9f2f4;
+    color: #c7254e;
+    background-color: #f2f2f25e;
   border-radius: 4px;
 }
 kbd {
@@ -1552,14 +1439,15 @@ pre {
 	display: block;
     padding: 9.5px;
     margin: 0 0 10px;
-    font-size: 16px;
+    font-size: inherit;
     line-height: 1.42857143;
     color: #333;
     word-break: break-all;
     word-wrap: break-word;    
-	background-color: #b3bdca!important;
+	background-color: #ffffff8c!important;
     border: 1px solid #fffdfda6;
     border-radius: 4px;
+	max-height: 300px;
 }
 pre code {
   padding: 0;
@@ -1572,8 +1460,10 @@ pre code {
 
 /* 设置滚动条的样式 */
 pre::-webkit-scrollbar {
-  width: 2px;
-  background-color: #eee;
+  width: 5px;    
+	height: 5px;
+    background-color: #96daca;/*#ee5050;*/
+
 }
 /* 滚动槽 */
 pre::-webkit-scrollbar-track {
@@ -3950,7 +3840,6 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav-tabs > li.active > a:hover,
 .nav-tabs > li.active > a:focus {
   color: #555;
-  cursor: default;
   background-color: #fff;
   border: 1px solid #ddd;
   border-bottom-color: transparent;
@@ -4671,7 +4560,6 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .pagination > .active > span:focus {
   z-index: 2;
   color: #fff;
-  cursor: default;
   background-color: #337ab7;
   border-color: #337ab7;
 }

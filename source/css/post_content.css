@@ -2,9 +2,9 @@
 
 .dearmsdan .dearmsdan-post .dearmsdan-post-Statistics a:nth-child(7n+1) {
   /* background-color: #ff4e6a; */
-  color: #f53b36;
+ /* color: #f53b36;*/
   background-color: rgba(255, 255, 255, 0);
-  border-color: #f53b36;
+  /*border-color: #f53b36;*/
   border-width: 1px;
   border-style: solid;
   -webkit-box-shadow: none;

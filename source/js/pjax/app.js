@@ -1,36 +1,5 @@
-$(document).pjax('a[target!=_blank]', '.main', {fragment: '.main',timeout: 8000}); 
-    	/* .main为刷新的id */
-    $(document).on('pjax:send', function() {
-		/* 预加载函数 */
-		
-		links();
-		tocs();
-		// 当前刷新目录产生
-		$(".second").pageslide();
-		dearzoom();
-		
-});
 
-$(document).on('pjax:complete', function() {
-	
-		links();
-		tocs();
-	    copycodes();
-		// 当前刷新目录产生
-		$(".second").pageslide();
-		dearzoom();
-	 
-		/* 右侧布的高度，相当于左侧高度*/
-		$(".main").css({ 
-			height: $("#sidebar-nav").outerHeight()
-		});
-	
-		/* 设置 post 样式*/
-		$(".dearmsdan-post").css("animation","1s ease 0s 1 normal forwards running action_translateY");
-	
 
-   		/* pjax加载结束的回调函数 解决js无法定位的问题*/
-});
 
 $(function(){
 	
@@ -39,20 +8,14 @@ $(function(){
 	// 当前刷新目录产生
     $(".second").pageslide();
 	dearzoom();
+	
+	
+		/* 设置 post 样式*/
+		$(".dearmsdan-post").css("animation","1s ease 0s 1 normal forwards running action_translateY");
 });
+	
 
-$(document).on('ready pjax:end', function(event) {
-	links();
-	tocs();
-	copycodes();
-	// 当前刷新目录产生
-    $(".second").pageslide(); 
-	dearzoom();
-		$(".main-content").delay(300).addClass("wrapShow");
-	
-	
-	
-})
+
 
 
 
@@ -152,4 +115,7 @@ function copycodes(){
 			
 		}(window, document);
 }
+
+	
+
 
