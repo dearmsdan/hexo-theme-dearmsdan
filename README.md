@@ -1,6 +1,6 @@
 
 # hexo-theme-dearmsdan
-HEXO 主题 宝钻蓝色，给人一种空灵的感觉
+HEXO 主题 宝钻蓝色，给你一种空灵的感觉
 view： [dearmsdan](https://www.dearmsdan.com)
 
 
