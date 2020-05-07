@@ -306,7 +306,7 @@ html.fullscreen-bg,html.fullscreen-bg body,html.fullscreen-bg #dearmsdan {
     padding: 0;
     margin: 0;
     border: 0;
-    background-color: #252c35;
+	background-color: #c6d6f4de;
 }
 
 .navbar-default .navbar-nav>.open>a,.navbar-default .navbar-nav>.open>a:hover,.navbar-default .navbar-nav>.open>a:focus {
