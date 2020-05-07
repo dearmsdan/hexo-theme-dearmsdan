@@ -205,7 +205,7 @@ jscex:
 # footer 版权和一些信息
 footer:
   # text 和 beian 信息都可以删除
-  text: "感谢<a style='color: #00bbff;font-weight: bolder;' href='https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral'>又拍云</a> 提供强力云存储服务 |  <a style='color:#f66464;font-weight: bolder;' href='https://www.dnspod.cn/'>dnspod </a>提供 DNS 解析服务|  <a style='color:#ea9000;font-weight: bolder;' href='https://valine.js.org/'> Valine</a>提供快速、简洁且高效的评论系统 <br/>"
+  text: "感谢<span></span><a style='color: #00bbff;font-weight: bolder;' href='https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral'><img style='width: 93px; position: relative;top: -2px;' src='https://cdn.dearmsdan.com/upyun_logo5.png' /></a> 提供强力云存储服务 | <a style='color:#f66464;font-weight: bolder;' href='https://www.dnspod.cn/'>dnspod </a>提供 DNS 解析服务|  <a style='color:#ea9000;font-weight: bolder;' href='https://valine.js.org/'> Valine</a>提供快速、简洁且高效的评论系统 <br/>"
   
   beian: "<a style='color:#939393;' href='http://hn.beian.miit.gov.cn/' target='_blank'> <img width='16px' src='https://img.alicdn.com/tfs/TB1..50QpXXXXX7XpXXXXXXXXXX-40-40.png' />湘ICP备20001824号 </a>， <a target='_blank' href='http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=43010302001049' style='display:inline-block;text-decoration:none;height:20px;line-height:20px;'><p style='height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;'>湘公网安备 43010302001049号</p></a>"
 
