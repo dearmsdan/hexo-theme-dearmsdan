@@ -1,8 +1,4 @@
-﻿# Hexo Configuration
-## Docs: https://hexo.io/docs/configuration.html
-## Source: https://github.com/hexojs/hexo/
-
-# 网站Site
+﻿# 网站Site
 title: hi mogul
 subtitle: '收藏和分享兼得'
 description: '最好的收藏,不过是分享'
@@ -46,7 +42,7 @@ post_asset_folder: false
 relative_link: false
 future: true
 highlight:
-  enable: false
+  enable: true
   line_number: true
   auto_detect: false
   tab_replace: ''
@@ -94,6 +90,27 @@ ignore:
 ## Themes: https://hexo.io/themes/
 theme: dearmsdan #landscape   
 ## landscape   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # 使用搜索功能
 search:
