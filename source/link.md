@@ -30,12 +30,11 @@ permalink: link.html
 <div class="cloud-wrapper clearfix">
 <a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" class="cloud-card">
 <div class="cloud-card-image">
-    <i style="    font-size: 937px;position: relative;top: -477px;left: -196px;" class="DearMsDanIconFont icon-youpaiyun_logo"></i>
-	<img class="cloud-scale cloud-card-image-back" src="" />
-<div></div>
 <div class="cloud-card-image-title">又拍云服务商</div>
 </div>
-<div class="cloud-card-text">一个良心服务商、国内知名企业级云服务商，又拍云是专注 CDN、云存储、小程序开发方案、 短视频开发方案、DDoS高防等产品的国内知名企业级云服务商</div>
+<div class="cloud-card-text">一个良心服务商、国内知名企业级云服务商  <br/>又拍云是专注 CDN、云存储、小程序开发方案   <br/>
+短视频开发方案、  <br/>
+DDoS高防等产品的国内知名企业级云服务商</div>
 </a>
 
 <a href="https://lmqyu.cn/" class="cloud-card">
