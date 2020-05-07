@@ -18,8 +18,6 @@
         </article>
         <div>
             <a><i></i><%- date(page.date, "YYYY年MM月DD日") %></a>
-            <a><i></i><%= wordcount(page.content) %> 字</a>
-            <a><i></i>大概 <%= min2read(page.content, {cn: 250, en: 160}) %> 分钟</a>
             <% if (page.categories && page.categories.length){ %>
                 <%- list_categories(page.categories, {
                     show_count: false,
