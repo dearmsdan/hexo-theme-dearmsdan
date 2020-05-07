@@ -1,4 +1,65 @@
 > <center><a href="https://www.dearmsdan.com"></a>hi mogul  blog   </center>
+### 10:54 2020/5/6   
+
+体积: 584 KB
+
+修改内容：   
+	修改主题config   
+			1.配置大纲描述信息  
+			2.修改网站小图标  /favicon.png 跟改为 /logo.png   
+			3.更新阿里图标库链接    
+			4.压缩头像体积, 主题大小约为 584 KB
+	修改目录模块  
+			1.为目录添加翻页插件pageslide.js  
+			2.添加css 样式  
+			3.使用hexo自带 toc目录 函数  
+			4.目录模板位置为layout\_partial/toc.ejs   
+	修改社交按钮中 邮箱点击错误问题    
+	更改 整体页面UI颜色、滚动条颜色等等...   
+	修改搜索模板  
+			1.搜索功能更改为第三方插件，默认为关闭状态，需要下载插件开启  
+			2.修改搜索模板位置.  
+	修改让原来的固定页脚显示信息，为动态显示作者信息   
+	修改模板位置  
+			1.copyright.ejs  2.paginator.ejs 3. search.ejs 4.sidebar.ejs   
+	统一 字体大小，修复移动端大小不一  
+	重新定义 bootstrap h1~h6 标签样式  
+	修改 pre code 等标签的样式   
+
+删除内容：
+
+​	删除所有需要安装插件  
+​	删除 prettyPrint 代码高亮  
+​	删除 preview 图片放大功能  
+​	删除插件 toc  
+​	删除多语言，统一为中文,暂不考虑多语言  
+​	删除提示文件 ，删除多余注释    
+​	删除全局加载动画，减少等待时间  
+​	删除多余归档页  
+​	删除文章记数统计功能  
+​	删除 /favicon.ico和/favicon.png  
+
+新增内容：  
+	顶部加载条 跟随滚动条进度功能  
+    新增 ../pajx/app.js  不开启 pjax  与pjax 开启 ../pajx/index.js 功能一致   
+	新增 悬浮hover 放大图片功能   zoom  
+	新增使用hexo自带 toc目录 函数  
+	新增代码复制功能 clipboard.min.js  
+	新增目录(/layout/_partial/*)_ body, _footer,_head  
+	新增文章阅读功能，选择一小段文字可阅读  
+	新增 avatar遮罩头像 css   
+	
+
+
+
+
+
+
+
+
+
+
+
 
 ###### 16:58 2020/4/29
 
