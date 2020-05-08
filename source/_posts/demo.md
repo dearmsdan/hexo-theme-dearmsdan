@@ -530,23 +530,3 @@ $H_{2SO_4}$
 [HTML特殊字符编码对照表](https://link.jianshu.com?t=https%3A%2F%2Fwww.baidu.com%2Flink%3Furl%3DvUfE2amYdxd0-eyzqayeMFOVKkDRJrtkb1dV1MxyoCEke31DbXM_rb8fy1qDh1o0tqcq9u_fKQG1RRqPKTB_YK%26wd%3D%26eqid%3D8a6c88e90000a679000000035aa6444d)
 
 
-
-<style>
-    .nexmoe-copyright{-webkit-filter:grayscale(100%);-moz-filter:grayscale(100%);-ms-filter:grayscale(100%);-o-filter:grayscale(100%)}
-#grayscale{
-       background-image: url(http://cdn.zhd99.cn/saying.gif);
-    /* background-image: url(https://imgsa.baidu.com/%B2%DD%C3%B1%C0%EF%B5%C4%E9%D9%D7%D3/pic/item/d97ca63….jpg?v=tbs?v=tbs); */
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    -moz-background-size: 100% 100%;
-    height: 200px;
-}
-
-</style>
-<script src="https://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
-<script>
-$(window).load(function(){
-	$('.nexmoe-comment').css('background-color','#fff');
-});
-</script>
-
