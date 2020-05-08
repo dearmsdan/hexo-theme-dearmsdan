@@ -1,17 +1,27 @@
 # ---------------------------------------------------------------
 # ---------------------------------------------------------------
 #  配置文件 大纲
+#  基本配置  *********
 #  head.ejs   头部     | header.ejs 导航栏
 #  sidebar.ejs侧边栏   | unit.ejs 新增无影响其他功能插件
 #  footer.ejs jio部   |  *.ejs 其他功能 推出中...
 #  post.ejs   文章页   |  第三方插件配置，如需开启 ：true
-#
+
 #  第三方插件
-#  
+#  \  pjax、搜索、调试、评论
 #     
 # ---------------------------------------------------------------
 # ---------------------------------------------------------------
 
+
+
+# ---------------------------------------------------------------
+#  基本配置  *********
+# ---------------------------------------------------------------
+
+sitename: hi mogul # 网站名字
+sitekeywords: hi mogul,hexo-theme-dearmsdan一款Hexo主题宝钻蓝色，给你一种空灵的感觉,hexo简约主题,HEXO,dearmsdan.com # 网站关键词
+sitedescription: dearmsdan基于Bootstrap 框架HEXO 强力驱动的一个宝钻蓝 色调给你一种空灵的感觉 # 网站描述
 
 
 # ---------------------------------------------------------------
@@ -65,8 +75,6 @@ toc:
 # 图片放大
 zoom:
   js: /resources/zoom/zoom.js
-# valine 评论插件
-valine: /js/valine.js
 #  
 copycode: 
   lib: /js/copycode/clipboard.min.js
@@ -95,7 +103,7 @@ menu:
     - /
   关于:
     - about.html
-  评论区:
+  留言板:
     - /valine.html
   友情链接:
     - /link.html
@@ -205,7 +213,7 @@ jscex:
 # footer 版权和一些信息
 footer:
   # text 和 beian 信息都可以删除
-  text: "感谢<span></span><a style='color: #00bbff;font-weight: bolder;' href='https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral'><img style='width: 93px; position: relative;top: -2px;' src='https://cdn.dearmsdan.com/upyun_logo5.png' /></a> 提供强力云存储服务 | <a style='color:#f66464;font-weight: bolder;' href='https://www.dnspod.cn/'>dnspod </a>提供 DNS 解析服务|  <a style='color:#ea9000;font-weight: bolder;' href='https://valine.js.org/'> Valine</a>提供快速、简洁且高效的评论系统 <br/>"
+  text: "感谢<span></span><a style='color: #00bbff;font-weight: bolder;' href='https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral'><img class='fooimg' style='width: 93px; position: relative;top: -2px;' src='https://cdn.dearmsdan.com/upyun_logo5.png' /></a> 提供强力云存储服务 | <a style='color:#f66464;font-weight: bolder;' href='https://www.dnspod.cn/'>dnspod </a>提供 DNS 解析服务|  <a style='color:#ea9000;font-weight: bolder;' href='https://valine.js.org/'> Valine</a>提供快速、简洁且高效的评论系统 <br/>"
   
   beian: "<a style='color:#939393;' href='http://hn.beian.miit.gov.cn/' target='_blank'> <img width='16px' src='https://img.alicdn.com/tfs/TB1..50QpXXXXX7XpXXXXXXXXXX-40-40.png' />湘ICP备20001824号 </a>， <a target='_blank' href='http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=43010302001049' style='display:inline-block;text-decoration:none;height:20px;line-height:20px;'><p style='height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;'>湘公网安备 43010302001049号</p></a>"
 
@@ -228,8 +236,8 @@ footer:
 copyright:
   author: 本文作者
   permalink: 本文链接
-  author_: dearmsdan
-  permalink_: https://www.dearmsdan.com/ # 可不填, 自动设置为您的 网站(site) 设置
+  author_: dearmsdan  # 默认作者
+  permalink_: https://www.dearmsdan.com/ # 可不填, 自动设置为您的 config(site) 设置
 
 
 
@@ -257,21 +265,34 @@ background: https://img.xjh.me/random_img.php?type=bg&ctype=nature&return=302
 # path: search.xml
 
 search:
-  enable: false #true 开启， 默认不启用，没安装插件启用会报错
+  enable: false #true 为开启， 默认不启用，没安装插件启用 会报错
   searchjs: /js/s.js
+
+
+
+# 调试功能 
+eruda:
+  enable: false #true 为开启， 默认不启用，无需安装插件，开启即可
+  init: eruda.init(); # 初始化
+  js: //cdn.jsdelivr.net/npm/eruda # js
   
+  
+
+
+# pjax 看个人需求 
 pjax:
-  enable: true #true 开启,默认启用,本主题基于pjax 制作
+  enable: true #true 开启, 默认启用,本主题基于pjax 制作
+  #关闭 与 pjax 功能 无缝连接
   
-#关闭 与 pjax 功能 无缝连接
-  
- 
-  
-  
-  
-  
-  
-  
-  # pjax 看个人需求，pjax 会极大影响SEO 
-  
-  
+
+
+# 以下文章评论插件，需要关闭pjax功能
+
+# valine 评论插件  如果有好的评论插件可以，用issues 方式推荐给我哦~
+# 使用方法 https://valine.js.org/quickstart.html
+valine: 
+  enable: true # 是否开启 文章评论
+  js: /js/valine.js
+  appId: jNrzXxvqR3NhebnE7swyQBFp-gzGzoHsz
+  appKey: iqXsTlkThMqeaKdhYcgajztG
+  avatar: robohash

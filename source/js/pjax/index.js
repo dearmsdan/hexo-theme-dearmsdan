@@ -7,8 +7,14 @@ $(document).pjax('a[target!=_blank]', '.main', {fragment: '.main',timeout: 8000}
 		tocs();
 		pagegun();
 		dearzoom();
-		
 });
+
+/*
+本pjax代码修改前请先备份 
+
+*/
+
+
 
 
 $(function(){
@@ -45,16 +51,22 @@ $(document).on('ready pjax:end', function(event) {
 	copycodes();
 	pagegun();
 	dearzoom();
-		$(".main-content").delay(300).addClass("wrapShow");
 	
 	
-	
+		/* 淡入，如果大于移动设备宽度大于714这影响 移动端显示文章空白效果，修改会出问题 */
+	  var windowWidth = $(window).width();
+    if(windowWidth < 714){
+		// 淡入
+    }
+    if(windowWidth >= 714){
+        // do something
+		$(".dearmsdan").delay(300).addClass("wrapShow");
+    }
 })
 
 
 
-
-		/* 外链保护http://link.zhd99.cn */
+		/* 外链保护http://link.zhd99.cn \http://link.dearmsdan.com */
 function links(){
 	
 	$("article a").not(".toc a,article h1 a,article h2 a,article h3 a,article h4 a,article h5 a,article h6 a,article .gallerys,.ui-artZoom-buttons a").attr("href",

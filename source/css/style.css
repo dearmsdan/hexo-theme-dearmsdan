@@ -192,12 +192,24 @@ footer {
     text-align: right;
     font-size: 13px
 }
+.dearmsdan{
+	overflow-x: hidden;
+	overflow-y: auto;
+    padding: 30px 20px 20px;
+}
 .dearmsdan-bg{
-	background-color: #252c35;
+	background-color: rgba(215, 237, 255, 0.5);
 	background-image: url('https://img.xjh.me/random_img.php?type=bg&ctype=nature&return=302');	
 	width: 100%;
     height: 100%;
     opacity: 0.3;
+    position: fixed;
+    z-index: -1;
+}
+.dearmsdan-bg .div_bg{    
+	background-color: rgba(215, 237, 255, 0.5);
+    width: inherit;
+    height: inherit;
     position: fixed;
     z-index: -1;
 }
@@ -258,13 +270,7 @@ footer {
     position: relative;
     left: 260px
 }
-.main-content {
-    padding: 0;
-}
 
-.navbar+.main-content {
-    padding: 105px 0 28px 5px
-}
 
 
 html.fullscreen-bg,html.fullscreen-bg body,html.fullscreen-bg #dearmsdan {
@@ -297,16 +303,16 @@ html.fullscreen-bg,html.fullscreen-bg body,html.fullscreen-bg #dearmsdan {
     -ms-transition: all .3s ease-in-out;
     -o-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
-    -moz-box-shadow: 1px 2px 3px rgba(0,0,0,0.1);
-    -webkit-box-shadow: 1px 2px 3px rgba(0,0,0,0.1);
-    box-shadow: 1px 2px 3px rgba(0,0,0,0.1);
+	-moz-box-shadow: 0 0 15px #777;
+    -webkit-box-shadow: 0 0 15px #777;
+    box-shadow: 0 0 15px #777;
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
     border-radius: 0;
     padding: 0;
     margin: 0;
     border: 0;
-	background-color: #c6d6f4de;
+	background-color: #c6d6f4;
 }
 
 .navbar-default .navbar-nav>.open>a,.navbar-default .navbar-nav>.open>a:hover,.navbar-default .navbar-nav>.open>a:focus {
@@ -583,10 +589,7 @@ background:#FF0BEE;
 	padding: 0;
 	margin: 0;
 	border: 0;
-	background-color: #c6d6f4de;    
-    -moz-box-shadow: 0 0 15px #777;;
-	-webkit-box-shadow: 0 0 15px #777;
-    box-shadow: 0 0 15px #777;
+	background-color: #c6d6f4de;
 }
 .btn-toggle-mx {
 	-webkit-transform: rotateY(0deg);
@@ -658,15 +661,11 @@ background:#FF0BEE;
 ****  
 ***********
 */
-.main-content{        
-	box-shadow: rgba(161, 177, 204, 0.4) 0px 0px 1rem;    
-	background-color: #d7edff75;
-    min-height: 100vh;
+.main-content{
     overflow-x: hidden;
-    overflow-y: auto;
     padding: 30px 20px 20px;
 }
-.dearmsdan-post{    
+.dearmsdan-post{
 	transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
 }
 .dearmsdan-post:hover {
@@ -728,10 +727,207 @@ background:#FF0BEE;
     left: 0;
     width: 0%;
 }
+
 /*
 ************
 ****  
-****   样式 设置
+****   导航栏样式 设置
+****  
+***********
+*/
+.mobile {
+	display: none;
+}
+.mobile-inner {
+	margin-right: auto;
+	margin-left: auto;
+	background-color: #fafafa;
+	position: relative;
+}
+.mobile-inner img {
+	width: 100%;
+	margin-bottom: 30px;
+}
+.mobile-inner p {
+	color: #676767;
+	line-height: 25px;
+	font-size: 16px;
+	padding-bottom: 30px;
+	padding-right: 30px;
+	padding-left: 30px;
+	margin: 0
+}
+.mobile-inner-header {
+	width: 100%;
+	height: 50px;
+	position: absolute;
+	top: 0;
+	left: 0
+}
+.mobile-inner-header-icon {
+	color: #fff;
+	height: 50px;
+	font-size: 25px;
+	text-align: center;
+	float: right;
+	width: 50px;
+	position: relative;
+    margin-right: 20px;
+    margin-top: 12px;
+	-webkit-transition: background .5s;
+	-moz-transition: background .5s;
+	-o-transition: background .5s;
+	transition: background .5s
+}
+.mobile-inner-header-icon:hover {
+	background-color: rgba(255,255,255,.2);
+	cursor: pointer
+}
+.mobile-inner-header-icon span {
+	position: absolute;
+	left: calc((100% - 25px)/2);
+	top: calc((100% - 1px)/2);
+	width: 25px;
+	height: 2px;
+    background-color: #428282;
+}
+.mobile-inner-header-icon span:nth-child(1) {
+	transform: translateY(4px) rotate(0deg)
+}
+.mobile-inner-header-icon span:nth-child(2) {
+	transform: translateY(-4px) rotate(0deg)
+}
+.mobile-inner-header-icon-click span:nth-child(1) {
+	animation-duration: .5s;
+	animation-fill-mode: both;
+	animation-name: clickfirst
+}
+.mobile-inner-header-icon-click span:nth-child(2) {
+	animation-duration: .5s;
+	animation-fill-mode: both;
+	animation-name: clicksecond
+}
+@keyframes clickfirst {
+0% {
+transform:translateY(4px) rotate(0deg)
+}
+100% {
+transform:translateY(0) rotate(45deg)
+}
+}
+@keyframes clicksecond {
+0% {
+transform:translateY(-4px) rotate(0deg)
+}
+100% {
+transform:translateY(0) rotate(-45deg)
+}
+}
+.mobile-inner-header-icon-out span:nth-child(1) {
+	animation-duration: .5s;
+	animation-fill-mode: both;
+	animation-name: outfirst
+}
+.mobile-inner-header-icon-out span:nth-child(2) {
+	animation-duration: .5s;
+	animation-fill-mode: both;
+	animation-name: outsecond
+}
+@keyframes outfirst {
+0% {
+transform:translateY(0) rotate(-45deg)
+}
+100% {
+transform:translateY(-4px) rotate(0deg)
+}
+}
+@keyframes outsecond {
+0% {
+transform:translateY(0) rotate(45deg)
+}
+100% {
+transform:translateY(4px) rotate(0deg)
+}
+}
+.mobile-inner-nav {    
+	background-color: rgba(108, 164, 169, 0.8);
+    width: 100%;
+    position: absolute;
+    top: 80px;
+	left: 0;
+	padding-top: 30px;
+	padding-bottom: 80px;
+	display: none;
+    text-align: center;
+}
+.mobile-inner-nav a {
+	display: inline-block;
+	line-height: 50px;
+	text-decoration: none;
+	width: 80%;
+	color: #fff;
+	border-bottom: solid 1px rgba(255,255,255,.3);
+	-webkit-transition: all .5s;
+	-moz-transition: all .5s;
+	-o-transition: all .5s;
+	transition: all .5s;
+	font-weight: 300;
+}
+.mobile-inner-nav a:hover {
+	color: rgba(255,255,255,.4);
+	border-bottom: solid 1px rgba(255,255,255,.2)
+}
+.mobile-inner-nav {
+	overflow: hidden;
+}
+.mobile-inner-nav a {
+	-webkit-animation-duration: 0.5s;
+	animation-duration: 0.5s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	-webkit-animation-name: resize;
+	animation-name: resize;
+}
+@-webkit-keyframes resize {
+from, 60%, 75%, 90%, to {
+-webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+}
+0% {
+opacity: 0;
+-webkit-transform: scale(5, 5);
+transform: scale(5, 5);
+}
+100% {
+opacity: 1;
+-webkit-transform: scale(1, 1);
+transform: scale(1, 1);
+}
+}
+@keyframes resize {
+from, 60%, 75%, 90%, to {
+-webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+}
+0% {
+opacity: 0;
+-webkit-transform: scale(5, 5);
+transform: scale(5, 5);
+}
+100% {
+opacity: 1;
+-webkit-transform: scale(1, 1);
+transform: scale(1, 1);
+}
+}
+
+
+
+
+/*
+************
+****  
+****   侧边栏样式 设置
 ****  
 ***********
 */
@@ -905,9 +1101,6 @@ figure td:nth-child(2) pre{
 	
 }
 @media screen and (max-width: 767px) {
-    .navbar+.main-content {
-        padding-top:155px
-    }
 }
 @media screen and (max-width: 1024px) {
     .navbar-default .brand {
@@ -952,9 +1145,20 @@ figure td:nth-child(2) pre{
     font-size: 0.5rem;
 	}
 	.navbar-btn .DearMsDanIconFont {
-    font-size: 1.5rem;
+    font-size: 3.5rem;
 	}
-
+	.fooimg{
+		width: 40px!important;
+	}
+	.nav-list{
+		display: none;
+	}
+	.mobile{
+		display: block;
+	}
+	#jp_container_N{
+		display:none;
+	}
 }
 
 @media screen and (max-width: 640px) {
@@ -966,6 +1170,9 @@ figure td:nth-child(2) pre{
 	}
 	footer{
 		    font-size: initial;
+	}
+	.slimScrollDiv{
+		top: -40px;
 	}
 	.dearmsdan-count {
     	padding: 17px 30px;

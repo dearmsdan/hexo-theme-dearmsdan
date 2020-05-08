@@ -5,10 +5,9 @@ $(function(){
 	
 	links();
 	tocs();
-	// 当前刷新目录产生
-    $(".second").pageslide();
 	dearzoom();
-	
+	dearmsdanpage();
+	copycodes();
 	
 		/* 设置 post 样式*/
 		$(".dearmsdan-post").css("animation","1s ease 0s 1 normal forwards running action_translateY");
@@ -16,7 +15,15 @@ $(function(){
 	
 
 
+function dearmsdanpage(){
+	if($('.second').length>0) {
+	// 当前刷新目录产生
+    $(".second").pageslide();
+	} else {
+		console.log("欢迎来到首页，本站是一款Hexo主题宝钻蓝色，hexo-theme-dearmsdan");
 
+	}
+}
 
 
 

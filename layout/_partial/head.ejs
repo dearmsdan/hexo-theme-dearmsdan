@@ -19,12 +19,20 @@
   %>
 
 <head>
-	<title><% if (title){ %><%= title %> - <% } %> <%= config.title %></title>
+	<title><% if (title){ %><%= title %> - <% } %> <%= theme.sitename %></title>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8">
-	<meta name="description" content="<%= config.description %>">
+	<meta name="keywords" content="<%= theme.sitekeywords %>" />
+	<meta name="description" content="<%= theme.sitedescription %>">
 	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 	<link rel="shortcut icon" href="<%= theme.favicon.href %>" type="<%= theme.favicon.type %>" />
+	
+	<%# 调试工具 %>
+		 <% if (theme.eruda.enable == true){ %>
+			<script type="text/javascript" src="<%= theme.eruda.js %>"></script>
+			<script><%= theme.eruda.init %></script>
+		<%}  else{ %>
+		<% } %>
 	
 	<%# 阿里图标库 %>
 	<link rel="stylesheet" type="text/css" href="<%= theme.aliiconfont %>">
@@ -44,8 +52,6 @@
 	<%# 代码块复制功能 %>
   <script type="text/javascript" src="<%= theme.copycode.lib %>"></script>  
 	
-	
-	
 	<%# 引入配置js 文件 %>
 	<script src="<%= theme.jquery.js.one %>"></script>
 	<%- js('js/app.js') %>
@@ -59,7 +65,7 @@
 	<%#  js-cookie %>
 	<script src="<%= theme.jQtools.cookie %>"></script>
 	<%# 引入评论valine.js %>
-	<script src="<%= theme.valine %>"></script>
+	<script src="<%= theme.valine.js %>"></script>
 	
 	<%# 网站加载条 %>
 	<script src="<%= theme.loadingBar.pace %>"></script>
@@ -69,10 +75,10 @@
 	<%# PJAX %>
 		 <% if (theme.pjax.enable == true){ %>
 			<script src="<%= theme.jquerypjax.pjax %>"></script>
+			<script src="<%= theme.jquerypjax.index %>"></script>
 		<%}  else{ %>
 			<script src="<%= theme.jquerypjax.app %>"></script>
 		<% } %>
-	<script src="<%= theme.jquerypjax.index %>"></script>
 	
 	
 </head>

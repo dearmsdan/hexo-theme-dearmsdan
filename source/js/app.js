@@ -1,8 +1,8 @@
 "use strict"
 $(window).on("load", function () {
 	
-	//加载中...................
-	$("#dearmsdan").delay(400).addClass("wrapShow");
+	//加载中延迟...................
+	$("#dearmsdan").delay(10000).addClass("wrapShow");
 
 	
 	
@@ -21,7 +21,7 @@ $(window).on("load", function () {
 
 	//全局分布
 	$(".main").css({ //右侧布的高度，相当于左侧高度
-		height: $("#sidebar-nav").outerHeight()
+		//height: $("#sidebar-nav").outerHeight()
 	});
  // 取消
 	/*$(".iframe_link").on("click", function () { //左侧a链接直接导入右侧iframe

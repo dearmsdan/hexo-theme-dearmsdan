@@ -23,14 +23,15 @@
 		  }) %>
 		<% } %>
 	  </div>
-		
+		<%# 目录 %>
 		<%- partial('_partial/toc') %>
 		<div>
 			  <article>
 				<%- page.content %>
 			  </article>
 		</div>
-		
+		<%# 文章评论 %>
+		<%- partial('_partial/_footer/comment') %>
 		
 	  <% if (!page.reprint){ %>
 	<%#文章页脚版权声明- %>

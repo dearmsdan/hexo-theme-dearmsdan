@@ -1,0 +1,28 @@
+﻿<div class="valine"></div>
+<script>
+    // 使用方法 https://valine.js.org/quickstart.html
+    new Valine({
+        el: '.valine',
+        appId: '<%= theme.valine.appId %>',
+        appKey: '<%= theme.valine.appKey %>',
+		avatar: '<%= theme.valine.avatar %>',
+    })
+        //placeholder: '输入前请确认 <昵称> <邮箱> <你的网站> 是否已填写，支持markdown 格式编写 ',
+</script>
+
+<script>
+//$(function() 
+$(window).load(function(){
+	// 去valine版权
+	$('.info').css("display","none");
+	// 去valine位移
+	$('.vmeta').css("padding-right","66px");
+	$('.vcontrol').css("padding-right","66px");
+	$('.vctrl').css("padding-right","66px");
+	$('#veditor').removeAttr("placeholder");
+	$("#veditor").attr("placeholder","输入前请确认 <昵称> <邮箱> <你的网站> 是否已填写，支持markdown 格式编写 ");
+	$('.v .vwrap .vheader .vinput:nth-child(3)').removeAttr("placeholder");
+	$(".v .vwrap .vheader .vinput:nth-child(3)").attr("placeholder","你的HOME(例：https://www.baidu.com)");
+	$(".info").after(" <p>&copy; </p>");
+});
+</script>

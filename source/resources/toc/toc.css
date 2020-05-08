@@ -15,6 +15,7 @@
     padding: 15px;
     color: #0d100d;
 	overflow-x: auto;
+    max-height: 382px;
 }
 #pageslide ul,#pageslide ol,#pageslide li{
 	list-style-type: none;    
