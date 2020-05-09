@@ -1053,6 +1053,10 @@ transform: scale(1, 1);
 	body{
 		font-size: 20px;
 	}
+    .dearmsdan {
+		padding: 0px;
+    }
+
     #dearmsdan .sidebar {
         left:-260px
     }

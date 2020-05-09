@@ -1,47 +1,19 @@
+<script type="text/javascript">
+	
+	
 var myPlaylist = new jPlayerPlaylist({
     jPlayer: "#jquery_jplayer_N",
     cssSelectorAncestor: "#jp_container_N"
-},[{
-    title: "东京不太热",
-    artist: "封茗囧菌",
-    mp3: "http://music.163.com/song/media/outer/url?id=34723470.mp3",
-    poster: "http://p1.music.126.net/srjmIxgdjRlCXSjZtl2aaw==/109951163825045428.jpg?param=90y90"
-},{
-    title: "安娜的橱窗",
-    artist: "封茗囧菌",
-    mp3: "http://music.163.com/song/media/outer/url?id=537470060.mp3",
-    poster: "http://p2.music.126.net/BJXxnpN2uKXUBxC7YvF7Cw==/109951163142278400.jpg?param=130y130"
-},{
-    title: "空山新雨后",
-    artist: "冷十三",
-    mp3: "http://music.163.com/song/media/outer/url?id=1397565121.mp3",
-    poster: "http://p1.music.126.net/jio03zzjVqkuofI0054Syg==/109951164433163481.jpg?param=177y177"
-},{
-    title: "拜拜",
-    artist: "小竖琴",
-    mp3: "http://music.163.com/song/media/outer/url?id=1383594415.mp3",
-    poster: "http://p1.music.126.net/aRpHnChT3GFQI7AsqCw6iA==/109951164284919406.jpg?param=130y130"
-},{
-    title: "冬眠",
-    artist: "司南",
-    mp3: "http://music.163.com/song/media/outer/url?id=1398663411.mp3",
-    poster: "http://p1.music.126.net/4KDBaQXnQywQovmqvjx-8Q==/109951164444131697.jpg?param=130y130"
-},{
-    title: "我的名字",
-    artist: "焦迈奇",
-    mp3: "http://music.163.com/song/media/outer/url?id=554241732.mp3",
-    poster: "http://p1.music.126.net/a_rb8pgC5R_hO-lfm7acSw==/109951164019567772.jpg?param=130y130"
-},{
-    title: "还是分开",
-    artist: "张叶蕾",
-    mp3: "http://music.163.com/song/media/outer/url?id=465921195.mp3",
-    poster: "http://p1.music.126.net/tH5FdakJX47uy8mlM0GMWQ==/19218363741925314.jpg?param=130y130"
-},{
-    title: "云烟成雨",
-    artist: "房东的猫",
-    mp3: "http://music.163.com/song/media/outer/url?id=513360721.mp3",
-    poster: "http://p1.music.126.net/DSTg1dR7yKsyGq4IK3NL8A==/109951163046050093.jpg?param=130y130"
-},],{
+},[
+   <% for (var player in theme.playerlsit) { %>
+   	{	
+    		title: "<%= player %>",
+			artist: "<%- theme.playerlsit[player].artist -%>",
+    		mp3: "<%- url_for(theme.playerlsit[player].mp3) -%>",
+    		poster: "<%- url_for(theme.playerlsit[player].poster) -%>"
+	},
+   <% } %>
+],{
     playlistOptions: {
         enableRemoveControls: true
     },
@@ -65,6 +37,14 @@ var spirit = [{
     mp3: "http://music.163.com/song/media/outer/url?id=591753.mp3 ",
     poster: "http://p1.music.126.net/lW4YKD6cMgm32nI66CzWVg==/5702067301704441.jpg?param=130y130"
 }];
+	
+	
+	
+
+	
+	
+	
+	
 $("#latest li").find("a.playIcon").click(function() {
     var k = $(this).parent("li").index();
     myPlaylist.add({
@@ -327,3 +307,8 @@ $("#listClose").click(function() {
         iOpen = true;
     }
 });
+
+	
+	
+	
+</script>

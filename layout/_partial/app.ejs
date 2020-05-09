@@ -1,19 +1,4 @@
-$(document).pjax('a[target!=_blank]', '.main', {fragment: '.main',timeout: 8000}); 
-    	/* .main为刷新的id */
-    $(document).on('pjax:send', function() {
-		/* 预加载函数 */
-		
-		links();
-		tocs();
-		pagegun();
-		dearzoom();
-});
-
-/*
-本pjax代码修改前请先备份 
-
-*/
-
+<script type="text/javascript">
 
 
 
@@ -21,52 +6,29 @@ $(function(){
 	
 	links();
 	tocs();
-	pagegun();
 	dearzoom();
-});
-
-$(document).on('pjax:complete', function() {
-	
-		links();
-		tocs();
-	    copycodes();
-		pagegun();
-		dearzoom();
-	 
-		/* 右侧布的高度，相当于左侧高度*/
-		$(".main").css({ 
-			height: $("#sidebar-nav").outerHeight()
-		});
-	
+	dearmsdanpage();
+	copycodes();
+	postcolor();
 		/* 设置 post 样式*/
 		$(".dearmsdan-post").css("animation","1s ease 0s 1 normal forwards running action_translateY");
-	
-
-   		/* pjax加载结束的回调函数 解决js无法定位的问题*/
 });
-
-$(document).on('ready pjax:end', function(event) {
-	links();
-	tocs();
-	copycodes();
-	pagegun();
-	dearzoom();
 	
-	
-		/* 淡入，如果大于移动设备宽度大于714这影响 移动端显示文章空白效果，修改会出问题 */
-	  var windowWidth = $(window).width();
-    if(windowWidth < 714){
-		// 淡入
-    }
-    if(windowWidth >= 714){
-        // do something
-		$(".dearmsdan").delay(300).addClass("wrapShow");
-    }
-})
+
+
+function dearmsdanpage(){
+	if($('.second').length>0) {
+	// 当前刷新目录产生
+    $(".second").pageslide();
+	} else {
+		console.log("欢迎来到首页，本站是一款Hexo主题宝钻蓝色，hexo-theme-dearmsdan");
+
+	}
+}
 
 
 
-		/* 外链保护http://link.zhd99.cn \http://link.dearmsdan.com */
+		/* 外链保护http://link.zhd99.cn */
 function links(){
 	
 	$("article a").not(".toc a,article h1 a,article h2 a,article h3 a,article h4 a,article h5 a,article h6 a,article .gallerys,.ui-artZoom-buttons a").attr("href",
@@ -85,10 +47,6 @@ function links(){
 	
 }
 
-	// 当前刷新目录产生
-function pagegun(){
-	$(".second").pageslide();
-}
 
 	// 目录 被点击
 	
@@ -166,3 +124,29 @@ function copycodes(){
 		}(window, document);
 }
 
+	
+		
+	/* .dearmsdan-post悬浮变色 */ 
+
+function postcolor(){
+	
+$(".dearmsdan-post").mouseover(function(){
+		
+	// 随机 变化的淡入
+var arr = ['<%= theme.dearmsdanPostColor.pc1 %>','<%= theme.dearmsdanPostColor.pc2 %>','<%= theme.dearmsdanPostColor.pc3 %>','<%= theme.dearmsdanPostColor.pc4 %>','<%= theme.dearmsdanPostColor.pc5 %>','<%= theme.dearmsdanPostColor.pc6 %>','<%= theme.dearmsdanPostColor.pc7 %>','<%= theme.dearmsdanPostColor.pc8 %>','<%= theme.dearmsdanPostColor.pc9 %>','<%= theme.dearmsdanPostColor.pc10 %>','<%= theme.dearmsdanPostColor.pc11 %>']; 
+		
+var index = Math.floor((Math.random()*arr.length)); 
+	// 预期不佳
+	$('.dearmsdan-post:hover').css("box-shadow",arr[index]);
+		
+});
+	$(".dearmsdan-post").mouseleave(function(){
+	// 移除
+	$('.dearmsdan-post').removeAttr('style');
+		
+});
+	
+}
+
+
+</script>

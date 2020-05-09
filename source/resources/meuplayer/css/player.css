@@ -21,7 +21,7 @@
     line-height: 1.6;
     color: #fff;
     border-radius: 4px;
-    background: #13051978;
+    background: rgba(0, 0, 0, 0.5);
 }
 
 .jp-controls-holder {
@@ -134,7 +134,7 @@
 }
 
 .jp-play-bar {
-    background-color: #7e60ad;
+    background-color: rgb(205, 205, 205);
     width: 0;
     height: 100%
 }
@@ -325,13 +325,12 @@ div.jp-type-playlist div.jp-playlist li.jp-playlist-current {
 }
 
 div.jp-type-playlist div.jp-playlist a {
-    color: #7e60ad;
-    font-family: å®‹ä½“;
+    color: #5b819d;
     text-decoration: none
 }
 
 div.jp-type-playlist div.jp-playlist a.jp-playlist-current,div.jp-type-playlist div.jp-playlist a:hover,div.jp-type-playlist div.jp-playlist li.jp-playlist-current span.jp-artist,div.jp-type-playlist div.jp-playlist a:hover span {
-    color: #e8e0f1;
+    color: rgb(255, 255, 255);
 }
 
 div.jp-type-playlist div.jp-playlist a.jp-playlist-item-remove {
@@ -416,7 +415,7 @@ span.jp-artist {
 .jp-video .scrollBar .bar {
     width: 4px;
     height: 25px;
-    background: #6646a1;
+    background: #465aa1;
     position: absolute;
     left: 0;
     top: 0;
@@ -432,7 +431,7 @@ span.jp-artist {
     right: -20px;
     top: 5px;
     border: none;
-    background: #1110;
+    background: rgba(0, 0, 0, 0);
     cursor: pointer;
     padding: 0;
     margin: 0

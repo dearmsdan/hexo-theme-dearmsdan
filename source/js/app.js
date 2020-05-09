@@ -1,9 +1,9 @@
 "use strict"
 $(window).on("load", function () {
-	
-	//加载中延迟...................
-	$("#dearmsdan").delay(10000).addClass("wrapShow");
 
+	
+	
+	
 	
 	
 	
@@ -87,10 +87,8 @@ $(window).on("load", function () {
 
 	
 	
-	
-	
-	
-	
+	//加载中延迟...................
+	$("#dearmsdan").delay(10000).addClass("wrapShow");
 	
 
 

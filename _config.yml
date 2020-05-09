@@ -8,11 +8,13 @@
 #  post.ejs   文章页   |  第三方插件配置，如需开启 ：true
 
 #  第三方插件
-#  \  pjax、搜索、调试、评论
+#  \  pjax、搜索、调试、评论、自定义文章悬浮颜色、自定义音乐播放
 #     
 # ---------------------------------------------------------------
 # ---------------------------------------------------------------
 
+
+# 详细介绍在文档中介绍http://docs.dearmsdan.com/
 
 
 # ---------------------------------------------------------------
@@ -64,8 +66,6 @@ loadingBar:
   #pink: https://cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css
 # pjax配置
 jquerypjax:
-  app: /js/pjax/app.js
-  index: /js/pjax/index.js
   pjax: /js/pjax/jquery.pjax.js
 link:
   css: /resources/dearmsdan_link/link.css
@@ -141,19 +141,21 @@ socialbtn:
     - https://weibo.com/
     - icon-weibo
 	
-# 可自定义目录，具体添加在sidebar.ejs 59行
+# 可自定义目录，具体添加多级在sidebar.ejs 59行左右
 Catalog:
   自定义目录:
     - /
 Catalog_son:
   地址0...:
-    - /链接
+    - /about.html
   地址1...:
-    - /链接
+    - /about.html
   地址2...:
-    - /链接
+    - /about.html
   地址3...:
-    - /链接
+    - /about.html
+	
+	
 	
 # 统计
 count:
@@ -190,7 +192,6 @@ player:
       index: /resources/meuplayer/player/index.js
       player: /resources/meuplayer/player/player.js
       playlist: /resources/meuplayer/player/playlist.js
-      player_database: /resources/meuplayer/player/player_database.js
 # 返回顶部
 top:
   js: /js/top/jquery.toTop.min.js
@@ -252,12 +253,33 @@ background: https://img.xjh.me/random_img.php?type=bg&ctype=nature&return=302
 
 
 # ---------------------------------------------------------------
-#  第三方插件 均为关闭状态
+#  第三方插件 | 均为关闭状态
 # ---------------------------------------------------------------
 
 
+
+
+# 悬浮文章上变色功能，可能需要进入post文章页显示效果
+# 喜欢什么颜色都可以添加，色调要相似网页才能美观，以下提供示例颜色~
+dearmsdanPostColor:
+  pc0: # 0 4px 24px rgb(255, 255, 255) # 示例注释,不喜欢都可以注释
+  pc1: 0 4px 24px rgb(255, 255, 255) # 示例颜色 白
+  pc2: 0 4px 24px rgb(163, 163, 163) # 示例颜色 灰
+  pc3: 0 4px 24px rgb(206, 154, 154) # 示例颜色 虹
+  pc4: 0 4px 24px rgb(206, 154, 178) # 示例颜色 粉
+  pc5: 0 4px 24px rgb(193, 154, 206) # 示例颜色 紫
+  pc6: 0 4px 24px rgb(154, 158, 206) # 示例颜色 靛
+  pc7: 0 4px 24px rgb(154, 187, 206) # 示例颜色 蓝
+  pc8: 0 4px 24px rgb(154, 206, 170) # 示例颜色 绿
+  pc9: 0 4px 24px rgb(206, 200, 154) # 示例颜色 黄
+  pc10: 0 4px 24px rgb(206, 180, 154) # 示例颜色 橙
+  pc11: 0 4px 24px rgb(206, 154, 154) # 示例颜色 红
+
+
+
+
 # 搜索插件
-# 请安装 ↓ 插件才能使用全文搜索,
+# 请安装 ↓ 插件才能使用全文搜索, 
 # npm install hexo-generator-search  --save
 # npm install hexo-generator-searchdb --save
 # 然后在全局 config 设置 ↓ 如果不懂（https://github.com/theme-next/hexo-generator-search）
@@ -267,7 +289,8 @@ background: https://img.xjh.me/random_img.php?type=bg&ctype=nature&return=302
 search:
   enable: false #true 为开启， 默认不启用，没安装插件启用 会报错
   searchjs: /js/s.js
-
+# ***注意，搜索也会有出错的时候，比如文章中的非法字符会导致搜索功能失效，与本主题无关
+# ***需要自己在localhost:4000/search.xml 索引寻找非法字符 在md编辑器删除就正常了
 
 
 # 调试功能 
@@ -296,3 +319,51 @@ valine:
   appId: jNrzXxvqR3NhebnE7swyQBFp-gzGzoHsz
   appKey: iqXsTlkThMqeaKdhYcgajztG
   avatar: robohash
+  
+
+# 自定义音乐
+#  示例音乐均来自猪厂，artist：作者、poster：歌曲小图片、MP3：音乐格式支持(webmv, ogv, m4v, oga, mp3等等) 
+playerlsit:
+  Right Here Waiting:
+    artist: Richard Marx
+    mp3: http://music.163.com/song/media/outer/url?id=3313653.mp3
+    poster: http://p2.music.126.net/_62h3kA2WCrYEXWL0yaJ7Q==/1743825441658717.jpg?param=130y130
+  勇气:
+    artist: 棉子
+    mp3: http://music.163.com/song/media/outer/url?id=1411358329.mp3
+    poster: http://p2.music.126.net/QcWNRX_0uhckImvF2nN1xA==/109951164573973377.jpg?param=130y130
+  东京不太热:
+    artist: 封茗囧菌
+    mp3: http://music.163.com/song/media/outer/url?id=34723470.mp3
+    poster: http://p1.music.126.net/srjmIxgdjRlCXSjZtl2aaw==/109951163825045428.jpg?param=90y90
+  空山新雨后:
+    artist: 冷十三
+    mp3: http://music.163.com/song/media/outer/url?id=1397565121.mp3
+    poster: http://p1.music.126.net/jio03zzjVqkuofI0054Syg==/109951164433163481.jpg?param=177y177
+  拜拜:
+    artist: 小竖琴
+    mp3: http://music.163.com/song/media/outer/url?id=1383594415.mp3
+    poster: http://p1.music.126.net/aRpHnChT3GFQI7AsqCw6iA==/109951164284919406.jpg?param=130y130
+  冬眠:
+    artist: 司南
+    mp3: http://music.163.com/song/media/outer/url?id=1398663411.mp3
+    poster: http://p1.music.126.net/4KDBaQXnQywQovmqvjx-8Q==/109951164444131697.jpg?param=130y130
+  我的名字:
+    artist: 焦迈奇
+    mp3: http://music.163.com/song/media/outer/url?id=554241732.mp3
+    poster: http://p1.music.126.net/a_rb8pgC5R_hO-lfm7acSw==/109951164019567772.jpg?param=130y130
+  还是分开:
+    artist: 张叶蕾
+    mp3: http://music.163.com/song/media/outer/url?id=465921195.mp3
+    poster: http://p1.music.126.net/tH5FdakJX47uy8mlM0GMWQ==/19218363741925314.jpg?param=130y130
+  云烟成雨:
+    artist: 房东的猫
+    mp3: http://music.163.com/song/media/outer/url?id=513360721.mp3
+    poster: http://p1.music.126.net/DSTg1dR7yKsyGq4IK3NL8A==/109951163046050093.jpg?param=130y130
+	
+	
+	
+	
+AboutMe: 德阿姆斯丹
+	
+	

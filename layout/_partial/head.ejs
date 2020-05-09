@@ -75,9 +75,9 @@
 	<%# PJAX %>
 		 <% if (theme.pjax.enable == true){ %>
 			<script src="<%= theme.jquerypjax.pjax %>"></script>
-			<script src="<%= theme.jquerypjax.index %>"></script>
+			<%- partial('_partial/pjax') %>
 		<%}  else{ %>
-			<script src="<%= theme.jquerypjax.app %>"></script>
+			<%- partial('_partial/app') %>
 		<% } %>
 	
 	
