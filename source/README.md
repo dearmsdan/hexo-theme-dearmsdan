@@ -1,4 +1,44 @@
 > <center><a href="https://www.dearmsdan.com"></a>hi mogul  blog   </center>
+##### 22:23 2020/5/9
+
+体积: 586 KB
+
+修改内容：   
+
+​	修改主题config 描述信息  
+​	把pjax 、音乐播放器模板的脚本修改成ejs模板动态添加数据
+
+删除内容：
+
+​	/js/pjax/app.js  
+​	/js/pjax/index.js  
+ 	/resources/meuplayer/player/player_database.js
+
+新增内容：  
+
+​	新增悬浮文章上变色功能  
+​	新增自定义音乐
+
+
+##### 22:36 2020/5/8
+
+体积：585 KB
+
+修改内容：   
+	修改主题config 描述信息   
+	评论区更名为留言板   
+	修改底部footer text 又拍云 更新为图片    
+	pjax 功能 关闭与启用 ，与其他模板功能一致
+
+新增内容：   
+	新增基本信息配置  
+	新增调试功能  
+	新增文章评论 模板  
+
+可能更新内容：
+
+​	自定义主题元素、自定义文章评论模板、等等.......
+
 ### 10:54 2020/5/6   
 
 体积: 584 KB
