@@ -40,8 +40,12 @@ theme: dearmsdan
 </code></pre>
 </details>
 
+#### 更新
 
-
+```
+cd themes/dearmsdan
+git pull
+```
 
 
 
