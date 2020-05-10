@@ -1,7 +1,7 @@
 ---
 title: 留言板
 date: 18:59 2019/11/25
-layout: links
+layout: Permalinks
 permalink: valine.html
 ---
 

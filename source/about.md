@@ -1,7 +1,7 @@
 ---
 title: about
 date: 18:59 2019/11/25
-layout: links
+layout: Permalinks
 permalink: about.html
 ---
 
