@@ -696,7 +696,7 @@ background:#FF0BEE;
     font-size: 12px;
 }
 .dearmsdan-post-Statistics:hover{ 
-    font-size: 28px;
+   /* font-size: 28px;*/
 }
 
 .dearmsdan-post-Statistics a{    
@@ -1101,7 +1101,10 @@ figure td:nth-child(2) pre{
     position: relative;
     left: 10px;
 	margin-left: 42px;
-}
+	}
+	#axis{
+		display: none;
+	}
 	
 }
 @media screen and (max-width: 767px) {
@@ -1111,6 +1114,9 @@ figure td:nth-child(2) pre{
         padding-left:30px;
         padding-right: 15px
     }
+	#links img{
+		height: 80px;
+	}
 }
 
 @media screen and (max-width: 301px) {
@@ -1131,10 +1137,13 @@ figure td:nth-child(2) pre{
 }
 @media screen and (max-width: 521px) {
 	body {
-    font-size: 1rem;
+    font-size: 1.5rem;
 	}
 	h1,.h1{
-    font-size: 1rem;
+    font-size: inherit;
+	}
+	footer{
+    font-size: 1rem!important;
 	}
 	#dearmsdan #sidebar-nav, #dearmsdan .main {
     padding-top: 0px;
@@ -1161,7 +1170,7 @@ figure td:nth-child(2) pre{
 		display: block;
 	}
 	#jp_container_N{
-		display:none;
+		display: none;
 	}
 }
 

@@ -49,6 +49,12 @@
 					  <%- partial('_side/' + side) %>
 					  <% }) %>
 					
+					<li>
+						<a id="axis" target="_self" href="<%= theme.side.axis.link %>" class="nav-togg">
+							<span><%= theme.side.axis.name %></span>
+						</a>
+					</li>
+					
 					<%# 界面目录自定义 %>
 				<% for (name in theme.Catalog) { %>
 					<li>
