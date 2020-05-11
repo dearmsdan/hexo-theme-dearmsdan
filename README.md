@@ -8,12 +8,12 @@
   <a href="https://hexo.io"><img src="https://img.shields.io/badge/hexo-%3E=4.0.0-blue?style=flat-square&logo=hexo"></a>
   <a href="https://github.com/theme-next/hexo-theme-next/blob/master/LICENSE.md"><img src="https://img.shields.io/badge/license-%20MIT -orange?style=flat-square&logo=gnu"></a>
  
-</p>
-<br/>
 
 
 HEXO 主题 宝钻蓝色，给你一种空灵的感觉
 view： [dearmsdan](https://www.dearmsdan.com)
+</p>
+<br/>
 
 
 ## 安装
