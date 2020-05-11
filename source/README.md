@@ -1,5 +1,11 @@
 > <center><a href="https://www.dearmsdan.com"></a>hi mogul  blog   </center>
 
+11:11 2020/5/11
+
+修改内容：  
+		动态设置外部链接拦截提示，写入配置文件  
+		时间轴不支持移动端 页面提示信息
+
 ##### 22:44 2020/5/10
 
 体积: 617 KB
