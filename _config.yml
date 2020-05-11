@@ -10,8 +10,8 @@
 #  links.ejs\Permalinks.ejs\axis.ejs
 #  Permalinks：友情链接模板\永久链接模板\时间轴
 #
-#  第三方插件
-#  \  pjax、搜索、调试、评论、自定义文章悬浮颜色、自定义音乐播放
+#  第三方插件/功能
+#  \  pjax、外部链接拦截提示、搜索、调试、评论、自定义文章悬浮颜色、自定义音乐播放
 #     
 # ---------------------------------------------------------------
 # ---------------------------------------------------------------
@@ -283,9 +283,21 @@ background: https://img.xjh.me/random_img.php?type=bg&ctype=nature&return=302
 
 
 # ---------------------------------------------------------------
+#  第三方插件 | 均为关闭状态 
 # ---------------------------------------------------------------
 
+#外部链接拦截提示
+# 可填写正则表达式
+# 暂提供2条安全链接
+linker: 
+  site: http.+zhd99.cn 
+  sitee: http.+dearmsdan
+# 如果不懂，那直接就把dearmsdan，换成自己的网站
+# 如：你的网站是www.baidu.com , 示例:http.+baidu （不带域名)
+# 意思是文章链接网址 http到dearmsdan 的格式链接不拦截 
+  link: http://link.dearmsdan.com/links.html # 默认link: /links.html
 # 拦截跳转的链接文件位置在 dearmsdan/source/links.html
+# http://link.dearmsdan.com/links.html
 
 
 

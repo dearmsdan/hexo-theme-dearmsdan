@@ -1,4 +1,18 @@
 <%#- 时间轴（Permalinks）在 md文章 里定义布局方式为layout: axis %>
+
+
+        <a href="<%- url_for(page.path) %>">
+            <div class="dearmsdan-title"> 
+				<%= page.title %>
+            </div>
+        </a>
+		<div class="axis">
+            <%- page.content %>
+			暂不支持移动端或窄屏哦~
+		</div>
+
+	
+	
 <div class="dearmsdan-post" id="axis">
 <script>
 	/*!
@@ -503,12 +517,23 @@ body{color:#535353;font-family: "arial","微软雅黑";background:#f0f1f1;}
 	</div>
 
 </div>
+<style>
+	.axis {
+		display: none;
+	}
+@media screen and (max-width: 1024px) {
+    .axis {
+        display: block;
+    }
+}	
+	
+</style>
 
 <script>
 $(function(){
 	$('#dearmsdan').css('opacity','1');						
 	$('#jp_container_N').css('display','none');						
-	$('body').css('overflow','hidden');						
+	$('body').css('overflow','hidden');		
 });
 </script>	
 	  

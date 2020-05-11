@@ -78,13 +78,13 @@ function links(){
 																													function(){
 		// 不是本站链接检测  article
 		var str = this.href;
-		var pattern = /http.+zhd99.cn/;
+		var pattern = /<%= theme.linker.site %>/;
 		var falg = pattern.test(str).toString().trim();
 		
-		var pattern2 = /http.+dearmsdan/;
+		var pattern2 = /<%= theme.linker.sitee %>/;
 		var falg2 = pattern2.test(str).toString().trim();
 		if('true' != falg && 'true' != falg2){
-			return 'http://link.dearmsdan.com/links.html' + '?target=' + str;
+			return '<%= theme.linker.link %>' + '?target=' + str;
 		   }
 });
 	
