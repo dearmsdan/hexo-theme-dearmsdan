@@ -1,4 +1,29 @@
 > <center><a href="https://www.dearmsdan.com"></a>hi mogul  blog   </center>
+
+##### 22:44 2020/5/10
+
+体积: 617 KB
+
+修改内容：  
+		修改邮箱文件关闭时间延迟3秒  
+		修改友情链接图片高度  
+		修改移动端字体大小为 1.5rem  
+		修改移动端h1,.h1 标签 为继承 body 大小  
+		修改 hexo永久链接（Permalinks）：  
+				永久链接为Permalinks: 留言板、关于  
+				永久链接为links: 友情链接  
+				永久链接为axis: 时间轴
+
+新增内容：    
+		新增页面时间轴
+
+删除内容：
+
+​		删除 统计(post-Statistics)词条 悬浮变大
+
+
+
+
 ##### 22:23 2020/5/9
 
 体积: 586 KB
