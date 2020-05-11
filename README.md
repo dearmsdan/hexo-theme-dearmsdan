@@ -12,7 +12,7 @@
   <a href="https://hexo.io"><img src="https://img.shields.io/badge/hexo-%3E=4.0.0-blue?style=flat-square&logo=hexo"></a>
   <a href="https://github.com/theme-next/hexo-theme-next/blob/master/LICENSE.md"><img src="https://img.shields.io/badge/license-%20MIT -orange?style=flat-square&logo=gnu"></a> <br/>
 <h1 align="center">HEXO 主题 宝钻蓝色 </h1><br/>
-<h1 align="center">给你一种空灵的感觉 </h1><br/>
+<h3 align="center">给你一种空灵的感觉 </h3><br/>
 </p>
 <br/>
 
