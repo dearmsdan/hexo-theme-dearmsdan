@@ -11,12 +11,11 @@
    <a href="https://nodejs.org"><img src="https://img.shields.io/badge/node-%3E= v12.13.1-green?style=flat-square"></a>
   <a href="https://hexo.io"><img src="https://img.shields.io/badge/hexo-%3E=4.0.0-blue?style=flat-square&logo=hexo"></a>
   <a href="https://github.com/theme-next/hexo-theme-next/blob/master/LICENSE.md"><img src="https://img.shields.io/badge/license-%20MIT -orange?style=flat-square&logo=gnu"></a> <br/>
-#HEXO 主题 宝钻蓝色，给你一种空灵的感觉 <br/>
-#view： [dearmsdan](https://www.dearmsdan.com)
+<h1>HEXO 主题 宝钻蓝色，给你一种空灵的感觉 </h1><br/>
 </p>
 <br/>
 
-
+view： [dearmsdan](https://www.dearmsdan.com)
 ## 安装
 
 #### 安装方法一：
