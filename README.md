@@ -17,7 +17,7 @@
 </p>
 <br/>
 
-view： [dearmsdan](https://www.dearmsdan.com)
+展示： [hexo-theme-dearmsdan](https://www.dearmsdan.com)
 ## 安装
 
 #### 安装方法一：
