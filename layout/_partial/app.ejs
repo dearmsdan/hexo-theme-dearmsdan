@@ -31,6 +31,7 @@ function dearmsdanpage(){
 		/* 外链保护http://link.zhd99.cn */
 function links(){
 	
+		 <% if (theme.linker.enable == true){ %>
 	$("article a").not(".toc a,article h1 a,article h2 a,article h3 a,article h4 a,article h5 a,article h6 a,article .gallerys,.ui-artZoom-buttons a").attr("href",
 																													function(){
 		// 不是本站链接检测  article
@@ -44,6 +45,7 @@ function links(){
 			return '<%= theme.linker.link %>' + '?target=' + str;
 		   }
 });
+		<% } %>
 	
 }
 

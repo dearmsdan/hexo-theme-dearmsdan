@@ -290,6 +290,7 @@ background: https://img.xjh.me/random_img.php?type=bg&ctype=nature&return=302
 # 可填写正则表达式
 # 暂提供2条安全链接
 linker: 
+  enable: false # 默认开启， 随意关闭开启
   site: http.+zhd99.cn 
   sitee: http.+dearmsdan
 # 如果不懂，那直接就把dearmsdan，换成自己的网站

@@ -241,7 +241,6 @@ footer {
     position: relative;
     float: right;
 }
-
 #dearmsdan #sidebar-nav,#dearmsdan .main {
     padding-top: 60px;
 }
@@ -673,11 +672,19 @@ background:#FF0BEE;
     z-index: 50;
     padding: 70px 70px;
 }
+#dearmsdanPost{
+	
+}
+
 #dearmsdanPost:hover {
     box-shadow: 0 4px 24px rgb(255, 255, 255);
     z-index: 50;
 	padding: 70px 245px 70px 70px;
 }
+#dearmsdanPost article ul,#dearmsdanPost article ol,#dearmsdanPost article li{
+	list-style-type: inherit;
+}
+
 
 .dearmsdan-post::after {
     opacity: 1;
@@ -1088,8 +1095,6 @@ transform: scale(1, 1);
 	.copy{
 		padding-bottom: 50px;
 	}
-	#dearmsdanPost{
-	}
 	#dearmsdanPost:hover {
 		padding: 10px;
 	}
@@ -1101,9 +1106,6 @@ figure td:nth-child(2) pre{
     position: relative;
     left: 10px;
 	margin-left: 42px;
-	}
-	#axis{
-		display: none;
 	}
 	
 }
