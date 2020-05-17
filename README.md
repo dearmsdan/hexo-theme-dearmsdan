@@ -17,7 +17,8 @@
 </p>
 <br/>
 
-展示： [hexo-theme-dearmsdan](https://www.dearmsdan.com)
+展示： [hexo-theme-dearmsdan](https://www.dearmsdan.com) <br/>
+主题文档：[docs.dearmsdan](http://docs.dearmsdan.com/#/)
 ## 安装
 
 dearmsdan 主题使用`ejs`模板引擎开发
