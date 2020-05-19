@@ -11,7 +11,7 @@
 <h3 align="center">给你一种空灵的感觉 </h3><br/>
 
 <p align="center">
-   <a href="https://nodejs.org"><img src="https://img.shields.io/badge/node-%3E= v12.13.1-green?style=flat-square"></a>
+   <a href="https://nodejs.org"><img src="https://img.shields.io/badge/node-%3E= v10-green?style=flat-square"></a>
   <a href="https://hexo.io"><img src="https://img.shields.io/badge/hexo-%3E=4.0.0-blue?style=flat-square&logo=hexo"></a>
   <a href="https://github.com/ZHD99/hexo-theme-dearmsdan/blob/master/LICENSE.md"><img src="https://img.shields.io/badge/license-%20MIT -orange?style=flat-square&logo=gnu"></a> <br/>
 </p>
