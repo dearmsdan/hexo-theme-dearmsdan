@@ -4,7 +4,7 @@
 侧边栏 子类设置平滑属性，  
 可能会更新相册当然这是异想天开，  
 大概会优化性能，  
-自我感觉不臃肿你们呢  
+[自我感觉不臃肿你们呢](https://github.com/ZHD99/hexo-theme-dearmsdan/issues)   
 }  
 
 
