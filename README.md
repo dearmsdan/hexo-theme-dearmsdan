@@ -51,3 +51,10 @@ theme: dearmsdan
 ```
 
 就可以运行了，`hexo s`
+
+
+## 展示
+
+ [梦窗 AI_blog](https://mymengchuang.gitee.io/)    
+ [ ye\'s universe](https://beamaster.top/)
+
