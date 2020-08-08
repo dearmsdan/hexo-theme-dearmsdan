@@ -1,3 +1,6 @@
+## 注意
+
+本主题无插件，下载即用无需`npm install`
 即将面临更新:{         
 阅读功能设置坐标偏移  
 图片放大功能占用内存大将删除，  
@@ -33,7 +36,7 @@
 
 展示： [www.dearmsdan.com](https://www.dearmsdan.com) 如果不显示请刷新页面 <br/>
 主题文档：[docs.dearmsdan](http://docs.dearmsdan.com/#/) <br/>
-本主题无插件，下载即用无需`npm install`
+
 ## 安装
 
 dearmsdan 主题使用`ejs`模板引擎开发
