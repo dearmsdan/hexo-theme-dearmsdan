@@ -3,12 +3,13 @@
 本主题无插件，下载即用无需`npm install`   
 即将面临更新:{         
 阅读功能设置坐标偏移  
-图片放大功能占用内存大将删除，  
-处理留言板pjax问题，  
+图片放大功能占用内存大将删除，
 侧边栏 子类设置平滑属性，  
 可能会更新相册当然这是异想天开，  
 大概会优化性能，  
-移动端监视滚动显示文章高亮       
+移动端监视滚动显示文章高亮，       
+删除bootstrap+jQuery，  
+用vue+vue-router+vuex+iView-ui|element-ui|VUX|Mint UI|vuetifyjs|quasarchs 实现主题重构    
 我写网站为什么不用图片加文字排列，因为我是白嫖怪，能不用图片就不用图片减少流量消耗        
 [自我感觉不臃肿你们呢](https://github.com/ZHD99/hexo-theme-dearmsdan/issues)     
 }  
