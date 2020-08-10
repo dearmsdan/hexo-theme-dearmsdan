@@ -8,9 +8,8 @@
 可能会更新相册当然这是异想天开，  
 大概会优化性能，  
 移动端监视滚动显示文章高亮，       
-删除bootstrap+jQuery，  
-用vue+vue-router+vuex+iView-ui|element-ui|VUX|Mint UI|vuetifyjs|quasarchs 实现主题重构    
-我写网站为什么不用图片加文字排列，因为我是白嫖怪，能不用图片就不用图片减少流量消耗        
+我写网站为什么不用图片加文字排列，因为我是白嫖怪，能不用图片就不用图片减少流量消耗         
+想法：删除bootstrap+jQuery，用vue+vue-router+vuex+iView-ui|element-ui|VUX|Mint UI|vuetifyjs|quasarchs 实现主题重构    
 [自我感觉不臃肿你们呢](https://github.com/ZHD99/hexo-theme-dearmsdan/issues)     
 }  
 
