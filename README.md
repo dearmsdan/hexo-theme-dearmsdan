@@ -1,20 +1,3 @@
-## 注意
-
-本主题无插件，下载即用无需`npm install`   
-即将面临更新:{         
-阅读功能设置坐标偏移  
-图片放大功能占用内存大将删除，
-侧边栏 子类设置平滑属性，  
-可能会更新相册当然这是异想天开，  
-大概会优化性能，  
-移动端监视滚动显示文章高亮，       
-我写网站为什么不用图片加文字排列，因为我是白嫖怪，能不用图片就不用图片减少流量消耗         
-想法：删除bootstrap+jQuery，用vue+vue-router+vuex+iView-ui|element-ui|VUX|Mint UI|vuetifyjs|quasarchs 实现主题重构    
-[自我感觉不臃肿你们呢](https://github.com/ZHD99/hexo-theme-dearmsdan/issues)     
-}  
-
-
-
 <div align="right">
   Language:
   中文
@@ -26,7 +9,6 @@
 
 <h1 align="center">HEXO 主题 宝钻蓝色 </h1>
 <h3 align="center">给你一种空灵的感觉 </h3><br/>
-
 <p align="center">
    <a href="https://nodejs.org"><img src="https://img.shields.io/badge/node-%3E= v10-green?style=flat-square"></a>
   <a href="https://hexo.io"><img src="https://img.shields.io/badge/hexo-%3E=4.0.0-blue?style=flat-square&logo=hexo"></a>
@@ -36,6 +18,27 @@
 
 展示： [www.dearmsdan.com](https://www.dearmsdan.com) 如果不显示请刷新页面 <br/>
 主题文档：[docs.dearmsdan](http://docs.dearmsdan.com/#/) <br/>
+
+## 特性
+
+- 文档有基本介绍，主题config注释有功能介绍
+- 全文搜索、调试功能
+- 自定义背景设置(图片、图片特效、视频)
+- 自定义一级、二级目录
+- 自定义社交按钮
+- 自定义音乐播放器
+- 首页 自定义排版
+- 自定义主题颜色
+- 节日特效  )D: diy
+- 可自定义设置背景特效canvas
+- 自定义悬浮文章上变色
+- 自定义外部链接拦截提示
+- 支持 valine 评论系统
+- 支持config配置友情链接
+- 、自定义作者、底部时间统计等等...
+- ~~pjax~~ 
+
+
 
 ## 安装
 
