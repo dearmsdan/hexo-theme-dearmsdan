@@ -9,6 +9,8 @@ $(window).on("load", function () {
 	
 	
 	
+	
+	
 	// 加载条
 	$('.toping').headBand({
 		'background':'#57abf8cc',
@@ -16,19 +18,18 @@ $(window).on("load", function () {
 	});
 	
 	
+	//加载中延迟...................
+	$("#dearmsdan").delay(1000).addClass("wrapShow");
+	
 	
 	
 
 	//全局分布
-	$(".main").css({ //右侧布的高度，相当于左侧高度
+	/*$(".main").css({ //右侧布的高度，相当于左侧高度
 		//height: $("#sidebar-nav").outerHeight()
-	});
+	});*/
+	
  // 取消
-	/*$(".iframe_link").on("click", function () { //左侧a链接直接导入右侧iframe
-		var url = $(this).attr("href");
-		$(".iframe_mx").attr("src", url);
-		return false;
-	}); */
 
 	$(".nav >li> a").click(function () { //一级导航点击后添加active
 		$(".nav >li >a").removeClass("active");
@@ -44,8 +45,34 @@ $(window).on("load", function () {
 		$(this).toggleClass("transmx");
 	});
 
+	
+	
+ /*  每次刷新 侧边栏悬浮不同效果css   */
+	var arr = ['btnEffect','btnEffect2','btnEffect3','btnEffect4','btnEffect5','btnEffect6'];
+	var index = Math.floor((Math.random()*arr.length)); //arr[index]
+	$('.nav >li > div> ul> li').addClass(arr[index]);
+	$('.nav >li > div> ul> li').mousemove(function(){
+		var str = $('.nav >li > div> ul> li > div').hasClass("btnbg-x");
+		//alert(str);
+		if(false === str){
+			$('.nav >li > div> ul> li').prepend('<div class="btnbg-x"></div>');
+		   }
+		
+	});
 
-
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 
     //PC和移动端响应以及经过后
@@ -69,7 +96,7 @@ $(window).on("load", function () {
 	});
 		
 		
-	// 这里是一边导航栏的滚动条slimScroll.min.js
+	// 这里是一边导航栏的滚动条插件slimScroll.min.js
 	if ($('.sidebar-scroll').length > 0) {
 		$('.sidebar-scroll').slimScroll({
 			height: '98%',
@@ -86,9 +113,6 @@ $(window).on("load", function () {
 	}
 
 	
-	
-	//加载中延迟...................
-	$("#dearmsdan").delay(10000).addClass("wrapShow");
 	
 
 

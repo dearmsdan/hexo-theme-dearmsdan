@@ -30,6 +30,7 @@
     	background-size: contain!important;
 		box-shadow: 0 4px 24px rgb(109, 108, 108);
 		transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
+		text-decoration: none;
 }
 	.footer a{
 		text-decoration: none;
@@ -37,8 +38,7 @@
 		font-family: initial;
 	}
 	.footer a:hover{
-		text-decoration: underline;
-    color: aliceblue!important;
+    color: rgba(255, 255, 255, 0)!important;
 	}
 	.footer .footer-logo{
 		color: #2c97e8;
@@ -46,18 +46,48 @@
 	.footer .footer-logo img{   
 		margin-left: 20px;
 	}
+	.foor{
+	overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+	}
+	
+	.footer a::after {
+	/*	color: #7cc2ff;*/
+	  -webkit-transition: width 0.35s;
+	  transition: width 0.35s;
+	  content: "";
+	  right: 0;
+	  width: 0;
+	  bottom: -2px;
+	  position: absolute;
+	  border-bottom: 2px solid;
+	}
+	.footer a:hover:after {
+		left: 1%;
+		right: 1%;
+		opacity: 1;
+		-webkit-transition: all .5s;
+		-o-transition: all .5s;
+		-ms-transition: all .5s;
+		transition: all .5s;
+	}
 </style>
 
 
 <footer class="footer">	
 	<div class="footer-content">
-		<%- theme.footer.text %>
-	© <%= date(new Date(), 'YYYY') %> <%= theme.sitename %>.  
-	
-	 <span id="dearmsdan-time-box"> 
-		 网站已经运行了<span id="dearmsdan-time"></span>
-     </span>...
-		<%- theme.footer.beian %>
+		<div class="foor"><%- theme.footer.text %></div>
+		<div class="foor">
+			© <%= date(new Date(), 'YYYY') %> 
+			<%= theme.sitename %>.  
+			 <span id="dearmsdan-time-box"> 
+				 网站已经运行了<span id="dearmsdan-time"></span>
+			 </span>...
+		</div>
+		<div class="foor">
+			<%- theme.footer.beian %>
+		</div>
 	</div>
 </footer>
 <script>

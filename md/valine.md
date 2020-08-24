@@ -9,7 +9,7 @@ permalink: valine.html
 如果有什么问题  
 或者反馈都可以   
 发送在评论区   
-或者在 [码云](https://gitee.com/zhd99/zhd99/issues)、 [GitHub](https://github.com/ZHD99/zhd99.github.io/issues)用 Issues 方式发送给我哦   
+或者在 [码云](https://gitee.com/zhd99/zhd99/issues)、 [GitHub](https://github.com/ZHD99/hexo-theme-dearmsdan/issues)用 Issues 方式发送给我哦   
 添加友链[传送带 ](/link.html)
 
 <div id="vcomments"></div>

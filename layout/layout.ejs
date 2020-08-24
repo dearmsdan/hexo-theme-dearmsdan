@@ -9,22 +9,19 @@
 		<!-- Header -->
 		<%- partial('_partial/header') %>
 			<div class="main">
-				<div class="dearmsdan-bg">
-					<div class="div_bg"></div>
-				</div>
+				<%- partial('_partial/bg') %>
 				<div class="main-content">
 					<%- body %>
     				<%# 测试模板→ - partial('_test/index') %>
-					<!--<iframe src="a/index.html" class="iframe_mx uicss-cn"></iframe>-->
-					<!-- footer -->
 					<%- partial('_partial/footer') %>
 				</div>
 			</div>
 		</div>
-		
-		
+
 		
 	<%#= 插件聚集地 %>
 	<%- partial('_plug/unit') %>
+		
+
     </body>
 </html>

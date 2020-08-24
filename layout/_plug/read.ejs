@@ -9,6 +9,7 @@
     padding: 6px;
     cursor: pointer;
     color: #b9b9b9;
+	margin-top: 20px;
         }
 .vditor-speech--current, .vditor-speech:hover {
             color: #fff
@@ -23,8 +24,12 @@
         }
 </style>
 <script>
-
-        (function(){try{var videos=document.getElementsByTagName('video');if(""!=videos&&videos.length>0){const players=Array.from(videos).map(p=>new Plyr(p));}
+   if (window.addEventListener) { window.addEventListener("load",dearmsdanread, false);} 
+   else if (window.attachEvent) {window.attachEvent("onload",dearmsdanread); }
+    else{ window.onload =dearmsdanread; }
+	
+  function dearmsdanread(){
+	        (function(){try{var videos=document.getElementsByTagName('video');if(""!=videos&&videos.length>0){const players=Array.from(videos).map(p=>new Plyr(p));}
 $.getJSON("https://api.heycmm.cn/all/",function(data){const ap=new APlayer({container:document.getElementById("aplayer"),fixed:true,lrcType:3,preload:"auto",order:"random",listFolded:true,listMaxHeight:"165px",theme:"#e9e9e9",audio:data})});var days=parseInt((new Date().getTime()-new Date(document.querySelector(".published").innerText.replace(/ /g,"").replace(/-/g,"/")).getTime())/1000/60/60/24,10);days>90&&document.querySelector("#post-content").insertAdjacentHTML("afterBegin",['<blockquote style="border: 1px solid #6a737d;border-left: 5px solid #6a737d;line-height: 36px;">本文最后更新于 <code style="color: #FF5722;vertical-align: middle;">',days,"</code> 天前，其中的信息可能已经不够准确，请您酌情参考！</blockquote>"].join(""))}catch(e){}})();
 function speak(text){if(!isBlank(text)){var src="https://api.heycmm.cn/speak/"+text;if(src.length<=2083){var n=document.querySelector(".Audio-speech");if(!n){(n=document.createElement("AUDIO")).className="Audio-speech";}else{document.getElementById("audios").style.display="block";}
 n.setAttribute("id","audios");n.setAttribute("src",src);n.setAttribute("controls","controls");n.play()}}else{document.getElementById("audios").pause();document.getElementById("audios").style.display="none"}}
@@ -38,6 +43,7 @@ document.addEventListener("mouseup",function(event){var text=getSelection().toSt
 return;}
 window.vditorSpeechRange=getSelection().getRangeAt(0).cloneRange();var rect=getSelection().getRangeAt(0).getBoundingClientRect();speechDom.innerHTML=play_svg_1;speechDom.style.display="block";speechDom.style.top=(rect.top+rect.height+document.querySelector("html").scrollTop-20)+"px";speechDom.style.left=(event.screenX+2)+"px";speechDom.setAttribute("data-text",text);});
 	
+  }
 	
 	// 。。。
 	

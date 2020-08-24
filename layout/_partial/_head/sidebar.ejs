@@ -1,5 +1,16 @@
 <%# 侧边栏 %>
 <div id="sidebar-nav" class="sidebar">
+<% if (theme.background.verification == '' ){ %>
+<div class="dearmsdan-bg">
+	<div class="dearmsdano div_bg"></div>		
+</div>
+<% } %>
+<% if (theme.background.verification == 'video' ){ %>
+
+<%#- 背景效果 %>
+<%- partial('_plug/background_video') %>
+	
+<% } %>
 		<div class="sidebar-scroll">
 			<div class="sidebar-author">
 				<a href="/">
@@ -42,6 +53,12 @@
 						</a>
 					</li>
 					
+					<li>
+						<a id="axis" target="_self" href="<%= theme.side.axis.link %>" class="nav-togg">
+							<span><%= theme.side.axis.name %></span>
+						</a>
+					</li>
+					
 					
 					<%# 遍历 _side（归档小部件）文件 的全部ejs 文件 %>
 
@@ -49,28 +66,20 @@
 					  <%- partial('_side/' + side) %>
 					  <% }) %>
 					
-					<li>
-						<a id="axis" target="_self" href="<%= theme.side.axis.link %>" class="nav-togg">
-							<span><%= theme.side.axis.name %></span>
-						</a>
-					</li>
-					
 					<%# 界面目录自定义 %>
 				<% for (name in theme.Catalog) { %>
 					<li>
 						<a href="javascript:;" class="nav-togg" target="_self" title="<%= name %>"><%= name %></a>
 						<div>
 							<ul>
+							<% for (namei in theme.Catalog[name]) { %>
 								<li>
-									<div>
-									<% for (name_son in theme.Catalog_son) { %>
-										<div>
-											<a href="<%- url_for(theme.Catalog_son[name_son][0]) -%>" class="nav-togg" target="_self" title="<%= name_son %>"><%= name_son %></a>
-										</div>
-										
-									<% } %>	
-									</div>
+								<div>
+									<a href="<%= theme.Catalog[name][namei] -%>" class="nav-togg" target="_self" title="<%= namei %>"><%= namei %></a>
+								</div>
 								</li>
+									
+							<% } %>	
 							</ul>
 						</div>
 					</li>

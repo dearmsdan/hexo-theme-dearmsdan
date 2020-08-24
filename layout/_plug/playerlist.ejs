@@ -1,5 +1,11 @@
 <script type="text/javascript">
-	
+
+   if (window.addEventListener) {window.addEventListener("load",dearmsdanPlaylist, false); } 
+   else if (window.attachEvent) { window.attachEvent("onload",dearmsdanPlaylist);}  
+   else{window.onload =dearmsdanPlaylist; }
+      
+
+function dearmsdanPlaylist(){
 	
 var myPlaylist = new jPlayerPlaylist({
     jPlayer: "#jquery_jplayer_N",
@@ -39,6 +45,7 @@ var spirit = [{
 }];
 	
 	
+}
 	
 
 	

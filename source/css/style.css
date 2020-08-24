@@ -102,7 +102,7 @@ a{
 
 */
 a::after {
-	color: #7cc2ff;
+/*	color: #7cc2ff;*/
   -webkit-transition: width 0.35s;
   transition: width 0.35s;
   content: "";
@@ -141,6 +141,14 @@ a::after {
 a:hover::after {
   left: 0;
   width: 100%;
+}
+
+.dearmsdano{
+	width: 100%!important;
+}
+.dearmsdan-none{
+	display: none;
+	display: none!important;
 }
 
 h1,
@@ -199,12 +207,15 @@ footer {
 }
 .dearmsdan-bg{
 	background-color: rgba(215, 237, 255, 0.5);
-	background-image: url('https://img.xjh.me/random_img.php?type=bg&ctype=nature&return=302');	
 	width: 100%;
     height: 100%;
     opacity: 0.3;
     position: fixed;
-    z-index: -1;
+	top: 0;
+/*    z-index: -1;*/
+	-webkit-box-shadow: inset -6px 4px 20px 15px #c3e3ff;
+    box-shadow: inset -6px 4px 20px 15px #c3e3ff;
+	background-size: cover;
 }
 .dearmsdan-bg .div_bg{    
 	background-color: rgba(215, 237, 255, 0.5);
@@ -213,6 +224,19 @@ footer {
     position: fixed;
     z-index: -1;
 }
+.dearmsdan-bg .divbg{   
+    padding: 30px;
+    width: 94%;
+    height: inherit;
+    position: relative;
+    z-index: -1;
+    top: 76px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+}
+
 #dearmsdan .sidebar {
     -webkit-transition: all .3s ease-in-out;
     -moz-transition: all .3s ease-in-out;
@@ -556,19 +580,28 @@ background:#FF0BEE;
 	display: none;
 }
 .nav > li > div a{
-    color: #787878;
+    color: #787878;    
+	/*display: block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;*/
 }
 .nav >li > div> ul> li {
 	padding: 17px 50px;    
 }
 .nav >li > div> ul> li{
 	border-bottom: 1px #cfe2ff solid;
+	transition: all 0.35s;
+    -ms-transition: all 0.35s;
+    -webkit-transition: all 0.35s;
+    -moz-transition: all 0.35s;
+    -o-transition: all 0.35s;
 }
 .nav >li > div> ul> li:hover{
-	background: #abc0db;   
+	background: #abc0db;
 }
 .nav >li > div> ul {
-	padding: 0
+	padding: 0;
 }
 .nav >li> div >ul> li > a:hover, .nav >li> div >ul> li > a:focus {
 	color: #3b98c8;
@@ -663,6 +696,8 @@ background:#FF0BEE;
 .main-content{
     overflow-x: hidden;
     padding: 30px 20px 20px;
+	position: relative;
+	z-index: 2;
 }
 .dearmsdan-post{
 	transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
@@ -671,15 +706,30 @@ background:#FF0BEE;
     box-shadow: 0 4px 24px rgb(255, 255, 255);
     z-index: 50;
     padding: 70px 70px;
+	background-color: rgba(255, 255, 255, 0.3);
 }
-#dearmsdanPost{
-	
+#dearmsdanPost:hover{
+	    background-color: rgba(255, 255, 255, 0.33);
+}
+.dearmsdanPost{
+	background-color: rgba(255, 255, 255, 0.52);
+    padding: 30px;
+    margin-bottom: 20px;
+    width: 94%;
+    height: inherit;
+    position: relative;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
 }
 
 #dearmsdanPost:hover {
-    box-shadow: 0 4px 24px rgb(255, 255, 255);
+   /* box-shadow: 0 4px 24px rgb(255, 255, 255);
     z-index: 50;
-	padding: 70px 245px 70px 70px;
+	padding: 70px 245px 70px 70px;*/
+	padding: 10px 40px;
 }
 #dearmsdanPost article ul,#dearmsdanPost article ol,#dearmsdanPost article li{
 	list-style-type: inherit;
@@ -693,14 +743,14 @@ background:#FF0BEE;
 	margin-bottom: 50px;
 }
 .dearmsdan-post:first-child{
-	margin-top: 50px;
+	/*margin-top: 50px;*/
 }
 .dearmsdan-post-Statistics{    
 		margin-top: 20px;
 	    margin-bottom: 10px;
 	/*-webkit-filter: grayscale(88%);
     filter: grayscale(99%);*/
-    font-size: 12px;
+    	font-size: inherit;
 }
 .dearmsdan-post-Statistics:hover{ 
    /* font-size: 28px;*/
@@ -762,14 +812,13 @@ background:#FF0BEE;
 	padding-bottom: 30px;
 	padding-right: 30px;
 	padding-left: 30px;
-	margin: 0
+	margin: 0;
 }
 .mobile-inner-header {
-	width: 100%;
+	width: auto;
 	height: 50px;
 	position: absolute;
-	top: 0;
-	left: 0
+	right: 0;
 }
 .mobile-inner-header-icon {
 	color: #fff;
@@ -857,7 +906,7 @@ transform:translateY(4px) rotate(0deg)
 }
 }
 .mobile-inner-nav {    
-	background-color: rgba(108, 164, 169, 0.8);
+	background-color: rgba(0, 0, 0, 0.25);
     width: 100%;
     position: absolute;
     top: 80px;
@@ -1013,13 +1062,15 @@ transform: scale(1, 1);
 	text-decoration: none;
 }
 .dearmsdan-post img{
-	width: 200px;
+	width: auto;
+	max-width: 100%;
 }
 #links img{
 	width: inherit; 
 }
 .copy{
 	    margin-top: 30px;
+	    margin-bottom: 20px;
 }
 .copy::before{
 	content: "";
@@ -1107,9 +1158,15 @@ figure td:nth-child(2) pre{
     left: 10px;
 	margin-left: 42px;
 	}
+	canvas{
+		display: none!important;
+	}
 	
 }
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 619px) {
+	.m-content {
+    padding: 30px 30px 20px;
+}
 }
 @media screen and (max-width: 1024px) {
     .navbar-default .brand {
@@ -1126,7 +1183,7 @@ figure td:nth-child(2) pre{
         display:none
     }
 	#dearmsdan{
-		margin-top: 90px;
+		margin-top: 62px!important;
 	}
 	.dearmsdan-post{
 		padding: 5px;
@@ -1147,6 +1204,9 @@ figure td:nth-child(2) pre{
 	footer{
     font-size: 1rem!important;
 	}
+	#dearmsdan{
+		margin-top: 80px;    
+	}
 	#dearmsdan #sidebar-nav, #dearmsdan .main {
     padding-top: 0px;
 	}
@@ -1165,12 +1225,6 @@ figure td:nth-child(2) pre{
 	.fooimg{
 		width: 40px!important;
 	}
-	.nav-list{
-		display: none;
-	}
-	.mobile{
-		display: block;
-	}
 	#jp_container_N{
 		display: none;
 	}
@@ -1180,9 +1234,6 @@ figure td:nth-child(2) pre{
     .navbar-default #navbar-menu {
         float:right
     }
-	#dearmsdan{
-		margin-top: 60px;    
-	}
 	footer{
 		    font-size: initial;
 	}
@@ -1280,6 +1331,16 @@ figure td:nth-child(2) pre{
         top: 10px;
         right: 15px
     }
+	
+	.nav-list{
+		display: none;
+	}
+	.mobile{
+		display: block;
+	}
+	pre {
+    font-size: 1rem;
+}
 }
 
 /*尺寸全局覆盖*/

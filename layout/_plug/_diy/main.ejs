@@ -1,65 +1,326 @@
-
-<%#- 节日判断 %>
-<script>
-<%- partial('_plug/_diy/utils') %>
-</script>
+<script src="<%= theme.dearmsdandate %>"></script>
+<script src="<%= theme.canvas.particleCanvas %>"></script>
 	
 <%#- 设置节日 或 季节 及重要日子 diy  %>
 <script>
-	var day = new Date();
-	day.setTime(day.getTime());
-    var demo = day.getFullYear()+"-" + (day.getMonth()+1) + "-" + day.getDate();
+dearmsdanDate();
+function dearmsdanDate() {
+  document.write('<a href="#" style="display:none" target="_blank"><div id="date"></div><font color="#DF0A10">星期<span id="wk"></span></font>&nbsp;<span id="clk"></span><br />农历<span id="nongli"></span></a>')
+  cal_u()
+  cal_s()
+  setInterval("cal_s()", 999)
+}
 
-	// 月
-	var month = day.getMonth()+1;
-	// 日
-	var date = day.getDate();
-	//alert(month+'+'+date);
-	if ((month == 1) && (date == 1)){
-		alert("简单的弹窗，祝你元旦快乐");
-	};
-	// 春节
-	if(GetResult(time) == 't'){
-	   alert("春节");
-	}
+
+var season = 0;  // 四季判断标识
+var festival = [];  // 节日标识
+var dearmsdanCanvas = null;  // 自定义画布标识
+(function(d){
+var traditional,month,date;
+traditional = d[0];
+month = d[1];
+date = d[2];
+	/* console.log("元旦快乐"+month+ '===='+date); */
+	if(month == 1 && date == 1){
+	   var fv = ['元旦快乐',1.1];
+	   var festival = function(){
+		   return fv;
+	   }
+	   this.festival = festival();
+	  };
 	
-	if ((month == 2) && (date == 14)){
-		alert("情人节快乐");
-	};
-
-	if ((month == 3) && (date == 8)){
-		alert("妇女节");
-	};
-
-	if ((month == 3) && (date == 12)){
-		alert("植树节");
-	};
-
-	if ((month == 4) && (date == 1)){
-		alert("愚人节");
-	};
-
-	// 清明节
+	/* t春节 */
+var arr = ['正月初一','正月初二','正月初三','正月初四','正月初五','正月初六','正月初七','正月初八','正月初九','正月初十']; 
+	for(var i=0; i <= arr.length; i++){
+		if(traditional == arr[i]){
+			var fv = ['新年快乐',2.1];
+			var festival = function(){
+				return fv;
+			}
+			this.festival = festival();
+	   }
+	}
+	/* t情人节 */
+	if(month == 2 && date == 14){
+	   var fv = ['情人节快乐',2.14];
+	   var festival = function(){
+		   return fv;
+	   }
+	   this.festival = festival();
+	   }
+	/* f植树节 */
+	if(month == 3 && date == 12){
+	   		console.log("植树节"+month+ '====' +date);
+	   }
+	/* f愚人节 */
+	if(month == 4 && date == 1){
+	   		console.log("愚人节"+month+ '====' +date);
+	   }
+	/* t清明节 */
 	if ((month == 4) && ((date == 4) || (date == 5) || (date == 6))){
-		$('html').css({"filter":"grayscale(100%)"}/* IE 6-9 */);
-		$('.sidebar-author video').css("display","none");
-		$('.sidebar-author a').prepend("<img src='https://cdn.dearmsdan.com/festival/4.4.jpg' />");
-	} 
+	   var fv = ['清明节安康',4.4];
+	   var festival = function(){
+		   return fv;
+	   }
+	   this.festival = festival();
+	}
+	/* f劳动节 */
+	if(month == 5 && date == 1){
+	   		console.log("劳动节"+month+ '====' +date);
+	   }
+	/* t儿童节 */
+	if(month == 6 && date == 1){
+	   var fv = ['儿童快乐',6.1];
+	   var festival = function(){
+		   return fv;
+	   }
+	   this.festival = festival();
+	   }
+	/* f端午节 */
+	if(traditional == '五月初五'){
+	   		console.log("端午节"+month+ '====' +date);
+	   }
+	/* t七夕 */
+	if(traditional == '七月初七'){
+		   var fv = ['七夕快乐',7.7];
+		   var festival = function(){
+			   return fv;
+		   }
+		   this.festival = festival();
+	   }
+	/* f教师节 */
+	if(month == 9 && date == 10){
+	   		console.log("教师节"+month+ '====' +date);
+	   }
+	/* f国庆节、国庆、中秋双庆 */
+	if(month == 10 && date == 1){
+		if(traditional == '八月十五'){
+	   		console.log("国庆节、中秋节双庆"+month+ '====' +date);
+		   }else{
+			   console.log("国庆节"+month+ '====' +date);
+		   }
+	   }
+	/* f中秋 */
+	if(traditional == '八月十五'){
+		if(month == 10 && date == 1){
+			
+		}else{
+			console.log("中秋节"+month+ '====' +date);
+		}
+	   }
+	/* f重阳节 */
+	if(traditional == '九月初九'){
+	   		console.log("重阳节"+month+ '====' +date);
+	   }
+	/* f万圣节 */
+	if(month == 11 && date == 1){
+	   		console.log("万圣节"+month+ '====' +date);
+	   }
+	/* f感恩节 */
+	if(month == 11 && date == 26){
+	   		console.log("感恩节"+month+ '====' +date);
+	   }
+	/* f平安节 */
+	if(month == 12 && date == 24){
+	   		console.log("平安夜"+month+ '====' +date);
+	   }
+	/* f圣诞节 */
+	if(month == 12 && date == 25){
+	   		console.log("圣诞节"+month+ '====' +date);
+	   }
+	
+	
+	
+	/*console.log("春季"+month+ '====' +date);*/
+	if(month >= 1 && month <= 3){
+		var cun = 1;
+		var season1 = function(){
+        return cun;
+    	}
+		season = season1();
+		
+	   }
+	/*console.log("夏季"+month+ '====' +date);*/
+	if(month >= 4 && month <= 6){
+		var cun = 2;
+		var season1 = function(){
+        return cun;
+    	}
+		season = season1();
+	   }
+	/*console.log("秋季"+month+ '====' +date);*/
+	if(month >= 7 && month <= 9){
+		var cun = 3;
+		var season1 = function(){
+        return cun;
+    	}
+		season = season1();
+		
+	   }
+	/*console.log("冬季"+month+ '====' +date);*/
+	if(month >= 10 && month <= 12){
+		var cun = 4;
+		var season1 = function(){
+        return cun;
+    	}
+		season = season1();
+	   }
+	
+})(arrdate);
 
-	if ((month == 6) && (date == 1)){
-		alert("儿童节");
-	};
-
-	if ((month == 10) && (date == 1)){
-		alert("国庆");
-	};
-
-	if ((month == 11) && (date == 25)){
-		alert("圣诞节");
-	};
-
-
+<% if (theme.canvas.season.enable == true ){ %>
+	//console.log(season);
+$(".dearmsdan-festival").attr("id","dearmsdanSeason");
+if(season == 1){
+var particleCanvas = new particleCanvas("dearmsdanSeason", [{
+	"type": {
+		"typeName": "image",
+		"url": "<%- theme.canvas.season.img1 %>"
+	},
+	"number": <%- theme.seasonimg1.number %>,
+	"op": {
+		"min": <%- theme.seasonimg1.op.min %>,
+		"max": <%- theme.seasonimg1.op.max %>
+	},
+	"size": {
+		"min": <%- theme.seasonimg1.size.min %>,
+		"max": <%- theme.seasonimg1.size.max %>
+	},
+	"zoom": {
+		"min": <%- theme.seasonimg1.zoom.min %>,
+		"max": <%- theme.seasonimg1.zoom.max %>
+	},
+	"speed": {
+		"min": <%- theme.seasonimg1.speed.min %>,
+		"max": <%- theme.seasonimg1.speed.min %>
+	},
+	"angle": {
+		"value": <%- theme.seasonimg1.angle.value %>,
+		"float": <%- theme.seasonimg1.angle.float %>
+	},
+	"rota": {
+		"value": <%- theme.seasonimg1.rota.value %>,
+		"speed": <%- theme.seasonimg1.rota.speed %>,
+		"floatValue": 120,
+		"floatSpeed": 2
+	},
+	"reIn": "reverseDirection"
+}]);
+}
+if(season == 2){
+var particleCanvas = new particleCanvas("dearmsdanSeason", [{
+	"type": {
+		"typeName": "image",
+		"url": "<%- theme.canvas.season.img2 %>"
+	},
+	"number": <%- theme.seasonimg2.number %>,
+	"op": {
+		"min": <%- theme.seasonimg2.op.min %>,
+		"max": <%- theme.seasonimg2.op.max %>
+	},
+	"size": {
+		"min": <%- theme.seasonimg2.size.min %>,
+		"max": <%- theme.seasonimg2.size.max %>
+	},
+	"zoom": {
+		"min": <%- theme.seasonimg2.zoom.min %>,
+		"max": <%- theme.seasonimg2.zoom.max %>
+	},
+	"speed": {
+		"min": <%- theme.seasonimg2.speed.min %>,
+		"max": <%- theme.seasonimg2.speed.min %>
+	},
+	"angle": {
+		"value": <%- theme.seasonimg2.angle.value %>,
+		"float": <%- theme.seasonimg2.angle.float %>
+	},
+	"rota": {
+		"value": <%- theme.seasonimg2.rota.value %>,
+		"speed": <%- theme.seasonimg2.rota.speed %>,
+		"floatValue": 120,
+		"floatSpeed": 2
+	},
+	"reIn": "reverseDirection"
+}]);
+}
+if(season == 3){
+var particleCanvas = new particleCanvas("dearmsdanSeason", [{
+	"type": {
+		"typeName": "image",
+		"url": "<%- theme.canvas.season.img3 %>"
+	},
+	"number": <%- theme.seasonimg3.number %>,
+	"op": {
+		"min": <%- theme.seasonimg3.op.min %>,
+		"max": <%- theme.seasonimg3.op.max %>
+	},
+	"size": {
+		"min": <%- theme.seasonimg3.size.min %>,
+		"max": <%- theme.seasonimg3.size.max %>
+	},
+	"zoom": {
+		"min": <%- theme.seasonimg3.zoom.min %>,
+		"max": <%- theme.seasonimg3.zoom.max %>
+	},
+	"speed": {
+		"min": <%- theme.seasonimg3.speed.min %>,
+		"max": <%- theme.seasonimg3.speed.min %>
+	},
+	"angle": {
+		"value": <%- theme.seasonimg3.angle.value %>,
+		"float": <%- theme.seasonimg3.angle.float %>
+	},
+	"rota": {
+		"value": <%- theme.seasonimg3.rota.value %>,
+		"speed": <%- theme.seasonimg3.rota.speed %>,
+		"floatValue": 120,
+		"floatSpeed": 2
+	},
+	"reIn": "reverseDirection"
+}]);
+}
+if(season == 4){
+var particleCanvas = new particleCanvas("dearmsdanSeason", [{
+	"type": {
+		"typeName": "image",
+		"url": "<%- theme.canvas.season.img4 %>"
+	},
+	"number": <%- theme.seasonimg4.number %>,
+	"op": {
+		"min": <%- theme.seasonimg4.op.min %>,
+		"max": <%- theme.seasonimg4.op.max %>
+	},
+	"size": {
+		"min": <%- theme.seasonimg4.size.min %>,
+		"max": <%- theme.seasonimg4.size.max %>
+	},
+	"zoom": {
+		"min": <%- theme.seasonimg4.zoom.min %>,
+		"max": <%- theme.seasonimg4.zoom.max %>
+	},
+	"speed": {
+		"min": <%- theme.seasonimg4.speed.min %>,
+		"max": <%- theme.seasonimg4.speed.min %>
+	},
+	"angle": {
+		"value": <%- theme.seasonimg4.angle.value %>,
+		"float": <%- theme.seasonimg4.angle.float %>
+	},
+	"rota": {
+		"value": <%- theme.seasonimg4.rota.value %>,
+		"speed": <%- theme.seasonimg4.rota.speed %>,
+		"floatValue": 120,
+		"floatSpeed": 2
+	},
+	"reIn": "reverseDirection"
+}]);
+}
+<% } %>
 </script>
 
 
+<%#- 自定义画布 %>
+<%- partial('_plug/_diy/canvas') %>
 
+<%#- 节日画布 %>
+<%- partial('_plug/_diy/festival') %>

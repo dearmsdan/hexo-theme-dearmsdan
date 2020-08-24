@@ -1,20 +1,35 @@
+
 <script type="text/javascript">
-
-
-
 $(function(){
-	
 	links();
 	tocs();
-	dearzoom();
-	dearmsdanpage();
 	copycodes();
 	postcolor();
-		/* 设置 post 样式*/
-		$(".dearmsdan-post").css("animation","1s ease 0s 1 normal forwards running action_translateY");
+	styleS();
+	/* 设置 post 样式*/
+	$(".dearmsdan-post").css("animation","1s ease 0s 1 normal forwards running action_translateY");
+
+
+	if(<%- is_post() %>){
+		dearmsdanpage();
+	}
+<% if (theme.background.verification == 'img' ){ %>
+	backg()
+<% } %>
+	
 });
 	
+	
+	
+	
 
+<% if (theme.background.verification == 'img' ){ %>
+function backg(){
+	$('.dearmsdan-bg').css('background','none');
+}
+<% } %>
+
+	
 
 function dearmsdanpage(){
 	if($('.second').length>0) {
@@ -76,24 +91,6 @@ function tocs(){
 }
 
 
-// 图片放大
-function dearzoom(){
-	
-	$('.dearmsdan article img').wrap('<span class="ex"></span>');
-	
-                /* simple call */
-                $('.ex').zoom();
-   
-                /* With callback function. EX. colorbox plugin ! */
-                $('a.photo').zoom({
-                  url: 'photo-big.jpg',
-                  callback: function(){
-                    $(this).colorbox({href: this.src});
-                  }
-                });
-}
-
-
 /*页面载入完成后，创建复制按钮*/
 function copycodes(){
 	
@@ -144,11 +141,89 @@ var index = Math.floor((Math.random()*arr.length));
 });
 	$(".dearmsdan-post").mouseleave(function(){
 	// 移除
-	$('.dearmsdan-post').removeAttr('style');
+	$('.dearmsdan-post').css("box-shadow","none");
 		
 });
 	
 }
 
+	
+
+	/*  移动端样式  */
+
+function styleS(){
+if ((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
+
+    // 背景色
+	/*$("html").css("background-image","url('<%- theme.background.bg  %>')");*/
+	
+<% if (theme.typesetting.type == '' || theme.typesetting.type == 'default' ){ %>
+	$('.dearmsdan-post').css('padding','30px');
+		<% } %>
+	
+	
+    // 底部背景色
+	$('.main').css('background','aliceblue');
+	$('.main').css('max-height','100%');
+	<% if (theme.background.verification == 'img' || theme.background.verification == 'video'  ){ %>
+		$('.main').css('background-color','rgba(240, 248, 255, <%- theme.background.bcopacity %>)');
+	<% } %>
+	
+
+	/* 首页 排版 */
+	$('.dearmsdan-bg').css('box-shadow','none');
+	$('.dearmsdan-bg').css('-webkit-box-shadow','none');
+//	$('.main-content').css('background-color','#ECECEE');
+	$('.dearmsdan-post').css('background-color','rgba(255, 255, 255, 0.52)');
+	$('.dearmsdan-post').css('padding','30px');
+	$('.dearmsdan-post').css('margin-bottom','20px');
+	$('.main-content').addClass('m-content');
+	$('.dearmsdan-title').css('opacity','1');
+	
+	
+	<% if (theme.textarrement.type == 'L' || theme.textarrement.type == 'M'){ %>
+	<% if(theme.typesetting.type == 'textarrement'){ %>
+		/* 大排版 */
+		$('.dearmsdan-post').css("padding",'0px');
+		$('.dearmsdan-post:hover').css("padding",'5px');
+		$('.dearmsdan-inner-img').css("flex",'2');
+	<% } %>
+	<% } %>
+	
+	
+	
+	/* 文章内容页 排版 */
+	$('.dearmsdan-bg div').removeClass('div_bg');
+	$('.dearmsdan-bg div').addClass('divbg');
+	$('.dearmsdan-bg div').css("background-color","rgba(255, 255, 255, <%- theme.background.staticopacity %>)");
+	
+	$('#dearmsdanPost').addClass('dearmsdanPost');
+
+	}else{					
+		Observer();
+	}
+}
+
+/* 观察者模式 */
+function Observer(){
+	$('#dearmsdan-logo').click( 
+		function () { 
+			alert("你是观察者");
+			$('.nav-list').addClass('dearmsdan-none');
+			$('.dearmsdan-bg').addClass('dearmsdan-none');
+			$('.main-content').addClass('dearmsdan-none');
+			$('.container-fluid').addClass('dearmsdan-none');
+			$('#dearmsdan-vbg').css("opacity","1");
+			$('#dearmsdan-vbg').css("z-index","5201314");
+			$('.navbar').css("background-color","transparent");
+			$('.navbar').css("box-shadow","none");
+			$('#dearmsdan-logo').css("position","relative");
+			$('#dearmsdan-logo').css("left","-100px");
+			console.log("你是观察者null");
+			
+		});
+}
+	
+	
 
 </script>

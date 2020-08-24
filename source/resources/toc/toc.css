@@ -25,7 +25,8 @@
 .second .i{    
 	position: relative;
     top: -32px;
-    left: -55px;
+    left: -20px;
+	z-index: 1;
 } 
 .second .i i{       
 	font-size: 24px;
