@@ -64,4 +64,5 @@ theme: dearmsdan
 
  [梦窗 AI_blog](https://mymengchuang.gitee.io/)    
  [ ye\'s universe](https://beamaster.top/)
+[ r0ya1\'s blog](https://r0ya1.gitee.io/)
 
