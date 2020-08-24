@@ -3,14 +3,7 @@
   <article>
     <%- page.content %>
   </article>
-	<div id="vcomments"></div>
-    <script>
-        new Valine({
-            el: '#vcomments',
-            appId: '<%- theme.valine.appId %>',
-            appKey: '<%- theme.valine.appKey %>',
-            avatar: '<%- theme.valine.avatar %>',
-            placeholder: '输入前请确认 <昵称> <邮箱> <你的网站> 是否已填写，支持markdown 格式编写 ',
-        })
-    </script>
+	
+		<%# 文章评论 %>
+		<%- partial('_partial/_footer/comment') %>
 </div>
