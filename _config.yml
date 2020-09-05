@@ -534,8 +534,8 @@ valine:
 # 想做随机背景，无奈资金镂空
 background:     
 # 背景设置
-  bg: 'https://img.xjh.me/random_img.php?type=bg&ctype=nature&return=302' 
-  verification: 'video'  # 参数: 默认为空、img、video
+  bg: '' 
+  verification: ''  # 参数: 默认为空、img、video
   imgapi:  # 图片地址 或者图片api  
     img1: 'https://api.ixiaowai.cn/gqapi/gqapi.php'
     img2: 'https://api.vvhan.com/api/acgimg'
