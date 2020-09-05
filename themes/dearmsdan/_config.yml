@@ -452,7 +452,7 @@ seasonimg4: #  9~12 月份 冬
 # 可填写正则表达式
 # 暂提供2条安全链接
 linker: 
-  enable: f # 默认关闭， 随意关闭开启
+  enable: true  # 默认关闭， 随意关闭开启
   site: http.+zhd99.cn 
   sitee: http.+dearmsdan
 # 如果不懂，那直接就把dearmsdan，换成自己的网站
@@ -492,7 +492,7 @@ dearmsdanPostColor:
 # path: search.xml
 
 search:
-  enable: f #true 为开启， 默认不启用，没安装插件启用 会报错
+  enable: true #true 为开启， 默认不启用，没安装插件启用 会报错
   searchjs: /js/s.js
 # ***注意，搜索也会有出错的时候，比如文章中的非法字符会导致搜索功能失效，与本主题无关
 # ***需要自己在localhost:4000/search.xml 索引寻找非法字符 在md编辑器删除就正常了
