@@ -543,28 +543,28 @@ background:
   video:   # 视频地址 可自定义格式!每次网页刷新，视频随机
 # 模仿以下格式 可自定义无数个随机背景视频，且不重复即可
     video1: # 计算原因，video1 出现频率为2/100，其他均为随机1/100
-      src: 'https://cdn.dearmsdan.com/video/IronMan.mp4' # 视频类型默认为mp4
+      src: 'http://link.dearmsdan.com/dearmsdan/video/IronMan.mp4' # 视频类型默认为mp4
       type: "video/mp4"  # 视频类型
     video2: 
-      src: 'https://cdn.dearmsdan.com/video/oceans.webm' # 视频类型默认为webm
+      src: 'http://link.dearmsdan.com/dearmsdan/video/oceans.webm' # 视频类型默认为webm
       type: "video/webm"  # 视频类型
     video3: 
-      src: 'https://cdn.dearmsdan.com/video/IronMan2.mp4' 
+      src: 'http://link.dearmsdan.com/dearmsdan/video/IronMan2.mp4' 
       type: "video/mp4"  # 视频类型
     video4: 
-      src: 'https://cdn.dearmsdan.com/video/IronMan3.mp4' 
+      src: 'http://link.dearmsdan.com/dearmsdan/video/IronMan3.mp4' 
       type: "video/mp4"  # 视频类型
     video5: 
-      src: 'https://cdn.dearmsdan.com/video/IronMan4.mp4' 
+      src: 'http://link.dearmsdan.com/dearmsdan/video/IronMan4.mp4' 
       type: "video/mp4"  # 视频类型
     video6: 
-      src: 'https://cdn.dearmsdan.com/video/thor.mp4' 
+      src: 'http://link.dearmsdan.com/dearmsdan/video/thor.mp4' 
       type: "video/mp4"  # 视频类型
     video7: 
-      src: 'https://cdn.dearmsdan.com/video/Strange.mp4' 
+      src: 'http://link.dearmsdan.com/dearmsdan/video/Strange.mp4' 
       type: "video/mp4"  # 视频类型
     video8: 
-      src: 'https://cdn.dearmsdan.com/video/Marvel.mp4' 
+      src: 'http://link.dearmsdan.com/dearmsdan/video/Marvel.mp4' 
       type: "video/mp4"  # 视频类型
   opacity: '0.2'   # 设置视频/图片背景透明度 0.1~1
 # opacity:0.2
