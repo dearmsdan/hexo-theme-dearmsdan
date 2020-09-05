@@ -2,6 +2,7 @@
 title: markdown 如何编写文章.md
 date: 10:41 2019/11/25
 author: 测试小刘~
+img: https://img.xjh.me/desktop/bg/nature/65231080_p0.jpg
 categories:
 - 博客
 tags:
