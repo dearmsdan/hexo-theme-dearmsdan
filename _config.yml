@@ -101,3 +101,9 @@ deploy:
   repo:
            coding: https://e.coding.net/zhd99/dearmsdan.git
 branch: master
+
+
+server:
+  port: 4000
+  compress: true
+  header: true
