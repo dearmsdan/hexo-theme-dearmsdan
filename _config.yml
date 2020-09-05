@@ -343,7 +343,7 @@ dearmsdanColorConfig:
 # 自定义画布 (只有少女系移动端可查看，暂未测试
 #   彩系=> 无情纸屑: confetti 纯白球: funPure
 # 少女系=> 悬浮心: floatheart 旋转心: whirling 错乱心: seeding
-meCanvas: funPure
+meCanvas: 
 
 dearmsdandate: /js/diy/date.js
 canvas:
