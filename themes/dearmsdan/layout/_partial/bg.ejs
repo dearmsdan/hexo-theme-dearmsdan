@@ -1,0 +1,31 @@
+<%#- 背景  %>
+	
+	<style>
+/* CSS */
+.canvas {
+    position:fixed;
+    width: 1920px;
+    height: 862px;
+    left: -360px;
+    top: 0;
+    z-index: -1;
+}
+	</style>
+<canvas class="canvas dearmsdan-canvas" width="1920" height="862"></canvas>
+<%- partial('_plug/vCanvas') %>
+<div class="dearmsdan-bg">
+	<div class="div_bg"></div>		
+</div>
+<%#- 背景效果 %>
+<% if (theme.background.verification == 'img' ){ %>
+<%- partial('_plug/background') %>
+<% } %>
+<% if (theme.background.verification == 'video' ){ %>
+<div id="dearmsdan-vbg">
+    <video id="dearmsdan-vbg_video" loop muted></video>
+</div>
+<% } %>
+
+<script>
+    //background-image: url(https://img.xjh.me/random_img.php?type=bg&ctype=nature&return=302);
+</script>

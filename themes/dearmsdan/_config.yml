@@ -1,0 +1,626 @@
+# ---------------------------------------------------------------
+# ---------------------------------------------------------------
+#  配置文件 大纲
+#  基本配置  *********
+#  head.ejs   头部     |  header.ejs 导航栏
+#  sidebar.ejs侧边栏   |  unit.ejs 新增无影响其他功能插件
+#  footer.ejs jio部   |  index.ejs 主题排版  
+#  post.ejs   文章页   |  第三方插件配置，如需开启 ：true
+#  *.ejs 其他功能 推出中...
+#
+#  links.ejs\Permalinks.ejs\axis.ejs
+#  Permalinks：友情链接模板\永久链接模板\时间轴
+#
+#  第三方插件/功能
+#  \  pjax、外部链接拦截提示、搜索、调试、评论、自定义文章悬浮颜色、自定义音乐播放、背景效果、观察者模式
+#  自定义设置画布(canvas)、 主题颜色配置
+#     
+# ---------------------------------------------------------------
+# ---------------------------------------------------------------
+
+
+# 详细介绍没有在文档中介绍 http://docs.dearmsdan.com/ 
+# 但是你可以提交文档
+
+# ---------------------------------------------------------------
+#  基本配置  *********
+# ---------------------------------------------------------------
+
+sitename: hi mogul # 网站名字
+sitekeywords: hi mogul,hexo-theme-dearmsdan一款Hexo主题宝钻蓝色，给你一种空灵的感觉,hexo简约主题,HEXO,dearmsdan.com # 网站关键词
+sitedescription: dearmsdan基于Bootstrap 框架HEXO 强力驱动的一个宝钻蓝 色调给你一种空灵的感觉 # 网站描述
+
+
+# ---------------------------------------------------------------
+#  head.ejs  全局样式 引用的样式和插件
+# ---------------------------------------------------------------
+
+# 网站小图标
+favicon: 
+  href: /logo.png # 网站图标
+  type: image/png # 图标类型，可能的值有(image/png, image/vnd.microsoft.icon, image/x-icon, image/gif)
+  
+# 阿里 图标库 
+aliiconfont: //at.alicdn.com/t/font_1605171_5fpik914nu9.css
+
+# jq库
+jquery:
+  js: #https://libs.baidu.com/jquery/2.1.4/jquery.min.js 
+    one: /js/jquery1.10.2.min.js
+    two: https://libs.baidu.com/jquery/2.1.4/jquery.min.js 
+# bootstrap
+bootstrap:
+  css: /css/bootstrap-3.3.4.css
+  js: /js/bootstrap-3.3.4.js
+# 头像 css 把这删除头像就不动了
+title_qiaoba: /css/avatar_user.css
+# slimscroll 滚动条
+slimscroll: /js/jquery.slimscroll.min.js
+# dearmsdan-post-Statistics样式
+Statistics: /css/post_content.css
+# dearmsdan-post-Statistics样式
+social:
+  css: /css/social/social.css
+  fontcss: /css/social/waesome.css
+nav:
+  css: /css/navEffect.css
+# 网站加载条
+loadingBar:
+  pace: /resources/loadingBar/pace.min.js
+  pink: /resources/loadingBar/flash.css
+  band: /js/headBand.min.js
+  #pace: https://cdn.bootcss.com/pace/1.0.2/pace.min.js
+  #pink: https://cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css
+# pjax配置
+jquerypjax:
+  pjax: /js/pjax/jquery.pjax.js
+toc:
+  css: /resources/toc/toc.css
+  pageslide: /resources/toc/jquery.pageslide.js
+#  复制功能插件
+copycode: 
+  lib: /js/copycode/clipboard.min.js
+
+
+# ---------------------------------------------------------------
+#  header.ejs 导航栏
+# ---------------------------------------------------------------
+
+
+dearmsdan:
+  logo:  #logo图标设置（设置其中之一就好了
+    ico: DearMsDanIconFont icon-zh    #这里将logo设置 图标库ICO
+    png: 						      #这里将logo设置图片
+    size: 50px # 设置logo大小
+  title: 
+    size: 20px # 设置网站名字大小
+
+# 顶部菜单
+menu:
+  首页:
+    - /
+  关于:
+    - about.html
+  留言板:
+    - /valine.html
+  友情链接:
+    - /link.html
+  
+  
+# ---------------------------------------------------------------
+#  sidebar.ejs 侧边栏
+# ---------------------------------------------------------------
+
+
+# 样式在source/css/avatar_user.css 中 5行 左右
+# 设置图片不动的配置在 title_qiaoba 中
+# 填写一个即可，另一个备用(第二个有抖动特效)   任意一个都可以为空
+# 尽可能选择正比例图片！！！，比例差距大可以修改 ejs 模板源文件 sidebar.ejs 5~ 10行左右
+dearHead: /Pexels.gif # 初始头像
+dearHeadlogo: /logo.png # 遮罩 logo
+PhotoHead: /resources/qiaoba.png  # 备用头像 
+
+
+# 社交按钮配置
+socialbtn:
+  GitHub:
+    - https://github.com/ZHD99/
+    - icon-git
+  email:
+    - /outlook.html
+    - icon-youxiang
+  netease:
+    - https://music.163.com/
+    - icon-netease
+  qq:
+    - https://wpa.qq.com/msgrd?v=3&uin=2646405301&site=qq&menu=yes
+    - icon-qq
+  weibo:
+    - https://weibo.com/
+    - icon-weibo
+	
+# 可自定义一级或者二级目录，按照以下规则添加
+Catalog:
+  自定义目录1:
+    没想好1: 
+      - /about1.html
+    没想好2:
+      - /about2.html
+    没想好3:
+      - /about3.html
+  没想好目录2:
+    地址1: 
+      - /about3.html
+    地址2:
+      - /about2.html
+    地址3:
+      - /about1.html
+  没想好目录3:
+    没想好1: 
+      - /about3.html
+    没想好2:
+      - /about2.html
+    没想好3:
+      - /about1.html
+	
+	
+	
+# 统计
+count:
+  articles: 文章
+  tags: 标签
+  categories: 分类
+
+# 文章类
+side:
+  archive: 文章归档
+  recent_posts: 最新文章
+  categories: 文章分类
+  tagcloud: 标签 
+  axis: 
+    name: 时间轴
+    link: /axis.html
+    
+  
+# 文章迭代
+sides:  
+- category #文章分类
+- tagcloud #标签
+- archive #文章归档
+- recent_posts #最新文章
+
+
+
+# ---------------------------------------------------------------
+#  unit.ejs 新增无影响其他功能插件
+# ---------------------------------------------------------------
+
+# 音乐播放器
+player:
+  audio:
+    css: /resources/meuplayer/css/player.css
+    js: 
+      index: /resources/meuplayer/player/index.js
+      player: /resources/meuplayer/player/player.js
+      playlist: /resources/meuplayer/player/playlist.js
+	  
+# 返回顶部
+top:     #  爱心状: love 箭头: arrow 三角形：triangle   
+  clip: arrow   # 具体更改在 ../layout/_plug/top.ejs
+
+# ---------------------------------------------------------------
+#  footer.ejs  jio部的配置
+# ---------------------------------------------------------------
+
+
+# footer 时间统计
+jscex:
+  jsq: /resources/jscex/jscex.min.js             # 必须
+  jsa: /resources/jscex/jscex-parser.js          # 必须
+  jsz: /resources/jscex/jscex-jit.js             # 必须
+  jsw: /resources/jscex/jscex-builderbase.min.js # 必须
+  jss: /resources/jscex/jscex-async.min.js       # 必须
+  jsx: /resources/jscex/jscex-async-powerpack.min.js
+
+# footer 版权和一些信息
+footer:
+  # text 和 beian 信息都可以删除或者修改
+  text: "感谢<span></span><a style='color: #00bbff;font-weight: bolder;' href='https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral'><img class='fooimg' style='width: 93px; position: relative;top: -2px;' src='https://cdn.dearmsdan.com/upyun_logo5.png' /></a> 提供强力云存储服务 | <a style='color:#f66464;font-weight: bolder;' href='https://www.dnspod.cn/'>dnspod </a>提供 DNS 解析服务|  <a style='color:#ea9000;font-weight: bolder;' href='https://valine.js.org/'> Valine</a>提供快速、简洁且高效的评论系统 <br/>"
+  
+  beian: "<a style='color:#939393;' href='http://hn.beian.miit.gov.cn/' target='_blank'> <img width='16px' src='https://img.alicdn.com/tfs/TB1..50QpXXXXX7XpXXXXXXXXXX-40-40.png' />湘ICP备20001824号 </a>·<a target='_blank' href='http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=43010302001049' style='display:inline-block;text-decoration:none;height:20px;line-height:20px;'><p style='height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;'>湘公网安备 43010302001049号</p></a>"
+
+# footer 页jio的时间
+# 时间年月日，注意月份是0-11 !!
+  time: 
+    year: 2019
+    m: 11
+    d: 25
+
+
+
+# ---------------------------------------------------------------
+#  post.ejs 
+# ---------------------------------------------------------------
+
+
+
+# 页脚  版权设置
+copyright:
+  author: 本文作者
+  permalink: 本文链接
+  author_: '德阿姆斯丹 · 迪尔斯'  # 默认作者
+  permalink_: https://www.dearmsdan.com/ # 可不填, 自动设置为您的 config(site) 设置
+
+
+
+
+
+# ---------------------------------------------------------------
+#  Permalinks
+# ---------------------------------------------------------------
+
+# 友情链接 配置信息
+link:
+  css: /resources/dearmsdan_link/link.css
+  
+  
+links: 		 # 被遍历的所有网站信息
+
+#***** 以下为示例模板，具体参考文档
+  又拍云服务商:  # 友情链接的名字
+    img: https://cdn.dearmsdan.com/upyun_logo5.png   # 友情链接的图片
+    link: https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral # 网址
+    description: "一个良心服务商、国内知名企业级云服务商  又拍云是专注 CDN、云存储、小程序开发方案 短视频开发方案、DDoS高防等产品的国内知名企业级云服务商"  # 描述
+  莲梦青语 - 软件技巧分享博客:
+    img: /logo.png
+    link: https://lmqyu.cn/
+    description: "心之所爱，便一往无前。时间：搭建于2019年12月12号  <br/>定位：软件技巧分享、系统装机、常用软件的学习交流以及分享博主的建站历程"
+
+
+# ---------------------------------------------------------------
+#  app.ejs/pjax.ejs  主题排版 
+# ---------------------------------------------------------------
+
+# 默认为空  为空标识默认排版
+# 默认排版：default   
+# 图文排列：textarrement  
+# 如果有好看且有趣的排版建议可联系我添加
+
+typesetting:
+  type: ''   # 为空代表默认排版
+
+# 图文主题排版 S、M、L  小、中、大码
+textarrement:
+  type: '' # 选取图文排列的类型
+  S: 
+    color: # 小图片排版 留白的颜色设置
+      pc0: # rgb(255, 255, 255)  # 示例注释,不喜欢都可以注释
+      pc1: rgb(255, 255, 255)    # 示例颜色 白
+      pc2: rgb(63, 63, 63)       # 示例颜色 灰
+      pc3: rgb(255, 103, 103)    # 示例颜色 虹
+      pc4: rgb(255, 85, 164)     # 示例颜色 粉
+      pc5: rgb(191, 0, 255)      # 示例颜色 紫
+      pc6: rgb(0, 20, 255)       # 示例颜色 靛
+      pc7: rgb(0, 162, 255)      # 示例颜色 蓝
+      pc8: rgb(0, 255, 78)       # 示例颜色 绿
+      pc9: rgb(255, 226, 0)      # 示例颜色 黄
+      pc10: rgb(255, 128, 0)     # 示例颜色 橙
+      pc11: rgb(255, 0, 0)       # 示例颜色 红
+# 图片排版 背景透明度设置
+  opacity: '0.52' # 值为 0.01 ~ 1
+
+
+
+
+
+# ---------------------------------------------------------------
+#  主题颜色配置  节日主题、自定义画布会覆盖此配置
+# ---------------------------------------------------------------
+
+# 可填 rgb、rgba、hs....
+dearmsdanColorConfig:
+  enable: f # 是否开启 true 主题颜色配置！！！ 默认关闭
+  a:                  # 超链接 和 一些悬事件
+  navbar:             # 导航栏颜色
+  sidebar:            # 侧边栏
+  sidebarbox:         # 侧边栏 阴影
+  bg:                 # 中间透明的颜色
+  nav:      #一级导航 颜色配置
+    bg:               # 一级导航 背景颜色
+    border:           # 一级导航 一边颜色
+  nav2:    # 二级级导航 颜色配置
+    bg:               # 二级导航 背景颜色
+    hover:            # 二级导航 颜色
+
+
+
+
+# ---------------------------------------------------------------
+#  画布diy canvas  配置信息
+# ---------------------------------------------------------------
+
+# 好看是用性能换的
+# 自定义画布 (只有少女系移动端可查看，暂未测试
+#   彩系=> 无情纸屑: confetti 纯白球: funPure
+# 少女系=> 悬浮心: floatheart 旋转心: whirling 错乱心: seeding
+meCanvas: 
+
+dearmsdandate: /js/diy/date.js
+canvas:
+  particleCanvas: /js/diy/particleCanvas.js  # TGideas团队编写的粒子类动画组件
+  season: # 四季变化小图片
+    enable: true # 是否开启 四季变化小图片, 不喜欢，怕消耗性能可以关闭
+    img1: /resources/season/flake.png
+    img2: /resources/season/watermelon.png
+    img3: /resources/season/butterfly.png
+    img4: /resources/season/snowflake.png
+# 四季变化配置 
+seasonimg1: #  1~3 月份 春
+  number: 5 # 释放的数量
+  op: # 透明度
+    min: 1   # 最小值 min max speed 均可为小数类型
+    max: 1   # 最大值
+  size: # 大小
+    min: 40  # 最小值
+    max: 60  # 最大值
+  zoom: # 缩放(我也不知道有没有用)
+    min: 1   # 最小值
+    max: 1   # 最大值
+  speed: # 移动速度
+    min: 1   # 最小值
+    max: 3   # 最大值
+  angle: # 移动角度
+    value: 150 # 角度 向左
+    float: 50  # 试试就知道了，大概是偏移量
+  rota:
+    value: 30   # 旋转值
+    speed: 1.6  # 旋转速度
+	
+seasonimg2: #  3~6 月份 夏
+  number: 8 # 释放的数量
+  op: # 透明度
+    min: 0.4   # 最小值 min max speed 均可为小数类型
+    max: 1   # 最大值
+  size: # 大小
+    min: 30  # 最小值
+    max: 60  # 最大值
+  zoom: # 缩放(我也不知道有没有用)
+    min: 1   # 最小值
+    max: 1   # 最大值
+  speed: # 移动速度
+    min: 2   # 最小值
+    max: 5   # 最大值
+  angle: # 移动角度
+    value: 150 # 角度 向左
+    float: 50  # 试试就知道了，大概是偏移量
+  rota:
+    value: 30   # 旋转值
+    speed: 0.8  # 旋转速度	
+	
+seasonimg3: #  6~9 月份 秋
+  number: 30 # 释放的数量
+  op: # 透明度
+    min: 0.5   # 最小值 min max speed 均可为小数类型
+    max: 1   # 最大值
+  size: # 大小
+    min: 8  # 最小值
+    max: 22  # 最大值
+  zoom: # 缩放(我也不知道有没有用)
+    min: 1   # 最小值
+    max: 1   # 最大值
+  speed: # 移动速度
+    min: 1   # 最小值
+    max: 2   # 最大值
+  angle: # 移动角度
+    value: 150 # 角度 向左
+    float: 50  # 试试就知道了，大概是偏移量
+  rota:
+    value: 30   # 旋转值
+    speed: 1.6  # 旋转速度
+	
+seasonimg4: #  9~12 月份 冬
+  number: 50 # 释放的数量
+  op: # 透明度
+    min: 0.1   # 最小值 min max speed 均可为小数类型
+    max: 1   # 最大值
+  size: # 大小
+    min: 20  # 最小值
+    max: 60  # 最大值
+  zoom: # 缩放(我也不知道有没有用)
+    min: 1   # 最小值
+    max: 1   # 最大值
+  speed: # 移动速度
+    min: 1   # 最小值
+    max: 3   # 最大值
+  angle: # 移动角度
+    value: 150 # 角度 向左
+    float: 50  # 试试就知道了，大概是偏移量
+  rota:
+    value: 30   # 旋转值
+    speed: 1.6  # 旋转速度
+
+
+
+
+
+
+# ---------------------------------------------------------------
+#  第三方插件 | 均为关闭状态 
+# ---------------------------------------------------------------
+
+#外部链接拦截提示
+# 可填写正则表达式
+# 暂提供2条安全链接
+linker: 
+  enable: f # 默认关闭， 随意关闭开启
+  site: http.+zhd99.cn 
+  sitee: http.+dearmsdan
+# 如果不懂，那直接就把dearmsdan，换成自己的网站
+# 如：你的网站是www.baidu.com , 示例:http.+baidu （不带域名)
+# 意思是文章链接网址 http到dearmsdan 的格式链接不拦截 
+  link: http://link.dearmsdan.com/links.html # 默认link: /links.html
+# 拦截跳转的链接文件位置在 dearmsdan/source/links.html
+# http://link.dearmsdan.com/links.html
+
+
+
+# 悬浮文章上变色功能，可能需要进入post文章页显示效果
+# 喜欢什么颜色都可以添加，色调要相似网页才能美观，以下提供示例颜色~
+dearmsdanPostColor:
+  pc0: # 0 4px 24px rgb(255, 255, 255) # 示例注释,不喜欢都可以注释
+  pc1: 0 4px 24px rgb(255, 255, 255) # 示例颜色 白
+  pc2: 0 4px 24px rgb(163, 163, 163) # 示例颜色 灰
+  pc3: 0 4px 24px rgb(206, 154, 154) # 示例颜色 虹
+  pc4: 0 4px 24px rgb(206, 154, 178) # 示例颜色 粉
+  pc5: 0 4px 24px rgb(193, 154, 206) # 示例颜色 紫
+  pc6: 0 4px 24px rgb(154, 158, 206) # 示例颜色 靛
+  pc7: 0 4px 24px rgb(154, 187, 206) # 示例颜色 蓝
+  pc8: 0 4px 24px rgb(154, 206, 170) # 示例颜色 绿
+  pc9: 0 4px 24px rgb(206, 200, 154) # 示例颜色 黄
+  pc10: 0 4px 24px rgb(206, 180, 154) # 示例颜色 橙
+  pc11: 0 4px 24px rgb(206, 154, 154) # 示例颜色 红
+
+
+
+
+# 搜索插件
+# 请安装 ↓ 插件才能使用全文搜索, 
+# npm install hexo-generator-search  --save
+# npm install hexo-generator-searchdb --save
+# 然后在全局 config 设置 ↓ 如果不懂（https://github.com/theme-next/hexo-generator-search）
+# search:
+# path: search.xml
+
+search:
+  enable: f #true 为开启， 默认不启用，没安装插件启用 会报错
+  searchjs: /js/s.js
+# ***注意，搜索也会有出错的时候，比如文章中的非法字符会导致搜索功能失效，与本主题无关
+# ***需要自己在localhost:4000/search.xml 索引寻找非法字符 在md编辑器删除就正常了
+
+
+# 调试功能 
+eruda:
+  enable: f #true 为开启， 默认不启用，无需安装插件，开启即可
+  init: eruda.init(); # 初始化
+  js: //cdn.jsdelivr.net/npm/eruda # js
+  
+  
+
+
+# pjax 顾名思义 无刷新网页跳转 (停止维护,有需求开启
+pjax:         
+  enable: f #true 开启, 默认关闭
+  
+
+
+# 以下文章评论插件，需要关闭pjax功能
+
+# valine 评论插件  如果有好的评论插件可以，用issues 方式推荐给我哦~
+# 使用方法 https://valine.js.org/quickstart.html
+valine: 
+  enable: true #true 是否开启 文章评论
+  js: /js/valine.js
+  appId: jNrzXxvqR3NhebnE7swyQBFp-gzGzoHsz
+  appKey: iqXsTlkThMqeaKdhYcgajztG
+  avatar: robohash
+  
+  
+# 背景效果设置 
+# 背景效果均为随机
+# 背景可设置为 默认图片() 图片特效(img)、视频(video)
+# https://img.xjh.me/random_img.php?type=bg&ctype=nature&return=302
+# https://img.xjh.me/random_img.php?type=bg&amp;ctype=nature&amp;return=302
+# http://vjs.zencdn.net/v/oceans.webm
+# 想做随机背景，无奈资金镂空
+background:     
+# 背景设置
+  bg: 'https://img.xjh.me/random_img.php?type=bg&ctype=nature&return=302' 
+  verification: 'video'  # 参数: 默认为空、img、video
+  imgapi:  # 图片地址 或者图片api  
+    img1: 'https://api.ixiaowai.cn/gqapi/gqapi.php'
+    img2: 'https://api.vvhan.com/api/acgimg'
+    img3: 'https://api.vvhan.com/api/view'
+  video:   # 视频地址 可自定义格式!每次网页刷新，视频随机
+# 模仿以下格式 可自定义无数个随机背景视频，且不重复即可
+    video1: # 计算原因，video1 出现频率为2/100，其他均为随机1/100
+      src: 'https://cdn.dearmsdan.com/video/IronMan.mp4' # 视频类型默认为mp4
+      type: "video/mp4"  # 视频类型
+    video2: 
+      src: 'https://cdn.dearmsdan.com/video/oceans.webm' # 视频类型默认为webm
+      type: "video/webm"  # 视频类型
+    video3: 
+      src: 'https://cdn.dearmsdan.com/video/IronMan2.mp4' 
+      type: "video/mp4"  # 视频类型
+    video4: 
+      src: 'https://cdn.dearmsdan.com/video/IronMan3.mp4' 
+      type: "video/mp4"  # 视频类型
+    video5: 
+      src: 'https://cdn.dearmsdan.com/video/IronMan4.mp4' 
+      type: "video/mp4"  # 视频类型
+    video6: 
+      src: 'https://cdn.dearmsdan.com/video/thor.mp4' 
+      type: "video/mp4"  # 视频类型
+    video7: 
+      src: 'https://cdn.dearmsdan.com/video/Strange.mp4' 
+      type: "video/mp4"  # 视频类型
+    video8: 
+      src: 'https://cdn.dearmsdan.com/video/Marvel.mp4' 
+      type: "video/mp4"  # 视频类型
+  opacity: '0.2'   # 设置视频/图片背景透明度 0.1~1
+# opacity:0.2
+  videoMax: '768'   # 默认 768  
+# 屏幕宽度小于videoMax数值将背景视频停止播放
+  bcopacity: '0.5'  # 0.1~1
+# 移动端背景底部颜色透明度 ！！！ 如果移动端不喜欢透明度设置为1
+  staticopacity: '1'  # 0.1~1
+# 移动端背景底部修饰颜色透明度
+
+
+
+
+# 自定义音乐
+#  示例音乐均来自猪厂，artist：作者、poster：歌曲小图片、MP3：音乐格式支持(webmv, ogv, m4v, oga, mp3等等) 
+playerlsit:
+  Right Here Waiting:
+    artist: Richard Marx
+    mp3: http://music.163.com/song/media/outer/url?id=3313653.mp3
+    poster: http://p2.music.126.net/_62h3kA2WCrYEXWL0yaJ7Q==/1743825441658717.jpg?param=130y130
+  勇气:
+    artist: 棉子
+    mp3: http://music.163.com/song/media/outer/url?id=1411358329.mp3
+    poster: http://p2.music.126.net/QcWNRX_0uhckImvF2nN1xA==/109951164573973377.jpg?param=130y130
+  东京不太热:
+    artist: 封茗囧菌
+    mp3: http://music.163.com/song/media/outer/url?id=34723470.mp3
+    poster: http://p1.music.126.net/srjmIxgdjRlCXSjZtl2aaw==/109951163825045428.jpg?param=90y90
+  空山新雨后:
+    artist: 冷十三
+    mp3: http://music.163.com/song/media/outer/url?id=1397565121.mp3
+    poster: http://p1.music.126.net/jio03zzjVqkuofI0054Syg==/109951164433163481.jpg?param=177y177
+  拜拜:
+    artist: 小竖琴
+    mp3: http://music.163.com/song/media/outer/url?id=1383594415.mp3
+    poster: http://p1.music.126.net/aRpHnChT3GFQI7AsqCw6iA==/109951164284919406.jpg?param=130y130
+  冬眠:
+    artist: 司南
+    mp3: http://music.163.com/song/media/outer/url?id=1398663411.mp3
+    poster: http://p1.music.126.net/4KDBaQXnQywQovmqvjx-8Q==/109951164444131697.jpg?param=130y130
+  我的名字:
+    artist: 焦迈奇
+    mp3: http://music.163.com/song/media/outer/url?id=554241732.mp3
+    poster: http://p1.music.126.net/a_rb8pgC5R_hO-lfm7acSw==/109951164019567772.jpg?param=130y130
+  还是分开:
+    artist: 张叶蕾
+    mp3: http://music.163.com/song/media/outer/url?id=465921195.mp3
+    poster: http://p1.music.126.net/tH5FdakJX47uy8mlM0GMWQ==/19218363741925314.jpg?param=130y130
+  云烟成雨:
+    artist: 房东的猫
+    mp3: http://music.163.com/song/media/outer/url?id=513360721.mp3
+    poster: http://p1.music.126.net/DSTg1dR7yKsyGq4IK3NL8A==/109951163046050093.jpg?param=130y130
+	
+	
+	
+	
+AboutMe: '德阿姆斯丹 · 迪尔斯'
+	
+	

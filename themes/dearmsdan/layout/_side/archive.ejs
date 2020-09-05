@@ -1,0 +1,10 @@
+<%# 标签归档  %>
+<% if (site.posts.length){ %>
+  <li>
+	  <a href="javascript:;" class="nav-togg" target="_self" ><span><%=  theme.side.archive %></span>
+	  </a>
+    <div>
+      <%- list_archives({show_count: theme.show_count, type: theme.archive_type}) %>
+    </div>
+  </li>
+<% } %>

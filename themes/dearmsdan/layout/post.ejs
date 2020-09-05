@@ -1,0 +1,41 @@
+<%#- 文章页 %>
+<div class="dearmsdan">
+	<div class="dearmsdan-post" id="dearmsdanPost">
+		<div class="dearmsdan-title">
+			<h1><%= page.title %></h1>
+		</div>
+	  <div id="post" class="dearmsdan-post-Statistics">
+            <a><%- date(page.date, "YYYY年MM月DD日") %></a>
+		<% if (page.categories && page.categories.length){ %>
+		  <%- list_categories(page.categories, {
+			show_count: false,
+			class: ' ',
+			style: 'none',
+			separator: ''
+		  }) %>
+		<% } %>
+		<% if (page.tags && page.tags.length){ %>
+		  <%- list_tags(page.tags, {
+			show_count: false,
+			class: ' ',
+			style: 'none',
+			separator: ' '
+		  }) %>
+		<% } %>
+	  </div>
+		<%# 目录 %>
+		<%- partial('_partial/toc') %>
+		<div>
+			  <article>
+				<%- page.content %>
+			  </article>
+		</div>
+		<%# 文章评论 %>
+		<%- partial('_partial/_footer/comment') %>
+		
+	  <% if (!page.reprint){ %>
+	<%#文章页脚版权声明- %>
+		<%- partial('_partial/_body/copyright') %>
+	  <% } %>
+	</div>
+</div>

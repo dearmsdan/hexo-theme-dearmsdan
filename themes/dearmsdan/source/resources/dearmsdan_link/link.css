@@ -1,0 +1,155 @@
+.clearfix::after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden
+}
+
+.clearfix {
+}
+
+.cloud-content {
+    padding: 80px 0
+}
+
+.cloud-header {
+    width: 90%;
+    margin: 0 auto;
+    position: relative
+}
+
+.cloud-header h3 {
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 40px;
+	    color: #565656;
+}
+
+.cloud-header h3 em {
+    display: block;
+    margin-bottom: 14px;
+    font-style: normal;
+    font-size: 30px
+}
+
+.cloud-header h3 span {
+    font-size: 16px;
+    opacity: .7
+}
+
+.cloud-wrapper .cloud-card {
+    float: left;
+    padding: 20px;
+    cursor: pointer;
+    min-height: 310px;
+    background: 0 0;
+    width: calc(24.8% - -3px);
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+    text-decoration: none
+}
+
+@media screen and (max-width: 1677px) {
+    .cloud-wrapper .cloud-card {
+        width:50%
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .cloud-wrapper .cloud-card {
+        width:100%
+    }
+}
+
+.cloud-card-image {
+    height: 200px;
+    overflow: hidden;
+    position: relative
+}
+
+.cloud-card-text {
+    margin-top: 10px;
+    color: #666;
+    font-size: 14px;
+    line-height: 24px
+}
+
+.cloud-card-image-back {
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: -webkit-transform .5s ease;
+    transition: -webkit-transform .5s ease;
+    transition: transform .5s ease;
+    transition: transform .5s ease,-webkit-transform .5s ease;
+	opacity: 0.2;
+}
+
+.cloud-card-image .cloud-card-image-back {
+    z-index: 0;
+    position: absolute
+}
+
+.cloud-card-image-title {
+    width: 100%;
+    color: #748169;
+    text-align: center;
+    font-size: 24px;
+    line-height: 200px;
+    position: absolute;
+    z-index: 1
+}
+
+.cloud-wrapper .cloud-card:hover .cloud-scale {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+		opacity: 1;
+}
+
+.cloud-wrapper .cloud-card:hover {
+    background: #fff;
+    -webkit-box-shadow: 0 0 25px rgba(186,204,207,.7);
+    -moz-box-shadow: 0 0 25px rgba(186,204,207,.7);
+    box-shadow: 0 0 25px rgba(186,204,207,.7);
+		
+		opacity: 1;
+}
+
+.cloud-card-image-back01 {
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: -webkit-transform .5s ease;
+    transition: -webkit-transform .5s ease;
+    transition: transform .5s ease;
+    transition: transform .5s ease,-webkit-transform .5s ease;
+    z-index: 0;
+    position: absolute;
+		opacity: 0.2;
+}
+
+.cloud-card-image-back02 {
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: -webkit-transform .5s ease;
+    transition: -webkit-transform .5s ease;
+    transition: transform .5s ease;
+    transition: transform .5s ease,-webkit-transform .5s ease;
+    z-index: 0;
+    position: absolute;
+	opacity: 0.2;
+}

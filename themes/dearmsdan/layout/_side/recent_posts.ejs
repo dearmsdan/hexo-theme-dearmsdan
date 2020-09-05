@@ -1,0 +1,17 @@
+<%# 最新文章归档  %>
+
+<% if (site.posts.length){ %>
+  <li>
+	  <a href="javascript:;" class="nav-togg" target="_self" ><span><%=  theme.side.recent_posts %></span>
+	  </a>
+    <div>
+      <ul>
+        <% site.posts.sort('date', -1).limit(5).each(function(post){ %>
+          <li>
+            <a href="<%- url_for(post.path) %>"><%= post.title || '(no title)' %></a>
+          </li>
+        <% }) %>
+      </ul>
+    </div>
+  </li>
+<% } %>

@@ -1,0 +1,17 @@
+﻿<%#- 文章页脚版权声明 %>
+
+<% if (page.hide_copyright !== true && theme.copyright || page.copyright) { %>
+<div class="copy">
+<i></i>
+<strong><%- theme.copyright.author %>：</strong>
+	
+	 <% if (page.author){ %>
+        <%- page.author %><br>
+        <%}  else{ %>
+			<%= theme.copyright.author_ %><br>
+        <% } %>
+	
+<strong><%- theme.copyright.permalink %>：</strong>
+	<%- link_to(page.permalink, page.permalink, {external: true}) %><br>
+</div>
+<% } %>

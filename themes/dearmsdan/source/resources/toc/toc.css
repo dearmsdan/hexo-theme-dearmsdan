@@ -1,0 +1,39 @@
+/**
+**  作者： dearmsdan
+* 手动好评
+**/
+#pageslide {    
+	margin-top: 150px;
+	left: 0px;
+    display: none;
+    position: absolute;
+    position: fixed;
+    top: 0;
+    height: 100%;
+    z-index: 1;
+    width: 260px;
+    padding: 15px;
+    color: #0d100d;
+	overflow-x: auto;
+    max-height: 382px;
+}
+#pageslide ul,#pageslide ol,#pageslide li{
+	list-style-type: none;    
+	padding-inline-start: 8px;
+}
+ 
+.second .i{    
+	position: relative;
+    top: -32px;
+    left: -20px;
+	z-index: 1;
+} 
+.second .i i{       
+	font-size: 24px;
+    position: fixed;
+}
+
+
+#article-toc{
+	font-size: 12px;
+}

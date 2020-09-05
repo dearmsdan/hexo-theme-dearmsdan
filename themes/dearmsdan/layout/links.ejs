@@ -1,0 +1,66 @@
+<%#- 友情链接（Permalinks）在 md文章 里定义布局方式为layout: links %>
+<div class="dearmsdan-post" id="links">
+  <article>
+	    <div class="cloud-content">
+			<div class="cloud-header">
+				<h3>
+				<em>友情链接</em>
+				<span>添加友链请将网站（logo、网站昵称、网站介绍、网站图片） 发送邮箱<a href="mailto:dearmsdan@outlook.com"/>dearmsdan@Outlook.com</a>也可以在下列填写</span>
+				<span style="display: block;">或者在
+				<a href="https://gitee.com/zhd99/zhd99/issues"/>码云</a>、
+				<a href="https://github.com/ZHD99/hexo-theme-dearmsdan/issues"/>GitHub</a>用 Issues 方式发送给我哦
+				</span>
+				</h3>
+			本站信息：
+	<table>
+		<thead>
+			<tr>
+			<th align="center"></th>
+			<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td align="center"></td>
+				<td>网站名称： hi mogul<br /></td>
+			</tr>
+			<tr>
+				<td align="center"></td>
+				<td>网站链接： <a href="http://link.dearmsdan.com/dearmsdan.html">http://link.dearmsdan.com/dearmsdan.html</a><br/></td>
+			</tr>
+			<tr>
+				<td align="center"></td>
+				<td>网站描述： 给人一种空灵的感觉<br /></td>
+				</tr>
+			<tr>
+				<td align="center"></td>
+				<td>图片链接： <a href="http://link.dearmsdan.com/logo.png">http://link.dearmsdan.com/logo.png</a></td>
+			</tr>
+		  </tbody>
+	</table>
+
+	
+<div class="cloud-wrapper clearfix">
+
+   <% for (var l in theme.links) { %>
+   	
+	<a href="<%- url_for(theme.links[l].link) -%>" class="cloud-card">
+
+		<div class="cloud-card-image">
+			<img class="cloud-scale cloud-card-image-back01" src="<%- url_for(theme.links[l].img) -%>" />
+			<div class="cloud-card-image-title"> <%- l -%></div>
+		</div>
+		<div class="cloud-card-text">
+			<%- theme.links[l].description -%>
+		</div>
+
+	</a>
+	
+   <% } %>
+
+
+
+</div>
+			</div>
+  </article>
+</div>

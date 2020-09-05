@@ -1,0 +1,85 @@
+<%# head头部信息 %>
+  <%
+	
+  var title = page.title;
+
+  if (is_archive()){
+    title = __('archive');
+
+    if (is_month()){
+      title += '：' + page.year + '/' + page.month;
+    } else if (is_year()){
+      title += '：' + page.year;
+    }
+  } else if (is_category()){
+    title = __('count.categories') + '：' + page.category;
+  } else if (is_tag()){
+    title = __('count.tags') + '：' + page.tag;
+  }
+  %>
+
+<head>
+	<title><% if (title){ %><%= title %> - <% } %> <%= theme.sitename %></title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta name="keywords" content="<%= theme.sitekeywords %>" />
+	<meta name="description" content="<%= theme.sitedescription %>">
+	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<link rel="shortcut icon" href="<%= theme.favicon.href %>" type="<%= theme.favicon.type %>" />
+	
+	<%# 调试工具 %>
+		 <% if (theme.eruda.enable == true){ %>
+			<script type="text/javascript" src="<%= theme.eruda.js %>"></script>
+			<script><%= theme.eruda.init %></script>
+		<%}  else{ %>
+		<% } %>
+	
+	<%# 阿里图标库 %>
+	<link rel="stylesheet" type="text/css" href="<%= theme.aliiconfont %>">
+	<%# 引入配置css文件 %>
+	<link rel="stylesheet" type="text/css" href="<%= theme.bootstrap.css %>">
+	<%- css('css/style.css') %>
+	<%# 乔巴拖尾 %>
+	<link rel="stylesheet" type="text/css" href="<%= theme.title_qiaoba %>">
+	<%# 社交按钮css %>
+	<link rel="stylesheet" type="text/css" href="<%= theme.social.css %>">
+	<%# 侧边栏悬浮效果css %>
+	<link rel="stylesheet" type="text/css" href="<%= theme.nav.css %>">
+	<%# 友链 %>
+	<link rel="stylesheet" href="<%= theme.link.css %>">
+	<%# 文章统计样式dearmsdan-post-Statistics %>
+	<link rel="stylesheet" type="text/css" href="<%= theme.Statistics %>">
+	<%# 目录 toc %>
+	<link rel="stylesheet" type="text/css" href="<%= theme.toc.css %>">  
+	<%# 代码块复制功能 %>
+  <script type="text/javascript" src="<%= theme.copycode.lib %>"></script>  
+	
+	<%# 引入配置js 文件 %>
+	<script src="<%= theme.jquery.js.one %>"></script>
+	<%- js('js/app.js') %>
+	<script src="<%= theme.bootstrap.js %>"></script>
+	<%# 引入滚动条js 文件 %>
+	<script src="<%= theme.slimscroll %>"></script>
+	<%# 引入全文搜索js 文件 %>
+	<script src="<%= theme.search.searchjs %>"></script>
+	<%# 引入评论valine.js %>
+	<script src="<%= theme.valine.js %>"></script>
+	
+	<%# 网站加载条 %>
+	<script src="<%= theme.loadingBar.pace %>"></script>
+	<script src="<%= theme.loadingBar.band %>"></script>
+	<link rel="stylesheet" href="<%= theme.loadingBar.pink %>">
+	
+	<%# PJAX %>
+		 <% if (theme.pjax.enable == true){ %>
+			<script src="<%= theme.jquerypjax.pjax %>"></script>
+			<%- partial('_partial/pjax') %>
+		<%}  else{ %>
+			<%- partial('_partial/app') %>
+		<% } %>
+	
+	
+</head>
+
+
+

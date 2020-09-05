@@ -1,0 +1,12 @@
+<%# 文章评论 %>
+
+		 <% if (theme.pjax.enable == true){ %>
+
+		<%}  else{ %>
+		 	<% if (theme.valine.enable == true){ %>
+				<%- partial('_partial/_footer/_comment/valine') %>
+			<%  }  %>
+
+			
+		<% } %>
+	
