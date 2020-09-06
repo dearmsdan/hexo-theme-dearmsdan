@@ -1,6 +1,19 @@
 <%#- 首页展示文章内容页 %>
 <% if (theme.typesetting.type == '' || theme.typesetting.type == 'default' ){ %>
-
+<style>
+	.dearmsdan-post{    
+		padding: 60px 70px;
+/*   		border: 1px #b8c7ff solid;*/
+		margin: 0px;    margin-bottom: 20px;
+        background-color: rgba(240, 248, 255, 0.4);
+	}
+	.dearmsdan-post:hover{
+   		border: none;
+		transform: translateY(-20px);
+		-webkit-transform: translateY(-20px);
+		-moz-transform: translateY(-20px);
+	}
+</style>
 <div class="dearmsdan">
 	<section class="dearmsdan-posts">
     <% page.posts.each(function (page) { %>
@@ -366,9 +379,9 @@ $(".dearmsdan-post").mouseleave(function(){
 	.dearmsdan-post:hover{
 		padding: 0;
 		background-color: initial;
-		transform: translateX(-30px);
-		-webkit-transform: translateX(-30px);
-		-moz-transform: translateX(-30px);
+		transform: translateX(-20px);
+		-webkit-transform: translateX(-20px);
+		-moz-transform: translateX(-20px);
 	}
 	.dearmsdan-post {
     	margin-bottom: 10px;
