@@ -16,8 +16,7 @@
 </p>
 <br/>
 
-展示： [www.dearmsdan.com](https://www.dearmsdan.com) 如果不显示请刷新页面 <br/>
-主题文档：[docs.dearmsdan](http://docs.dearmsdan.com/#/) <br/>
+展示： [dearmsdan.com](https://0.dearmsdan.com) 如果不显示请刷新页面 <br/>
 
 ## 特性
 
