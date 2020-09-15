@@ -173,6 +173,9 @@ textarea {
 optgroup {
   font-weight: bold;
 }
+figure table{
+	width: 100%;
+}
 table {
   border-spacing: 0;
   border-collapse: collapse;
@@ -190,11 +193,13 @@ figure td:first-child{
 figure td pre{
   /*height: 391px;*/
 	max-height: 391px;
+	touch-action: auto;
 }
 figure td:nth-child(2){
   display: grid;    
 	position: relative;
-    left: -50px;
+    left: -50px;   
+	width: 100%;
 }
 figure td:nth-child(2) pre{
     padding: 9.5px 0px;
@@ -1460,9 +1465,9 @@ pre code {
 
 /* 设置滚动条的样式 */
 pre::-webkit-scrollbar {
-  width: 5px;    
-	height: 5px;
-    background-color: #96daca;/*#ee5050;*/
+  width: 1px;    
+	height: 4px;
+    background-color: #c5cfff;/*#ee5050;*/
 
 }
 /* 滚动槽 */
@@ -1472,7 +1477,7 @@ pre::-webkit-scrollbar-track {
 /* 滚动条滑块 */
 pre::-webkit-scrollbar-thumb {
   border-radius: 50px;
-  background: #7cc2ff;
+  background: #b4bec8;
 }
 .pre-scrollable {
   max-height: 340px;

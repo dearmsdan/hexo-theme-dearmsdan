@@ -19,7 +19,7 @@ $(window).on("load", function () {
 	
 	
 	//加载中延迟...................
-	$("#dearmsdan").delay(1000).addClass("wrapShow");
+	//$("#dearmsdan").delay(1000).addClass("wrapShow");
 	
 	
 	
@@ -101,6 +101,9 @@ $(window).on("load", function () {
 		$('.sidebar-scroll').slimScroll({
 			height: '98%',
 			wheelStep: 20,
+			touchScrollStep: 50,
+			color: "#57abf8cc",
+			size: "7px",
 		});
 	}
 
@@ -114,7 +117,11 @@ $(window).on("load", function () {
 
 	
 	
-
+Function.prototype.getMultiLine = function () {
+		var lines = new String(this);
+		lines = lines.substring(lines.indexOf("/*") + 3, lines.lastIndexOf("*/"));
+		return lines;
+}
 
 
 });

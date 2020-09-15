@@ -16,11 +16,11 @@
 </p>
 <br/>
 
-展示： [www.dearmsdan.com](https://www.dearmsdan.com) 如果不显示请刷新页面 <br/>
-主题文档：[docs.dearmsdan](http://docs.dearmsdan.com/#/) <br/>
+展示： [dearmsdan.com](https://0.dearmsdan.com) 如果不显示请刷新页面 <br/>
 
 ## 特性
 
+- 基于Bootstrap+jQuery
 - 文档有基本介绍，主题config注释有功能介绍
 - 全文搜索、调试功能
 - 自定义背景设置(图片、图片特效、视频)
