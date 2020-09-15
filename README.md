@@ -16,7 +16,7 @@
 </p>
 <br/>
 
-展示： [dearmsdan.com](https://0.dearmsdan.com) 如果不显示请刷新页面 <br/>
+主题体积: 772 KB  <br/>
 
 ## 特性
 
