@@ -326,7 +326,7 @@ typesetting:
 
 # 默认排版设置 move(上移)、jump (空跳)、stick（便利贴）
 textdefault: 
-  type: 'stick' # 选取默认排列的类型
+  type: '' # 选取默认排列的类型
   opi: "0.4"    # 默认排版 首页文章列表的 透明度设置
   opih: "0.3"   # 默认排版 文章列表悬浮 透明度设置
   
@@ -599,7 +599,7 @@ background:
 # 背景图片设置
   bg: 'https://img.xjh.me/random_img.php?type=bg&ctype=nature&return=302' # 默认背景 和 默认文章图片
   op: '0.3' # 背景透明度  0.1~1
-  verification: 'img'  # 参数: 默认为空是关闭、img、video
+  verification: ''  # 参数: 默认为空是关闭、img、video
   imgapi:  # 图片地址 或者图片api   这三个图片地址 verification 为img 的时候轮播的图片
     img1: 'https://api.vvhan.com/api/view' 
     img2: 'https://api.vvhan.com/api/acgimg'
