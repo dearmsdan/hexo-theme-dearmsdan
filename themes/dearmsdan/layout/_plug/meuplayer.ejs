@@ -1,12 +1,11 @@
 
-<%#-  audio player 音乐插件 http://www.jq22.com/yanshi19022 %>
 <link href="<%= theme.player.audio.css %>" rel="stylesheet" type="text/css" />
 
 
-<div id="jp_container_N" class="jp-video jp-video-270p" role="application" aria-label="media player" style="left: 0px; height: 175px; bottom: 20px;">
+<div id="jp_container_N" class="jp-video jp-video-270p" role="application" aria-label="media player" style="left: 0px; height: 94px; bottom: 20px;">
 	<div class="jp-type-playlist">
-		<div id="jquery_jplayer_N" class="jp-jplayer" style="width: 90px; height: 90px;">	<img id="jp_poster_0" style="width: 90px; height: 90px; display: inline;" src="http://p1.music.126.net/QcWNRX_0uhckImvF2nN1xA==/109951164573973377.jpg?param=130y130">
-			<audio id="jp_audio_0" preload="metadata" src="http://music.163.com/song/media/outer/url?id=31473269.mp3" title="加载中...."></audio>
+		<div id="jquery_jplayer_N" class="jp-jplayer" style="width: 90px; height: 90px;">	<img id="jp_poster_0" style="width: 90px; height: 90px; display: inline;" src="">
+			<audio id="jp_audio_0" preload="metadata" src="" title="加载中...."></audio>
 			<video id="jp_video_0" preload="metadata" title="加载中...." style="width: 0px; height: 0px;"></video>
 		</div>
 		<div class="jp-gui">
@@ -46,13 +45,8 @@
 			</div>
 		</div>
 		<div class="jp-playlist">
-			<div class="jp-playlist-box" style="height: 80px;">
+			<div class="jp-playlist-box" style="height: 0px;">
 				<ul style="height: 1000px; display: block; top: 0px;">
-					
-					
-					
-					
-					
 					
 				</ul>
 			</div>
@@ -67,22 +61,18 @@
 		<div class="bar" style="top: 0px;"></div>
 	</div>
 
-	<button type="button" class="folded_bt" title="点击收缩" id="btnfold" style="top: 52px;">
+	<button type="button" class="folded_bt" title="点击收缩" id="btnfold" style="top: 0px;">
 	<span style="transform: rotate(180deg);"></span>
 	</button>
-	<div id="listRemove" style="display: block;"></div>
 
 	<div id="listClose"></div>
 
 </div>
 
 
-<%#- audio player 音乐插件 http://www.jq22.com/yanshi19022 %>
-
 <script async src="<%= theme.player.audio.js.player %>"></script>
 <script async src="<%= theme.player.audio.js.playlist %>"></script>
 <%- partial('_plug/playerlist') %>
-
 
 
 

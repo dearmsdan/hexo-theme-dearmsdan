@@ -32,7 +32,7 @@
 			<div class="social-btns">
 				
 				<% for (name in theme.socialbtn) { %>
-					<a target="_blank" class="btn <%= name %>" href="<%- url_for(theme.socialbtn[name][0]) -%>">
+					<a target="_blank" class="btn <%= name %>" href="<%- theme.socialbtn[name][0] -%>">
 						
             		<i class="DearMsDanIconFont <% if (theme.socialbtn[name][1]){ %><%= theme.socialbtn[name][1] %><%} else{ %><%= 'icon-cuowu' %><% } %>"></i>
 						
@@ -69,13 +69,13 @@
 					<%# 界面目录自定义 %>
 				<% for (name in theme.Catalog) { %>
 					<li>
-						<a href="javascript:;" class="nav-togg" target="_self" title="<%= name %>"><%= name %></a>
+						<a href="javascript:;" class="nav-togg" target="_self" title="<%- name %>"><%- name %></a>
 						<div>
 							<ul>
 							<% for (namei in theme.Catalog[name]) { %>
 								<li>
 								<div>
-									<a href="<%= theme.Catalog[name][namei] -%>" class="nav-togg" target="_self" title="<%= namei %>"><%= namei %></a>
+									<a href="<%- theme.Catalog[name][namei] -%>" class="nav-togg" target="<%- theme.cataTarget -%>" title="<%- namei %>"><%- namei %></a>
 								</div>
 								</li>
 									

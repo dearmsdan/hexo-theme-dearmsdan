@@ -8,9 +8,10 @@
 function dearmsdanPlaylist(){
 	
 var myPlaylist = new jPlayerPlaylist({
-    jPlayer: "#jquery_jplayer_N",
-    cssSelectorAncestor: "#jp_container_N"
-},[
+		jPlayer: "#jquery_jplayer_N",
+		cssSelectorAncestor: "#jp_container_N",
+		error: function(event){ }
+	},[
    <% for (var player in theme.playerlsit) { %>
    	{	
     		title: "<%= player %>",
@@ -21,15 +22,18 @@ var myPlaylist = new jPlayerPlaylist({
    <% } %>
 ],{
     playlistOptions: {
+        autoPlay: <%- theme.playerpautoPlay %>,
         enableRemoveControls: true
     },
+	loop: <%- theme.playerloop %>,
     swfPath: "js/",
     supplied: "webmv, ogv, m4v, oga, mp3",
     useStateClassSkin: true,
-    autoBlur: false,
+    autoBlur: true,
     smoothPlayBar: true,
     keyEnabled: true,
-    audioFullScreen: true
+    audioFullScreen: true,
+  	volume: .<%- theme.playervolume %>
 });
 var latest = [{
     title: "默",
@@ -43,7 +47,6 @@ var spirit = [{
     mp3: "http://music.163.com/song/media/outer/url?id=591753.mp3 ",
     poster: "http://p1.music.126.net/lW4YKD6cMgm32nI66CzWVg==/5702067301704441.jpg?param=130y130"
 }];
-	
 	
 }
 	
@@ -116,6 +119,7 @@ $("#playlist-remove").click(function() {
     myPlaylist.remove();
 });
 $("#listRemove").click(function() {
+	alert("删除就都没啦");
     myPlaylist.remove();
 });
 $("#playlist-next").click(function() {

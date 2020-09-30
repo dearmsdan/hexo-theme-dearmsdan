@@ -1,13 +1,36 @@
-﻿  <div id="vcomments"></div>
+﻿<style>
+.veditor {
+    background: url('https://www.calamus.xyz/wp-content/themes/lensnews2.2/images/loading/comment.gif') no-repeat #fcfcfc!important;
+    background-size: auto 130px!important;
+    background-position: right bottom!important;
+}
+</style>
+<div id="vcomments" class="comment">
+
+</div>
 <script>
+	window.valine = new Valine({
+		el: '#vcomments',
+		appId: '<%= theme.valine.appId %>',
+		appKey: '<%= theme.valine.appKey %>',
+		avatar: '<%= theme.valine.avatar %>',
+		placeholder: '<%= theme.valine.placeholder %>',
+		path: window.location.pathname,   //[重点] 记得添加path路径
+	});
+	
     // 使用方法 https://valine.js.org/quickstart.html
+	/*
+		var $vcomments = document.querySelector('.comment');
+		var $div= document.createElement('div');
+		$div.setAttribute("id","#vcomments");
+		$vcomments.appendChild($div);
     new Valine({
         el: '#vcomments',
         appId: '<%= theme.valine.appId %>',
         appKey: '<%= theme.valine.appKey %>',
 		avatar: '<%= theme.valine.avatar %>',
         placeholder: '输入前请确认 <昵称> <邮箱> <你的网站> 是否已填写，支持markdown 格式编写 ',
-    })
+    });*/
         //placeholder: '输入前请确认 <昵称> <邮箱> <你的网站> 是否已填写，支持markdown 格式编写 ',
 </script>
 

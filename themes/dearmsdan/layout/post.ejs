@@ -1,4 +1,39 @@
 <%#- 文章页 %>
+<% if (theme.typesetting.type == '' || theme.typesetting.type == 'default' ){ %>
+<% if (theme.textdefault.type == 'stick' ){ %>
+<style>
+@media screen and (min-width: 1024px){
+	.main-content {
+		padding: 0px;
+		width: 94%;
+		height: inherit;
+		position: relative;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		margin: auto;
+		background-color: rgba(255, 255, 255, 0.38)!important;
+	}
+	.dearmsdan-post{
+		margin-bottom: 0px;
+	}
+	.dearmsdan-post:hover{
+		box-shadow: 0 4px 24px rgb(255, 255, 255,0)!important;
+	}
+	#dearmsdanPost:hover {
+    padding: 10px 70px;
+	}	
+}
+</style>
+
+<% } %>
+<% } %>
+<style>
+	#dearmsdanPost:hover{
+   		    background-color: rgba(255, 255, 255, <%= theme.opPost %>)!important;
+	}	
+</style>
 <div class="dearmsdan">
 	<div class="dearmsdan-post" id="dearmsdanPost">
 		<div class="dearmsdan-title">
@@ -6,6 +41,7 @@
 		</div>
 	  <div id="post" class="dearmsdan-post-Statistics">
             <a><%- date(page.date, "YYYY年MM月DD日") %></a>
+		  	<a class="post-count">99 字</a>
 		<% if (page.categories && page.categories.length){ %>
 		  <%- list_categories(page.categories, {
 			show_count: false,
@@ -39,3 +75,26 @@
 	  <% } %>
 	</div>
 </div>
+<script>
+	(function(){
+		var jmz = {};
+		jmz.GetLength = function(str) {
+			var realLength = 0, len = str.length, charCode = -1;
+			for (var i = 0; i < len; i++) {
+				charCode = str.charCodeAt(i);
+				if (charCode >= 0 && charCode <= 128) 
+					  realLength += 1;
+				else
+					  realLength += 1;
+			}
+			return realLength;
+		};
+		//console.log(str);
+		var article = document.querySelector('.dearmsdan-post article').innerHTML.trim();
+
+		var b = article.replace(/<.*?>/ig,"");
+		
+		$('.post-count').html(jmz.GetLength(b)+"字");
+	})()
+</script>
+

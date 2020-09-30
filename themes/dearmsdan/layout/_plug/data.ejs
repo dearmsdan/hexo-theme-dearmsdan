@@ -15,7 +15,6 @@
 
 <script type="text/javascript"> 
 <% if (theme.dearmsdanColorConfig.enable == true ){ %>
-	alert(1);
 // 超链接 enable
 $('a').css('color','<%- theme.dearmsdanColorConfig.a %>');
 // 导航栏
@@ -36,6 +35,7 @@ $('.dearmsdan-bg').css('background-color','<%- theme.dearmsdanColorConfig.bg %>'
 	/* 设置 背景 */
 	<% if (theme.background.verification == '' ){ %>
 		$(".dearmsdan-bg").css("background-image","url('<%- theme.background.bg  %>')");
+		$(".dearmsdan-bg").css("opacity","<%- theme.background.op  %>");
 	<% } %>
    }
 
