@@ -7,6 +7,19 @@ $(window).on("load", function () {
 	
 	
 	
+	// 背景滤镜
+	$(window).scroll(function (e) {
+	  var scrollSeviye = $(this).scrollTop();
+	  if (scrollSeviye > 2400) {
+	    scrollSeviye = 2400;
+	  }
+	  var buyutme = (scrollSeviye / 6000) + 1;
+	  $('.visible,#dearmsdan-vbg,.dearmsdan-bg').css('-webkit-filter', 'blur(' + scrollSeviye / 120 + 'px)');
+	  $('.visible,#dearmsdan-vbg,.dearmsdan-bg').css('transform', 'scale(' + buyutme + ')');
+	});
+	
+	
+	
 	
 	
 	
