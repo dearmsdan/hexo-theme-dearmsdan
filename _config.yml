@@ -588,16 +588,16 @@ valine:
   avatar: robohash
   placeholder: 留下你的小脚印吧~
   
-# 背景效果设置 
-# 背景效果均为随机
-# 背景可设置为 默认图片() 图片特效(img)、视频(video)
 # https://img.xjh.me/random_img.php?type=bg&ctype=nature&return=302
 # https://img.xjh.me/random_img.php?type=bg&amp;ctype=nature&amp;return=302
 # http://vjs.zencdn.net/v/oceans.webm
-# 想做随机背景，没图床
+# 背景效果设置 
+# 背景效果均为随机
+# 背景可设置为 默认图片() 图片特效(img)、视频(video)
+
 background:     
 # 背景图片设置
-  bg: 'https://img.xjh.me/random_img.php?type=bg&ctype=nature&return=302' # 默认背景 和 默认文章图片
+  bg: '' # 默认背景 和 默认文章图片
   op: '0.3' # 背景透明度  0.1~1
   verification: ''  # 参数: 默认为空是关闭、img、video
   imgapi:  # 图片地址 或者图片api   这三个图片地址 verification 为img 的时候轮播的图片
