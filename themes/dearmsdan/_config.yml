@@ -23,7 +23,7 @@
 
 # 可设置置顶功能，文章作者，首页展示的图片，分类，标签 设置如下
 # 在文章markdown添加 
-# topping: true      # 为置顶 
+# topping: true      # 将最近的几篇文章中置顶 
 # author: 测试小刘~   # 设置文章作者
 # img: /zw.jpg       # 首页展示的图片 #前提是启用主题的图文排版
 # categories         # 分类
@@ -177,14 +177,13 @@ socialbtn:
 # cataTarget跳转方式，在当前页跳转 或 重新打开一页，可参看HTML a标签，target属性
 cataTarget: _self # 当前 _self 重新打开_blank 
 Catalog:
-  自定义目录1:
+  目录1:
     搜索: 
       - https://www.baidu.com/
     email:
       - mailto:dearmsdan@outlook.com
     404:
       - /about3.html
-	
 	
 	
 # 统计
@@ -493,7 +492,7 @@ linker:  # 默认关闭， 随意关闭开启
 # 如果不懂，那直接就把dearmsdan，换成自己的网站
 # 如：你的网站是www.baidu.com , 示例:http.+baidu （不带域名)
 # 意思是文章链接网址 http到dearmsdan 的格式链接不拦截 
-  link: http://link.dearmsdan.com/links.html # 默认link: /links.html
+  link: /links.html # 默认link: /links.html
 # 拦截跳转的链接文件位置在 dearmsdan/source/links.html
 # http://link.dearmsdan.com/links.html
 
@@ -574,16 +573,16 @@ valine:
   avatar: robohash
   placeholder: 留下你的小脚印吧~
   
-# 背景效果设置 
-# 背景效果均为随机
-# 背景可设置为 默认图片() 图片特效(img)、视频(video)
 # https://img.xjh.me/random_img.php?type=bg&ctype=nature&return=302
 # https://img.xjh.me/random_img.php?type=bg&amp;ctype=nature&amp;return=302
 # http://vjs.zencdn.net/v/oceans.webm
-# 想做随机背景，没图床
+# 背景效果设置 
+# 背景效果均为随机
+# 背景可设置为 默认图片() 图片特效(img)、视频(video)
+
 background:     
 # 背景图片设置
-  bg: 'https://img.xjh.me/random_img.php?type=bg&ctype=nature&return=302' # 默认背景 和 默认文章图片
+  bg: '' # 默认背景 和 默认文章图片
   op: '0.3' # 背景透明度  0.1~1
   verification: 'img'  # 参数: 默认为空是关闭、img、video
   imgapi:  # 图片地址 或者图片api   这三个图片地址 verification 为img 的时候轮播的图片
