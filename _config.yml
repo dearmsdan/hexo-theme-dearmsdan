@@ -23,7 +23,7 @@
 
 # 可设置置顶功能，文章作者，首页展示的图片，分类，标签 设置如下
 # 在文章markdown添加 
-# topping: true      # 为置顶 
+# topping: true      # 将最近的几篇文章中置顶 
 # author: 测试小刘~   # 设置文章作者
 # img: /zw.jpg       # 首页展示的图片 #前提是启用主题的图文排版
 # categories         # 分类
