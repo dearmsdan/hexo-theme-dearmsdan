@@ -707,7 +707,6 @@ iframe{
 ***********
 */
 .main-content{
-    overflow-x: hidden;
     padding: 30px 15px 20px;
 	position: relative;
 	z-index: 2;
