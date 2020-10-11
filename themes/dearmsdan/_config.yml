@@ -555,7 +555,7 @@ eruda:
  #    例如：第一次发布改为是v1,第二次v2,但不能是v1,如果第二次与第一次相同，将无法给用户更新版本
  # 4、开启离线访问  enable: true
 servicework:
-  enable: f # 填true开启,填f关闭
+  enable: true # 填true开启,填f关闭
 
 
 # pjax 顾名思义 无刷新网页跳转 ( 影响收录
