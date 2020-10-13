@@ -1,5 +1,4 @@
-var version = "v1";
-
+self.onerror=function(){return true;} 
 const caceheList = [
         '/',
         '/js/',
@@ -17,6 +16,15 @@ caches.keys().then(function(keys) {
 });
 */
 
+var version;
+
+// 获取postMessage数据
+self.addEventListener('message', function(eve){
+    /* console.log("SW Received Message: " + eve.data);
+    console.log('version=',version); */
+    version = eve.data;
+});
+
 // 缓存
 self.addEventListener('install', function(event) {
     event.waitUntil(self.skipWaiting()) 
@@ -25,6 +33,7 @@ self.addEventListener('install', function(event) {
 
 
 self.addEventListener('activate', function(event) {
+
     // console.log('activated!');
     var mainCache = [version];
     event.waitUntil(
@@ -41,6 +50,7 @@ self.addEventListener('activate', function(event) {
         })
     );
     return self.clients.claim();
+    
 });
 
 
@@ -57,6 +67,12 @@ self.addEventListener('fetch', function(event) {
     if(event.request.method !== "GET") {
         return false;
     }else{
+// 获取postMessage数据
+self.addEventListener('message', function(eve){
+var vs;
+    /* console.log("SW Received Message: " + eve.data);
+    console.log('version=',version); */
+    vs = eve.data;
         if (isExitInCacheList(caceheList, event.request.url)){
             // 只捕获需要加入cache的请求
             // 劫持 HTTP Request
@@ -70,7 +86,7 @@ self.addEventListener('fetch', function(event) {
                     } else {
                         return fetch(event.request)
                             .then(function(response) {
-                                return caches.open(version).then(function(cache) {
+                                return caches.open(vs).then(function(cache) {
                                     // 加入cache中)
                                     // console.log("【yes】 put in the cache" + event.request.url);
                                     cache.put(event.request, response.clone());
@@ -78,7 +94,7 @@ self.addEventListener('fetch', function(event) {
                                 });
                             })
                             .catch(function(error) {
-                                console.error('Fetching request url ,' +event.request.url+' failed:', error);
+                                console.log('资源获取,' +event.request.url+' 失败 :', error);
                                 // throw error;
                             });
                     }
@@ -89,6 +105,7 @@ self.addEventListener('fetch', function(event) {
         }else{
             return false;
         }
+});
     }
 });
 
