@@ -539,23 +539,44 @@ eruda:
   js: //cdn.jsdelivr.net/npm/eruda # js
   
  
- # 离线访问
- # 顾名思义，只要在有网络的地方访问一次即可实现离线访问，将数据存储在本地的意思，提高用户体验
- # 注意事项：
- # 如果开启，修改主题源码或者配置文件都不会生效，需要清除缓存
- # sw由于无法直接访问浏览器相关的API 需要在主题目录下./dearmsdan/source 找到 sw-cache.js 文件
- # 第一行，更改 var version = "v1"; version的值，最好是英文，然后过段时间自动更新缓存！
- # 如果想立即生效的话，通过 右击检查(DevTools开发者工具), 找到Application(存储)->Clear storage(缓存存储)，都删除就生效了
- # 注意！！！！如果想使用离线访问，但怕麻烦忽略以上操作，使用以下步骤
- 
- # 只要是开启过 需要清除缓存 Clear storage(缓存存储)
- # 1、在更改主题或者更改的过程中关闭离线访问enable: f 
- # 2、如果修改完之后想要发布的时候(hexo d) 在主题目录下./dearmsdan/source 找到 sw-cache.js 文件 第一行，更改 var version = "v1"; 
- # 3、version的v1 每次需要与上一次不一样就可以了
- #    例如：第一次发布改为是v1,第二次v2,但不能是v1,如果第二次与第一次相同，将无法给用户更新版本
- # 4、开启离线访问  enable: true
+ # 离线访问 功能  (该功能有使用页面通信，所以控制台有错误信息不断产生)
+ # 第一次访问网页，查询是否有新版本，并欲缓存目前浏览过的本站网页
+ # 第二次访问网页，新版本替换旧版本，删除冗余缓存，加载之前缓存过的网页
+ # 开启离线访问  enable: true
 servicework:
-  enable: true # 填true开启,填f关闭
+  enable: true           # 填true开启,填f关闭
+  version: v1.0.1.5.7 # 每次更新网站，都要记得改版本号哦(更新缓存)
+# version 用来更新版本，每次更改，发布之后更新离线访问
+
+
+
+# Service Worker优势
+# 1、 可在离线或网络较差的环境下正常打开页面
+# 2、 安全（HTTPS）
+# 3、 保持最新（及时更新）
+# 4、 支持安装（添加到主屏幕）和消息推送。
+# 5、 向下兼容，在不支持相关技术的浏览器中仍可正常访问。
+
+# 如果需要重新构建Service Worker 查看以下介绍↓↓↓
+
+# https://ld246.com/article/1520483961387 
+# https://blog.csdn.net/weixin_34221073/article/details/87942038
+# https://www.zhangxinxu.com/wordpress/2017/07/service-worker-cachestorage-offline-develop/
+# https://www.ihewro.com/archives/1126/
+# https://www.cnblogs.com/fundebug/p/understand_javascript_service_worker.html
+# Service Worker 注意事项：
+# Service Worker 是一种 Web Worker。它本质上是一个与主浏览器线程分开运行的 JavaScript 文件，可以拦截网络请求、缓存资源或从缓存中检索资源、传递推送消息。
+# 1、
+# Service Worker 不能直接访问 DOM(window对象、浏览器对象)。
+# 为了与页面通信，需使用 postMessage() 方法发送数据，并使用 message 事件侦听器来接收数据。
+# 2、Service worker 仅在HTTPS协议（或localhost:*域）下可用。
+# 3、一旦被安装，就永远存在，除非注销
+# 4、用到的时候唤醒，闲置的时候睡眠
+# 5、可以作为代理拦截请求和响应
+# 6、一个新的 Service worker 要经过注册、安装、激活这三个步骤，才可以对页面生效
+
+# 如果需要重新构建Service Worker 查看以上介绍↑↑↑
+
 
 
 # pjax 顾名思义 无刷新网页跳转 ( 影响收录

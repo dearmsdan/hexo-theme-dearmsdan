@@ -51,12 +51,31 @@
 
  <% if (theme.servicework.enable == true){ %>
   <script>
+var version = '<%- theme.servicework.version %>';
+
+Promise.all([
+ caches.open(version).then(function(cache) {
+  return cache.put('/dearmsdanVersion', new Response(version, { status: 200 }));
+ })
+]).then(function() {
+    return caches.match('/dearmsdanVersion');
+}).then(function(response) {
+    return response.text();
+}).then(function(body) {
+    console.log("\n %c <%- theme.sitename %> "+body+" %c <%- config.url %> \n", "color: #FFF; background:#030307; padding:5px 0;", "background: #85adfede; padding:5px 0;");
+});
+
+
+
 	//  /sw-cache.js
          //  $('.brand a:nth-child(2) span').text('installing');
     if ('serviceWorker' in navigator) {
                 navigator.serviceWorker.register('/sw-cache.js')
-                    .then(function (reg) {
-                    }).catch(function (error) {
+                    .then(reg => {
+                    reg = navigator.serviceWorker.controller;
+                    reg.postMessage(version);
+                    })
+                    .catch(function (error) {
                     console.log('cache failed with ' + error);
                 });
         }
