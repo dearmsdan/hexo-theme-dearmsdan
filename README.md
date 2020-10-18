@@ -1,3 +1,26 @@
+<style>
+h1{
+	    margin-bottom: 22px;
+	    color: #242424a3!important;    
+		text-align: center;
+		margin: 20px auto;
+		background-image: -webkit-linear-gradient(left,#3f4452,#48a0ec 25%,#3f4452 50%,#48ceec 75%,#3f4452);
+		-webkit-text-fill-color: transparent;
+		-webkit-background-clip: text;
+		-webkit-background-size: 200% 100%;
+		-webkit-animation: masked-animation 4s infinite linear;
+}
+  @-webkit-keyframes masked-animation {
+    0% {
+        background-position: 0 0
+    }
+
+    100% {
+        background-position: -100% 0
+    }
+}
+</style>
+
 <div align="right">
   Language:
   中文
