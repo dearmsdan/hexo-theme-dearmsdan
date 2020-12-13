@@ -3,7 +3,7 @@ $(document).ready(function () {
 	$(document).pjax('a[target!=_blank]', '.main', {fragment: '.main',timeout: 8000});
 
 	$(document).on('pjax:error', function() {
-		alert("慢点吧，等等我~");
+		alert("网络慢，等等我吧~");
 		  history.back();
 	});
 	
