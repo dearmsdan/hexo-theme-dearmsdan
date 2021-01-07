@@ -60,7 +60,7 @@
 #  基本配置  *********
 # ---------------------------------------------------------------
 
-sitename: hi mogul # 网站名字
+sitename: D:(earmsdan # 网站名字
 sitekeywords: hi mogul,hexo-theme-dearmsdan一款Hexo主题宝钻蓝色,It gives people a sense of emptiness,hexo简约主题,HEXO,dearmsdan.com # 网站关键词
 sitedescription: It gives people a sense of emptiness  # 网站描述
 
@@ -124,7 +124,7 @@ copycode:
 dearmsdan:
   logo:  #logo图标设置（设置其中之一就好了
     ico: DearMsDanIconFont icon-zh    #这里将logo设置 图标库ICO
-    png: 						      #这里将logo设置图片
+    png: 
     size: 50px # 设置logo大小
   title: 
     size: 20px # 设置网站名字大小
@@ -246,9 +246,9 @@ jscex:
 # footer 版权和一些信息
 footer:
   # text 和 beian 信息都可以删除或者修改
-  text: ""
+  text: "下载本主题用户,请随意使用、更改源码,能帮忙提交Bug与制作最好不过~"
   
-  beian: "<a style='color:#939393;' href='http://hn.beian.miit.gov.cn/' target='_blank'> <img width='16px' src='https://img.alicdn.com/tfs/TB1..50QpXXXXX7XpXXXXXXXXXX-40-40.png' />湘ICP备20001824号 </a>·<a target='_blank' href='http://www.beian.gov.cn/portal/registerSystemInfo' style='display:inline-block;text-decoration:none;height:20px;line-height:20px;'><p style='height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;'>湘公网安备 43010302001049号</p></a>"
+  beian: "<a style='color:#939393;' href='https://hexo.io/' target='_blank'> 框架:Hexo </a>·<a target='_blank' href='https://github.com/ZHD99/hexo-theme-dearmsdan' style='display:inline-block;text-decoration:none;height:20px;line-height:20px;'><p style='height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;'>主题:Dearmsdan</p></a>"
 
 # footer 页jio的时间
 # 时间年月日，注意月份是0-11 !!
@@ -544,7 +544,7 @@ eruda:
  # 第二次访问网页，新版本替换旧版本，删除冗余缓存，加载之前缓存过的网页
  # 开启离线访问  enable: true
 servicework:
-  enable: true           # 填true开启,填f关闭
+  enable: false           # 填true开启,填f关闭
   version: v1.0.1.5.7 # 每次更新网站，都要记得改版本号哦(更新缓存)
 # version 用来更新版本，每次更改，发布之后更新离线访问
 

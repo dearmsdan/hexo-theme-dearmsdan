@@ -1,0 +1,69 @@
+/** 访问页 css **/
+.Updowndemo {
+	position: absolute;
+    bottom: 30%;
+    left: 50%;
+	color: #FFF;
+  	width: 160px;
+  	margin: 0px auto;
+    animation: down 1s linear infinite;
+	z-index: 0px;
+}
+	.Updowndemo i.iconfont.icon-da-xiafanyeicon:hover{
+		color: aqua;
+	}
+@-moz-keyframes down {
+  0% {
+    margin-bottom: 0;
+    opacity: 1;
+  }
+  100% {
+    margin-bottom: -15px;
+    opacity: 0.1;
+  }
+}
+@-webkit-keyframes down {
+  0% {
+    margin-bottom: 0;
+    opacity: 1;
+  }
+  100% {
+    margin-bottom: -15px;
+    opacity: 0.1;
+  }
+}
+@-o-keyframes down {
+  0% {
+    margin-bottom: 0;
+    opacity: 1;
+  }
+  100% {
+    margin-bottom: -15px;
+    opacity: 0.1;
+  }
+}
+@keyframes down {
+  0% {
+    margin-bottom: 0;
+    opacity: 1;
+  }
+  100% {
+    margin-bottom: -15px;
+    opacity: 0.1;
+  }
+}
+	.home-bg {
+    display: block;
+    width: 100%;
+    height: 700px;
+    position: relative;
+    margin-top: -72px;
+}
+	.home-bg video {
+    width: 2500px;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    margin-left: -1280px;
+    z-index: -1;
+}

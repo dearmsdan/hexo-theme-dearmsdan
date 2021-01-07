@@ -1,0 +1,211 @@
+@charset "utf-8";
+/* CSS Document */
+.Timeline{
+	height: 100%;
+	
+	padding: 0px;
+}
+.CPU{
+	width: 100%;
+	padding: 10px 0px 10px 0px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 40px;
+	border: 1px solid;
+	border-radius: 10px;
+}
+/*左侧*/
+.left{
+	margin-top: 20px;
+	padding: 10px 0px 10px 40px;
+	float: left;
+	width: 550px;
+	height: 100%;
+	
+}
+.left div{
+	float: left;
+	width: 500px;
+	height: 60px;
+	margin-top: 10px;
+	border: 1px solid;
+	border-radius: 10px;
+	
+}
+
+/*中间*/
+.center{
+	float: left;
+	margin: 0px 0px 0px 25px;
+	width: 2px;
+	height: 3898px;
+	border: 2px solid;
+}
+/*右侧*/
+.right{
+	margin-top: 20px;
+	padding:10px 40px 10px 10px;
+	float: right;
+	width: 550px;
+	height: 100%;
+	
+}
+.right div{
+	float: right;
+	width: 500px;
+	height: 60px;
+	margin-top: 10px;
+	border: 1px solid;
+	border-radius: 10px;
+	
+}
+.a{
+	font-size: 30px;
+	font-weight: bold;
+	
+}
+/*提示内容框*/
+	/*左边*/
+.prompt-left{
+	text-align: center;
+	padding: 20px 0px;
+}
+.prompt-left1{
+	text-align: center;
+	padding: 10px 0px;
+}
+.prompt-left1 span{	
+	position: absolute;
+	width: 600px;
+	height: 275px;
+	margin: -22px 0px 0px 5px;
+	left: 560px;
+	/*border: 2px solid;*/
+	border-radius: 10px;
+	visibility: hidden;
+	opacity: 0;
+	transition: 0.5s;
+	box-shadow: 0px 0px 5px 1px;
+}
+.prompt-left1:hover span{
+	padding: 10px;
+	visibility: visible;
+	opacity: 1;
+}
+.prompt-left span{	
+	position: absolute;
+	width: 500px;
+	height: 250px;
+	margin: -22px 0px 0px 5px;
+	left: 560px;
+	/*border: 2px solid;*/
+	border-radius: 10px;
+	visibility: hidden;
+	opacity: 0;
+	transition: 0.5s;
+	box-shadow: 0px 0px 5px 1px;
+}
+
+.prompt-left:hover span{
+	padding: 10px;
+	visibility: visible;
+	opacity: 1;
+}
+	/*右边*/
+.prompt-right{
+	text-align: center;
+	padding: 20px 0px;
+}
+.prompt-right1{
+	text-align:center;
+	padding: 10px 0px;
+}
+.prompt-right1 span{
+	position: absolute;
+	width: 600px;
+	height: 275px;
+	margin: -22px 5px 0px 0px;
+	right: 560px;
+	/*border: 2px solid;*/
+	border-radius: 10px;
+	visibility: hidden;
+	opacity: 0;
+	transition: 0.5s;
+	box-shadow: 0px 0px 5px 1px;
+}
+.prompt-right1:hover span{
+	padding: 10px;
+	visibility: visible;
+	opacity: 1;
+}
+.prompt-right span{
+	position: absolute;
+	width: 500px;
+	height: 250px;
+	margin: -22px 5px 0px 0px;
+	right: 560px;
+	/*border: 2px solid;*/
+	border-radius: 10px;
+	visibility: hidden;
+	opacity: 0;
+	
+	transition: 0.5s;
+	box-shadow: 0px 0px 5px 1px;
+}
+.prompt-right:hover span{
+	padding: 10px;
+	visibility: visible;
+	opacity: 1;
+}
+/*边框 文字样式*/
+.span-l{
+	margin: 0px;
+	color: white;
+	text-align:center;
+	font-weight: bold;
+	font-size: 20px;
+	filter: blur(0px);
+	z-index: 100;
+}
+.span-r{
+	margin: 0px;
+	color: white;
+	text-align:center;
+	font-weight: bold;
+	font-size: 20px;
+	filter: blur(0px);
+	z-index: 100;
+}
+.span-l span{
+	left: -5px;
+	top: 21px;
+	height: 40PX;
+	box-shadow: 0px 0px 5px 0px;
+}
+.span-r span{
+	left: 0px;
+	top: 21px;
+	height: 40PX;
+	box-shadow: 0px 0px 5px 0px;
+}
+/*简介-开始*/
+/*左边简介*/
+.table-w{
+	width:150px;
+}
+.table-l{
+	text-align: right;
+	margin-top: 50px;
+}
+/*右边简介*/
+.table-r{
+	text-align: right;
+	margin-top: 50px;
+}
+/*简介-结束*/
+.span-bg{
+	filter: blur(5px);
+	background-color:rgba(0,0,0,0.90);
+	z-index: 99;
+}
+/*提示内容框-结束*/

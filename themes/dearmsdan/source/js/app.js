@@ -8,7 +8,7 @@ $(window).on("load", function () {
 	
 	
 	
-		// 背景滤镜
+		/* 背景滤镜
 		$(window).scroll(function (e) {
 			var scrollSeviye = $(this).scrollTop();
 			if (scrollSeviye > 2400) {
@@ -18,7 +18,7 @@ $(window).on("load", function () {
 			$('.visible').css('-webkit-filter', 'blur(' + scrollSeviye / 120 + 'px)');
 		   // $('.visible,#dearmsdan-vbg,.dearmsdan-bg').css('-webkit-filter', 'blur(' + scrollSeviye / 120 + 'px)');
 		   // $('.visible,#dearmsdan-vbg,.dearmsdan-bg').css('transform', 'scale(' + buyutme + ')');
-		  });
+		  });*/
 	
 	
 	

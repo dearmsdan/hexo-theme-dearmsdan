@@ -1,0 +1,140 @@
+:root {
+  --primary-bg-color: #000000;
+  --primary-color: #ffffff;
+}
+
+*:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 4500px;
+  font-family: "微软雅黑";
+
+  background-size: cover;
+  letter-spacing: 1px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.hero {
+  background: var(--primary-bg-color);
+  color: var(--primary-color);
+  transition: all .16s ease-in-out;
+}
+.h-screen{
+	height: 4500px;
+}
+.Content{
+	width: 1200px;
+	height: 3870px;
+	padding: 30px 20px 30px 20px;
+	position: absolute;
+    top:140px;
+    bottom:0;
+	border-bottom: 4px dashed;
+	/*border: 3px solid;*/
+	border-radius: 10px;
+	
+	z-index: 1;
+}
+
+/*商城页面*/
+	/*上半部分*/
+#Mall-top{
+	width: 100%;
+	height: 400px;
+	border: 3px solid;
+}
+/*左边部分*/
+.mall-l{
+	width: 25%;
+	height: 100%;
+	float: left;
+	z-index: 200;
+	padding: 0;
+	margin: 0;
+}
+.mall-l-p{
+	text-align: center;
+	width: 100%;
+	height: 49.3px;
+	padding: 14px 20px 14px 20px;
+	background-color: rgba(255,255,255,0.30);
+} 
+.mall-l-p h1{
+	padding-bottom: 50px;
+	border-bottom: 2px dashed; 
+}
+.mall-l span{
+	position: absolute;
+	float: left;
+	width: 700px;
+	height: 394px;
+	margin-left: 144px;
+	background-color:rgba(0,0,0,0.30);
+	visibility: hidden;
+	opacity: 0;
+	transition: 1s;
+	z-index: 500;
+}
+.mall-l div:hover{
+	letter-spacing: 5px;
+	transition: 1s;
+	background-color: rgba(0,0,0,0.30);
+}
+.mall-l-p:hover span {
+	visibility: visible;
+	opacity: 1;
+}
+.Classification-table{
+	margin: 20px 50px 20px 50px;
+}
+.Classification-table th{
+	font-size: 20px;
+	font-weight: bold;
+	border-bottom: 1px solid;
+}
+.Classification-table a:hover{
+	font-weight: bold;
+	border-bottom: 2px solid;
+}
+/*右边部分*/
+.mall-r{
+	width: 75%;
+	height: 400px;
+	
+	float: left;
+	z-index: 199;
+}
+
+
+/*商城页面-结束*/
+/*底部栏-样式*/
+.Bottombar{
+	width: 1200px;
+	height: 400px;
+	float: left;
+	margin-top: 4030px;
+	border: 2px solid;
+	border-radius: 10px;
+	z-index: 1;	
+}
+.Bottom-table{
+	float: left;
+	text-align: center;
+	border: 1px solid;
+	margin: 20px 0px 20px 20px;
+	border-radius: 10px;
+	z-index: 100;
+}
+.Bottom-tr{
+	border-bottom: 1px solid;
+	height: 30px;
+}
+.Bottom-tr1{
+	height: 20px;
+	font-size: 10px;
+}
+/*底部栏-样式-结束*/

@@ -1,0 +1,227 @@
+/** 搜索按钮 css
+//@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
+**/		
+#searchFigure {
+    width: 100%;
+	float: left;
+    height: 50px;
+    position: relative;
+    z-index: 2001;
+	    margin-bottom: 20px;
+}
+
+#searchFigure div {
+position: relative;
+    z-index: 1;
+  height: 50px;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  transition: 0.25s;
+  -webkit-transition: 0.25s;
+}
+
+#searchFigure:hover div {
+  transform: rotateX(-90deg);
+}
+
+#searchHover span {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  box-sizing: border-box;
+  border: 5px solid #fff;
+  font-family: 'Source Sans Pro',sans-serif;
+  line-height: 50px;
+  font-size: 15pt;
+  text-align: center;
+  text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.59);
+}
+
+#searchHoverspan:nth-child(1) {
+  color: #fff;
+  transform: translate3d(0, 0, 30px);
+  -webkit-transform: translate3d(0, 0, 30px);
+}
+
+#searchHover span:nth-child(2) {
+  color: #61312b;
+  background: #fff;
+  transform: rotateX(90deg) translate3d(0, 0, 30px);
+  -webkit-transform: rotateX(90deg) translate3d(0, 0, 30px);
+    cursor: text!important;
+}
+
+
+/**
+// 搜索 css
+*/
+#search-main{
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', Arial;
+    top: 30%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 99999;
+}
+.container{
+    width: 590px;
+    margin: 0 auto;
+    position: relative;
+	
+}
+.container:after{
+    content: '';
+    display: block;
+    clear:both;
+}
+.container>div{
+    float: left;
+}
+.container .logo{
+    width: 100%;
+    height: 120px;
+    margin: 0 auto 10px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 120px;
+}
+.container .input{
+    position: relative;
+    width: 500px;
+    height: 47px;
+    border-top: #ccc solid 1px;
+    border-right: none;
+    border-bottom: #ccc solid 1px;
+    border-left: #ccc solid 1px;
+    border-radius: 4px 0 0 4px;
+    background-color: aliceblue;
+    box-shadow: inset 0px 0px 10px 0px rgba(101, 101, 101, 0.63);
+} 
+.container .input>input{
+    outline: none;
+    border: none;
+    padding: 12px 0px 10px 16px;
+    margin: 0;
+    height: 44px;
+    color: #333;
+    font-size: 16px;
+    border-radius: 4px 0 0 4px;
+}
+.container .input>input::-webkit-input-placeholder{
+    color:#999;
+}
+.container .input .picker{
+    width: 75px;
+    padding-right: 30px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    line-height: 46px;
+    cursor: pointer;
+    color: #999;
+    font-size: 12px;
+    text-align: right;
+    background-image: url("/img/search/down.png");
+    background-position: 50px center;
+    background-repeat: no-repeat;
+    user-select: none;
+}
+.container .input .picker-list{
+    list-style: none;
+    padding: 5px 0;
+    width: 100px;
+    position: absolute;
+    right: 0;
+    top: 50px;
+    margin: 0;
+    line-height: 26px;
+    font-size: 12px;
+    border-radius: 2px;
+    box-shadow: 0 1px 5px rgba(0,0,0,.2);
+    background-color: #fff;
+    display: none;
+z-index: 1;
+}
+.container .input .picker-list>li{
+    padding-left: 36px;
+    background-position: 10px center;
+    background-repeat: no-repeat;
+    background-size: 16px auto;
+}
+.container .input .picker-list>li:hover{
+    background-color: #ebf1f5;
+    cursor: pointer;
+}
+.container .input .hot-list{
+    padding: 10px 0;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 50px;
+    margin: 0;
+    line-height: 32px;
+    font-size: 14px;
+    border-radius: 2px;
+    box-shadow: 0 1px 5px rgba(0,0,0,.2);
+    background-color: #fff;
+    display: none;
+}
+.container .input .hot-list>a{
+    display: block;
+    color: #333;
+    text-decoration: none;
+    padding: 0 10px;
+    overflow: hidden;
+}
+.container .input .hot-list>a:hover{
+    background-color: #f3f3f3;
+}
+.container .input .hot-list>a>div{
+    float: left;
+}
+.container .input .hot-list>a>div.number{
+    text-align: center;
+    width: 40px;
+}
+.container .search{
+    width: 70px;
+    height: 46px;
+    background-color: #08f;
+    background-image: url("/img/search/search.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 0 4px 4px 0;
+    cursor: not-allowed;
+}
+
+
+
+.container .input #local-search-result{
+    padding: 10px 0;
+    position: absolute;
+    left: 0;
+    top: 50px;
+    margin: 0;
+    line-height: 22px;
+    font-size: 14px;
+    border-radius: 2px;
+    box-shadow: 0 1px 5px rgba(0,0,0,.2);
+    background-color: #fff;
+}
+@media all and (max-width: 595px) {
+    #search-main .container{
+	width: 375.2px;
+}
+    #search-main .input{
+	width: 300px;
+    }
+}
+

@@ -1,0 +1,197 @@
+/* nexmoe-post  css 样式 */
+
+#nexmoe-content .nexmoe-post .nexmoe-post-meta a:nth-child(7n+1) {
+  /* background-color: #ff4e6a; */
+  color: #f53b36;
+  background-color: rgba(255, 255, 255, 0);
+  border-color: #f53b36;
+  border-width: 1px;
+  border-style: solid;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+#nexmoe-content .nexmoe-post .nexmoe-post-meta a:nth-child(7n+2) {
+  /* background-color: #ff4e6a; */
+  color: #ffaa73;
+  background-color: rgba(255, 255, 255, 0);
+  border-color: #ffaa73;
+  border-width: 1px;
+  border-style: solid;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+#nexmoe-content .nexmoe-post .nexmoe-post-meta a:nth-child(7n+3) {
+  /* background-color: #ff4e6a; */
+  color: #f9bd06;
+  background-color: rgba(255, 255, 255, 0);
+  border-color: #f9bd06;
+  border-width: 1px;
+  border-style: solid;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+#nexmoe-content .nexmoe-post .nexmoe-post-meta a:nth-child(7n+4) {
+  /* background-color: #ff4e6a; */
+  color: #3cdc82;
+  background-color: rgba(255, 255, 255, 0);
+  border-color: #3cdc82;
+  border-width: 1px;
+  border-style: solid;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+#nexmoe-content .nexmoe-post .nexmoe-post-meta a:nth-child(7n+5) {
+  /* background-color: #ff4e6a; */
+  color: #64dcf0;
+  background-color: rgba(255, 255, 255, 0);
+  border-color: #64dcf0;
+  border-width: 1px;
+  border-style: solid;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+#nexmoe-content .nexmoe-post .nexmoe-post-meta a:nth-child(7n+6) {
+  /* background-color: #ff4e6a; */
+  color: #64b9ff;
+  background-color: rgba(255, 255, 255, 0);
+  border-color: #64b9ff;
+  border-width: 1px;
+  border-style: solid;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+#nexmoe-content .nexmoe-post .nexmoe-post-meta a:nth-child(7n+7) {
+  /* background-color: #ff4e6a; */
+  color: #b4b4ff;
+  background-color: rgba(255, 255, 255, 0);
+  border-color: #b4b4ff;
+  border-width: 1px;
+  border-style: solid;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.nexmoe-post-wafe:hover,
+.nexmoe-post-wafe:focus,
+.nexmoe-post-wafe:active,
+.nexmoe-post-wafe.active {
+  border-color: #f53b36;
+  background-color: #fff;
+  color: #f53b36;
+}
+#nexmoe-content .nexmoe-post .nexmoe-post-meta a:nth-child(7n+1):hover,
+#nexmoe-content .nexmoe-post .nexmoe-post-meta a:nth-child(7n+1):focus,
+#nexmoe-content .nexmoe-post .nexmoe-post-meta a:nth-child(7n+1):active,
+#nexmoe-content .nexmoe-post .nexmoe-post-meta a:nth-child(7n+1).active {
+  border-color: #f53b36;
+  background-color: #f53b36;
+  color: #fff;
+}
+#nexmoe-content .nexmoe-post .nexmoe-post-meta a:nth-child(7n+2):hover,
+#nexmoe-content .nexmoe-post .nexmoe-post-meta a:nth-child(7n+2):focus,
+#nexmoe-content .nexmoe-post .nexmoe-post-meta a:nth-child(7n+2):active,
+#nexmoe-content .nexmoe-post .nexmoe-post-meta a:nth-child(7n+2).active {
+  border-color: #ffaa73;
+  background-color: #ffaa73;
+  color: #fff;
+}
+#nexmoe-content .nexmoe-post .nexmoe-post-meta a:nth-child(7n+3):hover,
+#nexmoe-content .nexmoe-post .nexmoe-post-meta a:nth-child(7n+3):focus,
+#nexmoe-content .nexmoe-post .nexmoe-post-meta a:nth-child(7n+3):active,
+#nexmoe-content .nexmoe-post .nexmoe-post-meta a:nth-child(7n+3).active {
+  border-color: #f9bd06;
+  background-color: #f9bd06;
+  color: #fff;
+}
+#nexmoe-content .nexmoe-post .nexmoe-post-meta a:nth-child(7n+4):hover,
+#nexmoe-content .nexmoe-post .nexmoe-post-meta a:nth-child(7n+4):focus,
+#nexmoe-content .nexmoe-post .nexmoe-post-meta a:nth-child(7n+4):active,
+#nexmoe-content .nexmoe-post .nexmoe-post-meta a:nth-child(7n+4).active {
+  border-color: #3cdc82;
+  background-color: #3cdc82;
+  color: #fff;
+}
+#nexmoe-content .nexmoe-post .nexmoe-post-meta a:nth-child(7n+5):hover,
+#nexmoe-content .nexmoe-post .nexmoe-post-meta a:nth-child(7n+5):focus,
+#nexmoe-content .nexmoe-post .nexmoe-post-meta a:nth-child(7n+5):active,
+#nexmoe-content .nexmoe-post .nexmoe-post-meta a:nth-child(7n+5).active {
+  border-color: #64dcf0;
+  background-color: #64dcf0;
+  color: #fff;
+}
+#nexmoe-content .nexmoe-post .nexmoe-post-meta a:nth-child(7n+6):hover,
+#nexmoe-content .nexmoe-post .nexmoe-post-meta a:nth-child(7n+6):focus,
+#nexmoe-content .nexmoe-post .nexmoe-post-meta a:nth-child(7n+6):active,
+#nexmoe-content .nexmoe-post .nexmoe-post-meta a:nth-child(7n+6).active {
+  border-color: #64b9ff;
+  background-color: #64b9ff;
+  color: #fff;
+}
+#nexmoe-content .nexmoe-post .nexmoe-post-meta a:nth-child(7n+7):hover,
+#nexmoe-content .nexmoe-post .nexmoe-post-meta a:nth-child(7n+7):focus,
+#nexmoe-content .nexmoe-post .nexmoe-post-meta a:nth-child(7n+7):active,
+#nexmoe-content .nexmoe-post .nexmoe-post-meta a:nth-child(7n+7).active {
+  border-color: #b4b4ff;
+  background-color: #b4b4ff;
+  color: #fff;
+}
+
+
+a, a:hover, a:active, a:visited, a:link {
+    outline: none;
+    transition: all 0.5s ease 0s;
+    -webkit-transition: all 0.5s ease 0s;
+    -moz-transition: all 0.5s ease 0s;
+}
+.nexmoe-post-wafe, .nexmoe-post-wafe:hover, .nexmoe-post-wafe:active, .nexmoe-post-wafe:visited, .nexmoe-post-wafe:link {
+    outline: none;
+    transition: all 0.5s ease 0s;
+    -webkit-transition: all 0.5s ease 0s;
+    -moz-transition: all 0.5s ease 0s;
+}
+
+
+
+
+
+.nexmoe-post-zhd99page{
+    color: #5b5c3e;
+    font-weight: bold;
+}
+.nexmoe-post-wafe{
+	color: #fff;
+	background-color: #f53b36;
+	border-color: #f53b36;
+	border-width: 1px;
+	border-style: solid;
+	-webkit-box-shadow: none;
+	box-shadow: none;    
+	display: inline-block;
+	margin: 20px 0px 0px 0px;
+	padding: 5px;
+	display: none;
+}
+
+
+
+
+
+.nexmoe-post {
+    -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1); 
+	-moz-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+	transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.nexmoe-post::after {
+    opacity: 0; 
+	-webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1); 
+	-moz-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1); 
+	transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.nexmoe-post:hover {
+    box-shadow: 0 4px 24px rgba(0,0,0,0.16);
+    z-index: 50;
+    padding: 50px;
+	/* -webkit-transform: scale(1.25, 1.25); transform: scale(1.25, 1.25); */
+}
+.nexmoe-post::after {
+    opacity: 1;
+}

@@ -1,0 +1,806 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Timeline</title>
+
+<link href="css/Timeline-style.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="css/Navigation Bar.css">
+<link rel="stylesheet" href="https://cdn.bootcss.com/tailwindcss/1.0.5/tailwind.min.css">
+<link rel="stylesheet" href="css/normalize.min.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/stylecolor.css">
+</head>
+
+<body>
+	<!--底部（取色器）-开始-->
+<div class="nav_menu w">
+        <div class="menu_item">
+            <div class="home">个性化设置</div>
+            <div class="web_home">
+			
+			<div id="Color">
+			  <div class="flex items-center">
+				<div class="flex flex-wrap mr-8 items-center justify-between">
+				  <h3 class="font-bold text-sm mr-3">默认主题</h3>
+					  <div class="flex">
+						  <span class="cursor-pointer w-10 h-10 inline-block rounded-full mr-4" data-bg-color="#ffffff" data-color="#000000" style="background-color: #ffffff">&nbsp;</span>
+						  <span class="cursor-pointer w-10 h-10 inline-block rounded-full mr-4" data-bg-color="#000000" data-color="#FF0000" style="background-color: #000000">&nbsp;</span>
+						  <span class="cursor-pointer w-10 h-10 inline-block rounded-full mr-4" data-bg-color="#000000" data-color="#FFFFFF" style="background-color: #000000">&nbsp;</span>
+					  </div>
+				  <h3 class="font-bold text-sm mr-3">护眼主题</h3>
+					  <div class="flex">
+						  <span class="cursor-pointer w-10 h-10 inline-block rounded-full mr-4" data-bg-color="#C7EDCC" data-color="#22CC00" style="background-color: #C7EDCC">&nbsp;</span>
+					  </div>
+				</div>
+<!--
+				<h3 class="font-bold mr-4 text-sm">动态颜色</h3>
+				<div class="flex items-center">
+				  <div class="flex items-center mr-3">
+					<label class="text-sm mr-2">背景：</label>
+					<input class="cursor-pointer h-10 outline-none rounded-full w-10 input-color-picker" type="color" data-id="bg-color" name="Background" />
+				  </div>
+				  <div class="flex items-center">
+					<label class="text-sm mr-2">Color:</label>
+					<input class="cursor-pointer h-10 outline-none rounded-full w-10 input-color-picker" type="color" data-id="color" name="Color" />
+				  </div>
+				</div>-->
+			  </div>
+			</div>
+			
+			</div>
+        </div>
+       
+    </div>
+<!--底部（取色器）-结束-->
+	
+	<section class="hero h-screen">
+  <div class=" h-1 flex justify-center ">
+    <!--<h1 class="text-5xl font-bold">HYBOY</h1>-->
+	<!--顶部导航栏-开始-->
+	<nav >
+		  <ul class="main">
+			<li id="logo">
+           	 <a href="index.html"><img src="img/HYBOY-LOGO.png" width="700" height="100" alt="HYBOY"/></a>
+			</li>
+			  
+			<li><a href="#">硬件排行</a>
+			  <ul class="drop menu2">
+				<li><a href="CPU-Timeline.html">CPU排行榜</a></li>
+				<li><a href="GPU-Timeline.html">显卡排行榜</a></li>
+				<!--<li><a href="#">contact</a></li> 
+				<li><a href="#">about</a></li>-->
+			  </ul>
+			</li>
+			<li><a href="#">contact</a>
+			  <ul class="drop menu3">
+				<li><a href="#">Home</a></li>
+				<li><a href="#">news</a></li>
+				<li><a href="#">contact</a></li>
+				<li><a href="#">about</a></li>
+			  </ul>
+			</li>
+			<li><a href="#">works</a>
+			  <ul class="drop menu4">
+				<li><a href="#">Home</a></li>
+				<li><a href="#">news</a></li>
+				<li><a href="#">contact</a></li>
+				<li><a href="#">about</a></li>
+			  </ul>
+			</li>
+			<li><a href="#">team</a>
+			  <ul class="drop menu5">
+				<li><a href="#">Home</a></li>
+				<li><a href="#">news</a></li>
+				<li><a href="#">contact</a></li>
+				<li><a href="#">about</a></li>
+			  </ul>
+			</li>
+			<li><a href="#">about</a>
+			  <ul class="drop menu6">
+				<li><a href="#">Home</a></li>
+				<li><a href="#">news</a></li>
+				<li><a href="#">contact</a></li>
+				<li><a href="#">about</a></li>
+			  </ul>
+			</li>
+	  </ul>
+	</nav>
+	  <div id="style-NavigationBar"></div>
+	  <!--顶部导航栏-结束-->
+	  <!--内容区-开始-->
+	  <div class="Content">
+		  
+		  <div class="Timeline">
+<!--CPU排行榜-->
+			  <div>
+				  <p class="CPU">CPU排行榜</p>
+			  </div>
+<!--inter排行榜-->
+			  <div class="left">
+		<!--英特尔 CPU-->
+				  <div class="prompt-left1">
+					  <a class="a">英特尔（inter）</a>
+					  <span class="span-l">
+						  <span>英特尔&nbsp;简介</span>
+						  <table class="table-l" width="575" border="1">
+							  <tbody>
+								<tr>
+								  <td class="table-w">公司名称：</td>
+								  <td>英特尔（集成电子公司）</td>
+								</tr>
+								<tr>
+								  <td>外文名：</td>
+								  <td>lntel Corporation(lntegrated Electronics Corporation)</td>
+								</tr>
+								<tr>
+								  <td>所属行业：</td>
+								  <td>电脑</td>
+								</tr>
+								<tr>
+								  <td>成立时间：</td>
+								  <td>1968年7月18日</td>
+								</tr>
+								<tr>
+								  <td>总部地点：</td>
+								  <td>美国加州圣克拉拉</td>
+								</tr>
+								<tr>
+								  <td>经营范围：</td>
+								  <td>半导体芯片</td>
+								</tr>
+								<tr>
+								  <td>创始人：</td>
+								  <td>罗伯特-诺伊斯;戈登·摩尔;安迪·格鲁夫</td>
+								</tr>
+								<tr>
+								  <td>CEO：</td>
+								  <td>罗伯特·斯旺</td>
+								</tr>
+							  </tbody>
+							</table>
+					  </span>
+					  <span class="span-bg"></span>
+					  
+				  </div>
+		<!--Intel Core i9-10980XE-->
+				  <div class="prompt-left">
+					  <a>Intel&nbsp;Core&nbsp;i9-10980XE</a>
+					  <span class="span-l">
+						  <span>Intel&nbsp;Core&nbsp;i9-10980XE</span>
+						  <table class="table-l" width="475" border="1">
+							  <tbody>
+								<tr>
+								  <td class="table-w">核心代号：</td>
+								  <td>Cascade&nbsp;Lake</td>
+								</tr>
+								<tr>
+								  <td>基础频率：</td>
+								  <td>3000&nbsp;MHz</td>
+								</tr>
+								<tr>
+								  <td>最大睿频：</td>
+								  <td>4800&nbsp;MHz</td>
+								</tr>
+								<tr>
+								  <td>核心/线程：</td>
+								  <td>18&nbsp;C/36&nbsp;T</td>
+								</tr>
+								<tr>
+								  <td>缓存：</td>
+								  <td>24.75MB&nbsp;L3</td>
+								</tr>
+								<tr>
+								  <td>制程：</td>
+								  <td>14&nbsp;nm</td>
+								</tr>
+								<tr>
+								  <td>针脚：</td>
+								  <td>socket&nbsp;2066</td>
+								</tr>
+								<tr>
+								  <td>TDP：</td>
+								  <td>165&nbsp;W</td>
+								</tr>
+							  </tbody>
+							</table>
+					  </span>
+					  <span class="span-bg"></span>
+				  </div>
+		<!--Intel Core i9-10980XE-->
+				  <div class="prompt-left">
+					  <a>Intel&nbsp;Core&nbsp;i9-10980XE</a>
+					  <span class="span-l">
+						  <span>Intel&nbsp;Core&nbsp;i9-10980XE</span>
+						  <table class="table-l" width="475" border="1">
+							  <tbody>
+								<tr>
+								  <td class="table-w">核心代号：</td>
+								  <td>Cascade&nbsp;Lake</td>
+								</tr>
+								<tr>
+								  <td>基础频率：</td>
+								  <td>3000&nbsp;MHz</td>
+								</tr>
+								<tr>
+								  <td>最大睿频：</td>
+								  <td>4800&nbsp;MHz</td>
+								</tr>
+								<tr>
+								  <td>核心/线程：</td>
+								  <td>18&nbsp;C/36&nbsp;T</td>
+								</tr>
+								<tr>
+								  <td>缓存：</td>
+								  <td>24.75MB&nbsp;L3</td>
+								</tr>
+								<tr>
+								  <td>制程：</td>
+								  <td>14&nbsp;nm</td>
+								</tr>
+								<tr>
+								  <td>针脚：</td>
+								  <td>socket&nbsp;2066</td>
+								</tr>
+								<tr>
+								  <td>TDP：</td>
+								  <td>165&nbsp;W</td>
+								</tr>
+							  </tbody>
+							</table>
+					  </span>
+					  <span class="span-bg"></span>
+				  </div>
+		<!--Intel Core i9-10980XE-->
+				  <div class="prompt-left">
+					  <a>Intel&nbsp;Core&nbsp;i9-10980XE</a>
+					  <span class="span-l">
+						  <span>Intel&nbsp;Core&nbsp;i9-10980XE</span>
+						  <table class="table-l" width="475" border="1">
+							  <tbody>
+								<tr>
+								  <td class="table-w">核心代号：</td>
+								  <td>Cascade&nbsp;Lake</td>
+								</tr>
+								<tr>
+								  <td>基础频率：</td>
+								  <td>3000&nbsp;MHz</td>
+								</tr>
+								<tr>
+								  <td>最大睿频：</td>
+								  <td>4800&nbsp;MHz</td>
+								</tr>
+								<tr>
+								  <td>核心/线程：</td>
+								  <td>18&nbsp;C/36&nbsp;T</td>
+								</tr>
+								<tr>
+								  <td>缓存：</td>
+								  <td>24.75MB&nbsp;L3</td>
+								</tr>
+								<tr>
+								  <td>制程：</td>
+								  <td>14&nbsp;nm</td>
+								</tr>
+								<tr>
+								  <td>针脚：</td>
+								  <td>socket&nbsp;2066</td>
+								</tr>
+								<tr>
+								  <td>TDP：</td>
+								  <td>165&nbsp;W</td>
+								</tr>
+							  </tbody>
+							</table>
+					  </span>
+					  <span class="span-bg"></span>
+				  </div>
+		<!--Intel Core i9-10980XE-->
+				  <div class="prompt-left">
+					  <a>Intel&nbsp;Core&nbsp;i9-10980XE</a>
+					  <span class="span-l">
+						  <span>Intel&nbsp;Core&nbsp;i9-10980XE</span>
+						  <table class="table-l" width="475" border="1">
+							  <tbody>
+								<tr>
+								  <td class="table-w">核心代号：</td>
+								  <td>Cascade&nbsp;Lake</td>
+								</tr>
+								<tr>
+								  <td>基础频率：</td>
+								  <td>3000&nbsp;MHz</td>
+								</tr>
+								<tr>
+								  <td>最大睿频：</td>
+								  <td>4800&nbsp;MHz</td>
+								</tr>
+								<tr>
+								  <td>核心/线程：</td>
+								  <td>18&nbsp;C/36&nbsp;T</td>
+								</tr>
+								<tr>
+								  <td>缓存：</td>
+								  <td>24.75MB&nbsp;L3</td>
+								</tr>
+								<tr>
+								  <td>制程：</td>
+								  <td>14&nbsp;nm</td>
+								</tr>
+								<tr>
+								  <td>针脚：</td>
+								  <td>socket&nbsp;2066</td>
+								</tr>
+								<tr>
+								  <td>TDP：</td>
+								  <td>165&nbsp;W</td>
+								</tr>
+							  </tbody>
+							</table>
+					  </span>
+					  <span class="span-bg"></span>
+				  </div>
+		<!--Intel Core i9-10980XE-->
+				  <div class="prompt-left">
+					  <a>Intel&nbsp;Core&nbsp;i9-10980XE</a>
+					  <span class="span-l">
+						  <span>Intel&nbsp;Core&nbsp;i9-10980XE</span>
+						  <table class="table-l" width="475" border="1">
+							  <tbody>
+								<tr>
+								  <td class="table-w">核心代号：</td>
+								  <td>Cascade&nbsp;Lake</td>
+								</tr>
+								<tr>
+								  <td>基础频率：</td>
+								  <td>3000&nbsp;MHz</td>
+								</tr>
+								<tr>
+								  <td>最大睿频：</td>
+								  <td>4800&nbsp;MHz</td>
+								</tr>
+								<tr>
+								  <td>核心/线程：</td>
+								  <td>18&nbsp;C/36&nbsp;T</td>
+								</tr>
+								<tr>
+								  <td>缓存：</td>
+								  <td>24.75MB&nbsp;L3</td>
+								</tr>
+								<tr>
+								  <td>制程：</td>
+								  <td>14&nbsp;nm</td>
+								</tr>
+								<tr>
+								  <td>针脚：</td>
+								  <td>socket&nbsp;2066</td>
+								</tr>
+								<tr>
+								  <td>TDP：</td>
+								  <td>165&nbsp;W</td>
+								</tr>
+							  </tbody>
+							</table>
+					  </span>
+					  <span class="span-bg"></span>
+				  </div>
+		<!--Intel Core i9-10980XE-->
+				  <div class="prompt-left">
+					  <a>Intel&nbsp;Core&nbsp;i9-10980XE</a>
+					  <span class="span-l">
+						  <span>Intel&nbsp;Core&nbsp;i9-10980XE</span>
+						  <table class="table-l" width="475" border="1">
+							  <tbody>
+								<tr>
+								  <td class="table-w">核心代号：</td>
+								  <td>Cascade&nbsp;Lake</td>
+								</tr>
+								<tr>
+								  <td>基础频率：</td>
+								  <td>3000&nbsp;MHz</td>
+								</tr>
+								<tr>
+								  <td>最大睿频：</td>
+								  <td>4800&nbsp;MHz</td>
+								</tr>
+								<tr>
+								  <td>核心/线程：</td>
+								  <td>18&nbsp;C/36&nbsp;T</td>
+								</tr>
+								<tr>
+								  <td>缓存：</td>
+								  <td>24.75MB&nbsp;L3</td>
+								</tr>
+								<tr>
+								  <td>制程：</td>
+								  <td>14&nbsp;nm</td>
+								</tr>
+								<tr>
+								  <td>针脚：</td>
+								  <td>socket&nbsp;2066</td>
+								</tr>
+								<tr>
+								  <td>TDP：</td>
+								  <td>165&nbsp;W</td>
+								</tr>
+							  </tbody>
+							</table>
+					  </span>
+					  <span class="span-bg"></span>
+				  </div>
+			  </div>
+<!--中垂线-->
+			  <div class="center"></div>
+<!--AMD排行榜-->
+			  <div class="right">
+		<!--AMD CPU-->
+				  <div class="prompt-right1">
+					  <a class="a">A&nbsp;M&nbsp;D</a>
+					  <span class="span-r">
+						  <span>A&nbsp;M&nbsp;D&nbsp;简介</span>
+						  <table class="table-r" width="575" border="1">
+							  <tbody>
+								<tr>
+								  <td class="table-w">公司名称：</td>
+								  <td>超威半导体公司</td>
+								</tr>
+								<tr>
+								  <td>外文名：</td>
+								  <td>AMD(Advanced Micro Devices, Inc.)</td>
+								</tr>
+								<tr>
+								  <td>所属行业：</td>
+								  <td>半导体</td>
+								</tr>
+								<tr>
+								  <td>成立时间：</td>
+								  <td>1969年</td>
+								</tr>
+								<tr>
+								  <td>总部地点：</td>
+								  <td>美国加州硅谷桑尼维尔</td>
+								</tr>
+								<tr>
+								  <td>经营范围：</td>
+								  <td>CPU、显卡、主板等电脑硬件设备</td>
+								</tr>
+								<tr>
+								  <td>创始人：</td>
+								  <td>杰瑞·桑德斯（Jerry Sanders）</td>
+								</tr>
+								<tr>
+								  <td>CEO：</td>
+								  <td>Lisa Su (苏姿丰)</td>
+								</tr>
+							  </tbody>
+							</table>
+					  </span>
+					  <span class="span-bg"></span>
+				  </div>
+		<!--AMD Ryzen TR 3990X-->
+				  <div class="prompt-right">
+					  <a>AMD&nbsp;Ryzen&nbsp;TR&nbsp;3990X</a>
+					  <span class="span-r">
+						  <span>AMD&nbsp;Ryzen&nbsp;TR&nbsp;3990X</span>
+						  <table class="table-r" width="475" border="1">
+							  <tbody>
+								<tr>
+								  <td class="table-w">核心代号：</td>
+								  <td>ZEN2</td>
+								</tr>
+								<tr>
+								  <td>基础频率：</td>
+								  <td>2900&nbsp;MHz</td>
+								</tr>
+								<tr>
+								  <td>最大睿频：</td>
+								  <td>4300&nbsp;MHz</td>
+								</tr>
+								<tr>
+								  <td>核心/线程：</td>
+								  <td>64&nbsp;C/128&nbsp;T</td>
+								</tr>
+								<tr>
+								  <td>缓存：</td>
+								  <td>256MB&nbsp;L3</td>
+								</tr>
+								<tr>
+								  <td>制程：</td>
+								  <td>7&nbsp;nm</td>
+								</tr>
+								<tr>
+								  <td>针脚：</td>
+								  <td>sTRX4</td>
+								</tr>
+								<tr>
+								  <td>TDP：</td>
+								  <td>280&nbsp;W</td>
+								</tr>
+							  </tbody>
+							</table>
+					  </span>
+					  <span class="span-bg"></span>
+				  </div>
+		<!--AMD Ryzen TR 3990X-->
+				  <div class="prompt-right">
+					  <a>AMD&nbsp;Ryzen&nbsp;TR&nbsp;3990X</a>
+					  <span class="span-r">
+						  <span>AMD&nbsp;Ryzen&nbsp;TR&nbsp;3990X</span>
+						  <table class="table-r" width="475" border="1">
+							  <tbody>
+								<tr>
+								  <td class="table-w">核心代号：</td>
+								  <td>ZEN2</td>
+								</tr>
+								<tr>
+								  <td>基础频率：</td>
+								  <td>2900&nbsp;MHz</td>
+								</tr>
+								<tr>
+								  <td>最大睿频：</td>
+								  <td>4300&nbsp;MHz</td>
+								</tr>
+								<tr>
+								  <td>核心/线程：</td>
+								  <td>64&nbsp;C/128&nbsp;T</td>
+								</tr>
+								<tr>
+								  <td>缓存：</td>
+								  <td>256MB&nbsp;L3</td>
+								</tr>
+								<tr>
+								  <td>制程：</td>
+								  <td>7&nbsp;nm</td>
+								</tr>
+								<tr>
+								  <td>针脚：</td>
+								  <td>sTRX4</td>
+								</tr>
+								<tr>
+								  <td>TDP：</td>
+								  <td>280&nbsp;W</td>
+								</tr>
+							  </tbody>
+							</table>
+					  </span>
+					  <span class="span-bg"></span>
+				  </div>
+		<!--AMD Ryzen TR 3990X-->
+				  <div class="prompt-right">
+					  <a>AMD&nbsp;Ryzen&nbsp;TR&nbsp;3990X</a>
+					  <span class="span-r">
+						  <span>AMD&nbsp;Ryzen&nbsp;TR&nbsp;3990X</span>
+						  <table class="table-r" width="475" border="1">
+							  <tbody>
+								<tr>
+								  <td class="table-w">核心代号：</td>
+								  <td>ZEN2</td>
+								</tr>
+								<tr>
+								  <td>基础频率：</td>
+								  <td>2900&nbsp;MHz</td>
+								</tr>
+								<tr>
+								  <td>最大睿频：</td>
+								  <td>4300&nbsp;MHz</td>
+								</tr>
+								<tr>
+								  <td>核心/线程：</td>
+								  <td>64&nbsp;C/128&nbsp;T</td>
+								</tr>
+								<tr>
+								  <td>缓存：</td>
+								  <td>256MB&nbsp;L3</td>
+								</tr>
+								<tr>
+								  <td>制程：</td>
+								  <td>7&nbsp;nm</td>
+								</tr>
+								<tr>
+								  <td>针脚：</td>
+								  <td>sTRX4</td>
+								</tr>
+								<tr>
+								  <td>TDP：</td>
+								  <td>280&nbsp;W</td>
+								</tr>
+							  </tbody>
+							</table>
+					  </span>
+					  <span class="span-bg"></span>
+				  </div>
+		<!--AMD Ryzen TR 3990X-->
+				  <div class="prompt-right">
+					  <a>AMD&nbsp;Ryzen&nbsp;TR&nbsp;3990X</a>
+					  <span class="span-r">
+						  <span>AMD&nbsp;Ryzen&nbsp;TR&nbsp;3990X</span>
+						  <table class="table-r" width="475" border="1">
+							  <tbody>
+								<tr>
+								  <td class="table-w">核心代号：</td>
+								  <td>ZEN2</td>
+								</tr>
+								<tr>
+								  <td>基础频率：</td>
+								  <td>2900&nbsp;MHz</td>
+								</tr>
+								<tr>
+								  <td>最大睿频：</td>
+								  <td>4300&nbsp;MHz</td>
+								</tr>
+								<tr>
+								  <td>核心/线程：</td>
+								  <td>64&nbsp;C/128&nbsp;T</td>
+								</tr>
+								<tr>
+								  <td>缓存：</td>
+								  <td>256MB&nbsp;L3</td>
+								</tr>
+								<tr>
+								  <td>制程：</td>
+								  <td>7&nbsp;nm</td>
+								</tr>
+								<tr>
+								  <td>针脚：</td>
+								  <td>sTRX4</td>
+								</tr>
+								<tr>
+								  <td>TDP：</td>
+								  <td>280&nbsp;W</td>
+								</tr>
+							  </tbody>
+							</table>
+					  </span>
+					  <span class="span-bg"></span>
+				  </div>
+		<!--AMD Ryzen TR 3990X-->
+				  <div class="prompt-right">
+					  <a>AMD&nbsp;Ryzen&nbsp;TR&nbsp;3990X</a>
+					  <span class="span-r">
+						  <span>AMD&nbsp;Ryzen&nbsp;TR&nbsp;3990X</span>
+						  <table class="table-r" width="475" border="1">
+							  <tbody>
+								<tr>
+								  <td class="table-w">核心代号：</td>
+								  <td>ZEN2</td>
+								</tr>
+								<tr>
+								  <td>基础频率：</td>
+								  <td>2900&nbsp;MHz</td>
+								</tr>
+								<tr>
+								  <td>最大睿频：</td>
+								  <td>4300&nbsp;MHz</td>
+								</tr>
+								<tr>
+								  <td>核心/线程：</td>
+								  <td>64&nbsp;C/128&nbsp;T</td>
+								</tr>
+								<tr>
+								  <td>缓存：</td>
+								  <td>256MB&nbsp;L3</td>
+								</tr>
+								<tr>
+								  <td>制程：</td>
+								  <td>7&nbsp;nm</td>
+								</tr>
+								<tr>
+								  <td>针脚：</td>
+								  <td>sTRX4</td>
+								</tr>
+								<tr>
+								  <td>TDP：</td>
+								  <td>280&nbsp;W</td>
+								</tr>
+							  </tbody>
+							</table>
+					  </span>
+					  <span class="span-bg"></span>
+				  </div>
+		<!--AMD Ryzen TR 3990X-->
+				  <div class="prompt-right">
+					  <a>AMD&nbsp;Ryzen&nbsp;TR&nbsp;3990X</a>
+					  <span class="span-r">
+						  <span>AMD&nbsp;Ryzen&nbsp;TR&nbsp;3990X</span>
+						  <table class="table-r" width="475" border="1">
+							  <tbody>
+								<tr>
+								  <td class="table-w">核心代号：</td>
+								  <td>ZEN2</td>
+								</tr>
+								<tr>
+								  <td>基础频率：</td>
+								  <td>2900&nbsp;MHz</td>
+								</tr>
+								<tr>
+								  <td>最大睿频：</td>
+								  <td>4300&nbsp;MHz</td>
+								</tr>
+								<tr>
+								  <td>核心/线程：</td>
+								  <td>64&nbsp;C/128&nbsp;T</td>
+								</tr>
+								<tr>
+								  <td>缓存：</td>
+								  <td>256MB&nbsp;L3</td>
+								</tr>
+								<tr>
+								  <td>制程：</td>
+								  <td>7&nbsp;nm</td>
+								</tr>
+								<tr>
+								  <td>针脚：</td>
+								  <td>sTRX4</td>
+								</tr>
+								<tr>
+								  <td>TDP：</td>
+								  <td>280&nbsp;W</td>
+								</tr>
+							  </tbody>
+							</table>
+					  </span>
+					  <span class="span-bg"></span>
+				  </div>
+
+			  </div>
+		  </div>
+		
+	</div>  
+	  <!--内容区-结束-->
+  <!--底部-开始-->
+	  <div class="Bottombar">
+		  
+		  <div class="Bottom-table">
+			  <table  width="552" height="200" border="0">
+				  <tbody>
+					<tr class="Bottom-tr">
+					  <td>硬件排行</td>
+					  <td>Contact</td>
+					  <td>Worke</td>
+					  <td>Team</td>
+					  <td>Team</td>
+					</tr>
+					<tr class="Bottom-tr1">
+					  <td>CPU排行榜</td>
+					  <td>&nbsp;</td>
+					  <td>&nbsp;</td>
+					  <td>&nbsp;</td>
+					  <td>team</td>
+					</tr>
+					<tr class="Bottom-tr1">
+					  <td>GPU排行榜</td>
+					  <td>&nbsp;</td>
+					  <td>&nbsp;</td>
+					  <td>&nbsp;</td>
+			          <td>team</td>
+					</tr>
+					<tr class="Bottom-tr1">
+					  <td>&nbsp;</td>
+					  <td>&nbsp;</td>
+					  <td>&nbsp;</td>
+					  <td>&nbsp;</td>
+						<td>team</td>
+					</tr>
+					<tr class="Bottom-tr1">
+					  <td>&nbsp;</td>
+					  <td>&nbsp;</td>
+					  <td>&nbsp;</td>
+					  <td>&nbsp;</td>
+				      <td>team</td>
+					</tr>
+				  </tbody>
+				</table>	  
+		  </div>
+		  
+		  
+	  
+	  </div>
+	  
+	  <!--底部-结束-->
+</div>
+</section>
+
+<script src="https://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+<script src="js/script.js"></script>
+
+</body>
+</html>
