@@ -4,7 +4,9 @@
 			<a>
 				<i id="dearmsdan-logo" style="font-size:<%= theme.dearmsdan.logo.size %>;vertical-align: middle;"
 			class="<%= theme.dearmsdan.logo.ico %>"></i>
+				<% if(theme.dearmsdan.logo.png){ %>
 				<img width="<%= theme.dearmsdan.logo.size %>" src="<% if (theme.dearmsdan.logo.png){ %><%= theme.dearmsdan.logo.png %><% } %>" />
+				<% } %>
 				
 			</a>
 			<a href="/">

@@ -25,6 +25,18 @@
 	
 
 <style>
+
+@media screen and (max-width: 1024px) {
+	.dearmsdan-post:hover {
+		box-shadow: 0 4px 24px rgb(255, 255, 255);
+		z-index: 50!important;
+		padding: 15px!important;
+	}
+}
+	.dearmsdan-axis-img img{
+		width: 15%;
+        border-radius: 15px 15px;
+	}
 	#history  li::before{
 	content: "";
     width: 14px;
@@ -75,7 +87,7 @@
 <% Object.keys(years).reverse().forEach(function(year){  %>
 		<div class="title"><b><%= year %></b></div>
 	<div id="listul">
-
+	
 		<ul>
             <% years[year].map(function(post){  %>
 			<li>
@@ -90,7 +102,14 @@
 					<div >
 
 						<div>
-							<a href="<%- config.root %><%- post.path %>"><%- post.title || "Untitled" %></a>
+							<a href="<%- config.root %><%- post.path %>">
+								<%- post.title || "Untitled" %></a>
+						</div>
+						<div class="dearmsdan-axis-img">
+							<%- post.excerpt %>
+							<% if(post.img) {%>
+								<img src="<%- post.img || "Untitled" %>" />
+							<% } %>
 						</div>
 
 					</div>

@@ -24,7 +24,13 @@ body a {
 	-moz-transition: 0.8s all;
 	-ms-transition: 0.8s all;
 }
-*, *::after, *::before {
+* { 
+	touch-action: pan-y; 
+}
+.dearmsdan article{
+	touch-action: auto; 
+}
+*, *::after, *::before *{
     box-sizing: border-box;
 }
 ul,ol,li{
@@ -212,7 +218,8 @@ footer {
     opacity: 0.3;
     position: fixed;
 	top: 0;
-/*    z-index: -1;*/
+	left: 0;
+    z-index: -1;
 	-webkit-box-shadow: inset -6px 4px 20px 15px #c3e3ff;
     box-shadow: inset -6px 4px 20px 15px #c3e3ff;
 	background-size: cover;
@@ -230,7 +237,7 @@ footer {
     height: inherit;
     position: relative;
     z-index: -1;
-    top: 76px;
+    top: 0;
     left: 0;
     bottom: 0;
     right: 0;
@@ -509,7 +516,7 @@ background:#FF0BEE;
 
 .nav-list {
     float: right;
-    padding: 25px;
+    padding: 25px 25px 0px 0px;
     display: inline-block;
 }
 .nav-list a{
@@ -526,9 +533,9 @@ background:#FF0BEE;
 
 /*.main{ background: #252c35!important }*/
 #dearmsdan {
-	position: -webkit-sticky;
+	/*position: -webkit-sticky;  
 	position: sticky;
-	opacity: 0
+	opacdity: 0;*//* sticky只限于高版本浏览器或者谷歌 */
 }
 .wrapShow {
 	-webkit-animation: 1.3s saani forwards;
@@ -546,7 +553,12 @@ background:#FF0BEE;
 }
 
 /*全局加载动画*/
-
+iframe{
+	width: 100%;
+    max-width: 100%;
+    height: 600px;
+    max-height: 100%;
+}
 
 .iframe_mx {
 	width: 100%;
@@ -648,7 +660,8 @@ background:#FF0BEE;
 ***********
 */
 .highlight{
-  position: relative;
+  position: relative;    
+  overflow: hidden;
 }
 .btn-copy {
     display: inline-block;
@@ -694,8 +707,7 @@ background:#FF0BEE;
 ***********
 */
 .main-content{
-    overflow-x: hidden;
-    padding: 30px 20px 20px;
+    padding: 30px 15px 20px;
 	position: relative;
 	z-index: 2;
 }
@@ -706,7 +718,6 @@ background:#FF0BEE;
     box-shadow: 0 4px 24px rgb(255, 255, 255);
     z-index: 50;
     padding: 70px 70px;
-	background-color: rgba(255, 255, 255, 0.3);
 }
 #dearmsdanPost:hover{
 	    background-color: rgba(255, 255, 255, 0.33);
@@ -758,6 +769,7 @@ background:#FF0BEE;
 
 .dearmsdan-post-Statistics a{    
 		    padding: 3px;
+	display: inline-block;
 }
 #post{    
 	margin-bottom: 60px;
@@ -770,7 +782,19 @@ background:#FF0BEE;
 
 .dearmsdan-title h1{
 	    margin-bottom: 22px;
-	    color: #242424a3!important;
+	    color: #242424a3!important;    
+		text-align: center;
+		margin: 20px auto;
+		background-image: -webkit-linear-gradient(left,#3f4452,#48a0ec 25%,#3f4452 50%,#48ceec 75%,#3f4452);
+		-webkit-text-fill-color: transparent;
+		-webkit-background-clip: text;
+		-webkit-background-size: 200% 100%;
+		-webkit-animation: masked-animation 4s infinite linear;
+}
+#post{
+		text-align: center;
+		margin: 20px auto;    
+		margin-bottom: 70px;
 }
 .header-anchor{
 	color: #ffffff00!important;
@@ -1065,6 +1089,16 @@ transform: scale(1, 1);
 	width: auto;
 	max-width: 100%;
 }
+#dearmsdanPost article img{
+	width: 88%;
+	max-width: 100%;
+    margin: auto;
+    display: block;
+}
+#dearmsdanPost article video{
+	width: 100%;
+	max-width: 100%;
+}
 #links img{
 	width: inherit; 
 }
@@ -1084,6 +1118,9 @@ transform: scale(1, 1);
     -o-transition: all .5s;
     -ms-transition: all .5s;
     transition: all .5s;
+	background-image: -webkit-linear-gradient(left,#3f4452,#48a0ec 25%,#3f4452 50%,#48ceec 75%,#3f4452);
+	-webkit-background-size: 200% 100%;
+	-webkit-animation: masked-animation 4s infinite linear;
 }
 /* top 位移，防止top挡住 */
 
@@ -1140,9 +1177,9 @@ transform: scale(1, 1);
 		transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
 	}
 	
-	.dearmsdan-post:hover {
+	/*.dearmsdan-post:hover {
     	padding: 4px;
-	}
+	}*/
 	.copy{
 		padding-bottom: 50px;
 	}
@@ -1163,7 +1200,7 @@ figure td:nth-child(2) pre{
 	}
 	
 }
-@media screen and (min-width: 619px) {
+@media screen and (min-width: 534px) {
 	.m-content {
     padding: 30px 30px 20px;
 }
@@ -1188,6 +1225,14 @@ figure td:nth-child(2) pre{
 	.dearmsdan-post{
 		padding: 5px;
 	}
+	.mobile-inner-nav{
+		top: 64px;
+	}
+}
+@media screen and (max-width: 401px) {
+	.dearmsdanPost{
+		width: 100%;
+	}
 }
 @media screen and (max-width: 499px) {
 	#dearmsdan #sidebar-nav, #dearmsdan .main {
@@ -1211,7 +1256,7 @@ figure td:nth-child(2) pre{
     padding-top: 0px;
 	}
 	.dearmsdan-post-Statistics{    
-		font-size: 0.3rem;
+		font-size: 1.3rem;
 	}
 	.dearmsdan-post-Statistics a {
      padding: 0;
@@ -1228,6 +1273,18 @@ figure td:nth-child(2) pre{
 	#jp_container_N{
 		display: none;
 	}
+	.slimScrollDiv{
+		height: 90%!important;
+	}
+	.slimScrollDiv{
+		top: -40px;
+	}
+	iframe{
+		width: 100%;
+		max-width: 100%;
+		height: 200px;
+		max-height: 100%;
+	}
 }
 
 @media screen and (max-width: 640px) {
@@ -1237,11 +1294,14 @@ figure td:nth-child(2) pre{
 	footer{
 		    font-size: initial;
 	}
-	.slimScrollDiv{
-		top: -40px;
-	}
 	.dearmsdan-count {
     	padding: 17px 30px;
+	}
+	iframe{
+		width: 100%;
+		max-width: 100%;
+		height: 300px;
+		max-height: 100%;
 	}
 /*	.toc-brand {
 	font-size: 22px;
@@ -1351,4 +1411,14 @@ figure td:nth-child(2) pre{
 		#wrapper #sidebar-nav, #wrapper .main {
 			padding-top: 75px!important;
 		}
+}
+
+@-webkit-keyframes masked-animation {
+    0% {
+        background-position: 0 0
+    }
+
+    100% {
+        background-position: -100% 0
+    }
 }

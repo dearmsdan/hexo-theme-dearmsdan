@@ -1,11 +1,10 @@
 <%#= 公共插件聚集地， 与其他模板无影响 %>
 
 
+<%#- 顶部进度条 %>
+<div class="toping"></div>
 <%#- 版本检测 %>
 <%- partial('_plug/judge.ejs') %>
-
-<%#- 偷窥代码提示 %>
-<%- partial('_plug/debug.ejs') %>
 
 <%#- 音乐插件 audio player %>
 <%- partial('_plug/meuplayer') %>
@@ -14,7 +13,7 @@
 <%- partial('_plug/top') %>
 
 <%#- 移动端自适应修改 %>
-<%- partial('_plug/responsive') %>
+<%#- partial('_plug/responsive') %>
 
 
 <%#- 阅读工具人 %>
@@ -30,6 +29,66 @@
 
 
 
+	
+<%# PJAX %>
+ <% if (theme.pjax.enable == true){ %>
+		<div class="dearmsdan-pjax">
+		<script src="<%= theme.jquerypjax.pjax %>"></script>
+			<%- partial('_partial/pjax') %>
+		</div>
+
+<%}  else{ %>
+		<script type="text/javascript">
+			<%- partial('_partial/app') %>
+		</script>
+<% } %>
+	<%# 目录 toc %>
+	<link rel="stylesheet" type="text/css" href="<%= theme.toc.css %>"> 
+	<script src="<%= theme.toc.pageslide %>"></script> 
+	<%# 代码块复制功能 %>
+  <script type="text/javascript" src="<%= theme.copycode.lib %>"></script>  
 
 
+ <% if (theme.servicework.enable == true){ %>
+  <script>
+var version = '<%- theme.servicework.version %>';
+
+Promise.all([
+ caches.open(version).then(function(cache) {
+  return cache.put('/dearmsdanVersion', new Response(version, { status: 200 }));
+ })
+]).then(function() {
+    return caches.match('/dearmsdanVersion');
+}).then(function(response) {
+    return response.text();
+}).then(function(body) {
+    console.log("\n %c <%- theme.sitename %> "+body+" %c <%- config.url %> \n", "color: #FFF; background:#030307; padding:5px 0;", "background: #85adfede; padding:5px 0;");
+});
+
+
+
+	//  /sw-cache.js
+         //  $('.brand a:nth-child(2) span').text('installing');
+    if ('serviceWorker' in navigator) {
+                navigator.serviceWorker.register('/sw-cache.js')
+                    .then(reg => {
+                    reg = navigator.serviceWorker.controller;
+                    reg.postMessage(version);
+                    })
+                    .catch(function (error) {
+                    console.log('cache failed with ' + error);
+                });
+        }
+   if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.addEventListener('controllerchange', function (ev) 	{
+                try {
+					window.location.reload();
+                }catch (e) {
+                    console.log("controllerchange");
+                }
+            });
+    }
+
+	</script>
+<% } %>
 	

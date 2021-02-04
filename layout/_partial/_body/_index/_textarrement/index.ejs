@@ -1,0 +1,806 @@
+
+<% if (theme.typesetting.type == 'textarrement'){ %>
+
+<style>
+/* 
+ *	这显示隐藏标题 功能， 写完头疼 
+ *  PC 缩放、各种分辨率适用	
+ * author: Dearmsdan Diels
+ * https://github.com/ZHD99/hexo-theme-dearmsdan
+*/
+	.dearmsdan-inner-img{
+		max-width: 100%;
+		margin: auto;
+		position: relative;
+		display: inline-block;
+		overflow: hidden;
+	}
+	.dearmsdan-inner-img img{
+		border-radius: 10px;
+	}
+	.dearmsdan-cover-content{
+		height: 100%;
+		width: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	.dearmsdan-cover-img{    
+		display: inline-block;
+	}
+	.dearmsdan-title{
+		border-radius: 0 0 10px 10px;
+		opacity: 0;
+		height: 100%;
+		display: flex;
+	-webkit-transition: opacity 0.2s;
+    transition: opacity 0.2s;
+    will-change: opacity;
+	}
+	.dearmsdan-title:hover{
+		opacity: 1;
+	}
+	.dearmsdan-title-shadow{    
+		background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(81%, rgba(0, 0, 0, 0.6)));
+		background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.6) 81%);
+		padding: 30px 15px 18px;
+		border-radius: 0 0 4px 4px;
+		margin: 0;
+		margin-top: auto;
+		flex: 1;
+		color: #fff;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
+	}
+	.dearmsdan-title a{
+        position: initial; 
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		display: block;
+	}
+	.dearmsdan-tags a {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+	}
+	.dearmsdan-cover-img a:hover::after{
+		width: 0%;
+	}
+	.dearmsdan-inner-content{
+		background-color: rgba(255, 255, 255, <%= theme.textarrement.opacity %>);
+		background: gradient(linear, left bottom,left top, from(transparent), color-stop(0%, rgba(255, 255, 255, <%= theme.textarrement.opacity %>)));
+		background: -webkit-gradient(linear, left bottom,left top, from(transparent), color-stop(0%, rgba(255, 255, 255, <%= theme.textarrement.opacity %>)));
+		padding: 35px;
+	}
+	
+</style>
+
+<div class="dearmsdan">
+	<section class="dearmsdan-posts">
+		
+		
+		
+		
+		
+		
+		
+		
+		
+<% if (theme.textarrement.type == 'S' ){ %>
+<style>
+	.dearmsdan-inner-img{
+		width: 100%;
+ 		max-width: none; 
+	}
+	.dearmsdan-inner-img img {
+    	border-radius: initial;
+	}
+	.dearmsdan-post {
+    	margin-bottom: 10px;
+	}
+	.dearmsdan-posts{
+		display: inline-grid;
+		grid-gap: 20px;
+		grid-template-columns: repeat(7, 1fr);
+		width: 100%;
+		display: grid;
+		padding: 0 24px;
+	}
+	@media (max-width: 1724px) and (min-width: 1301px){
+		.dearmsdan-posts {
+			grid-template-columns: repeat(4, 1fr);
+		}
+	}
+	@media (max-width: 1300px) and (min-width: 877px){
+		.dearmsdan-posts {
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+	@media (max-width: 876px) and (min-width: 604px){
+		.dearmsdan-posts {
+		grid-template-columns: repeat(2, 1fr);
+		}
+	}
+	@media (max-width: 603px){
+		.dearmsdan-posts {
+			grid-template-columns: repeat(1, 1fr);
+		}
+		
+	}
+
+	.dearmsdan-post {
+		overflow: hidden;
+		padding: 0px!important;
+		margin: 0px!important;
+		border-radius: 12px;
+	}
+	.dearmsdan-post:hover {
+		box-shadow: 0 4px 24px rgb(255, 255, 255);
+		z-index: 50;
+		padding: 0px;
+	}
+	.dearmsdan-post img {   
+		max-width: 100%;
+		width: 100%;
+		height: 266px;
+		background-size: cover;
+		opacity: <%= theme.textarrement.S.sop %>;
+		
+	}
+	.dearmsdan-inner-content{     
+	}
+	.dearmsdan-post:hover{
+		padding: 0;
+		background-color: initial;
+		transform: translateY(-15px);
+		-webkit-transform: translateY(-15px);
+		-moz-transform: translateY(-15px);
+		opacity: 1;
+	}
+	
+.dearmsdan-inner-content {
+    background-color: rgba(0,0,0,0);
+    padding: 0;
+}
+	.dearmsdan-tags{
+		display: -webkit-box;
+		display: flex;
+		position: absolute;
+		right: 10px;
+		top: 0;
+		z-index: 2;
+		clip-path: polygon(100% 0, 100% 100%, 50% 70%, 0 100%, 0 0);
+		background-color: rgba(15,1,255,1);    
+		background: -webkit-gradient(linear, left bottom,left top, from(transparent), color-stop(100%, rgb(14, 0, 255)));
+    	background: gradient(linear, left bottom,left top, from(transparent), color-stop(100%, rgb(14, 0, 255)));
+		height: 61px;
+		width: 41px;
+	}
+	.dearmsdan-tags a{
+		color: #fff; 
+		font-size: 15px; 
+	}
+	.dearmsdan-title:hover{
+		opacity: 1;
+		animation: fade-in;/*动画名称*/  
+		animation-duration: 0.6s;/*动画持续时间*/  
+		-webkit-animation:fade-in 0.6s;/*针对webkit内核*/ 
+	}
+	@keyframes fade-in {  
+    0% {opacity: 0;}/*初始状态 透明度为0*/  
+    40% {opacity: 0;}/*过渡状态 透明度为0*/  
+    100% {opacity: 1;}/*结束状态 透明度为1*/  
+	}  
+	@-webkit-keyframes fade-in {/*针对webkit内核*/  
+		0% {opacity: 0;}  
+		40% {opacity: 0;}  
+		100% {opacity: 1;}  
+	}  
+</style>
+
+
+<% page.posts.each(function (page) { %>
+<% if(page.topping == true){  %>
+	
+
+    <div class="dearmsdan-post" id="dearmsdanIndex">
+		
+		<div class="dearmsdan-inner-content">
+		<div class="dearmsdan-inner-img">
+			<div class="dearmsdan-cover-img">
+				<a href="<%- url_for(page.path) %>">
+				<% if (page.img){ %>
+					<img src="https://via.placeholder.com/600x300.png?text=Loading...." dearmsdan-src="<%- page.img %>">
+				<%}  else{ %>
+					<img src="https://via.placeholder.com/600x300.png?text=Loading...." dearmsdan-src="<% if (theme.background.bg){ %><%- theme.background.bg %><%}  else{ %>https://via.placeholder.com/600x300.png?text=Loading....<% } %>">
+				<% } %>
+				</a>
+			</div>
+			<div class="dearmsdan-cover-content">
+<% if (page.tags && page.tags.length){ %>
+						<div class="dearmsdan-tags" style="background-color:rgba(255, 0, 0, 0.51);background: -webkit-gradient(linear, left bottom,left top, from(transparent), color-stop(100%, rgba(255, 0, 0, 0.51)));">
+							<% if (page.tags && page.tags.length){ %>
+								<%- list_tags(page.tags, {
+									show_count: false,
+									class: '',
+									style: 'none',
+									separator: ' '
+								}) %>
+							<% } %>
+						</div>
+<% } %>
+				<a  href="<%- url_for(page.path) %>">
+					<div class="dearmsdan-title"> 
+						<div class="dearmsdan-title-shadow">
+							<%= page.title %>
+						</div>
+					</div>
+				</a>
+			</div>
+		</div>
+			
+	</div>
+</div>
+		
+	<% }  %>
+<% }) %>
+		
+<% page.posts.each(function (page) { %>
+<% if(!page.topping == true){  %>		
+		
+    <div class="dearmsdan-post" id="dearmsdanIndex">
+		
+		<div class="dearmsdan-inner-content">
+		<div class="dearmsdan-inner-img">
+			<div class="dearmsdan-cover-img">
+				<a href="<%- url_for(page.path) %>">
+				<% if (page.img){ %>
+					<img src="https://via.placeholder.com/600x300.png?text=Loading...." dearmsdan-src="<%- page.img %>">
+				<%}  else{ %>
+					<img src="https://via.placeholder.com/600x300.png?text=Loading...." dearmsdan-src="<% if (theme.background.bg){ %><%- theme.background.bg %><%}  else{ %>https://via.placeholder.com/600x300.png?text=Loading....<% } %>">
+				<% } %>
+				</a>
+			</div>
+			<div class="dearmsdan-cover-content">
+<% if (page.tags && page.tags.length){ %>
+						<div class="dearmsdan-tags">
+							<% if (page.tags && page.tags.length){ %>
+								<%- list_tags(page.tags, {
+									show_count: false,
+									class: '',
+									style: 'none',
+									separator: ' '
+								}) %>
+							<% } %>
+						</div>
+<% } %>
+				<a  href="<%- url_for(page.path) %>">
+					<div class="dearmsdan-title"> 
+						<div class="dearmsdan-title-shadow">
+							<%= page.title %>
+						</div>
+					</div>
+				</a>
+			</div>
+		</div>
+			
+	</div>
+</div>
+		
+	<% }  %>
+<% }) %>
+	
+<script>
+	// 随机 变化的淡入
+var bgarr = ['<%= theme.textarrement.S.color.pc1 %>','<%= theme.textarrement.S.color.pc2 %>','<%= theme.textarrement.S.color.pc3 %>','<%= theme.textarrement.S.color.pc4 %>','<%= theme.textarrement.S.color.pc5 %>','<%= theme.textarrement.S.color.pc6 %>','<%= theme.textarrement.S.color.pc7 %>','<%= theme.textarrement.S.color.pc8 %>','<%= theme.textarrement.S.color.pc9 %>','<%= theme.textarrement.S.color.pc10 %>','<%= theme.textarrement.S.color.pc11 %>']; 
+
+var index = Math.floor((Math.random()*bgarr.length)); 
+		
+$(".dearmsdan-post").mouseover(function(){		  
+	// 预期不佳
+	$('.dearmsdan-inner-content:hover').css("background-color",bgarr[index]);
+	
+});
+$(".dearmsdan-post").mouseleave(function(){
+	// 移除
+	$('.dearmsdan-inner-content').css("background-color",'transparent');
+		
+});
+
+</script>
+	
+<% } %>
+		
+		
+		
+		
+		
+		
+		
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+<% if (theme.textarrement.type == 'M' || theme.textarrement.type  == ''){ %>
+		
+<style>
+
+@media screen and (min-width: 1024px){
+	.dearmsdan-post:hover .dearmsdan-toping {display: inline-block!important;}
+	.dearmsdan-toping{
+		display: none;
+		position: fixed;
+		left: 10px;
+		top: 0;
+		z-index: 2;color: #FFFFFF;
+		clip-path: polygon(100% 0, 100% 100%, 50% 70%, 0 100%, 0 0);
+		background-color: rgba(255, 0, 0, 0.51);    
+		background: -webkit-gradient(linear, left bottom,left top, from(transparent), color-stop(100%, rgba(255, 0, 0, 0.51)));
+    	background: gradient(linear, left bottom,left top, from(transparent), color-stop(100%, rgba(255, 0, 0, 0.51)));
+		height: 61px;
+		width: 41px;
+	}
+}
+	
+@media screen and (max-width: 1024px){
+	
+	.dearmsdan-toping{
+		display: inline-block;
+		left: 10px;
+		top: 0;
+		z-index: 2;
+		color: #FFFFFF;
+		padding: 0 10px;
+		border-radius: 4px;
+		font-style: normal;
+		background-color: rgba(234, 67, 74, 0.7);
+	}
+	.dearmsdan-post:hover .dearmsdan-toping {display: inline-block!important;}
+	.dearmsdan-post {
+    	padding: 0px!important;
+	}
+	.dearmsdan-more{   
+		opacity: 1!important;
+	}
+}
+	.dearmsdan-more{   
+		display: inline-block;
+		background-color: rgba(204, 196, 196, 0.45);
+		padding: .5rem 1rem;
+		border-radius: 4px;
+		color: #919191!important;
+		text-decoration: none;
+		opacity: 0;
+		-webkit-transition: opacity 1.2s;
+		transition: opacity 1.2s;
+		will-change: opacity;
+        -moz-user-select: none; /*火狐*/
+        -webkit-user-select: none; /*webkit浏览器*/
+        -ms-user-select: none; /*IE10*/
+        -khtml-user-select: none; /*早期浏览器*/
+        -o-user-select: none; /* Opera*/
+        user-select: none;
+	}
+	.dearmsdan-post:hover .dearmsdan-more {
+		opacity: 1;
+		animation: fade-in;
+		animation-duration: 0.6s;
+		-webkit-animation: fade-in 0.6s;
+	}
+	.dearmsdan-inner-content {
+		display: flex; 
+    	overflow: hidden;
+		
+	}
+	.dearmsdan-inner-img {
+		width: 40%;
+		flex: <%- theme.textarrement.M.imgProportion %>;
+	}
+	.dearmsdan-index-content{
+		flex: <%- theme.textarrement.M.contextProportion %>;
+		display: block;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		margin-left: 20px;
+	}
+	.dearmsdan-post:hover{
+		padding: 0;
+		background-color: initial;
+		transform: translateX(-20px);
+		-webkit-transform: translateX(-20px);
+		-moz-transform: translateX(-20px);
+	}
+	.dearmsdan-post {
+    	margin-bottom: 10px;
+	}
+	@media screen and (max-width:799px) {
+		.dearmsdan-inner-content {
+			display: block;    
+			max-height: none;
+			overflow: inherit;
+
+		}
+		.dearmsdan-inner-img {
+			width: 100%;
+		}
+		.dearmsdan-index-content{
+			display: block;
+			text-overflow: ellipsis;
+			overflow: inherit;
+			margin-left: 0;
+		}
+		.dearmsdan-post:hover{
+			padding: 0;
+			background-color: initial;
+			transform: translateY(-15px);
+			-webkit-transform: translateY(-15px);
+			-moz-transform: translateY(-15px);
+		}
+		.dearmsdan-post {
+			margin-bottom: 10px;
+		}
+	}
+</style>
+	
+		
+
+<% page.posts.each(function (page) { %>
+	<% if(page.topping == true){  %>
+		
+    <div class="dearmsdan-post" id="dearmsdanIndex">
+				<div class="dearmsdan-tags">
+					<div class="dearmsdan-toping">置顶</div>
+				</div>
+		<div class="dearmsdan-inner-content">
+		<div class="dearmsdan-inner-img">
+			<div class="dearmsdan-cover-img">
+				<a href="<%- url_for(page.path) %>">
+				<% if (page.img){ %>
+					<img src="https://via.placeholder.com/600x300.png?text=Loading...." dearmsdan-src="<%- page.img %>">
+				<%}  else{ %>
+					<img src="https://via.placeholder.com/600x300.png?text=Loading...." dearmsdan-src="<% if (theme.background.bg){ %><%- theme.background.bg %><%}  else{ %>https://via.placeholder.com/600x300.png?text=Loading....<% } %>">
+				<% } %>
+				</a>
+			</div>
+			<div class="dearmsdan-cover-content">
+				<a href="<%- url_for(page.path) %>">
+					<div class="dearmsdan-title"> 
+						<div class="dearmsdan-title-shadow">
+							<%= page.title %>
+						</div>
+					</div>
+				</a>
+			</div>
+		</div>
+			
+		<div class="dearmsdan-index-content">
+			<article>
+				<% if(page.excerpt) {%>
+				<%- page.excerpt %>
+				<%}  else{ %>
+				<%- page.content %>
+				<% } %>
+			</article>
+		<a style="position: unset;" href="<%- url_for(page.path) %>"><div class="dearmsdan-more">阅读更多...</div></a>
+			<div class="dearmsdan-post-Statistics">
+				<a><%- date(page.date, "YYYY年MM月DD日") %></a>
+				<% if (page.categories && page.categories.length){ %>
+					<%- list_categories(page.categories, {
+						show_count: false,
+						class: '',
+						style: 'none',
+						separator: ''
+					}) %>
+				<% } %>
+				<% if (page.tags && page.tags.length){ %>
+					<%- list_tags(page.tags, {
+						show_count: false,
+						class: '',
+						style: 'none',
+						separator: ' '
+					}) %>
+				<% } %>
+			</div>
+		</div>
+	</div>
+</div>
+	
+	<% }  %>
+<% }) %>
+		
+<% page.posts.each(function (page) { %>
+	<% if(!page.topping == true){  %>
+    <div class="dearmsdan-post" id="dearmsdanIndex">
+		<div class="dearmsdan-inner-content">
+		<div class="dearmsdan-inner-img">
+			<div class="dearmsdan-cover-img">
+				<a href="<%- url_for(page.path) %>">
+				<% if (page.img){ %>
+					<img src="https://via.placeholder.com/600x300.png?text=Loading...." dearmsdan-src="<%- page.img %>">
+				<%}  else{ %>
+					<img src="https://via.placeholder.com/600x300.png?text=Loading...." dearmsdan-src="<% if (theme.background.bg){ %><%- theme.background.bg %><%}  else{ %>https://via.placeholder.com/600x300.png?text=Loading....<% } %>">
+				<% } %>
+				</a>
+			</div>
+			<div class="dearmsdan-cover-content">
+				<a href="<%- url_for(page.path) %>">
+					<div class="dearmsdan-title"> 
+						<div class="dearmsdan-title-shadow">
+							<%= page.title %>
+						</div>
+					</div>
+				</a>
+			</div>
+		</div>
+			
+		<div class="dearmsdan-index-content">
+			<article>
+				<% if(page.excerpt) {%>
+				<%- page.excerpt %>
+				<%}  else{ %>
+				<%- page.content %>
+				<% } %>
+			</article>
+		<a style="position: unset;" href="<%- url_for(page.path) %>"><div class="dearmsdan-more">阅读更多...</div></a>
+			<div class="dearmsdan-post-Statistics">
+				<a><%- date(page.date, "YYYY年MM月DD日") %></a>
+				<% if (page.categories && page.categories.length){ %>
+					<%- list_categories(page.categories, {
+						show_count: false,
+						class: '',
+						style: 'none',
+						separator: ''
+					}) %>
+				<% } %>
+				<% if (page.tags && page.tags.length){ %>
+					<%- list_tags(page.tags, {
+						show_count: false,
+						class: '',
+						style: 'none',
+						separator: ' '
+					}) %>
+				<% } %>
+			</div>
+		</div>
+	</div>
+</div>
+	<% }  %>
+<% }) %>
+		
+		
+<% } %>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+<% if (theme.textarrement.type == 'L' ){ %>
+
+<style>
+
+@media screen and (min-width: 1024px){
+	.dearmsdan-post:hover .dearmsdan-toping {display: inline-block!important;}
+	.dearmsdan-toping{
+		
+		display: inline-block;
+		left: 10px;
+		top: 0;
+		z-index: 2;
+		color: #FFFFFF;
+		padding: 0 10px;
+		border-radius: 4px;
+		font-style: normal;
+		background-color: rgba(234, 67, 74, 0.7);
+	}
+}
+	
+@media screen and (max-width: 1024px){
+	
+	.dearmsdan-toping{
+		display: inline-block;
+		left: 10px;
+		top: 0;
+		z-index: 2;
+		color: #FFFFFF;
+		padding: 0 10px;
+		border-radius: 4px;
+		font-style: normal;
+		background-color: rgba(234, 67, 74, 0.7);
+	}
+	.dearmsdan-post:hover .dearmsdan-toping {display: inline-block!important;}
+	.dearmsdan-post {
+    	padding: 0px!important;
+	}
+	.dearmsdan-more{   
+		opacity: 1!important;
+	}
+}
+	.dearmsdan-more{   
+		display: inline-block;
+		background-color: rgba(204, 196, 196, 0.45);
+		padding: .5rem 1rem;
+		border-radius: 4px;
+		color: #919191!important;
+		text-decoration: none;
+		opacity: 0;
+		-webkit-transition: opacity 1.2s;
+		transition: opacity 1.2s;
+		will-change: opacity;
+        -moz-user-select: none; /*火狐*/
+        -webkit-user-select: none; /*webkit浏览器*/
+        -ms-user-select: none; /*IE10*/
+        -khtml-user-select: none; /*早期浏览器*/
+        -o-user-select: none; /* Opera*/
+        user-select: none;
+	}
+	.dearmsdan-post:hover .dearmsdan-more {
+		opacity: 1;
+		animation: fade-in;
+		animation-duration: 0.6s;
+		-webkit-animation: fade-in 0.6s;
+	}	
+
+</style>	
+<% page.posts.each(function (page) { %>
+	<% if(page.topping == true){  %>	
+		
+    <div class="dearmsdan-post" id="dearmsdanIndex">
+		<div class="dearmsdan-inner-content">
+				<div class="dearmsdan-tags">
+					<div class="dearmsdan-toping">置顶</div>
+				</div>
+		<div class="dearmsdan-inner-img">
+			<div class="dearmsdan-cover-img">
+				<a href="<%- url_for(page.path) %>">
+				<% if (page.img){ %>
+					<img src="https://via.placeholder.com/1200x600.png?text=Loading...." dearmsdan-src="<%- page.img %>">
+				<%}  else{ %>
+					<img src="https://via.placeholder.com/1200x600.png?text=Loading...." dearmsdan-src="<% if (theme.background.bg){ %><%- theme.background.bg %><%}  else{ %>https://via.placeholder.com/1200x600.png?text=Loading....<% } %>">
+				<% } %>
+				</a>
+				
+			</div>
+			<div class="dearmsdan-cover-content">
+				<a href="<%- url_for(page.path) %>">
+					<div class="dearmsdan-title"> 
+						<div class="dearmsdan-title-shadow">
+							<%= page.title %>
+						</div>
+					</div>
+				</a>
+			</div>
+			
+		</div>
+
+			<article>
+				<% if(page.excerpt) {%>
+				<%- page.excerpt %>
+				<%}  else{ %>
+				<%- page.content %>
+				<% } %>
+			</article>
+		<a style="position: unset;" href="<%- url_for(page.path) %>"><div class="dearmsdan-more">阅读更多...</div></a>
+			<div class="dearmsdan-post-Statistics">
+				<a><%- date(page.date, "YYYY年MM月DD日") %></a>
+				<% if (page.categories && page.categories.length){ %>
+					<%- list_categories(page.categories, {
+						show_count: false,
+						class: '',
+						style: 'none',
+						separator: ''
+					}) %>
+				<% } %>
+				<% if (page.tags && page.tags.length){ %>
+					<%- list_tags(page.tags, {
+						show_count: false,
+						class: '',
+						style: 'none',
+						separator: ' '
+					}) %>
+				<% } %>
+			</div>
+		</div>
+		
+    </div>
+	<% }  %>
+<% }) %>
+		
+<% page.posts.each(function (page) { %>
+	<% if(!page.topping == true){  %>	
+		
+    <div class="dearmsdan-post" id="dearmsdanIndex">
+		<div class="dearmsdan-inner-content">
+		
+		<div class="dearmsdan-inner-img">
+			<div class="dearmsdan-cover-img">
+				<a href="<%- url_for(page.path) %>">
+				<% if (page.img){ %>
+					<img src="https://via.placeholder.com/1200x600.png?text=Loading...." dearmsdan-src="<%- page.img %>">
+				<%}  else{ %>
+					<img src="https://via.placeholder.com/1200x600.png?text=Loading...." dearmsdan-src="<% if (theme.background.bg){ %><%- theme.background.bg %><%}  else{ %>https://via.placeholder.com/1200x600.png?text=Loading....<% } %>">
+				<% } %>
+				</a>
+				
+			</div>
+			<div class="dearmsdan-cover-content">
+				<a href="<%- url_for(page.path) %>">
+					<div class="dearmsdan-title"> 
+						<div class="dearmsdan-title-shadow">
+							<%= page.title %>
+						</div>
+					</div>
+				</a>
+			</div>
+			
+		</div>
+
+			<article>
+				<% if(page.excerpt) {%>
+				<%- page.excerpt %>
+				<%}  else{ %>
+				<%- page.content %>
+				<% } %>
+			</article>
+		<a style="position: unset;" href="<%- url_for(page.path) %>"><div class="dearmsdan-more">阅读更多...</div></a>
+			<div class="dearmsdan-post-Statistics">
+				<a><%- date(page.date, "YYYY年MM月DD日") %></a>
+				<% if (page.categories && page.categories.length){ %>
+					<%- list_categories(page.categories, {
+						show_count: false,
+						class: '',
+						style: 'none',
+						separator: ''
+					}) %>
+				<% } %>
+				<% if (page.tags && page.tags.length){ %>
+					<%- list_tags(page.tags, {
+						show_count: false,
+						class: '',
+						style: 'none',
+						separator: ' '
+					}) %>
+				<% } %>
+			</div>
+		</div>
+		
+    </div>
+	
+	<% }  %>
+<% }) %>
+		
+		
+		
+<% } %>
+</section>
+	<%#- 分页 %>
+<%- partial('_partial/_body/paginator') %>
+</div>
+
+
+
+<% } %>

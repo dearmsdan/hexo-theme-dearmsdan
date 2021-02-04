@@ -12,14 +12,48 @@
 #  Permalinks：友情链接模板\永久链接模板\时间轴
 #
 #  第三方插件/功能
-#  \  pjax、外部链接拦截提示、搜索、调试、评论、自定义文章悬浮颜色、自定义音乐播放、背景效果、观察者模式
-#  自定义设置画布(canvas)、 主题颜色配置
+#  \  pjax、外部链接拦截提示、搜索、调试、评论、自定义文章悬浮颜色
+#  \  自定义音乐播放、背景效果、观察者模式、离线访问功能
+#  \  自定义设置画布(canvas)、 主题颜色配置、 置顶功能
 #     
 # ---------------------------------------------------------------
 # ---------------------------------------------------------------
 
+# 涉及的 文章内容 一些设置
 
-# 详细介绍没有在文档中介绍 http://docs.dearmsdan.com/ 
+# 可设置置顶功能，文章作者，首页展示的图片，分类，标签 设置如下
+# 在文章markdown添加 
+# topping: true      # 将最近的几篇文章中置顶 
+# author: 测试小刘~   # 设置文章作者
+# img: /zw.jpg       # 首页展示的图片 #前提是启用主题的图文排版
+# categories         # 分类
+# tags               # 标签
+
+
+# 例如以下为文章markdown:
+# ---
+# title: markdown 如何编写文章.md
+# date: 10:41 2019/11/25
+# topping: true
+# author: 测试小明~
+# img: https://img.xjh.me/desktop/bg/nature/65231080_p0.jpg
+# categories:
+# - 博客
+# tags:
+# - hexo
+# ---
+
+# Markdown 的使用和快捷键方法.
+# 吧啦吧啦 ....
+#  <!--more-->  # 这个意思是以上都为概述，以下内容在首页不展示。具体看官方文档
+#  <!-- toc -->  # 产生目录
+
+# 内容......
+
+
+
+
+# 详细介绍没有在文档中介绍 https://github.com/ZHD99/hexo-theme-dearmsdan
 # 但是你可以提交文档
 
 # ---------------------------------------------------------------
@@ -27,8 +61,8 @@
 # ---------------------------------------------------------------
 
 sitename: hi mogul # 网站名字
-sitekeywords: hi mogul,hexo-theme-dearmsdan一款Hexo主题宝钻蓝色，给你一种空灵的感觉,hexo简约主题,HEXO,dearmsdan.com # 网站关键词
-sitedescription: dearmsdan基于Bootstrap 框架HEXO 强力驱动的一个宝钻蓝 色调给你一种空灵的感觉 # 网站描述
+sitekeywords: hi mogul,hexo-theme-dearmsdan一款Hexo主题宝钻蓝色,It gives people a sense of emptiness,hexo简约主题,HEXO,dearmsdan.com # 网站关键词
+sitedescription: It gives people a sense of emptiness  # 网站描述
 
 
 # ---------------------------------------------------------------
@@ -127,7 +161,7 @@ socialbtn:
     - https://github.com/ZHD99/
     - icon-git
   email:
-    - /outlook.html
+    - mailto:dearmsdan@outlook.com
     - icon-youxiang
   netease:
     - https://music.163.com/
@@ -140,12 +174,14 @@ socialbtn:
     - icon-weibo
 	
 # 可自定义一级或者二级目录，按照以下规则添加
+# cataTarget跳转方式，在当前页跳转 或 重新打开一页，可参看HTML a标签，target属性
+cataTarget: _self # 当前 _self 重新打开_blank 
 Catalog:
   自定义目录1:
     没想好1: 
-      - /about1.html
-    没想好2:
-      - /about2.html
+      - https://www.baidu.com/
+    email:
+      - mailto:dearmsdan@outlook.com
     没想好3:
       - /about3.html
   没想好目录2:
@@ -192,7 +228,7 @@ sides:
 
 
 # ---------------------------------------------------------------
-#  unit.ejs 新增无影响其他功能插件
+#  unit.ejs 
 # ---------------------------------------------------------------
 
 # 音乐播放器
@@ -209,7 +245,7 @@ top:     #  爱心状: love 箭头: arrow 三角形：triangle
   clip: arrow   # 具体更改在 ../layout/_plug/top.ejs
 
 # ---------------------------------------------------------------
-#  footer.ejs  jio部的配置
+#  footer.ejs  底部部的配置
 # ---------------------------------------------------------------
 
 
@@ -227,7 +263,7 @@ footer:
   # text 和 beian 信息都可以删除或者修改
   text: ""
   
-  beian: "<a style='color:#939393;' href='http://hn.beian.miit.gov.cn/' target='_blank'> <img width='16px' src='https://img.alicdn.com/tfs/TB1..50QpXXXXX7XpXXXXXXXXXX-40-40.png' />湘ICP备20001824号 </a>·<a target='_blank' href='http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=43010302001049' style='display:inline-block;text-decoration:none;height:20px;line-height:20px;'><p style='height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;'>湘公网安备 43010302001049号</p></a>"
+  beian: "<a style='color:#939393;' href='http://hn.beian.miit.gov.cn/' target='_blank'> <img width='16px' src='https://img.alicdn.com/tfs/TB1..50QpXXXXX7XpXXXXXXXXXX-40-40.png' />湘ICP备20001824号 </a>·<a target='_blank' href='http://www.beian.gov.cn/portal/registerSystemInfo' style='display:inline-block;text-decoration:none;height:20px;line-height:20px;'><p style='height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;'>湘公网安备 43010302001049号</p></a>"
 
 # footer 页jio的时间
 # 时间年月日，注意月份是0-11 !!
@@ -242,7 +278,8 @@ footer:
 #  post.ejs 
 # ---------------------------------------------------------------
 
-
+# 可将文章设置为其他作者，在文章markdown添加
+# author: dearmsdan  就可以设置为其他作者
 
 # 页脚  版权设置
 copyright:
@@ -250,9 +287,6 @@ copyright:
   permalink: 本文链接
   author_: '德阿姆斯丹 · 迪尔斯'  # 默认作者
   permalink_: https://www.dearmsdan.com/ # 可不填, 自动设置为您的 config(site) 设置
-
-
-
 
 
 # ---------------------------------------------------------------
@@ -267,14 +301,14 @@ link:
 links: 		 # 被遍历的所有网站信息
 
 #***** 以下为示例模板，具体参考文档
-  又拍云服务商:  # 友情链接的名字
-    img: https://cdn.dearmsdan.com/upyun_logo5.png   # 友情链接的图片
-    link: https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral # 网址
-    description: "一个良心服务商、国内知名企业级云服务商  又拍云是专注 CDN、云存储、小程序开发方案 短视频开发方案、DDoS高防等产品的国内知名企业级云服务商"  # 描述
-  莲梦青语 - 软件技巧分享博客:
+  百度...:  # 友情链接的名字
+    img: /logo.png   # 友情链接的图片
+    link: https://www.baidu.com/ # 网址
+    description: "全球最大的中文搜索引擎、致力于让网民更便捷地获取信息，找到所求。百度超过千亿的中文网页数据库，可以瞬间找到相关的搜索结果。"  # 描述
+  腾讯...:
     img: /logo.png
-    link: https://lmqyu.cn/
-    description: "心之所爱，便一往无前。时间：搭建于2019年12月12号  <br/>定位：软件技巧分享、系统装机、常用软件的学习交流以及分享博主的建站历程"
+    link: https://www.tencent.com/
+    description: "腾讯于1998年11月成立，是一家以互联网为基础的平台公司，通过技术丰富互联网用户的生活，助力企业数字化升级。我们的使命是“用户为本 科技向善"
 
 
 # ---------------------------------------------------------------
@@ -286,10 +320,18 @@ links: 		 # 被遍历的所有网站信息
 # 图文排列：textarrement  
 # 如果有好看且有趣的排版建议可联系我添加
 
+opPost: "0.5" # 文章内容悬浮 透明度设置
 typesetting:
-  type: ''   # 为空代表默认排版
+  type: 'default'   # 为空代表默认排版 default、textarrement
 
-# 图文主题排版 S、M、L  小、中、大码
+# 默认排版设置 move(上移)、jump (空跳)、stick（便利贴）
+textdefault: 
+  type: '' # 选取默认排列的类型
+  opi: "0.4"    # 默认排版 首页文章列表的 透明度设置
+  opih: "0.3"   # 默认排版 文章列表悬浮 透明度设置
+  
+  
+# 图文排版设置 S、M、L  小、中、大码
 textarrement:
   type: '' # 选取图文排列的类型
   S: 
@@ -306,9 +348,16 @@ textarrement:
       pc9: rgb(255, 226, 0)      # 示例颜色 黄
       pc10: rgb(255, 128, 0)     # 示例颜色 橙
       pc11: rgb(255, 0, 0)       # 示例颜色 红
-# 图片排版 背景透明度设置
-  opacity: '0.52' # 值为 0.01 ~ 1
-
+  M:  
+    imgProportion: 1 # 填写 图片比例  1~10   （flex）
+    contextProportion: 3 # 填写 文字比例  1~10  （flex）
+  
+# 图片颜色深？ 试试降低透明度
+    sop: 0.8 # S排版 文章列表透明度 值为 0.01 ~ 1 
+# 图片排版 背景遮罩透明度设置
+  opacity: '0.5' # 值为 0.01 ~ 1 
+  
+# opacity 在S排版时设置0.1 ，sop 设置0.9以下 有颜色效果
 
 
 
@@ -319,7 +368,7 @@ textarrement:
 
 # 可填 rgb、rgba、hs....
 dearmsdanColorConfig:
-  enable: f # 是否开启 true 主题颜色配置！！！ 默认关闭
+  enable: f  # 填true开启,填f关闭  主题颜色配置！！！ 默认关闭
   a:                  # 超链接 和 一些悬事件
   navbar:             # 导航栏颜色
   sidebar:            # 侧边栏
@@ -343,13 +392,13 @@ dearmsdanColorConfig:
 # 自定义画布 (只有少女系移动端可查看，暂未测试
 #   彩系=> 无情纸屑: confetti 纯白球: funPure
 # 少女系=> 悬浮心: floatheart 旋转心: whirling 错乱心: seeding
-meCanvas: 
+meCanvas:  # 填以上 例如: floatheart
 
 dearmsdandate: /js/diy/date.js
 canvas:
   particleCanvas: /js/diy/particleCanvas.js  # TGideas团队编写的粒子类动画组件
   season: # 四季变化小图片
-    enable: true # 是否开启 四季变化小图片, 不喜欢，怕消耗性能可以关闭
+    enable: true # 填true开启,填f关闭 四季变化小图片, 不喜欢，怕消耗性能可以关闭
     img1: /resources/season/flake.png
     img2: /resources/season/watermelon.png
     img3: /resources/season/butterfly.png
@@ -448,11 +497,11 @@ seasonimg4: #  9~12 月份 冬
 #  第三方插件 | 均为关闭状态 
 # ---------------------------------------------------------------
 
-#外部链接拦截提示
+# 外部链接拦截提示
 # 可填写正则表达式
 # 暂提供2条安全链接
-linker: 
-  enable: f # 默认关闭， 随意关闭开启
+linker:  # 默认关闭， 随意关闭开启
+  enable: true # 填true开启,填f关闭 
   site: http.+zhd99.cn 
   sitee: http.+dearmsdan
 # 如果不懂，那直接就把dearmsdan，换成自己的网站
@@ -466,7 +515,7 @@ linker:
 
 # 悬浮文章上变色功能，可能需要进入post文章页显示效果
 # 喜欢什么颜色都可以添加，色调要相似网页才能美观，以下提供示例颜色~
-dearmsdanPostColor:
+dearmsdanPostColor: 
   pc0: # 0 4px 24px rgb(255, 255, 255) # 示例注释,不喜欢都可以注释
   pc1: 0 4px 24px rgb(255, 255, 255) # 示例颜色 白
   pc2: 0 4px 24px rgb(163, 163, 163) # 示例颜色 灰
@@ -492,7 +541,7 @@ dearmsdanPostColor:
 # path: search.xml
 
 search:
-  enable: f #true 为开启， 默认不启用，没安装插件启用 会报错
+  enable: f # 填true开启,填f关闭， 默认不启用，没安装插件启用 会报错
   searchjs: /js/s.js
 # ***注意，搜索也会有出错的时候，比如文章中的非法字符会导致搜索功能失效，与本主题无关
 # ***需要自己在localhost:4000/search.xml 索引寻找非法字符 在md编辑器删除就正常了
@@ -500,79 +549,101 @@ search:
 
 # 调试功能 
 eruda:
-  enable: f #true 为开启， 默认不启用，无需安装插件，开启即可
+  enable: f # 填true开启,填f关闭 ， 默认不启用，无需安装插件，开启即可
   init: eruda.init(); # 初始化
   js: //cdn.jsdelivr.net/npm/eruda # js
   
-  
+ 
+ # 离线访问 功能  (该功能有使用页面通信，所以控制台有错误信息不断产生)
+ # 第一次访问网页，查询是否有新版本，并欲缓存目前浏览过的本站网页
+ # 第二次访问网页，新版本替换旧版本，删除冗余缓存，加载之前缓存过的网页
+ # 开启离线访问  enable: true
+servicework:
+  enable: f  # 填true开启,填f关闭 ，如果关闭了，需要手动清除缓存,不然缓存一直在
+  version: v1.0.1.5.7 # 每次更新网站，都要记得改版本号哦(更新缓存)
+# version 用来更新版本，每次更改，发布之后更新离线访问
 
 
-# pjax 顾名思义 无刷新网页跳转 (停止维护,有需求开启
+
+# Service Worker优势
+# 1、 可在离线或网络较差的环境下正常打开页面
+# 2、 安全（HTTPS）
+# 3、 保持最新（及时更新）
+# 4、 支持安装（添加到主屏幕）和消息推送。
+# 5、 向下兼容，在不支持相关技术的浏览器中仍可正常访问。
+
+# 如果需要重新构建Service Worker 查看以下介绍↓↓↓
+
+# https://ld246.com/article/1520483961387 
+# https://blog.csdn.net/weixin_34221073/article/details/87942038
+# https://www.zhangxinxu.com/wordpress/2017/07/service-worker-cachestorage-offline-develop/
+# https://www.ihewro.com/archives/1126/
+# https://www.cnblogs.com/fundebug/p/understand_javascript_service_worker.html
+# Service Worker 注意事项：
+# Service Worker 是一种 Web Worker。它本质上是一个与主浏览器线程分开运行的 JavaScript 文件，可以拦截网络请求、缓存资源或从缓存中检索资源、传递推送消息。
+# 1、
+# Service Worker 不能直接访问 DOM(window对象、浏览器对象)。
+# 为了与页面通信，需使用 postMessage() 方法发送数据，并使用 message 事件侦听器来接收数据。
+# 2、Service worker 仅在HTTPS协议（或localhost:*域）下可用。
+# 3、一旦被安装，就永远存在，除非注销
+# 4、用到的时候唤醒，闲置的时候睡眠
+# 5、可以作为代理拦截请求和响应
+# 6、一个新的 Service worker 要经过注册、安装、激活这三个步骤，才可以对页面生效
+
+# 如果需要重新构建Service Worker 查看以上介绍↑↑↑
+
+
+
+# pjax 顾名思义 无刷新网页跳转 ( 影响收录
 pjax:         
-  enable: f #true 开启, 默认关闭
+  enable: true # 填true开启,填f关闭 , 默认开启
   
-
-
-# 以下文章评论插件，需要关闭pjax功能
 
 # valine 评论插件  如果有好的评论插件可以，用issues 方式推荐给我哦~
 # 使用方法 https://valine.js.org/quickstart.html
 valine: 
-  enable: true #true 是否开启 文章评论
+  enable: true # 填true开启,填f关闭  文章评论
   js: /js/valine.js
   appId: jNrzXxvqR3NhebnE7swyQBFp-gzGzoHsz
   appKey: iqXsTlkThMqeaKdhYcgajztG
   avatar: robohash
+  placeholder: 留下你的小脚印吧~
   
-  
-# 背景效果设置 
-# 背景效果均为随机
-# 背景可设置为 默认图片() 图片特效(img)、视频(video)
 # https://img.xjh.me/random_img.php?type=bg&ctype=nature&return=302
 # https://img.xjh.me/random_img.php?type=bg&amp;ctype=nature&amp;return=302
 # http://vjs.zencdn.net/v/oceans.webm
-# 想做随机背景，无奈资金镂空
+# 背景效果设置 
+# 背景效果均为随机
+# 背景可设置为 默认图片() 图片特效(img)、视频(video)
+
 background:     
-# 背景设置
-  bg: '' 
-  verification: ''  # 参数: 默认为空、img、video
-  imgapi:  # 图片地址 或者图片api  
-    img1: 'https://api.ixiaowai.cn/gqapi/gqapi.php'
+# 背景图片设置
+  bg: '' # 默认背景 和 默认文章图片
+  op: '0.3' # 背景透明度  0.1~1
+  verification: ''  # 参数: 默认为空是关闭、img、video
+  imgapi:  # 图片地址 或者图片api   这三个图片地址 verification 为img 的时候轮播的图片
+    img1: 'https://api.vvhan.com/api/view' 
     img2: 'https://api.vvhan.com/api/acgimg'
-    img3: 'https://api.vvhan.com/api/view'
+    img3: 'https://api.pingping6.com/tools/acg3/index.php'
+    img4: 'http://api.mtyqx.cn/api/random.php'
   video:   # 视频地址 可自定义格式!每次网页刷新，视频随机
-# 模仿以下格式 可自定义无数个随机背景视频，且不重复即可
+# 仿以下格式 可自定义无数个随机背景视频，且不重复即可
     video1: # 计算原因，video1 出现频率为2/100，其他均为随机1/100
-      src: 'http://link.dearmsdan.com/dearmsdan/video/IronMan.mp4' # 视频类型默认为mp4
+      src: '/dearmsdan/video/IronMan.mp4' # 视频类型默认为mp4
       type: "video/mp4"  # 视频类型
     video2: 
-      src: 'http://link.dearmsdan.com/dearmsdan/video/oceans.webm' # 视频类型默认为webm
+      src: 'http://vjs.zencdn.net/v/oceans.webm' # 视频类型默认为webm
       type: "video/webm"  # 视频类型
     video3: 
-      src: 'http://link.dearmsdan.com/dearmsdan/video/IronMan2.mp4' 
-      type: "video/mp4"  # 视频类型
-    video4: 
-      src: 'http://link.dearmsdan.com/dearmsdan/video/IronMan3.mp4' 
-      type: "video/mp4"  # 视频类型
-    video5: 
-      src: 'http://link.dearmsdan.com/dearmsdan/video/IronMan4.mp4' 
-      type: "video/mp4"  # 视频类型
-    video6: 
-      src: 'http://link.dearmsdan.com/dearmsdan/video/thor.mp4' 
-      type: "video/mp4"  # 视频类型
-    video7: 
-      src: 'http://link.dearmsdan.com/dearmsdan/video/Strange.mp4' 
-      type: "video/mp4"  # 视频类型
-    video8: 
-      src: 'http://link.dearmsdan.com/dearmsdan/video/Marvel.mp4' 
+      src: '/dearmsdan/video/IronMan2.mp4' 
       type: "video/mp4"  # 视频类型
   opacity: '0.2'   # 设置视频/图片背景透明度 0.1~1
 # opacity:0.2
   videoMax: '768'   # 默认 768  
-# 屏幕宽度小于videoMax数值将背景视频停止播放
+# 屏幕宽度小于videoMax数值 将背景视频停止播放
   bcopacity: '0.5'  # 0.1~1
 # 移动端背景底部颜色透明度 ！！！ 如果移动端不喜欢透明度设置为1
-  staticopacity: '1'  # 0.1~1
+  staticopacity: '0.8'  # 0.1~1
 # 移动端背景底部修饰颜色透明度
 
 
@@ -580,6 +651,10 @@ background:
 
 # 自定义音乐
 #  示例音乐均来自猪厂，artist：作者、poster：歌曲小图片、MP3：音乐格式支持(webmv, ogv, m4v, oga, mp3等等) 
+
+playervolume: 14        # 默认音量 80    值为  0~100
+playerloop: true        # 默认循环播放： true  不循环播放： false 
+playerpautoPlay: true   # 默认自动播放： true  不自动播放： false 
 playerlsit:
   Right Here Waiting:
     artist: Richard Marx
@@ -624,3 +699,29 @@ playerlsit:
 AboutMe: '德阿姆斯丹 · 迪尔斯'
 	
 	
+
+# 仿以下格式 可自定义无数个随机背景视频，且不重复即可
+#    video1: # 计算原因，video1 出现频率为2/100，其他均为随机1/100
+#      src: '/dearmsdan/video/IronMan.mp4' # 视频类型默认为mp4
+#      type: "video/mp4"  # 视频类型
+#    video2: 
+#      src: '/dearmsdan/video/oceans.webm' # 视频类型默认为webm
+#      type: "video/webm"  # 视频类型
+#    video3: 
+#      src: '/dearmsdan/video/IronMan2.mp4' 
+#      type: "video/mp4"  # 视频类型
+#    video4: 
+#      src: '/dearmsdan/video/IronMan3.mp4' 
+#      type: "video/mp4"  # 视频类型
+#    video5: 
+#      src: '/dearmsdan/video/IronMan4.mp4' 
+#      type: "video/mp4"  # 视频类型
+#    video6: 
+#      src: '/dearmsdan/video/thor.mp4' 
+#      type: "video/mp4"  # 视频类型
+#    video7: 
+#      src: '/dearmsdan/video/Strange.mp4' 
+#      type: "video/mp4"  # 视频类型
+#    video8: 
+#      src: '/dearmsdan/video/Marvel.mp4' 
+#      type: "video/mp4"  # 视频类型

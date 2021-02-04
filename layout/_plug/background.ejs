@@ -8,8 +8,8 @@
 	"use strict";
 
 	var	$body = document.querySelector('body');
-	$('body').addClass('is-preload');
-	$('.dearmsdan-bg').css('background','none');
+	/*$('body').addClass('is-preload');  添加灰面遮罩，可能存在问题
+	//$('.dearmsdan-bg').css('background','none'); */
 	// Methods/polyfills.
 
 		// classList | (c) @remy | github.com/remy/polyfills | rem.mit-license.org
@@ -47,6 +47,7 @@ function dearmsdanimgbg(){
 						'<%= theme.background.imgapi.img1 %>': 'center',
 						'<%= theme.background.imgapi.img2 %>': 'center',
 						'<%= theme.background.imgapi.img3 %>': 'center',
+						'<%= theme.background.imgapi.img4 %>': 'center'
 					},
 
 				// Delay.

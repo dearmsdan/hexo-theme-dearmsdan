@@ -5,6 +5,7 @@
 	right: 15px;
 	bottom: 30px;
 	    opacity: 0.5;
+	    z-index: 9999;
 }
 
 #myPath path {
@@ -161,7 +162,7 @@
 </script>
 
 <script>
-window.onload = function() {
+$(document).ready(function () {
   let pumpLevels = [25, 30, 45, 0];
   let tankLevels = [25, 45, 70, -20];
   let counter = 0;
@@ -219,5 +220,5 @@ window.onload = function() {
   
   let heart = document.getElementsByClassName('heart')[0];
   heart.addEventListener("click", pumpHeart);
-}
+});
 </script>
