@@ -8,8 +8,8 @@ $(function(){
 });
 
 
-function linker(){
 /* 外链保护http://link.zhd99.cn */
+function linker(){
 	 <% if (theme.linker.enable == true){ %>
 
 		$("article a").not(".toc a,article h1 a,article h2 a,article h3 a,article h4 a,article h5 a,article h6 a,article .gallerys,.ui-artZoom-buttons a").attr("href",
@@ -259,5 +259,9 @@ function dearmsdanlazyload(){
     else{ window.onload = dearmsdanlazyload; }
 
 
-
-	
+function dearmsdanMathjax(){
+	var $head = document.querySelector('head');
+	var $wrapper = document.createElement("script");
+	$wrapper.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+	$head.appendChild($wrapper);
+}
