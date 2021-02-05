@@ -796,6 +796,9 @@ iframe{
 		margin: 20px auto;    
 		margin-bottom: 70px;
 }
+mjx-container.MathJax.CtxtMenu_Attached_0 {
+    display: none;
+}
 .header-anchor{
 	color: #ffffff00!important;
 	background-color: #ffffff00!important;

@@ -105,6 +105,9 @@ loadingBar:
   band: /js/headBand.min.js
   #pace: https://cdn.bootcss.com/pace/1.0.2/pace.min.js
   #pink: https://cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css
+# 网站进度条
+topingBar:
+  js: wdad
 # pjax配置
 jquerypjax:
   pjax: /js/pjax/jquery.pjax.js
@@ -114,6 +117,9 @@ toc:
 #  复制功能插件
 copycode: 
   lib: /js/copycode/clipboard.min.js
+#  公式功能
+mathjax: 
+  js: /js/mathjax3/tex-mml-chtml.js
 
 
 # ---------------------------------------------------------------

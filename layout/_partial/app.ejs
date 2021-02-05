@@ -5,6 +5,7 @@ $(function(){
 	postcolor();								 
 	styleS();
 	dearmsdanlazyload(); 
+	dearmsdanMathjax();
 });
 
 
@@ -136,6 +137,17 @@ function consoleTest(){
 	
 } /* end toc */
 
+
+function dearmsdanMathjax(){
+	
+	var $head = document.querySelector('head');
+	var $wrapper = document.createElement("script");
+	$wrapper.src = '/js/mathjax3/tex-mml-chtml.js';
+	$head.appendChild($wrapper);
+}
+
+
+
 /*  移动端样式  */
 function styleS(){
 if ((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
@@ -258,10 +270,3 @@ function dearmsdanlazyload(){
    else if (window.attachEvent) {window.attachEvent("onload",dearmsdanlazyload); }
     else{ window.onload = dearmsdanlazyload; }
 
-
-function dearmsdanMathjax(){
-	var $head = document.querySelector('head');
-	var $wrapper = document.createElement("script");
-	$wrapper.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
-	$head.appendChild($wrapper);
-}
