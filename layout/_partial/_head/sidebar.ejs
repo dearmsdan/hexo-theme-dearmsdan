@@ -52,12 +52,13 @@
 						<a target="_self" href="/" class="iframe_link active"><span>首页</span>
 						</a>
 					</li>
-					
-					<li>
-						<a id="axis" target="_self" href="<%= theme.side.axis.link %>" class="nav-togg">
-							<span><%= theme.side.axis.name %></span>
-						</a>
-					</li>
+					<% if (theme.side.axis.enable == true){ %>
+						<li>
+							<a id="axis" target="_self" href="<%= theme.side.axis.link %>" class="nav-togg">
+								<span><%= theme.side.axis.name %></span>
+							</a>
+						</li>
+					<% } %>
 					
 					
 					<%# 遍历 _side（归档小部件）文件 的全部ejs 文件 %>

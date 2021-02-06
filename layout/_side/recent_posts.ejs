@@ -1,6 +1,8 @@
+
 <%# 最新文章归档  %>
 
 <% if (site.posts.length){ %>
+  <% if (theme.side.recent_posts){ %>
   <li>
 	  <a href="javascript:;" class="nav-togg" target="_self" ><span><%=  theme.side.recent_posts %></span>
 	  </a>
@@ -14,4 +16,5 @@
       </ul>
     </div>
   </li>
+  <% } %>
 <% } %>

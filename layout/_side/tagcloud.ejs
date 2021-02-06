@@ -1,6 +1,8 @@
+
 <%# 标签归档  %>
 
 <% if (site.tags.length){ %>
+  <% if (theme.side.tagcloud){ %>
   <li><a href="javascript:;" class="nav-togg" target="_self"  ><span><%= theme.side.tagcloud %></span>
 	  </a>
 	  
@@ -30,4 +32,5 @@
       </script>
     <% } %>
   </li>
+  <% } %>
 <% } %>

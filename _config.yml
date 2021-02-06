@@ -119,7 +119,7 @@ copycode:
   lib: /js/copycode/clipboard.min.js
 #  公式功能
 mathjax: 
-  js: /js/mathjax3/tex-mml-chtml.js
+  js: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js ##/js/mathjax3/tex-mml-chtml.js
 
 
 # ---------------------------------------------------------------
@@ -128,9 +128,9 @@ mathjax:
 
 
 dearmsdan:
-  logo:  #logo图标设置（设置其中之一就好了
+  logo:  #logo图标设置（ico/png填其中之一就好了
     ico: DearMsDanIconFont icon-zh    #这里将logo设置 图标库ICO
-    png: 						      #这里将logo设置图片
+    png:   					                  #这里将logo设置图片
     size: 50px # 设置logo大小
   title: 
     size: 20px # 设置网站名字大小
@@ -146,6 +146,8 @@ menu:
   友情链接:
     - /link.html
   
+
+    
   
 # ---------------------------------------------------------------
 #  sidebar.ejs 侧边栏
@@ -154,11 +156,11 @@ menu:
 
 # 样式在source/css/avatar_user.css 中 5行 左右
 # 设置图片不动的配置在 title_qiaoba 中
-# 填写一个即可，另一个备用(第二个有抖动特效)   任意一个都可以为空
+# dearHead PhotoHead 填写一个即可
 # 尽可能选择正比例图片！！！，比例差距大可以修改 ejs 模板源文件 sidebar.ejs 5~ 10行左右
-dearHead: /Pexels.gif # 初始头像
+dearHead: /Pexels.gif             # 普通头像
+PhotoHead: /resources/qiaoba.png  # 特效头像 
 dearHeadlogo: /logo.png # 遮罩 logo
-PhotoHead: /resources/qiaoba.png  # 备用头像 
 
 
 # 社交按钮配置
@@ -178,6 +180,42 @@ socialbtn:
   weibo:
     - https://weibo.com/
     - icon-weibo
+
+
+
+# 统计
+count:
+  articles: 文章
+  tags: 标签
+  categories: 分类
+
+
+  
+
+# 文章类
+side:
+  archive: 文章归档
+  categories: 文章分类
+  recent_posts: 最新文章
+  tagcloud: 标签 
+  axis: 
+    name: 时间轴
+    link: /axis.html
+    enable: true  # 时间轴开启:true   关闭:f 
+    
+
+  
+# 排序
+#改变这个上下顺序可调节页面中的排序哦
+sides:  
+- tagcloud #标签
+- category #文章分类
+- archive #文章归档
+- recent_posts #最新文章
+
+
+
+
 	
 # 可自定义一级或者二级目录，按照以下规则添加
 # cataTarget跳转方式，在当前页跳转 或 重新打开一页，可参看HTML a标签，target属性
@@ -206,30 +244,6 @@ Catalog:
       - /about1.html
 	
 	
-	
-# 统计
-count:
-  articles: 文章
-  tags: 标签
-  categories: 分类
-
-# 文章类
-side:
-  archive: 文章归档
-  recent_posts: 最新文章
-  categories: 文章分类
-  tagcloud: 标签 
-  axis: 
-    name: 时间轴
-    link: /axis.html
-    
-  
-# 文章迭代
-sides:  
-- category #文章分类
-- tagcloud #标签
-- archive #文章归档
-- recent_posts #最新文章
 
 
 

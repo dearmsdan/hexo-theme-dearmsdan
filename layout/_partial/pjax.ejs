@@ -344,9 +344,9 @@ function dearmsdanMathjax(){
 		  processEscapes: true
 		}
 	  };
-	  var script = document.createElement('script');
-script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
-script.setAttribute('id', 'MathJax-script');
-document.head.appendChild(script);
+	var script = document.createElement('script');
+	script.src = '<%= theme.mathjax.js %>';
+	script.setAttribute('id', 'MathJax-script');
+	document.head.appendChild(script);
 
 } /* end */

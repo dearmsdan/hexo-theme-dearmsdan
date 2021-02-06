@@ -92,6 +92,8 @@ $(window).on("load", function () {
 
 	
 	
+	
+ /*  挂载输出注释   */
 Function.prototype.getMultiLine = function () {
 		var lines = new String(this);
 		lines = lines.substring(lines.indexOf("/*") + 3, lines.lastIndexOf("*/"));
