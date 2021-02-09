@@ -2,22 +2,6 @@
 $(window).on("load", function () {
 
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	// 加载条
-	$('.toping').headBand({
-		'background':'#57abf8cc',
-		'height':"3"
-	});
-	
-	
 	//加载中延迟...................
 	//$("#dearmsdan").delay(1000).addClass("wrapShow");
 	
@@ -61,16 +45,7 @@ $(window).on("load", function () {
 	});
 
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
 	
 	
 
@@ -117,6 +92,8 @@ $(window).on("load", function () {
 
 	
 	
+	
+ /*  挂载输出注释   */
 Function.prototype.getMultiLine = function () {
 		var lines = new String(this);
 		lines = lines.substring(lines.indexOf("/*") + 3, lines.lastIndexOf("*/"));

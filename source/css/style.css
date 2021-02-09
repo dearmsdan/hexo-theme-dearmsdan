@@ -89,6 +89,9 @@ ul,ol,li{
  a:hover{
 	cursor: url("/link.png"),auto!important;
 }
+button,ul,ol{
+    cursor: url("/link.png"),auto!important;
+ }
 
 a:hover,a:focus {
     color: #7bc2ff;
@@ -795,6 +798,9 @@ iframe{
 		text-align: center;
 		margin: 20px auto;    
 		margin-bottom: 70px;
+}
+mjx-container.MathJax.CtxtMenu_Attached_0 {
+    display: none;
 }
 .header-anchor{
 	color: #ffffff00!important;

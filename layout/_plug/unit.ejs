@@ -2,7 +2,8 @@
 
 
 <%#- 顶部进度条 %>
-<div class="toping"></div>
+<%#  进度条  %>
+	
 <%#- 版本检测 %>
 <%- partial('_plug/judge.ejs') %>
 
@@ -14,10 +15,6 @@
 
 <%#- 移动端自适应修改 %>
 <%#- partial('_plug/responsive') %>
-
-
-<%#- 阅读工具人 %>
-<%- partial('_plug/read') %>
 
 
 <%#- js 驱动 %>
@@ -33,8 +30,10 @@
 <%# PJAX %>
  <% if (theme.pjax.enable == true){ %>
 		<div class="dearmsdan-pjax">
-		<script src="<%= theme.jquerypjax.pjax %>"></script>
+        <script src="<%= theme.jquerypjax.pjax %>"></script>
+        <script type="text/javascript">
 			<%- partial('_partial/pjax') %>
+        </script>
 		</div>
 
 <%}  else{ %>
@@ -46,7 +45,10 @@
 	<link rel="stylesheet" type="text/css" href="<%= theme.toc.css %>"> 
 	<script src="<%= theme.toc.pageslide %>"></script> 
 	<%# 代码块复制功能 %>
-  <script type="text/javascript" src="<%= theme.copycode.lib %>"></script>  
+    <script type="text/javascript" src="<%= theme.copycode.lib %>"></script>  
+    <%#  公式功能  %>
+    <script type="text/javascript" id="MathJax-script" src="<%= theme.mathjax.js %>"></script>  
+  
 
 
  <% if (theme.servicework.enable == true){ %>

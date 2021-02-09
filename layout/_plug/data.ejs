@@ -1,5 +1,7 @@
 <%#- 数据驱动 %>
 
+
+<%#- 自定义主题颜色 %>
 <style>
 	.navme>li>a:hover, .navme>li>a:focus, .navme>li>a.active{
     background-color: <%- theme.dearmsdanColorConfig.nav.bg %>;
@@ -45,3 +47,18 @@ $('.dearmsdan-bg').css('background-color','<%- theme.dearmsdanColorConfig.bg %>'
     else{ window.onload =dearmsdanfooter; }
      
 </script>
+
+
+
+<%#- 自定义功能 %>
+<style>
+	html,body,a {
+	   cursor: url("<%- theme.cursor.default %>"),auto!important;
+   }
+	a:hover{
+	   cursor: url("<%- theme.cursor.link %>"),auto!important;
+   }
+   button,ul,ol{
+	   cursor: url("<%- theme.cursor.link %>"),auto!important;
+	}
+</style>

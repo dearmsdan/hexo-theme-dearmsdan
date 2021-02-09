@@ -5,11 +5,12 @@ $(function(){
 	postcolor();								 
 	styleS();
 	dearmsdanlazyload(); 
+	dearmsdanMathjax();
 });
 
 
-function linker(){
 /* 外链保护http://link.zhd99.cn */
+function linker(){
 	 <% if (theme.linker.enable == true){ %>
 
 		$("article a").not(".toc a,article h1 a,article h2 a,article h3 a,article h4 a,article h5 a,article h6 a,article .gallerys,.ui-artZoom-buttons a").attr("href",
@@ -136,6 +137,17 @@ function consoleTest(){
 	
 } /* end toc */
 
+
+function dearmsdanMathjax(){
+	
+	var $head = document.querySelector('head');
+	var $wrapper = document.createElement("script");
+	$wrapper.src = '/js/mathjax3/tex-mml-chtml.js';
+	$head.appendChild($wrapper);
+}
+
+
+
 /*  移动端样式  */
 function styleS(){
 if ((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
@@ -258,6 +270,3 @@ function dearmsdanlazyload(){
    else if (window.attachEvent) {window.attachEvent("onload",dearmsdanlazyload); }
     else{ window.onload = dearmsdanlazyload; }
 
-
-
-	
