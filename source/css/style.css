@@ -89,6 +89,9 @@ ul,ol,li{
  a:hover{
 	cursor: url("/link.png"),auto!important;
 }
+button,ul,ol{
+    cursor: url("/link.png"),auto!important;
+ }
 
 a:hover,a:focus {
     color: #7bc2ff;

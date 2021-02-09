@@ -64,6 +64,11 @@ sitename: hi mogul # 网站名字
 sitekeywords: hi mogul,hexo-theme-dearmsdan一款Hexo主题宝钻蓝色,It gives people a sense of emptiness,hexo简约主题,HEXO,dearmsdan.com # 网站关键词
 sitedescription: It gives people a sense of emptiness  # 网站描述
 
+# 鼠标指针配置
+cursor:
+  default: /a.png   # 默认鼠标样式
+  link: /link.png   # 超链接鼠标样式
+
 
 # ---------------------------------------------------------------
 #  head.ejs  全局样式 引用的样式和插件
