@@ -1,7 +1,7 @@
 <!--
  * @Autor: dearmsdan
  * @Date: 2020-12-13 23:42:14
- * @LastEditTime: 2021-02-14 15:45:55
+ * @LastEditTime: 2021-02-14 15:47:40
  * @Description: 
 -->
 
@@ -10,7 +10,7 @@
   中文
 </div>
 
-<h6 align="center">垃圾主题，爱用不用 </h6>
+<h6 align="center">无需插件，直接下载即用 </h6>
 
 
 <div>
