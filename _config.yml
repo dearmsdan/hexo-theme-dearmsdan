@@ -351,7 +351,7 @@ typesetting:
 
 # 默认排版设置 move(上移)、jump (空跳)、stick（便利贴）
 textdefault: 
-  type: '' # 选取默认排列的类型
+  type: 'move' # 选取默认排列的类型
   opi: "0.4"    # 默认排版 首页文章列表的 透明度设置
   opih: "0.3"   # 默认排版 文章列表悬浮 透明度设置
   

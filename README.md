@@ -1,3 +1,22 @@
+<!--
+ * @Autor: dearmsdan
+ * @Date: 2020-12-13 23:42:14
+ * @LastEditTime: 2021-02-14 15:47:40
+ * @Description: 
+-->
+
+
+
+<div>
+
+
+
+
+  <!--
+   -->
+
+
+
 <div align="right">
   Language:
   中文
@@ -6,6 +25,7 @@
   </p>
 <p align="center">
   </p>
+<h6 align="center">无需插件，直接下载即用 </h6>
 
 <h1 align="center">HEXO 主题 宝钻蓝色 </h1>
 <h3 align="center">给你一种空灵的感觉 </h3><br/>
@@ -87,3 +107,7 @@ http://s-bj.dearmsdan.com/
 http://m-bj.dearmsdan.com/  
 http://c-bj.dearmsdan.com/   
 
+
+
+
+</div>
