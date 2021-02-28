@@ -4,7 +4,7 @@
   var title = page.title;
 
   if (is_archive()){
-    title = __('archive');
+    title = __('归档');
 
     if (is_month()){
       title += '：' + page.year + '/' + page.month;
@@ -12,9 +12,9 @@
       title += '：' + page.year;
     }
   } else if (is_category()){
-    title = __('count.categories') + '：' + page.category;
+    title = __('分类') + '：' + page.category;
   } else if (is_tag()){
-    title = __('count.tags') + '：' + page.tag;
+    title = __('标签') + '：' + page.tag;
   }
   %>
 
