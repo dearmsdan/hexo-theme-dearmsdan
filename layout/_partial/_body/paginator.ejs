@@ -1,29 +1,14 @@
+<%# 分页块 %>
+<% if (page.total > 1){ %>
+    <nav id="paging">
+      <%- paginator({
+        prev_text: '<i class="DearMsDanIconFont">&#xe617;</i>',
+        next_text: '<i class="DearMsDanIconFont">&#xe627;</i>',
+		escape: false
+      }) %>
+    </nav>
+  <% } %>
 
-<% if (theme.pullToRefresh.enable == true ){ %>
-  <%# 下拉 %>
-
-  <%if( is_home()  ){%>
-<button class="paginator">查看更多</button>
-<% } %>
-
-
-
-
-  <% }else{ %>
-    <%# 分页块 %>
-    
-    <% if (page.total > 1){ %>
-      <nav id="paging">
-        <%- paginator({
-          prev_text: '<i class="DearMsDanIconFont">&#xe617;</i>',
-          next_text: '<i class="DearMsDanIconFont">&#xe627;</i>',
-          escape: false
-        }) %>
-      </nav>
-      <% } %>	
-
-<% } %>
-  
 <!--
         prev_text: '<i class="iconfont">&#xe617;</i>',
         next_text: '<i class="iconfont">&#xe627;</i>'
