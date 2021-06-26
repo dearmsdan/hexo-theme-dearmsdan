@@ -224,8 +224,14 @@ function mouseWheel(event) {
 ;var fold = true;
 $(".jp-video").animate({
 /*默认弹出*/
-    /* left: 0 
-    left: "-480px"*/
+    display:'inline'
+}, "slow", function() {
+    slideIn($(this));
+});
+/*
+$(".jp-video").animate({
+    left: 0, 
+    display:'inline'
 }, "slow", function() {
     slideOut($(this));
 }).delay(0).animate({
@@ -233,6 +239,7 @@ $(".jp-video").animate({
 }, 350, function() {
     slideIn($(this));
 });
+*/
 $("#btnfold").mouseover(function() {
     if (fold) {
         $(".jp-video").animate({
@@ -248,6 +255,23 @@ $("#btnfold").mouseover(function() {
         });
     }
 });
+
+$("#btnfold").click(function() {
+    if (fold) {
+        $(".jp-video").animate({
+            left: "-480px"
+        }, 350, function() {
+            slideIn($(this));
+        });
+    } else {
+        $(".jp-video").animate({
+            left: 0
+        }, 350, function() {
+            slideOut($(this));
+        });
+    }
+});
+
 function slideOut(obj) {
     $("#btnfold").attr({
         "title": "点击收缩"

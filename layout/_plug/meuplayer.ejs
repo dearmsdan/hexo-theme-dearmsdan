@@ -1,16 +1,16 @@
 <!--
  * @Autor: dearmsdan
  * @Date: 2021-02-09 12:56:49
- * @LastEditTime: 2021-02-14 15:39:42
+ * @LastEditTime: 2021-06-26 08:04:38
  * @Description: 
 -->
 
 <link href="<%= theme.player.audio.css %>" rel="stylesheet" type="text/css" />
 
-
+<!--id="jp_container_N" 的 为播放器初始位置style="left: 0px;    0或者-480 -->
 <div id="jp_container_N" class="jp-video jp-video-270p" role="application" aria-label="media player" style="left: -480px; height: 94px; bottom: 20px;">
 	<div class="jp-type-playlist">
-		<div id="jquery_jplayer_N" class="jp-jplayer" style="width: 90px; height: 90px;">	<img id="jp_poster_0" style="width: 90px; height: 90px; display: inline;" src="">
+		<div id="jquery_jplayer_N" class="jp-jplayer" style="width: 90px; height: 90px;">	<img id="jp_poster_0" style="width: 90px; height: 90px; display: none;" src="">
 			<audio id="jp_audio_0" preload="metadata" src="" title="加载中...."></audio>
 			<video id="jp_video_0" preload="metadata" title="加载中...." style="width: 0px; height: 0px;"></video>
 		</div>
@@ -68,7 +68,7 @@
 	</div>
 
 	<button type="button" class="folded_bt" title="点击收缩" id="btnfold" style="top: 0px;">
-	<span style="transform: rotate(180deg);"></span>
+	<span style="transform: rotate(0deg);"></span><!--transform: rotate(180deg);或者transform: rotate(0deg); -->
 	</button>
 
 	<div id="listClose"></div>
