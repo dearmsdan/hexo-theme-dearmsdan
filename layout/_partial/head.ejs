@@ -1,10 +1,16 @@
+<!--
+ * @Autor: dearmsdan
+ * @Date: 2021-06-26 14:20:44
+ * @LastEditTime: 2021-06-26 14:30:44
+ * @Description: 
+-->
 <%# head头部信息 %>
   <%
 	
   var title = page.title;
 
   if (is_archive()){
-    title = __('archive');
+    title = __('归档');
 
     if (is_month()){
       title += '：' + page.year + '/' + page.month;
@@ -12,9 +18,9 @@
       title += '：' + page.year;
     }
   } else if (is_category()){
-    title = __('count.categories') + '：' + page.category;
+    title = __('文章分类') + '：' + page.category;
   } else if (is_tag()){
-    title = __('count.tags') + '：' + page.tag;
+    title = __('便签') + '：' + page.tag;
   }
   %>
 
