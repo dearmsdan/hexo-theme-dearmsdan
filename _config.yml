@@ -526,13 +526,13 @@ seasonimg4: #  9~12 月份 冬
 # 可填写正则表达式
 # 暂提供2条安全链接
 linker:  # 默认关闭， 随意关闭开启
-  enable: true # 填true开启,填f关闭 
+  enable: f # 填true开启,填f关闭 
   site: http.+zhd99.cn 
   sitee: http.+dearmsdan
 # 如果不懂，那直接就把dearmsdan，换成自己的网站
 # 如：你的网站是www.baidu.com , 示例:http.+baidu （不带域名)
 # 意思是文章链接网址 http到dearmsdan 的格式链接不拦截 
-  link: http://link.dearmsdan.com/links.html # 默认link: /links.html
+  link: /links.html # 默认link: /links.html
 # 拦截跳转的链接文件位置在 dearmsdan/source/links.html
 # http://link.dearmsdan.com/links.html
 
