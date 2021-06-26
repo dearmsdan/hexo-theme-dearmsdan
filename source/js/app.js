@@ -1,3 +1,17 @@
+$(function(){
+		
+	// 这里是一边导航栏的滚动条插件slimScroll.min.js
+	if ($('.sidebar-scroll').length > 0) {
+		$('.sidebar-scroll').slimScroll({
+			height: '98%',
+			wheelStep: 20,
+			touchScrollStep: 50,
+			color: "#57abf8cc",
+			size: "7px",
+		});
+	}
+	
+});
 "use strict"
 $(window).on("load", function () {
 
@@ -70,25 +84,7 @@ $(window).on("load", function () {
 		}
 	});
 		
-		
-	// 这里是一边导航栏的滚动条插件slimScroll.min.js
-	if ($('.sidebar-scroll').length > 0) {
-		$('.sidebar-scroll').slimScroll({
-			height: '98%',
-			wheelStep: 20,
-			touchScrollStep: 50,
-			color: "#57abf8cc",
-			size: "7px",
-		});
-	}
 
-	addEventListener("load", function () {
-		setTimeout(hideURLbar, 0);
-	}, false);
-
-	function hideURLbar() {
-		window.scrollTo(0, 1);
-	}
 
 	
 	
