@@ -1,21 +1,11 @@
+/*
+ * @Autor: dearmsdan
+ * @Date: 2021-06-26 12:07:19
+ * @LastEditTime: 2021-06-26 14:13:36
+ * @Description: 
+ */
 $(function(){
-		
-	// 这里是一边导航栏的滚动条插件slimScroll.min.js
-	if ($('.sidebar-scroll').length > 0) {
-		$('.sidebar-scroll').slimScroll({
-			height: '98%',
-			wheelStep: 20,
-			touchScrollStep: 50,
-			color: "#57abf8cc",
-			size: "7px",
-		});
-	}
-	
-});
-"use strict"
-$(window).on("load", function () {
 
-	
 	//加载中延迟...................
 	//$("#dearmsdan").delay(1000).addClass("wrapShow");
 	
@@ -44,21 +34,6 @@ $(window).on("load", function () {
 	});
 
 	
-	
- /*  每次刷新 侧边栏悬浮不同效果css   */
-	var arr = ['btnEffect','btnEffect2','btnEffect3','btnEffect4','btnEffect5','btnEffect6'];
-	var index = Math.floor((Math.random()*arr.length)); //arr[index]
-	$('.nav >li > div> ul> li').addClass(arr[index]);
-	$('.nav >li > div> ul> li').mousemove(function(){
-		var str = $('.nav >li > div> ul> li > div').hasClass("btnbg-x");
-		//alert(str);
-		if(false === str){
-			$('.nav >li > div> ul> li').prepend('<div class="btnbg-x"></div>');
-		   }
-		
-	});
-
-	
 
 	
 	
@@ -84,6 +59,33 @@ $(window).on("load", function () {
 		}
 	});
 		
+
+	// 这里是一边导航栏的滚动条插件slimScroll.min.js
+	if ($('.sidebar-scroll').length > 0) {
+		$('.sidebar-scroll').slimScroll({
+			height: '98%',
+			wheelStep: 20,
+			touchScrollStep: 50,
+			color: "#57abf8cc",
+			size: "7px",
+		});
+	}
+
+	
+	
+	
+ /*  每次刷新 侧边栏悬浮不同效果css   */
+ var arr = ['btnEffect','btnEffect2','btnEffect3','btnEffect4','btnEffect5','btnEffect6'];
+ var index = Math.floor((Math.random()*arr.length)); //arr[index]
+ $('.nav >li > div> ul> li').addClass(arr[index]);
+ $('.nav >li > div> ul> li').mousemove(function(){
+	 var str = $('.nav >li > div> ul> li > div').hasClass("btnbg-x");
+	 //alert(str);
+	 if(false === str){
+		 $('.nav >li > div> ul> li').prepend('<div class="btnbg-x"></div>');
+		}
+	 
+ });
 
 
 	
