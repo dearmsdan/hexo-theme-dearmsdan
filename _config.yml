@@ -127,12 +127,13 @@ search:
 deploy:
   type: git
   repo:
-           github: https://github.com/ZHD99/zhd99.github.io.git
-           gitee: https://gitee.com/zhd99/zhd99.git
            coding: https://e.coding.net/zhd99/dearmsdan/bg-dearmsdan.git
 branch: master
+#           github: https://github.com/ZHD99/zhd99.github.io.git
+#           gitee: https://gitee.com/zhd99/zhd99.git
 
 
+# https://zhd99.coding.net/p/dearmsdan/d/default-bg-dearmsdan/git    http://kr5a83.coding-pages.com/
 
 
 server:

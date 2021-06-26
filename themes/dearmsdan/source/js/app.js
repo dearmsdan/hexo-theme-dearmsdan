@@ -1,37 +1,11 @@
-"use strict"
-$(window).on("load", function () {
+/*
+ * @Autor: dearmsdan
+ * @Date: 2021-06-26 12:07:19
+ * @LastEditTime: 2021-06-26 14:13:36
+ * @Description: 
+ */
+$(function(){
 
-	
-	
-	
-	
-	
-	
-	
-		/* 背景滤镜
-		$(window).scroll(function (e) {
-			var scrollSeviye = $(this).scrollTop();
-			if (scrollSeviye > 2400) {
-			  scrollSeviye = 2400;
-			}
-			var buyutme = (scrollSeviye / 6000) + 1;
-			$('.visible').css('-webkit-filter', 'blur(' + scrollSeviye / 120 + 'px)');
-		   // $('.visible,#dearmsdan-vbg,.dearmsdan-bg').css('-webkit-filter', 'blur(' + scrollSeviye / 120 + 'px)');
-		   // $('.visible,#dearmsdan-vbg,.dearmsdan-bg').css('transform', 'scale(' + buyutme + ')');
-		  });*/
-	
-	
-	
-	
-	
-	
-	// 加载条
-	$('.toping').headBand({
-		'background':'#57abf8cc',
-		'height':"3"
-	});
-	
-	
 	//加载中延迟...................
 	//$("#dearmsdan").delay(1000).addClass("wrapShow");
 	
@@ -60,31 +34,7 @@ $(window).on("load", function () {
 	});
 
 	
-	
- /*  每次刷新 侧边栏悬浮不同效果css   */
-	var arr = ['btnEffect','btnEffect2','btnEffect3','btnEffect4','btnEffect5','btnEffect6'];
-	var index = Math.floor((Math.random()*arr.length)); //arr[index]
-	$('.nav >li > div> ul> li').addClass(arr[index]);
-	$('.nav >li > div> ul> li').mousemove(function(){
-		var str = $('.nav >li > div> ul> li > div').hasClass("btnbg-x");
-		//alert(str);
-		if(false === str){
-			$('.nav >li > div> ul> li').prepend('<div class="btnbg-x"></div>');
-		   }
-		
-	});
 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	
 
@@ -109,7 +59,7 @@ $(window).on("load", function () {
 		}
 	});
 		
-		
+
 	// 这里是一边导航栏的滚动条插件slimScroll.min.js
 	if ($('.sidebar-scroll').length > 0) {
 		$('.sidebar-scroll').slimScroll({
@@ -121,16 +71,27 @@ $(window).on("load", function () {
 		});
 	}
 
-	addEventListener("load", function () {
-		setTimeout(hideURLbar, 0);
-	}, false);
+	
+	
+	
+ /*  每次刷新 侧边栏悬浮不同效果css   */
+ var arr = ['btnEffect','btnEffect2','btnEffect3','btnEffect4','btnEffect5','btnEffect6'];
+ var index = Math.floor((Math.random()*arr.length)); //arr[index]
+ $('.nav >li > div> ul> li').addClass(arr[index]);
+ $('.nav >li > div> ul> li').mousemove(function(){
+	 var str = $('.nav >li > div> ul> li > div').hasClass("btnbg-x");
+	 //alert(str);
+	 if(false === str){
+		 $('.nav >li > div> ul> li').prepend('<div class="btnbg-x"></div>');
+		}
+	 
+ });
 
-	function hideURLbar() {
-		window.scrollTo(0, 1);
-	}
 
 	
 	
+	
+ /*  挂载输出注释   */
 Function.prototype.getMultiLine = function () {
 		var lines = new String(this);
 		lines = lines.substring(lines.indexOf("/*") + 3, lines.lastIndexOf("*/"));

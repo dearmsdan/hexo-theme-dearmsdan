@@ -60,9 +60,14 @@
 #  基本配置  *********
 # ---------------------------------------------------------------
 
-sitename: D:(earmsdan # 网站名字
+sitename: DEARMSDAN # 网站名字
 sitekeywords: hi mogul,hexo-theme-dearmsdan一款Hexo主题宝钻蓝色,It gives people a sense of emptiness,hexo简约主题,HEXO,dearmsdan.com # 网站关键词
 sitedescription: It gives people a sense of emptiness  # 网站描述
+
+# 鼠标指针配置
+cursor:
+  default: /a.png   # 默认鼠标样式
+  link: /link.png   # 超链接鼠标样式
 
 
 # ---------------------------------------------------------------
@@ -105,6 +110,9 @@ loadingBar:
   band: /js/headBand.min.js
   #pace: https://cdn.bootcss.com/pace/1.0.2/pace.min.js
   #pink: https://cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css
+# 网站进度条
+topingBar:
+  js: wdad
 # pjax配置
 jquerypjax:
   pjax: /js/pjax/jquery.pjax.js
@@ -114,6 +122,9 @@ toc:
 #  复制功能插件
 copycode: 
   lib: /js/copycode/clipboard.min.js
+#  公式功能
+mathjax: 
+  js: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js ##/js/mathjax3/tex-mml-chtml.js
 
 
 # ---------------------------------------------------------------
@@ -122,9 +133,9 @@ copycode:
 
 
 dearmsdan:
-  logo:  #logo图标设置（设置其中之一就好了
+  logo:  #logo图标设置（ico/png填其中之一就好了
     ico: DearMsDanIconFont icon-zh    #这里将logo设置 图标库ICO
-    png: 
+    png:   					                  #这里将logo设置图片
     size: 50px # 设置logo大小
   title: 
     size: 20px # 设置网站名字大小
@@ -140,6 +151,8 @@ menu:
   友情链接:
     - /link.html
   
+
+    
   
 # ---------------------------------------------------------------
 #  sidebar.ejs 侧边栏
@@ -148,11 +161,11 @@ menu:
 
 # 样式在source/css/avatar_user.css 中 5行 左右
 # 设置图片不动的配置在 title_qiaoba 中
-# 填写一个即可，另一个备用(第二个有抖动特效)   任意一个都可以为空
+# dearHead PhotoHead 填写一个即可
 # 尽可能选择正比例图片！！！，比例差距大可以修改 ejs 模板源文件 sidebar.ejs 5~ 10行左右
-dearHead: /Pexels.gif # 初始头像
+dearHead: /Pexels.gif             # 普通头像
+PhotoHead: /resources/qiaoba.png  # 特效头像 
 dearHeadlogo: /logo.png # 遮罩 logo
-PhotoHead: /resources/qiaoba.png  # 备用头像 
 
 
 # 社交按钮配置
@@ -172,13 +185,49 @@ socialbtn:
   weibo:
     - https://weibo.com/
     - icon-weibo
+
+
+
+# 统计
+count:
+  articles: 文章
+  tags: 标签
+  categories: 分类
+
+
+  
+
+# 文章类
+side:
+  archive: 文章归档
+  categories: 文章分类
+  recent_posts: 最新文章
+  tagcloud: 标签 
+  axis: 
+    name: 时间轴
+    link: /axis.html
+    enable: true  # 时间轴开启:true   关闭:f 
+    
+
+  
+# 排序
+#改变这个上下顺序可调节页面中的排序哦
+sides:  
+- tagcloud #标签
+- category #文章分类
+- archive #文章归档
+- recent_posts #最新文章
+
+
+
+
 	
 # 可自定义一级或者二级目录，按照以下规则添加
 # cataTarget跳转方式，在当前页跳转 或 重新打开一页，可参看HTML a标签，target属性
 cataTarget: _self # 当前 _self 重新打开_blank 
 Catalog:
-  目录1:
-    搜索: 
+  自定义目录1:
+    百度: 
       - https://www.baidu.com/
     email:
       - mailto:dearmsdan@outlook.com
@@ -186,29 +235,6 @@ Catalog:
       - /about3.html
 	
 	
-# 统计
-count:
-  articles: 文章
-  tags: 标签
-  categories: 分类
-
-# 文章类
-side:
-  archive: 文章归档
-  recent_posts: 最新文章
-  categories: 文章分类
-  tagcloud: 标签 
-  axis: 
-    name: 时间轴
-    link: /axis.html
-    
-  
-# 文章迭代
-sides:  
-- category #文章分类
-- tagcloud #标签
-- archive #文章归档
-- recent_posts #最新文章
 
 
 
@@ -246,9 +272,9 @@ jscex:
 # footer 版权和一些信息
 footer:
   # text 和 beian 信息都可以删除或者修改
-  text: "下载本主题用户,请随意使用、更改源码,能帮忙提交Bug与制作最好不过~"
+  text: ""
   
-  beian: "<a style='color:#939393;' href='https://hexo.io/' target='_blank'> 框架:Hexo </a>·<a target='_blank' href='https://github.com/ZHD99/hexo-theme-dearmsdan' style='display:inline-block;text-decoration:none;height:20px;line-height:20px;'><p style='height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;'>主题:Dearmsdan</p></a>"
+  beian: ""
 
 # footer 页jio的时间
 # 时间年月日，注意月份是0-11 !!
@@ -270,7 +296,7 @@ footer:
 copyright:
   author: 本文作者
   permalink: 本文链接
-  author_: '德阿姆斯丹 · 迪尔斯'  # 默认作者
+  author_: 'dearmsdan'  # 默认作者
   permalink_: https://www.dearmsdan.com/ # 可不填, 自动设置为您的 config(site) 设置
 
 
@@ -311,14 +337,14 @@ typesetting:
 
 # 默认排版设置 move(上移)、jump (空跳)、stick（便利贴）
 textdefault: 
-  type: 'stick' # 选取默认排列的类型
+  type: 'move' # 选取默认排列的类型
   opi: "0.4"    # 默认排版 首页文章列表的 透明度设置
   opih: "0.3"   # 默认排版 文章列表悬浮 透明度设置
   
   
 # 图文排版设置 S、M、L  小、中、大码
 textarrement:
-  type: '' # 选取图文排列的类型
+  type: 'S' # 选取图文排列的类型
   S: 
     color: # 小图片排版 留白的颜色设置
       pc0: # rgb(255, 255, 255)  # 示例注释,不喜欢都可以注释
@@ -492,7 +518,7 @@ linker:  # 默认关闭， 随意关闭开启
 # 如果不懂，那直接就把dearmsdan，换成自己的网站
 # 如：你的网站是www.baidu.com , 示例:http.+baidu （不带域名)
 # 意思是文章链接网址 http到dearmsdan 的格式链接不拦截 
-  link: /links.html # 默认link: /links.html
+  link: http://link.dearmsdan.com/links.html # 默认link: /links.html
 # 拦截跳转的链接文件位置在 dearmsdan/source/links.html
 # http://link.dearmsdan.com/links.html
 
@@ -502,11 +528,9 @@ linker:  # 默认关闭， 随意关闭开启
 # 喜欢什么颜色都可以添加，色调要相似网页才能美观，以下提供示例颜色~
 dearmsdanPostColor: 
   pc0: # 0 4px 24px rgb(255, 255, 255) # 示例注释,不喜欢都可以注释
-  pc1: 0 4px 24px rgb(255, 255, 255) # 示例颜色 白
+  pc1: 0 4px 24px rgb(163, 163, 163) # 示例颜色 白
   pc2: 0 4px 24px rgb(163, 163, 163) # 示例颜色 灰
-  pc3: 0 4px 24px rgb(206, 154, 154) # 示例颜色 虹
-  pc4: 0 4px 24px rgb(206, 154, 178) # 示例颜色 粉
-  pc5: 0 4px 24px rgb(193, 154, 206) # 示例颜色 紫
+  pc5: 0 4px 24px rgb(163, 163, 163) # 示例颜色 紫
   pc6: 0 4px 24px rgb(154, 158, 206) # 示例颜色 靛
   pc7: 0 4px 24px rgb(154, 187, 206) # 示例颜色 蓝
   pc8: 0 4px 24px rgb(154, 206, 170) # 示例颜色 绿
@@ -544,7 +568,7 @@ eruda:
  # 第二次访问网页，新版本替换旧版本，删除冗余缓存，加载之前缓存过的网页
  # 开启离线访问  enable: true
 servicework:
-  enable: false           # 填true开启,填f关闭
+  enable: f  # 填true开启,填f关闭 ，如果关闭了，需要手动清除缓存,不然缓存一直在
   version: v1.0.1.5.7 # 每次更新网站，都要记得改版本号哦(更新缓存)
 # version 用来更新版本，每次更改，发布之后更新离线访问
 
@@ -614,28 +638,13 @@ background:
   video:   # 视频地址 可自定义格式!每次网页刷新，视频随机
 # 仿以下格式 可自定义无数个随机背景视频，且不重复即可
     video1: # 计算原因，video1 出现频率为2/100，其他均为随机1/100
-      src: '/IronMan.mp4' # 视频类型默认为mp4
+      src: '/dearmsdan/video/IronMan.mp4' # 视频类型默认为mp4
       type: "video/mp4"  # 视频类型
     video2: 
-      src: 'http://link.dearmsdan.com/dearmsdan/video/oceans.webm' # 视频类型默认为webm
+      src: 'http://vjs.zencdn.net/v/oceans.webm' # 视频类型默认为webm
       type: "video/webm"  # 视频类型
     video3: 
-      src: 'http://link.dearmsdan.com/dearmsdan/video/IronMan2.mp4' 
-      type: "video/mp4"  # 视频类型
-    video4: 
-      src: 'http://link.dearmsdan.com/dearmsdan/video/IronMan3.mp4' 
-      type: "video/mp4"  # 视频类型
-    video5: 
-      src: 'http://link.dearmsdan.com/dearmsdan/video/IronMan4.mp4' 
-      type: "video/mp4"  # 视频类型
-    video6: 
-      src: 'http://link.dearmsdan.com/dearmsdan/video/thor.mp4' 
-      type: "video/mp4"  # 视频类型
-    video7: 
-      src: 'http://link.dearmsdan.com/dearmsdan/video/Strange.mp4' 
-      type: "video/mp4"  # 视频类型
-    video8: 
-      src: 'http://link.dearmsdan.com/dearmsdan/video/Marvel.mp4' 
+      src: '/dearmsdan/video/IronMan2.mp4' 
       type: "video/mp4"  # 视频类型
   opacity: '0.2'   # 设置视频/图片背景透明度 0.1~1
 # opacity:0.2

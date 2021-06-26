@@ -37,6 +37,7 @@ ul,ol,li{
 	list-style-type: none;
 }
 
+
 /* 设置淡出的css */
 /* 鼠标选中的颜色webkit, opera, IE9 */
 ::selection {
@@ -89,6 +90,9 @@ ul,ol,li{
  a:hover{
 	cursor: url("/link.png"),auto!important;
 }
+button,ul,ol{
+    cursor: url("/link.png"),auto!important;
+ }
 
 a:hover,a:focus {
     color: #7bc2ff;
@@ -592,14 +596,22 @@ iframe{
 	display: none;
 }
 .nav > li > div a{
-    color: #787878;    
+    color: #676a6d;    
 	/*display: block;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;*/
 }
-.nav >li > div> ul> li {
-	padding: 17px 50px;    
+.nav >li > div> ul> li a{
+    padding: 17px 50px;    
+    display: block;
+}
+.tagcloud{
+    padding: 17px 50px!important;    
+}
+.tagcloud > a{
+    padding:0!important;
+    display: initial!important;
 }
 .nav >li > div> ul> li{
 	border-bottom: 1px #cfe2ff solid;
@@ -795,6 +807,9 @@ iframe{
 		text-align: center;
 		margin: 20px auto;    
 		margin-bottom: 70px;
+}
+mjx-container.MathJax.CtxtMenu_Attached_0 {
+    display: none;
 }
 .header-anchor{
 	color: #ffffff00!important;

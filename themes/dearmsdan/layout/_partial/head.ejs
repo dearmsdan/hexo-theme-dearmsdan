@@ -1,10 +1,16 @@
+<!--
+ * @Autor: dearmsdan
+ * @Date: 2021-06-26 14:20:44
+ * @LastEditTime: 2021-06-26 14:30:44
+ * @Description: 
+-->
 <%# head头部信息 %>
   <%
 	
   var title = page.title;
 
   if (is_archive()){
-    title = __('archive');
+    title = __('归档');
 
     if (is_month()){
       title += '：' + page.year + '/' + page.month;
@@ -12,9 +18,9 @@
       title += '：' + page.year;
     }
   } else if (is_category()){
-    title = __('count.categories') + '：' + page.category;
+    title = __('文章分类') + '：' + page.category;
   } else if (is_tag()){
-    title = __('count.tags') + '：' + page.tag;
+    title = __('便签') + '：' + page.tag;
   }
   %>
 
@@ -51,22 +57,23 @@
 	
 	<%# 引入配置js 文件 %>
 	<script src="<%= theme.jquery.js.one %>"></script>
+	<%# 引入滚动条js 文件 %>
+	<script src="<%= theme.slimscroll %>"></script>
 	<%- js('js/app.js') %>
 	<script src="<%= theme.bootstrap.js %>"></script>
 	<%# 引入全文搜索js 文件 %>
 	<script src="<%= theme.search.searchjs %>"></script>
-	<%# 引入滚动条js 文件 %>
-	<script src="<%= theme.slimscroll %>"></script>
 	<%# 引入评论valine.js %>
 	<script src="<%= theme.valine.js %>"></script>
 	
 	<%# 网站加载条 %>
 	<script src="<%= theme.loadingBar.pace %>"></script>
-	<script src="<%= theme.loadingBar.band %>"></script>
-	<link rel="stylesheet" href="<%= theme.loadingBar.pink %>">
+	<link rel="stylesheet" href="<%= theme.loadingBar.pink %>"> 
 	
 	
 </head>
 
+<%#- 顶部进度条 %>
+<div class="toping"></div>
 
 

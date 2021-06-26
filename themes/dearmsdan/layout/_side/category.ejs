@@ -1,6 +1,14 @@
-<%# ÎÄÕÂ·ÖÀà¹éµµ  %>
+<!--
+ * @Autor: dearmsdan
+ * @Date: 2021-06-26 09:26:54
+ * @LastEditTime: 2021-06-26 11:15:20
+ * @Description: 
+-->
+
+<%# æ–‡ç« åˆ†ç±»  %>
 
 <% if (site.categories.length){ %>
+  <% if (theme.side.categories){ %>
   <li>
 	  <a href="javascript:;" class="nav-togg" target="_self"  ><span><%= theme.side.categories %></span>
 	  </a>
@@ -10,8 +18,8 @@
 
         <%
           /*
-           * »ñ È¡ È« ²¿ ·Ö Àà
-           * ²¢ÌáÈ¡³öpayload
+           * èŽ· å– å…¨ éƒ¨ åˆ† ç±»
+           * å¹¶æå–å‡ºpayload
            */
 
           let categories = Array();
@@ -31,7 +39,7 @@
 
         <%
           /*
-           * É¸Ñ¡ É¾µôÖØ¸´µÄ ½«ÖØ¸´µÄÊýÁ¿·Åµ½Î¨Ò»µÄÄÄÒ»¸ö
+           * ç­›é€‰ åˆ æŽ‰é‡å¤çš„ å°†é‡å¤çš„æ•°é‡æ”¾åˆ°å”¯ä¸€çš„å“ªä¸€ä¸ª
            *
            */
           let counter;
@@ -83,8 +91,9 @@
         %>
 
         <li>
-          <a href="<%- config.root %><%- final_categories[u].path %>"><%= final_categories[u].name %></a>
-          <span><%= final_categories[u].length %></span>
+          <a href="<%- config.root %><%- final_categories[u].path %>"><%= final_categories[u].name %>&nbsp;<span><%= final_categories[u].length %></span>
+          </a>
+          
         </li>
 
         <% } %>
@@ -92,4 +101,5 @@
 
     </div>
   </li>
+  <% } %>
 <% } %>
