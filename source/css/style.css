@@ -606,10 +606,6 @@ iframe{
     padding: 17px 50px;    
     display: block;
 }
-.nav >li > div> ul> li a{
-    padding: 17px 50px;    
-    display: block;
-}
 .tagcloud{
     padding: 17px 50px!important;    
 }
