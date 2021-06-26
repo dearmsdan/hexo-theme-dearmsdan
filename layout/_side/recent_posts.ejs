@@ -9,7 +9,7 @@
     <div>
       <ul>
         <% site.posts.sort('date', -1).limit(5).each(function(post){ %>
-          <li>
+          <li style="font-size: 16px;">
             <a href="<%- url_for(post.path) %>"><%= post.title || '(no title)' %></a>
           </li>
         <% }) %>

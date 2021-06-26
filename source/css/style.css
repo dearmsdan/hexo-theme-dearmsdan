@@ -37,6 +37,7 @@ ul,ol,li{
 	list-style-type: none;
 }
 
+
 /* 设置淡出的css */
 /* 鼠标选中的颜色webkit, opera, IE9 */
 ::selection {
@@ -595,14 +596,26 @@ iframe{
 	display: none;
 }
 .nav > li > div a{
-    color: #787878;    
+    color: #676a6d;    
 	/*display: block;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;*/
 }
-.nav >li > div> ul> li {
-	padding: 17px 50px;    
+.nav >li > div> ul> li a{
+    padding: 17px 50px;    
+    display: block;
+}
+.nav >li > div> ul> li a{
+    padding: 17px 50px;    
+    display: block;
+}
+.tagcloud{
+    padding: 17px 50px!important;    
+}
+.tagcloud > a{
+    padding:0!important;
+    display: initial!important;
 }
 .nav >li > div> ul> li{
 	border-bottom: 1px #cfe2ff solid;
