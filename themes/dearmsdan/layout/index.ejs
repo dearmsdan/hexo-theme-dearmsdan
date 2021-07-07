@@ -1,37 +1,23 @@
+<!--
+ * @Autor: dearmsdan
+ * @Date: 2021-06-26 14:32:54
+ * @LastEditTime: 2021-06-26 20:50:59
+ * @Description: 
+-->
 
 <%#- 首页展示文章内容页 %>
 
 
-<%# 默认的排版 %>
+<%# 默认的排版-all %>
 <%#- partial('_partial/_body/_index/_default/index') %>
 
 
-<%# 图文排版 %>
+<%# 图文排版-all %>
 <%#- partial('_partial/_body/_index/_textarrement/index') %>
 
 
 
-<script>
-		
-(function(){
-    
-var abc = ['default:move','default:jump']; 
 
-var index = Math.floor((Math.random()*abc.length+1)).toString(); 
-if(index === "1"){
-    
-}
-
-
-$(".main-content").wrap(`
-
-	<%#- 分页 %>
-<%- partial('_partial/_body/paginator') %>
-
-`);
-
-})()
-
-</script>
-
+<%# 随机首页 %>
+<%- partial('_partial/_body/RandomHomepage') %>
 

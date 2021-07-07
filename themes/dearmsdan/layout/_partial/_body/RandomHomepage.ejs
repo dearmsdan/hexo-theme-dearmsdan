@@ -1,0 +1,73 @@
+<script>
+    
+    (function(){
+        
+    var abc = ['default:move','default:jump','default:stick',"textarrement:S","textarrement:M","textarrement:L"]; 
+    //var abc = ["textarrement:S"]; 
+    
+    var index = Math.floor((Math.random()*abc.length+1)).toString(); 
+    if(index === "1"){
+        $(".main-content").wrapAll(`
+        <div class="dearmsdan">
+            <%- partial('_partial/_body/_index/_default/move') %>
+        </div>
+        `);
+    }
+    if(index === "2"){
+        $(".main-content").wrapAll(`
+        <div class="dearmsdan">
+            <%- partial('_partial/_body/_index/_default/jump') %>
+        </div>
+        `);
+    }
+    if(index === "3"){
+        $(".main-content").wrapAll(`
+        <div class="dearmsdan">
+            <%- partial('_partial/_body/_index/_default/stick') %>
+        </div>
+        `);
+    }
+    
+    
+    if(index === "4"){
+        $(".main-content").wrapAll(`
+        <div class="dearmsdan">
+            <%- partial('_partial/_body/_index/_textarrement/S') %>
+        </div>
+        `);
+        // 随机 变化的淡入
+    var bgarr = ['<%= theme.textarrement.S.color.pc1 %>','<%= theme.textarrement.S.color.pc2 %>','<%= theme.textarrement.S.color.pc3 %>','<%= theme.textarrement.S.color.pc4 %>','<%= theme.textarrement.S.color.pc5 %>','<%= theme.textarrement.S.color.pc6 %>','<%= theme.textarrement.S.color.pc7 %>','<%= theme.textarrement.S.color.pc8 %>','<%= theme.textarrement.S.color.pc9 %>','<%= theme.textarrement.S.color.pc10 %>','<%= theme.textarrement.S.color.pc11 %>']; 
+    
+    var index = Math.floor((Math.random()*bgarr.length)); 
+    
+    $(".dearmsdan-post").mouseover(function(){		  
+        // 预期不佳
+        $('.dearmsdan-inner-content:hover').css("background-color",bgarr[index]);
+    });
+    $(".dearmsdan-post").mouseleave(function(){
+        // 移除
+        $('.dearmsdan-inner-content').css("background-color",'transparent');
+    });
+    }
+    if(index === "5"){
+        $(".main-content").wrapAll(`
+        <div class="dearmsdan">
+            <%- partial('_partial/_body/_index/_textarrement/M') %>
+        </div>
+        `);
+    }
+    if(index === "6"){
+        $(".main-content").wrapAll(`
+        <div class="dearmsdan">
+            <%- partial('_partial/_body/_index/_textarrement/L') %>
+        </div>
+        `);
+    }
+    
+        
+    
+    
+    })()
+    
+    </script>
+    

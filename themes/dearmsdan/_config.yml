@@ -333,18 +333,18 @@ links: 		 # 被遍历的所有网站信息
 
 opPost: "0.5" # 文章内容悬浮 透明度设置
 typesetting:
-  type: 'default'   # 为空代表默认排版 default、textarrement
+  type: 'textarrement'   # 为空代表默认排版 default 、 textarrement
 
 # 默认排版设置 move(上移)、jump (空跳)、stick（便利贴）
 textdefault: 
-  type: 'move' # 选取默认排列的类型
+  type: 'stick' # 选取默认排列的类型
   opi: "0.4"    # 默认排版 首页文章列表的 透明度设置
   opih: "0.3"   # 默认排版 文章列表悬浮 透明度设置
   
   
 # 图文排版设置 S、M、L  小、中、大码
 textarrement:
-  type: 'S' # 选取图文排列的类型
+  type: 'L' # 选取图文排列的类型
   S: 
     color: # 小图片排版 留白的颜色设置
       pc0: # rgb(255, 255, 255)  # 示例注释,不喜欢都可以注释
@@ -627,7 +627,7 @@ valine:
 
 background:     
 # 背景图片设置
-  bg: '' # 默认背景 和 默认文章图片
+  bg: 'http://img.xjh.me/random_img.php?type=bg&ctype=nature&return=302' # 默认背景 和 默认文章图片
   op: '0.3' # 背景透明度  0.1~1
   verification: 'img'  # 参数: 默认为空是关闭、img、video
   imgapi:  # 图片地址 或者图片api   这三个图片地址 verification 为img 的时候轮播的图片
