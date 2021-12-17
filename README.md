@@ -1,9 +1,3 @@
-<!--
- * @Autor: dearmsdan
- * @Date: 2020-12-13 23:42:14
- * @LastEditTime: 2021-02-14 15:47:40
- * @Description: 
--->
 
 
 
@@ -97,15 +91,11 @@ theme: dearmsdan
 
 
 
-## 展示
+## 展示https://sdq3.gitee.io/
+[ r0ya1\'s blog](https://lin92n.gitee.io/)     
+[史迪奇王子](https://sdq3.gitee.io/)     
 
- [梦窗 AI_blog](https://mymengchuang.gitee.io/)    
- [ ye\'s universe](https://beamaster.top/)   
-[ r0ya1\'s blog](https://r0ya1.gitee.io/)     
 
-http://s-bj.dearmsdan.com/  
-http://m-bj.dearmsdan.com/  
-http://c-bj.dearmsdan.com/   
 
 
 
