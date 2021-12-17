@@ -91,7 +91,7 @@ theme: dearmsdan
 
 
 
-## 展示https://sdq3.gitee.io/
+## 展示
 [ r0ya1\'s blog](https://lin92n.gitee.io/)     
 [史迪奇王子](https://sdq3.gitee.io/)     
 
