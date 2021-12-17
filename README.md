@@ -87,7 +87,6 @@ theme: dearmsdan
 - 找到您的主题dearmsdan下的md 文件下的4个 *.md 格式 
 - 把这4个文件复制到node_modules  同目录下的 source 文件夹下 (说白了就是你写文章的地方)
 
-如果不会我有个无声视频建议2倍速https://www.bilibili.com/video/BV1bT4y1L77L
 
 
 
