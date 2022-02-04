@@ -133,7 +133,21 @@ post:
 
 footer:
   info:
-    info1: "footer"  # [String]{}
+    info1: "<script>
+    $(function(){
+      run();
+    function run() {
+    var 
+        a = Seablue._defDate().nyear
+        ,b = Seablue._defDate().nmonth
+        ,c = Seablue._defDate().nday
+        ,d = Seablue._defDate().shapetime
+    ;
+        $('.footbar-base .footbar-base-info2').html('动态时间：'+ a +'年'+b+ '月' +c+ '日' +d);
+        setTimeout('run()',1000);
+        
+    }
+    });</script>"  # [String]{}
     info2: "footer2"  # [String]{}
     info3: "footer3"  # [String]{}
 
