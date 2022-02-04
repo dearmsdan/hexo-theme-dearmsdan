@@ -1,3 +1,9 @@
+<!--
+ * @Autor: dearmsdan
+ * @Date: 2020-12-13 23:42:14
+ * @LastEditTime: 2021-02-14 15:47:40
+ * @Description: 
+-->
 
 
 
@@ -87,14 +93,19 @@ theme: dearmsdan
 - 找到您的主题dearmsdan下的md 文件下的4个 *.md 格式 
 - 把这4个文件复制到node_modules  同目录下的 source 文件夹下 (说白了就是你写文章的地方)
 
+如果不会我有个无声视频建议2倍速https://www.bilibili.com/video/BV1bT4y1L77L
 
 
 
 ## 展示
-[ r0ya1\'s blog](https://lin92n.gitee.io/)     
-[史迪奇王子](https://sdq3.gitee.io/)     
 
+ [梦窗 AI_blog](https://mymengchuang.gitee.io/)    
+ [ ye\'s universe](https://beamaster.top/)   
+[ r0ya1\'s blog](https://r0ya1.gitee.io/)     
 
+http://s-bj.dearmsdan.com/  
+http://m-bj.dearmsdan.com/  
+http://c-bj.dearmsdan.com/   
 
 
 

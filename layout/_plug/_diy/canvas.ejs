@@ -3,7 +3,20 @@
 
 <%#------ 彩系 ------%>
 
+
 <%#- 纸屑的 %>
-<%- partial('_plug/_diy/_canvas/confetti') %>
+
+<% if (theme.meCanvas == "confetti" ){ %>
+<script>
+    <%- partial('_plug/_diy/_canvas/confetti') %>
+</script>
+<% } %>
+
+
+
 <%#- 纯白 %>
+<% if (theme.meCanvas == "funPure" ){ %>
+<script>
 <%- partial('_plug/_diy/_canvas/funPure') %>
+</script>
+<% } %>

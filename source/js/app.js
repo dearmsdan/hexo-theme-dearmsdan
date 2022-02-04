@@ -1,13 +1,14 @@
 /*
  * @Autor: dearmsdan
  * @Date: 2021-06-26 12:07:19
- * @LastEditTime: 2021-06-26 14:13:36
+ * @LastEditTime: 2021-06-26 20:45:16
  * @Description: 
  */
 $(function(){
 
 	//加载中延迟...................
 	//$("#dearmsdan").delay(1000).addClass("wrapShow");
+	//$("#dearmsdan").css('display','block');
 	
 	
 	

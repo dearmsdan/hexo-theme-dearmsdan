@@ -4,8 +4,16 @@
 <%#------ 少女系 ------%>
 
 <%#- 悬浮的心 %>
+<% if (theme.meCanvas == "floatheart" ){ %>
 <%- partial('_plug/_diy/_canvas/floatingHeart') %>
+<% } %>
+
 <%#- 旋转的 %>
+<% if (theme.meCanvas == "whirling" ){ %>
 <%- partial('_plug/_diy/_canvas/Whirling') %>
+<% } %>
+
 <%#- 错乱的 %>
+<% if (theme.meCanvas == "seeding" ){ %>
 <%- partial('_plug/_diy/_canvas/Seeding') %>
+<% } %>

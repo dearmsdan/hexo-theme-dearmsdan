@@ -1,0 +1,156 @@
+<%- partial('_partial/_body/_index/_default/public') %>
+<style>
+    @media screen and (min-width: 1024px){
+        .dearmsdan-post{    
+            padding: 60px 70px!important;
+        }
+    }
+        .dearmsdan-post{    
+            margin: 0px;    margin-bottom: 20px;
+            background-color: rgba(240, 248, 255, <%= theme.textdefault.opi %>);
+        }
+        .dearmsdan-post:hover{
+               border: none;
+            transform: translateX(20px);
+            -webkit-transform: translateX(20px);
+            -moz-transform: translateX(20px);
+            background-color: rgba(255, 255, 255, <%= theme.textdefault.opih %>);
+            border-left: 5px solid #afafaf;
+        }
+    @media screen and (min-width: 1024px){
+        .main-content {
+            padding: 30px 15px 20px;
+            z-index: 2;
+            padding: 0px;
+            width: 94%;
+            height: inherit;
+            position: relative;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+            background-color: rgba(255, 255, 255, 0.38)!important;
+        }
+        .dearmsdan {
+            padding: 30px 12px 20px;
+        }
+        .dearmsdan-post{
+            background-color: rgba(255, 255, 255, 0.7)!important;
+        }
+        .dearmsdan-post:hover{
+            box-shadow: 0 4px 24px rgb(255, 255, 255,0)!important;
+        }
+    }
+    
+    </style>
+
+
+
+
+<div class="dearmsdan">
+	<section class="dearmsdan-posts">
+    <% page.posts.each(function (page) { %>
+    <% if(page.topping == true){  %>
+		
+    <div class="dearmsdan-post" id="dearmsdanIndex">
+				<div class="dearmsdan-tags">
+					<div class="dearmsdan-toping">置顶</div>
+				</div>
+		<div class="dearmsdan-inner-content">
+		<div class="dearmsdan-inner-img">
+			<div class="dearmsdan-cover-content">
+				<a href="<%- url_for(page.path) %>">
+					<div class="dearmsdan-title"> 
+						<%= page.title %>
+					</div>
+				</a>
+			</div>
+			
+		</div>
+
+			<article>
+				<% if(page.excerpt) {%>
+				<%- page.excerpt %>
+				<%}  else{ %>
+				<%- page.content %>
+				<% } %>
+			</article>
+			<div class="dearmsdan-post-Statistics">
+				<a><%- date(page.date, "YYYY年MM月DD日") %></a>
+				<% if (page.categories && page.categories.length){ %>
+					<%- list_categories(page.categories, {
+						show_count: false,
+						class: '',
+						style: 'none',
+						separator: ''
+					}) %>
+				<% } %>
+				<% if (page.tags && page.tags.length){ %>
+					<%- list_tags(page.tags, {
+						show_count: false,
+						class: '',
+						style: 'none',
+						separator: ' '
+					}) %>
+				<% } %>
+			</div>
+		</div>
+		<a href="<%- url_for(page.path) %>"><div class="dearmsdan-more">阅读更多...</div></a>
+    </div>
+    
+	<% }  %>
+    <% }) %>
+    <% page.posts.each(function (page) { %>
+    <% if(!page.topping == true){  %>
+		
+    <div class="dearmsdan-post" id="dearmsdanIndex">
+		<div class="dearmsdan-inner-content">
+		<div class="dearmsdan-inner-img">
+			<div class="dearmsdan-cover-content">
+				<a href="<%- url_for(page.path) %>">
+					<div class="dearmsdan-title"> 
+						<%= page.title %>
+					</div>
+				</a>
+			</div>
+			
+		</div>
+
+			<article>
+				<% if(page.excerpt) {%>
+				<%- page.excerpt %>
+				<%}  else{ %>
+				<%- page.content %>
+				<% } %>
+			</article>
+			<div class="dearmsdan-post-Statistics">
+				<a><%- date(page.date, "YYYY年MM月DD日") %></a>
+				<% if (page.categories && page.categories.length){ %>
+					<%- list_categories(page.categories, {
+						show_count: false,
+						class: '',
+						style: 'none',
+						separator: ''
+					}) %>
+				<% } %>
+				<% if (page.tags && page.tags.length){ %>
+					<%- list_tags(page.tags, {
+						show_count: false,
+						class: '',
+						style: 'none',
+						separator: ' '
+					}) %>
+				<% } %>
+			</div>
+		</div>
+		<a href="<%- url_for(page.path) %>"><div class="dearmsdan-more">阅读更多...</div></a>
+		
+    </div>
+    
+	<% }  %>
+    <% }) %>
+</section>
+	<%#- 分页 %>
+<%- partial('_partial/_body/paginator') %>
+</div>

@@ -60,7 +60,7 @@
 #  基本配置  *********
 # ---------------------------------------------------------------
 
-sitename: hi mogul # 网站名字
+sitename: DEARMSDAN # 网站名字
 sitekeywords: hi mogul,hexo-theme-dearmsdan一款Hexo主题宝钻蓝色,It gives people a sense of emptiness,hexo简约主题,HEXO,dearmsdan.com # 网站关键词
 sitedescription: It gives people a sense of emptiness  # 网站描述
 
@@ -221,33 +221,8 @@ sides:
 
 
 
-	
-# 可自定义一级或者二级目录，按照以下规则添加
-# cataTarget跳转方式，在当前页跳转 或 重新打开一页，可参看HTML a标签，target属性
-cataTarget: _self # 当前 _self 重新打开_blank 
-Catalog:
-  自定义目录1:
-    没想好1: 
-      - https://www.baidu.com/
-    email:
-      - mailto:dearmsdan@outlook.com
-    没想好3:
-      - /about3.html
-  没想好目录2:
-    地址1: 
-      - /about3.html
-    地址2:
-      - /about2.html
-    地址3:
-      - /about1.html
-  没想好目录3:
-    没想好1: 
-      - /about3.html
-    没想好2:
-      - /about2.html
-    没想好3:
-      - /about1.html
-	
+
+
 	
 
 
@@ -288,7 +263,7 @@ footer:
   # text 和 beian 信息都可以删除或者修改
   text: ""
   
-  beian: "<a style='color:#939393;' href='http://hn.beian.miit.gov.cn/' target='_blank'> <img width='16px' src='https://img.alicdn.com/tfs/TB1..50QpXXXXX7XpXXXXXXXXXX-40-40.png' />湘ICP备20001824号 </a>·<a target='_blank' href='http://www.beian.gov.cn/portal/registerSystemInfo' style='display:inline-block;text-decoration:none;height:20px;line-height:20px;'><p style='height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;'>湘公网安备 43010302001049号</p></a>"
+  beian: ""
 
 # footer 页jio的时间
 # 时间年月日，注意月份是0-11 !!
@@ -310,7 +285,7 @@ footer:
 copyright:
   author: 本文作者
   permalink: 本文链接
-  author_: '德阿姆斯丹 · 迪尔斯'  # 默认作者
+  author_: 'dearmsdan'  # 默认作者
   permalink_: https://www.dearmsdan.com/ # 可不填, 自动设置为您的 config(site) 设置
 
 
@@ -347,18 +322,18 @@ links: 		 # 被遍历的所有网站信息
 
 opPost: "0.5" # 文章内容悬浮 透明度设置
 typesetting:
-  type: 'default'   # 为空代表默认排版 default、textarrement
+  type: 'textarrement'   # 为空代表默认排版 default 、 textarrement
 
 # 默认排版设置 move(上移)、jump (空跳)、stick（便利贴）
 textdefault: 
-  type: 'move' # 选取默认排列的类型
+  type: 'stick' # 选取默认排列的类型
   opi: "0.4"    # 默认排版 首页文章列表的 透明度设置
   opih: "0.3"   # 默认排版 文章列表悬浮 透明度设置
   
   
 # 图文排版设置 S、M、L  小、中、大码
 textarrement:
-  type: '' # 选取图文排列的类型
+  type: 'L' # 选取图文排列的类型
   S: 
     color: # 小图片排版 留白的颜色设置
       pc0: # rgb(255, 255, 255)  # 示例注释,不喜欢都可以注释
@@ -526,13 +501,13 @@ seasonimg4: #  9~12 月份 冬
 # 可填写正则表达式
 # 暂提供2条安全链接
 linker:  # 默认关闭， 随意关闭开启
-  enable: f # 填true开启,填f关闭 
+  enable: true # 填true开启,填f关闭 
   site: http.+zhd99.cn 
   sitee: http.+dearmsdan
 # 如果不懂，那直接就把dearmsdan，换成自己的网站
 # 如：你的网站是www.baidu.com , 示例:http.+baidu （不带域名)
 # 意思是文章链接网址 http到dearmsdan 的格式链接不拦截 
-  link: /links.html # 默认link: /links.html
+  link: http://link.dearmsdan.com/links.html # 默认link: /links.html
 # 拦截跳转的链接文件位置在 dearmsdan/source/links.html
 # http://link.dearmsdan.com/links.html
 
@@ -542,11 +517,9 @@ linker:  # 默认关闭， 随意关闭开启
 # 喜欢什么颜色都可以添加，色调要相似网页才能美观，以下提供示例颜色~
 dearmsdanPostColor: 
   pc0: # 0 4px 24px rgb(255, 255, 255) # 示例注释,不喜欢都可以注释
-  pc1: 0 4px 24px rgb(255, 255, 255) # 示例颜色 白
+  pc1: 0 4px 24px rgb(163, 163, 163) # 示例颜色 白
   pc2: 0 4px 24px rgb(163, 163, 163) # 示例颜色 灰
-  pc3: 0 4px 24px rgb(206, 154, 154) # 示例颜色 虹
-  pc4: 0 4px 24px rgb(206, 154, 178) # 示例颜色 粉
-  pc5: 0 4px 24px rgb(193, 154, 206) # 示例颜色 紫
+  pc5: 0 4px 24px rgb(163, 163, 163) # 示例颜色 紫
   pc6: 0 4px 24px rgb(154, 158, 206) # 示例颜色 靛
   pc7: 0 4px 24px rgb(154, 187, 206) # 示例颜色 蓝
   pc8: 0 4px 24px rgb(154, 206, 170) # 示例颜色 绿
@@ -566,7 +539,7 @@ dearmsdanPostColor:
 # path: search.xml
 
 search:
-  enable: f # 填true开启,填f关闭， 默认不启用，没安装插件启用 会报错
+  enable: true # 填true开启,填f关闭， 默认不启用，没安装插件启用 会报错
   searchjs: /js/s.js
 # ***注意，搜索也会有出错的时候，比如文章中的非法字符会导致搜索功能失效，与本主题无关
 # ***需要自己在localhost:4000/search.xml 索引寻找非法字符 在md编辑器删除就正常了
@@ -643,9 +616,9 @@ valine:
 
 background:     
 # 背景图片设置
-  bg: '' # 默认背景 和 默认文章图片
+  bg: 'http://img.xjh.me/random_img.php?type=bg&ctype=nature&return=302' # 默认背景 和 默认文章图片
   op: '0.3' # 背景透明度  0.1~1
-  verification: ''  # 参数: 默认为空是关闭、img、video
+  verification: 'img'  # 参数: 默认为空是关闭、img、video
   imgapi:  # 图片地址 或者图片api   这三个图片地址 verification 为img 的时候轮播的图片
     img1: 'https://api.vvhan.com/api/view' 
     img2: 'https://api.vvhan.com/api/acgimg'
