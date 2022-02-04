@@ -1,0 +1,42 @@
+<%# head头部信息 %>
+  <%
+  var title = page.title;
+  var logo = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JQAAgIMAAPn/AACA6QAAdTAAAOpgAAA6mAAAF2+SX8VGAAABEVBMVEUAAACr2P////+AxP8ANP98wv+x2/9+w/9/w/+BxP+Dxf9zvv+JyP+b0f95wP+Oyv/v+P+Zz/+Lyf/v9/+Lyf+Cxf9/xP9+w/9+w/9/w/+Bxf+Kyf+Cxf9/xP9+w/9+w/99wv99w/+BxP9/w/9+w/9+w/98wv98wv98wv+AxP99w/99wv99wv98wv98wv98wv98wv+Dxf9+w/9+w/98wv98wv98wv98wv98wv9+w/9+w/+AxP98wv98wv98wv9+w/99w/9/w/98wv98wv9/w/9+w/99wv98wv9/w/+Cxf99w/99w/9+w/9/w/9/xP+BxP+Hx/+b0P+Cxf9+w/9+w/9/w/9/xP+BxP+Cxf+Gx//////9rq7FAAAAWnRSTlMAAAAAAAAAAAAAAAAAAAAAAAAAAAwgLjQ2MQ4JIUFmisyzFSOmOAERBw6Whw4ENysCBHp2PZJ0RwNakw0Jm147oh88SSChEi8FDZ/CdWRWOR0GFEY3JhcMBQLgh0xmAAAAAWJLR0QCZgt8ZAAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB+YCBQQ0I1+T2zQAAACGSURBVBjTY2AgAzAyiYiKiUuIS0oxQwVYpGVk5eQVFJWYWVlZoarY2JVVVFnV1DVgAhyaWto6unr6BlABTkMjYxNTM3MLKJ+L29LK2sbWDibPw2rv4Mju5Azj87K7uKryubl7MPELgAWYPb28fXz9/AMCeaACQcEhoWHhEZGCQsLkeIyBAQCpIhClWvQyPQAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyMi0wMi0wNFQyMDo1MjozNSswODowMA+GXX0AAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjItMDItMDRUMjA6NTI6MzUrMDg6MDB+2+XBAAAAIHRFWHRzb2Z0d2FyZQBodHRwczovL2ltYWdlbWFnaWNrLm9yZ7zPHZ0AAAAYdEVYdFRodW1iOjpEb2N1bWVudDo6UGFnZXMAMaf/uy8AAAAYdEVYdFRodW1iOjpJbWFnZTo6SGVpZ2h0ADUwMHiYA+wAAAAXdEVYdFRodW1iOjpJbWFnZTo6V2lkdGgANTAw62lTsQAAABl0RVh0VGh1bWI6Ok1pbWV0eXBlAGltYWdlL3BuZz+yVk4AAAAXdEVYdFRodW1iOjpNVGltZQAxNjQzOTc5MTU1U1XDqwAAABN0RVh0VGh1bWI6OlNpemUAMTM1MzhCQkfLZ2MAAABGdEVYdFRodW1iOjpVUkkAZmlsZTovLy9hcHAvdG1wL2ltYWdlbGMvaW1ndmlldzJfOV8xNjM4ODQ4MDM1NzU1Njc1OF83OV9bMF0pirxqAAAAAElFTkSuQmCC";
+  if (theme.head.favicon.href) {
+    logo = theme.head.favicon.href;
+  }
+  if (is_archive()){
+    title = __('归档');
+
+    if (is_month()){
+      title += '：' + page.year + '/' + page.month;
+    } else if (is_year()){
+      title += '：' + page.year;
+    }
+  } else if (is_category()){
+    title = __('文章分类') + '：' + page.category;
+  } else if (is_tag()){
+    title = __('标签') + '：' + page.tag;
+  }
+
+
+  %>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="keywords" content="<%= theme.head.keywords %>" />
+	<meta name="description" content="<%= theme.head.description %>">
+  <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+	<title><% if (title){ %><%= title %> - <% } %> <%= config.title %></title>
+	<link rel="shortcut icon" href="<%= logo %>" type="<%= theme.head.favicon.type %>" />
+	<!-- 引入配置css文件 -->
+	<%- css('css/seablueUI.min.css') %>
+	<!-- 引入配置js文件 -->
+	<%#- js('SeablueUI.js') %>
+</head>
+
+
+
+
+

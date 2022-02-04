@@ -1,43 +1,5 @@
-<%#- 首页展示文章内容页 %>
-<div class="right">
-	<section>
-    <% page.posts.each(function (page) { %>
-    <div>
-        <a href="<%- url_for(page.path) %>">
-            <div> 
-				<%= page.title %>
-            </div>
-        </a>
-		
-        <article>
-            <% if(page.excerpt) {%>
-            <%- page.excerpt %>
-            <%}  else{ %>
-            <%- page.content %>
-            <% } %>
-        </article>
-        <div>
-            <a><i></i><%- date(page.date, "YYYY年MM月DD日") %></a>
-            <% if (page.categories && page.categories.length){ %>
-                <%- list_categories(page.categories, {
-                    show_count: false,
-                    class: '',
-                    style: 'none',
-                    separator: ''
-                }) %>
-            <% } %>
-            <% if (page.tags && page.tags.length){ %>
-                <%- list_tags(page.tags, {
-                    show_count: false,
-                    class: '',
-                    style: 'none',
-                    separator: ' '
-                }) %>
-            <% } %>
-        </div>
-    </div>
-    <% }) %>
-</section>
-	<%#- 分页 %>
-<%- partial('_partial/paginator') %>
-</div>
+
+<% if(theme.index.style.single) {%>
+    <%- partial('_index/single') %>
+<% } %>
+
