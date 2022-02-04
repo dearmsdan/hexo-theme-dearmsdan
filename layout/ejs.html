@@ -1,0 +1,223 @@
+<% 
+var nav =  JSON.stringify(theme.headerNav)
+
+%>
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <%- partial('_public/head') %>
+    <body class="Seablue">
+		<header>
+			<%- partial('_public/header') %>
+		</header>
+		<section class="img-background">
+			<div class="img-background-overlay"></div>
+		</section>
+		<main>
+			<%- body %>
+		</main>
+		
+		<footer>
+			<%- partial('_public/footer') %>
+    	</footer>
+
+		<div class="dropdown-icon-menu">
+			<div class="list-container">
+			  <button class="more-button">
+				<div class="menu-icon-wrapper">
+				  <div class="menu-icon-line half first"></div>
+				  <div class="menu-icon-line"></div>
+				  <div class="menu-icon-line half last"></div>
+				</div>
+			  </button>
+			  <ul class="more-button-list">
+				<li class="more-button-list-item">
+				<span class="icon Seablue-icon">&#xe81a;</span>
+				  <span><a href="/" class="a-no-hover">首页</a></span>
+				</li>
+				<li class="more-button-list-item">
+				<span class="icon Seablue-icon">&#xe618;</span>
+				  <span><a href="javascript:document.body.scrollTop = 0;document.documentElement.scrollTop = 0;"
+					 class="a-no-hover">顶部</a></span>
+				</li>
+				<li class="more-button-list-item">
+				<span class="icon Seablue-icon">&#xe68a;</span>
+				  <span><a target="_blank" href="about:blank" class="a-no-hover">空白</a></span>
+				</li>
+				<li class="more-button-list-item">
+				<span class="icon Seablue-icon">&#xe68a;</span>
+				  <span class="seting">设置</span>
+				</li>
+			  </d>
+			</div>
+		</div>
+		<!-- 引入配置js文件 -->
+		<%- js('SeablueUI.js') %>
+	</body>
+<script>
+var $ = Seablue.$;
+var str = function () {
+/*
+
+     _                                         _               
+    | | It gives people a sense of emptiness  | |              
+  __| |  ___   __ _  _ __  _ __ ___   ___   __| |  __ _  _ __  
+ / _` | / _ \ / _` || '__|| '_ ` _ \ / __| / _` | / _` || '_ \ 
+| (_| ||  __/| (_| || |   | | | | | |\__ \| (_| || (_| || | | |
+ \__,_| \___| \__,_||_|   |_| |_| |_||___/ \__,_| \__,_||_| |_|
+                                                               
+welcoming you to...                                       
+
+
+*/
+}
+	Seablue.menu.init({
+		el:'.headbar-nav' 
+		,nav: true  
+		,data: <%- nav || [{}]  %>
+	});
+	
+	Seablue.headbar.init({
+		fixed: <%= theme.header.function.fixed || false  %> 
+		,scrollTop: <%= theme.header.function.scrollTop || false  %>
+		,time: <%= theme.header.function.time || 500 %>
+	});
+<% if (theme.search.enable == true){ %>
+	Seablue.collection.displayConversion(".headbar-search",".headbar-search-list","active");
+	var search_path = "<%= config.search.path %>";
+	if (search_path.length == 0) {
+		search_path = "/search.xml";
+	}
+	var path = "<%= config.root %>" + search_path;
+	Seablue.collection.searchFunc(path, 'local-search-input', 'local-search-result');
+<% } %>
+
+<% if (is_home()){ %>
+
+	Seablue.prompt.init({
+		el :'.single-post-copyright' // 获取 元素
+		,color: '<%= theme.index.prompt.color || "#666" %>' // 设置 颜色
+		,bg: '<%= theme.index.prompt.bg || "#e5f4ff" %>' // 设置背景
+		,type: 2  // 设置类型 类型为2 悬浮提示
+		,lineTips: '<%= theme.index.prompt.lineTips || "文章底部查看详情" %>'  // 设置提示内容
+	});
+
+<% } %>
+
+<% if (is_post()　||　!is_home()){ %>
+ 
+ // ajax 请求服务器数据
+ Seablue.comment.ajax({
+        el: ".sea-comments"
+        ,url: 'http://localhost:3030/comments?link='+location.pathname+'&sort=-1'
+        ,comment: 'http://localhost:3030/comment/'
+        ,reply: 'http://localhost:3030/comment/reply'
+});
+<%
+var data =  JSON.stringify(page.data)
+var tips =  JSON.stringify(page.tips)
+%>
+
+	<% if (page.tips){ %>
+		Seablue.prompt.init({
+		el :'.article-flag-sup' // 获取 元素
+		,color: '<%= theme.post.prompt.color || "#666" %>' // 设置 颜色
+		,bg: '<%= theme.post.prompt.bg || "#e5f4ff" %>' // 设置背景
+		,type: 2  // 设置类型 类型为2 悬浮提示
+		,lineTips: <%- tips  %>  // 设置提示内容
+		});
+	<% } %>
+
+	<% if (page.data){ %>
+		var a = [{
+			name: '<%- page.author || theme.author %>'
+			,value: '该文章来自 <%- page.author || theme.author %> 版权所有，若有侵权联系立即删除'
+			,href: '<%- page.url || url_for(page.path) %>'
+		}];
+		var b = <%- data %>;
+		Seablue.part.reference({
+			el: '.part-reference'
+			,data: a.concat(b)
+		});
+	<% } %>
+
+	Seablue.prompt.fancybox('.single-post img');
+
+	Seablue.code.init({
+	el: "article pre"
+	,hover: <%= theme.post.code.hover %>
+  	,auto_copy: <%= theme.post.code.auto_copy %>
+	,height: <%= theme.post.code.height %>
+	});
+
+    Seablue.iframe.init({
+         el: ".iframe-auto" // [String]{iframe} 获取元素
+        ,id: "iframe-"  // [String]{iframe} 设置id,可以不设置默认iframe
+        ,width: "100%"  // [String]{100%} 设置宽度大小
+        ,iframehide: "yes"  // [yes/no]{yes} 设置如果不兼容就隐藏
+        ,scrolling: "no"  // [yes/no]{no} 设置滚动条是否有
+        ,frameBorder: "no"  // [yes/no/number]{no} 设置边框是否有
+        ,allowfullscreen: true  // [Boolean]{true} 设置全屏显示是否有
+    });
+
+
+<% } %>
+
+<% if (is_current("/active.html")){ %>
+Seablue.menu.archive();
+<% } %>
+
+<% if (is_current("/linkExternal.html")) { %>
+	$(".js-show-tip").click(function(){
+		$('.tip').css('display','block');
+	});
+	$(function(){
+		var url = Seablue._defUrl().search.target;
+		var str = url.substring(0,8);
+		if('https://' == str){
+			if(str < url){
+				$('.button').attr('href',url);
+				}
+		}else{
+			$('.info').css('display','none');
+			$('.button').css('display','none');
+			$('.info-warning').css('display','block');
+			$('.info-warning').css('font-size','1rem');
+			$('.js-show-tip').css('font-size','1rem');
+			$('.js-show-tip').css('display','block');
+		}
+		$('.link').append(url);
+	});
+<% } %>
+
+
+
+
+
+
+
+<% if (theme.linkExternal.enable == true) { %>
+	Seablue.collection.linkExternal(<%- theme.linkExternal.link %>,"/linkExternal.html");
+<% } %>
+
+Seablue.lazyload.init({
+	el: ".single-post-img img"
+	,time: <%= theme.lazyload.time || 100 %>
+});
+
+<% if (theme.transitionImg.enable == true) { %>
+	Seablue.collection.transitionImg({
+		el: ".single-post-img"
+	});
+<% } %>
+
+Seablue.part.background(".img-background","<%= theme.SeablueImg.bg %>").css();
+Seablue.part.background(".headbar","<%= theme.SeablueImg.bg %>").before();
+console.log(Seablue.util.getMultiLine(str));
+console.log("\n %c vsb %c https://github.com/ZHD99/hexo-theme-dearmsdan \n", "color: #FFF; background:#89d8d3; padding:5px 0;", "background: #85adfede; padding:5px 0;");
+	  
+
+ 
+
+</script>
+</html>

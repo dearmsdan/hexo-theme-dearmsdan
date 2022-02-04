@@ -1,0 +1,24 @@
+<%#- 分类（Permalinks）在 md资源 里定义布局方式为layout: md/class %>
+
+<%# 标签分类  %>
+<div class="sea-container headbar-top">
+    <div class="page-category height-min-1000 single-post">
+        <%# 首页统计 文章数 %>
+        <div class="page-category-count">
+            <div class="page-category-title">
+              <h2><span><%=  theme.side.categories %></span></h2>
+              <span><%= theme.count.articles %></span> <small>(<%= site.posts.length %>)</small>
+              <span><%= theme.count.tags %></span> <small>(<%= site.tags.length %>)</small>
+              <span><%= theme.count.categories %> </span> <small>(<%= site.categories.length %>)</small>
+          </div>
+        </div>
+        <div class="treelike">
+          <%- partial('_public/part/category') %>
+        </div>
+    </div>
+
+</div>
+<div class="single-hr" style="margin-top: 120px;">
+  <hr>
+  <hr>
+</div>

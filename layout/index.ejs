@@ -1,11 +1,5 @@
-<%#- 首页展示文章内容页 %>
 
-
-<%# 默认的排版 %>
-<%- partial('_partial/_body/_index/_default/index') %>
-
-
-<%# 图文排版 %>
-<%- partial('_partial/_body/_index/_textarrement/index') %>
-
+<% if(theme.index.style.single) {%>
+    <%- partial('_index/single') %>
+<% } %>
 

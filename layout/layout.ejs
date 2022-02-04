@@ -1,26 +1,219 @@
+<% 
+var nav =  JSON.stringify(theme.headerNav)
+
+%>
+
 <!DOCTYPE html>
-<html>
-    <!-- Head -->
-    <%- partial('_partial/head') %>
-	
-    <body>
-		<div id="dearmsdan">
-		<!-- Header -->
-		<%- partial('_partial/header') %>
-				<%- partial('_partial/bg') %>
-			<div class="main">
-				<div class="main-content">
-					<%- body %>
-    				<%# 测试模板→ - partial('_test/index') %>
-					<%- partial('_partial/footer') %>
+<html lang="zh-CN">
+    <%- partial('_public/head') %>
+    <body class="Seablue">
+		<header>
+			<%- partial('_public/header') %>
+		</header>
+		<section class="img-background">
+			<div class="img-background-overlay"></div>
+		</section>
+		<main>
+			<%- body %>
+		</main>
+		
+		<footer>
+			<%- partial('_public/footer') %>
+    	</footer>
+
+		<div class="dropdown-icon-menu">
+			<div class="list-container">
+			  <button class="more-button">
+				<div class="menu-icon-wrapper">
+				  <div class="menu-icon-line half first"></div>
+				  <div class="menu-icon-line"></div>
+				  <div class="menu-icon-line half last"></div>
 				</div>
+			  </button>
+			  <ul class="more-button-list">
+				<li class="more-button-list-item">
+				<span class="icon Seablue-icon">&#xe81a;</span>
+				  <span><a href="/" class="a-no-hover">首页</a></span>
+				</li>
+				<li class="more-button-list-item">
+				<span class="icon Seablue-icon">&#xe618;</span>
+				  <span><a href="javascript:document.body.scrollTop = 0;document.documentElement.scrollTop = 0;"
+					 class="a-no-hover">顶部</a></span>
+				</li>
+				<li class="more-button-list-item">
+				<span class="icon Seablue-icon">&#xe68a;</span>
+				  <span><a target="_blank" href="about:blank" class="a-no-hover">空白</a></span>
+				</li>
+				<li class="more-button-list-item">
+				<span class="icon Seablue-icon">&#xe68a;</span>
+				  <span class="seting">设置</span>
+				</li>
+			  </d>
 			</div>
 		</div>
+		<!-- 引入配置js文件 -->
+		<%- js('SeablueUI.js') %>
+	</body>
 
-		
-	<%#= 插件聚集地 %>
-	<%- partial('_plug/unit') %>
-		
+	<script>
 
-    </body>
+		var $ = Seablue.$;
+		var str = function () {
+		/*
+		
+			 _                                         _               
+			| | It gives people a sense of emptiness  | |              
+		  __| |  ___   __ _  _ __  _ __ ___   ___   __| |  __ _  _ __  
+		 / _` | / _ \ / _` || '__|| '_ ` _ \ / __| / _` | / _` || '_ \ 
+		| (_| ||  __/| (_| || |   | | | | | |\__ \| (_| || (_| || | | |
+		 \__,_| \___| \__,_||_|   |_| |_| |_||___/ \__,_| \__,_||_| |_|
+																	   
+		welcoming you to...                                       
+		
+		
+		*/
+		}
+		
+		<% if (theme.search.enable == true){ %>
+			Seablue.collection.displayConversion(".headbar-search",".headbar-search-list","active");
+			var search_path = "<%= config.search.path %>";
+			if (search_path.length == 0) {
+				search_path = "/search.xml";
+			}
+			var path = "<%= config.root %>" + search_path;
+			Seablue.collection.searchFunc(path, 'local-search-input', 'local-search-result');
+		<% } %>
+		
+		<% if (is_post()　||　!is_home()){ %>
+			<%
+			var data =  JSON.stringify(page.data)
+			var tips =  JSON.stringify(page.tips)
+			%>
+			<% if (page.data){ %>
+				var a = [{
+					name: '<%- page.author || theme.author %>'
+					,value: '该文章来自 <%- page.author || theme.author %> 版权所有，若有侵权联系立即删除'
+					,href: '<%- page.url || url_for(page.path) %>'
+				}];
+				var b = <%- data %>;
+			<% } %>
+		<% } %>
+		Seablue.menu.init({
+			el:'.headbar-nav' 
+			,nav: true  
+			,data: <%- nav || [{}]  %>
+		});
+		Seablue.init({
+			// 导航设置
+			headbar: {
+				fixed: <%= theme.header.function.fixed || false  %> 
+				,scrollTop: <%= theme.header.function.scrollTop || false  %>
+				,time: <%= theme.header.function.time || 500 %>
+			},
+		<% if (is_home()){ %>// 提示
+			prompt: {
+				el :'.single-post-copyright' // 获取 元素
+				,color: '<%= theme.index.prompt.color || "#666" %>' // 设置 颜色
+				,bg: '<%= theme.index.prompt.bg || "#e5f4ff" %>' // 设置背景
+				,type: 2  // 设置类型 类型为2 悬浮提示
+				,lineTips: '<%= theme.index.prompt.lineTips || "文章底部查看详情" %>'  // 设置提示内容
+			},
+		<% } %>
+		<% if (is_post()){ %>
+			<% if (theme.comment.enable == true){ %>// 评论数据
+				comment_ajax: {
+					el: ".sea-comments"
+					,url: '<%= theme.comment.url.link %>/comments?link='+location.pathname+'&sort=<%= theme.comment.url.sort %>'
+					,comment: '<%= theme.comment.url.link %>/comment/'
+					,reply: '<%= theme.comment.url.link %>/comment/reply'
+				},
+			<% } %>
+		<% } %>
+		<% if (is_post()　||　!is_home()){ %>
+			<% if (page.tips){ %>// 提示
+				prompt: {
+					el :'.article-flag-sup' // 获取 元素
+					,color: '<%= theme.post.prompt.color || "#666" %>' // 设置 颜色
+					,bg: '<%= theme.post.prompt.bg || "#e5f4ff" %>' // 设置背景
+					,type: 2  // 设置类型 类型为2 悬浮提示
+					,lineTips: <%- tips  %>  // 设置提示内容
+				},
+			<% } %>
+			<% if (page.data){ %>// 主标
+				reference: {
+					el: '.part-reference'
+					,data: a.concat(b)
+				},
+			<% } %>// 全屏
+			prompt_fancybox: ['.single-post img'],
+			// 代码
+			code: {
+				el: "article pre"
+				,hover: <%= theme.post.code.hover %>
+				,auto_copy: <%= theme.post.code.auto_copy %>
+				,height: <%= theme.post.code.height %>
+			},
+			// 框架
+			iframe: {
+				 el: ".iframe-auto" // [String]{iframe} 获取元素
+				,id: "iframe-"  // [String]{iframe} 设置id,可以不设置默认iframe
+				,width: "100%"  // [String]{100%} 设置宽度大小
+				,iframehide: "yes"  // [yes/no]{yes} 设置如果不兼容就隐藏
+				,scrolling: "no"  // [yes/no]{no} 设置滚动条是否有
+				,frameBorder: "no"  // [yes/no/number]{no} 设置边框是否有
+				,allowfullscreen: true  // [Boolean]{true} 设置全屏显示是否有
+			},
+		
+		<% } %>
+		<% if (theme.linkExternal.enable == true) { %>// 外链链接
+			linkExternal: [<%- theme.linkExternal.link %>,"/linkExternal.html"],
+		<% } %>// 懒加载
+			lazyload: {
+				el: ".single-post-img img"
+				,time: <%= theme.lazyload.time || 100 %>
+			},
+		<% if (theme.transitionImg.enable == true) { %>// 随机数据
+			transitionImg: {
+				el: ".single-post-img"
+			},
+		<% } %>
+		<% if (is_current("/active.html")){ %>// 年度数据
+			menu_archive: true,
+		<% } %>
+			
+		}); // 初始化完毕
+		
+		<% if (is_current("/linkExternal.html")) { %>
+			$(".js-show-tip").click(function(){
+				$('.tip').css('display','block');
+			});
+			$(function(){
+				var url = Seablue._defUrl().search.target;
+				var str = url.substring(0,8);
+				if('https://' == str){
+					if(str < url){
+						$('.button').attr('href',url);
+						}
+				}else{
+					$('.info').css('display','none');
+					$('.button').css('display','none');
+					$('.info-warning').css('display','block');
+					$('.info-warning').css('font-size','1rem');
+					$('.js-show-tip').css('font-size','1rem');
+					$('.js-show-tip').css('display','block');
+				}
+				$('.link').append(url);
+			});
+		<% } %>
+		
+		
+		// 无用设置
+		Seablue.part.background(".img-background","<%= theme.SeablueImg.bg %>").css();
+		Seablue.part.background(".headbar","<%= theme.SeablueImg.bg %>").before();
+		console.log(Seablue.util.getMultiLine(str));
+		console.log("\n %c vsb %c https://github.com/ZHD99/hexo-theme-dearmsdan \n", "color: #FFF; background:#89d8d3; padding:5px 0;", "background: #85adfede; padding:5px 0;");
+			  
+		
+		
+		</script>
 </html>

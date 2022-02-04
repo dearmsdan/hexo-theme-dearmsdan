@@ -1,0 +1,44 @@
+<%#- 通用布局在 md资源 里定义布局方式为layout: md/iframe %>
+<div class="seablue-customize">
+  <style>
+    body,html {
+      height: 100%;
+      width: 100%;
+    }
+  </style>
+  <%- page.content %>
+</div>
+
+
+
+
+
+<script src="/SeablueUI.js"></script>
+<script type="text/javascript">
+  var $ = Seablue.$;
+
+
+
+  Seablue.loading.full({
+      name: "full-loading"   // [String]{full-loading}   这个是名字，不是标签元素
+      ,time: 1000    // [Number]{500} 加载时间
+      ,style: 1       // [Number]{1}    样式类型
+    },a);
+
+  function a() {
+        $("body").prepend($(".seablue-customize"));
+            $("body").prepend($(".full-loading"));
+        $("body *").not(".full-loading,.full-loading *,.seablue-customize,.seablue-customize *").remove();
+        $("body").removeClass("Seablue");
+        $(function(){
+            $("body").prepend($(".seablue-customize"));
+            $("body").prepend($(".full-loading"));
+            $("body *").not(".full-loading,.full-loading *,.seablue-customize,.seablue-customize *").remove();
+            $("body").removeClass("Seablue");
+        }); 
+    }
+    
+</script>
+<script>
+                
+</script>

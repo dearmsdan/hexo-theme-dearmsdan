@@ -1,0 +1,94 @@
+
+
+<div class="sea-container headbar-top">
+    <!-- 自适应 box -->
+    <div class="sea-box">
+    <div class="sea-box-1 response">
+        <!-- 内容  -->
+    <div class="single-content lazyload-container">
+        <div class="single-template single-template-post height-min-1000">
+            <div class="single-post">
+                <div class="single-post-title"><h2><%= page.title %></h2></div>
+                <aside class="single-article-info">
+                    <% if (page.img){ %>
+                    <div class="single-post-img">
+                            <img alt="loading" title="<%- url_for(page.path) %>" class="lazyload" data-src="<%- page.img %>">
+                            <span  class="lazyload"></span>
+                    </div>
+                    <% } %>
+                    <div class="single-post-table">
+                        <table class="responsive">
+                            <tr>
+                                <td><span class="icon Seablue-icon">&#xe616;</span></td>
+                                <td><%- date(page.date, "YYYY年MM月DD日") %></td>
+                            </tr>
+                            <tr>
+                                <td><span class="icon Seablue-icon">&#xeac0;</span></td>
+                                <td><%- date(page.updated, "YYYY年MM月DD日") %></td>
+                            </tr>
+                            <tr>
+                                <td><span class="icon Seablue-icon">&#xe65c;</span></td>
+                                <td><%= page.author || theme.author %></span> <span class="article-flag-sup"></span> </td>
+                            </tr>
+                            <% if (page.categories && page.categories.length){ %>
+                            <tr>
+                                <td><span class="icon Seablue-icon">&#xe654;</span></td>
+                                <td>
+                                        <%- list_categories(page.categories, {
+                                            show_count: false,
+                                            class: 'no-a-hover Seablue-icon category',
+                                            style: 'none',
+                                            separator: ', '
+                                        }) %>
+                                </td>
+                            </tr>
+                            <% } %>
+                            <% if (page.tags && page.tags.length){ %>
+                            <tr>
+                                <td><span class="icon Seablue-icon">&#xe87d;</span></td>
+                                <td>
+                                        <%- list_tags(page.tags, {
+                                            show_count: false,
+                                            class: 'no-a-hover Seablue-icon tag',
+                                            style: 'none',
+                                            separator: ', '
+                                        }) %>
+                                </td>
+                            </tr>
+                            <% } %>
+                        </table>
+                    </div>
+                </aside>
+                <article>
+                    <%- page.excerpt %>
+                    <div class="single-toc">
+                        <% if(toc(page.content)){ %>
+                            <h2>目录</h2>
+                            <%- toc(page.content, {list_number: false,class: "a-buddy single-toc-content"}) %>
+                        <% } %>
+                    </div>
+                    <%- page.more %>
+                </article>
+
+                <%- partial('_public/comment') %>
+                <% if (page.data){ %>
+                <div class="single-post-copyright">
+                    <h2>注: </h2>
+                    <hr />
+                    <div class="part-reference"> </div>
+                </div>
+                <% } %>
+                <div class="single-hr">
+                    <hr />
+                    <hr />
+                </div>  <!-- END hr -->
+            </div>  <!-- END post -->
+            
+        </div>
+        <!-- END single-template -->
+    </div>
+        <!-- END single-content -->
+    </div>
+    <!-- END sea-box-1 -->
+    </div>
+</div>
