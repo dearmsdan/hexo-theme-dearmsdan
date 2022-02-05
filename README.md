@@ -1,152 +1,80 @@
->>什么是 Hexo？  
-[Hexo](https://hexo.io/) 是一个快速、简洁且高效的博客框架。Hexo 使用 [Markdown](http://daringfireball.net/projects/markdown/)（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。
+* 
 
-用hexo 过程发现它 是一个插件十齐全的一个博客系统，快速、简洁且高效，在hexo 的主题下，我下载使用了 [hexo-theme-nexmoe](https://github.com/nexmoe/hexo-theme-nexmoe) 主题，非常的花里胡哨且简洁。  
-于是不断的在样式和布局上折腾，最后因为pjax的原因放弃了这个主题，于是自己开始打造属于自己的hexo博客 hexo-theme-dearmsdan ........ 
+<div align="right">
+  Language:
+  中文
+</div>
+<p align="center">
+  </p>
+<p align="center">
+  </p>
+<h6 align="center">无需插件，直接下载即用 </h6>
+<h6 align="center"> 持续跟新中... </h6>
+<h1 align="center">HEXO 主题 宝钻蓝色 </h1>
+<h3 align="center">给你一种空灵的感觉 </h3><br/>
+<p align="center">
+   <a href="https://nodejs.org"><img src="https://img.shields.io/badge/node-%3E= v10-green?style=flat-square"></a>
+  <a href="https://hexo.io"><img src="https://img.shields.io/badge/hexo-%3E=4.0.0-blue?style=flat-square&logo=hexo"></a>
+  <a href="https://github.com/ZHD99/hexo-theme-dearmsdan/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-%20MIT -orange?style=flat-square&logo=gnu"></a>
+ <a href="https://codeload.github.com/ZHD99/hexo-theme-dearmsdan/zip/master"><img src="https://img.shields.io/badge/downloads-1.2MB-brightgreen?style=flat-square"></a> 
+  <br/>
+</p>
 
+<br/>
 
+.  <br/>
 
+## 特性
 
+- 基于 Hexo+SeablueUi
+- 文档有基本介绍，主题config注释有功能介绍
+- 懒加载
+- 外链拦截功能
+- 自定义背景设置(图片)
+- 自定义一级、二级目录
+- 图片悬浮效果 
+- 搜索功能
+- katex 公式
+- 、自定义作者、时间统计等等...
 
-## 1.0 hexo 纯净版 主题：
+## 安装
 
-### 安装
+dearmsdan 主题使用`ejs`模板引擎开发
 
-dearmsdan 与其他主题一样的安装  
-本主题 拉到自己电脑上的 主题目录 下 
+1. 拷贝主题到`themes`目录
 
 ```
-git clone https://github.com/ZHD99/hexo-theme-dearmsdan.git --branch 1.0 dearmsdan
+cd themes
+git clone https://github.com/ZHD99/hexo-theme-dearmsdan.git dearmsdan
 ```
 
-## 测试
-
-运行命令  
+2. 修改主程序的`_config.yml`文件
 
 ```
-$ hexo g
+theme: dearmsdan
 ```
 
+就可以运行了，`hexo s`
+
+
+
+## 基本附加
+
+为了方便修改和使用，我把`关于、分类、标签、404页面`等等都以永久链接的方式添加  
+如果你需要的话可能会使用到这些内容，我提供了示例页面 
+
+添加`关于、分类、标签、404页面` 等等
+
+- 找到您的主题dearmsdan下的md 文件下的几个个 *.md 格式 
+- 把这几个文件复制到node_modules  同目录下的 source 文件夹下 (说白了就是你写文章的地方)
+
+
+## 展示
+
+ [梦窗 AI_blog](https://mymengchuang.gitee.io/)    
+ [ ye\'s universe](https://beamaster.top/)   
+[ r0ya1\'s blog](https://r0ya1.gitee.io/)     
 
 
 
 
-#### 记录config配置信息.
-
-```
-# Hexo Configuration
-## Docs: https://hexo.io/docs/configuration.html
-## Source: https://github.com/hexojs/hexo/
-
-# 网站Site
-title: hi mogul
-subtitle: '收藏和分享兼得'
-description: '最好的收藏,不过是分享'
-keywords: 个人技术的分享圈子，欢迎各圈大佬观摩
-author: Hxx
-language: zh-CN
-timezone: ''
-
-# URL
-## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://www.dearmsdan.com
-root: /
-permalink: :year/:month/:day/:title/
-# permalink: :year/:month/:day/:title/
-permalink_defaults:
-pretty_urls:
-  trailing_index: true # Set to false to remove trailing index.html from permalinks
-
-# Directory 默认配置就好了
-source_dir: source
-public_dir: D:\server\apache-tomcat-7.0.52\webapps\WWW
-tag_dir: tags
-archive_dir: archives
-category_dir: categories
-code_dir: downloads/code
-i18n_dir: :lang
-skip_render: README.md
-# 不渲染
-
-# Writing
-new_post_name: :title.md # File name of new posts
-default_layout: post
-titlecase: false # Transform title into titlecase
-external_link:
-  enable: true # Open external links in new tab
-  field: site # Apply to the whole site
-  exclude: ''
-filename_case: 0
-render_drafts: false
-post_asset_folder: false
-relative_link: false
-future: true
-highlight:
-  enable: false
-  line_number: true
-  auto_detect: false
-  tab_replace: ''
-
-# Home page setting
-# path: Root path for your blogs index page. (default = '')
-# per_page: Posts displayed per page. (0 = disable pagination)
-# order_by: Posts order. (Order by date descending by default)
-index_generator:
-  path: ''
-  per_page: 5
-  order_by: -date
-
-# Category & Tag
-default_category: uncategorized
-category_map:
-tag_map:
-
-# Metadata elements
-## https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta
-meta_generator: true
-
-# Date / Time format
-## Hexo uses Moment.js to parse and display date
-## You can customize the date format as defined in
-## http://momentjs.com/docs/#/displaying/format/
-date_format: YYYY-MM-DD
-time_format: HH:mm:ss
-## Use post's date for updated date unless set in front-matter
-use_date_for_updated: false
-
-# Pagination
-## Set per_page to 0 to disable pagination
-per_page: 10
-pagination_dir: page
-
-# Include / Exclude file(s)
-## include:/exclude: options only apply to the 'source/' folder
-include:
-exclude:
-ignore:
-
-# Extensions
-## Plugins: https://hexo.io/plugins/
-## Themes: https://hexo.io/themes/
-theme: dearmsdan #landscape   
-## landscape   
-
-# 使用搜索功能
-search:
-  path: search.xml
-  field: post
-  format: html
-  limit: 10000
-
-# Deployment
-
-## Docs: https://hexo.io/docs/deployment.html
-
-deploy:
-  type: git
-  repo:
-           coding: https://e.coding.net/zhd99/dearmsdan.git
-           github: https://github.com/ZHD99/zhd99.github.io.git
-           gitee: https://gitee.com/zhd99/zhd99.git
-branch: master
-```

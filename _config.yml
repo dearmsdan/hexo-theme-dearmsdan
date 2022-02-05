@@ -1,5 +1,5 @@
 # ---------------------------------------------------------------
-#  注意问题 
+#  帮助
 # ---------------------------------------------------------------
 
   # [] 代表类型 {} 代表默认值 
@@ -131,11 +131,13 @@ post:
 #  footer.ejs 底部栏
 # ---------------------------------------------------------------
 
+date: # 时间设置
+  s: '2018/11/25 0:0:0' # [String]{2018/11/25 0:0:0} 设置网站多久运行的时间戳
 footer:
   info:
-    info1: "footer"  # [String]{}
-    info2: "footer2"  # [String]{}
-    info3: "footer3"  # [String]{}
+    info1: "<font style='color:#ff8f8f;font-size:100%'>♥</font>"  # [String]{}
+    info2: "© 2018-现在 - Seablue Dearmsdan. "  # [String]{}
+    info3: "基于Hexo框架 - Theme By Dearmsdan v3.0"  # [String]{}
 
 
 
@@ -143,7 +145,7 @@ footer:
 #  通用设置
 # ---------------------------------------------------------------
     
-SeablueImg:
+SeablueImg:  # 背景设置
   bg: "/img.png" # [String]{}
   # bg: "https://api.vvhan.com/api/acgimg" # [String]{}
 
