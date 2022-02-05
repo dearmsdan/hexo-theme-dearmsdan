@@ -1,4 +1,3 @@
-* 
 
 <div align="right">
   Language:
@@ -21,12 +20,15 @@
 </p>
 
 <br/>
+<br/>
+<br/>
+<br/>
 
-.  <br/>
+</div>
 
 ## 特性
 
-- 基于 Hexo+SeablueUi
+- 基于 Hexo+SeablueUI
 - 文档有基本介绍，主题config注释有功能介绍
 - 懒加载
 - 外链拦截功能
@@ -68,6 +70,10 @@ theme: dearmsdan
 - 找到您的主题dearmsdan下的md 文件下的几个个 *.md 格式 
 - 把这几个文件复制到node_modules  同目录下的 source 文件夹下 (说白了就是你写文章的地方)
 
+## 版本介绍
+1.0  [原生EJS 结构](https://github.com/dearmsdan/hexo-theme-dearmsdan/tree/1.0)  
+2.0  [jquery+bootstrap](https://github.com/dearmsdan/hexo-theme-dearmsdan/tree/jqueryBootstrap)    
+3.0  [SeablueUI](https://github.com/dearmsdan/hexo-theme-dearmsdan/tree/seablue)    
 
 ## 展示
 
