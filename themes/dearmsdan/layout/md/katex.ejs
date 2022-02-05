@@ -1,0 +1,26 @@
+<%#- 通用布局在 md资源 里定义布局方式为layout: md/katex %>
+<!-- 引入公式配置css文件 -->
+<link href="<%= theme.katex.css %>" rel="stylesheet" />
+<!-- 引入配置js文件 -->
+<script defer src="<%= theme.katex.js1 %>"></script>
+<script defer src="<%= theme.katex.js2 %>"></script>
+
+
+<%- partial('post') %>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          // customised options
+          // • auto-render specific keys, e.g.:
+          delimiters: [
+              {left: '$$', right: '$$', display: true} // 行间
+              ,{left: '$', right: '$', display: false}　　// 行内
+              ,{left: '\\(', right: '\\)', display: false} // 行内
+              ,{left: '\\[', right: '\\]', display: true} // 行间
+          ],
+          // • rendering keys, e.g.:
+          throwOnError : false
+        });
+    });
+</script>

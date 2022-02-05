@@ -1,0 +1,79 @@
+
+<%
+
+%>
+
+<div class="sea-container headbar-top">
+<!-- 自适应 box -->
+<div class="sea-box">
+    <div class="sea-box-1 response">
+    <!-- 内容  -->
+    <div class="single-content lazyload-container">
+        <div class="single-template height-min-1000">
+            <% page.posts.each(function (page) { %>
+            <div class="single-post">
+                <div class="single-post-title"><h2><a  class="a-no-hover" href="<%- url_for(page.path) %>"><%= page.title || "未定义" %></a></h2></div>
+                <% if (page.img){ %>
+                <div class="single-post-img post-home-img">
+                    <a href="<%- url_for(page.path) %>" class="a-no-hover">
+                        <img alt="loading" title="<%- url_for(page.path) %>" class="lazyload" data-src="<%= page.img %>">
+                        <span  class="lazyload"></span>
+                    </a>
+                </div>
+                <% } %>
+                <article>
+                    <% if(page.excerpt) {%>
+                        <%- page.excerpt %>
+                        <%}  else{ %>
+                        <%- page.content %>
+                    <% } %>
+                </article>
+                
+        <div class="single-post-statistics">
+            <a  class="no-a-hover date-link Seablue-icon"><%- date(page.date, "YYYY年MM月DD日") %></a>
+           <% if (page.categories && page.categories.length){ %>
+                <%- list_categories(page.categories, {
+                    show_count: false,
+                    class: 'no-a-hover Seablue-icon category',
+                    style: 'none',
+                    separator: ' '
+                }) %>
+            <% } %>
+            <% if (page.tags && page.tags.length){ %>
+                <%- list_tags(page.tags, {
+                    show_count: false,
+                    class: 'no-a-hover Seablue-icon tag',
+                    style: 'none',
+                    separator: ' '
+                }) %>
+            <% } %>
+        </div>
+                <div class="single-post-copyright">
+                    <code> 来源于 <cite><%= page.author || theme.author %></cite> </code>
+                </div>
+                
+            <div class="single-post-overlay"></div>
+            </div>   <!-- END single-post -->
+            <% }) %>
+            
+        <% if (page.total > 1){ %>
+            <div class="pagination">
+              <%- paginator({
+                mid_size: 0,
+                end_size: 0,
+                space: '',
+                escape: false,
+                prev_text: '<span class="icon Seablue-icon">&#xe60b;</span>',
+                next_text: '<span class="icon Seablue-icon">&#xe60b;</span>'
+              }) %>
+            </div>
+          <% } %>
+        
+        </div>
+        <!-- END single-template -->
+    </div>
+    <!-- END single-content -->
+    </div>
+    <!-- END sea-box-1 -->
+</div>
+</div>

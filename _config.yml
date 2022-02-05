@@ -19,7 +19,7 @@ pretty_urls:
 
 # Directory 默认配置就好了
 source_dir: source
-public_dir: D:\server\apache-tomcat-7.0.52\webapps\WWW
+public_dir: public  # D:\server\apache-tomcat-7.0.52\webapps\WWW
 tag_dir: tags
 archive_dir: archives
 category_dir: categories

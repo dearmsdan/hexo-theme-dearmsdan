@@ -1,23 +1,5 @@
-<!--
- * @Autor: dearmsdan
- * @Date: 2021-06-26 14:32:54
- * @LastEditTime: 2021-06-26 20:50:59
- * @Description: 
--->
 
-<%#- 首页展示文章内容页 %>
-
-
-<%# 默认的排版-all %>
-<%#- partial('_partial/_body/_index/_default/index') %>
-
-
-<%# 图文排版-all %>
-<%#- partial('_partial/_body/_index/_textarrement/index') %>
-
-
-
-
-<%# 随机首页 %>
-<%- partial('_partial/_body/RandomHomepage') %>
+<% if(theme.index.style.single) {%>
+    <%- partial('_index/single') %>
+<% } %>
 

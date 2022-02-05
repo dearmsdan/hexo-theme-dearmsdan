@@ -1,5 +1,4 @@
 /* global hexo */
-
 // Welcome Message
-require('../source/js/welcome');
+require('../source/resources/_welcome');
 

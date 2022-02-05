@@ -1,0 +1,202 @@
+<%# 文章分类  %>
+
+<%
+/*
+ * 获 取 全 部 分 类
+ * 并提取出payload
+ */
+
+let categories = Array();
+let categories_counter = 0;
+
+site.categories.sort('name').each(function(item){
+     categories[categories_counter] = {
+       name: item.name,
+       path: item.path,
+       length: item.length
+     };
+
+    categories_counter++;
+});
+%>
+
+
+<%
+/*
+ * 筛选 删掉重复的 将重复的数量放到唯一的哪一个
+ *
+ */
+let counter;
+let isDisplayed = false;
+let displayed = Array();
+let final_categories = Array();
+
+//console.log("init categories.length: " + categories.length);
+
+for (counter = 0; counter < categories.length; counter++){
+
+  ///console.log("starting displayed.length: " + displayed.length + " | finding: " + categories[counter].name);
+  for (let i = 0; i < displayed.length; i++){
+    if (displayed[i].name === categories[counter].name){
+      //console.log("blocked same name: " + categories[counter].name);
+
+      for (let b = 0; b < final_categories.length; b++){
+        if (displayed[i].name === final_categories[b].name){
+          final_categories[b].length++;
+        }
+      }
+
+      isDisplayed = true;
+      break;
+    }else{
+      isDisplayed = false;
+    }
+  }
+
+  if (isDisplayed == false){
+    final_categories[final_categories.length] = {
+      name: categories[counter].name,
+      path: categories[counter].path,
+      length: categories[counter].length
+    }
+
+    displayed[displayed.length] = {
+      name: categories[counter].name,
+      path: categories[counter].path,
+      length: categories[counter].length
+    }
+  }
+
+}
+%>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<% if (site.categories.length){ %>
+  <% if (theme.side.categories){ %>
+
+
+
+    <%
+    <!-- 将路径转换成 tree 目录结构 -->
+    const pathToTree = (input) => {
+      var output = [];
+      input.forEach(function(post){
+        <!-- 用来分割去掉时间的路径 -->
+        var chain = post.slug.split("/");
+        var currentNode = output;
+        for (var j = 0; j < chain.length; j++) {
+          if (chain[j] === '') {
+            break;
+          }
+          var wantedNode = chain[j];
+          var lastNode = currentNode;
+          for (var k = 0; k < currentNode.length; k++) {
+            if (currentNode[k].title == wantedNode) {
+              currentNode = currentNode[k].children;
+              break;
+            }
+          }
+          if (lastNode == currentNode) {
+            var newNode = currentNode[k] = { post: post, title: wantedNode, children: [] };
+            currentNode = newNode.children;
+          } else {
+            delete currentNode.children
+          }
+        }
+      });
+      return output;
+    }
+    %>
+    
+    <ul class="tree">
+       
+      <li>
+        <input type="checkbox" checked="checked" id="categories" />
+        <label class="tree_label" for="categories"><%= theme.count.categories %></label>
+        <ul>
+          <%
+          for (let u = 0; u < final_categories.length; u++){
+          %>
+          <li class=" transform fadeInDown">
+            <span class="tree_label">
+              <a href="<%- config.root %><%- final_categories[u].path %>"><%= final_categories[u].name %>&nbsp;
+                <span>(<%= final_categories[u].length %>)</span>
+            </span>
+            </a>
+          </li>
+          <% } %>
+        </ul>
+      </li>
+    <%
+    <!-- 递归输出侧边栏目录 tree -->
+    const showTree = (input) => {
+      <!-- 按 tile ascii 排序 -->
+      input.sort(function(a, b){
+        var len = a.title.length <= b.title.length ? a.title.length : b.title.length;
+        for ( var i = 0; i < len; i++ ) {
+          res = a.title[i].charCodeAt() - b.title[i].charCodeAt();
+          if ( res ) { return res }
+        }
+        if(a.title.length <= b.title.length){
+          return true;
+        }else{
+          return false;
+        }
+      });
+      <!-- 循环输出 html 结构 -->
+      input.forEach(function(node) {
+        if ( node.children == 0 ) {
+    %>
+    
+								<li class=" transform fadeInDown">
+                  <span class="tree_label">
+                    <a href="<%- url_for(node.post.path) %><%-  %>">
+                    <%- node.post.title || node.title %>   </a>
+                  </span>
+									
+								</li>
+			<%
+						}
+						else {
+			%>
+								<li>
+                  <input type="checkbox" id="<%- node.title %><%- url_for(node.post.path) %>" />
+                  <label class="tree_label" for="<%- node.title %><%- url_for(node.post.path) %>"><%- node.title %></label>
+                  <ul>
+                    <%- showTree(node.children) %>
+                  </ul>
+								</li>
+								
+			<%
+						}
+					});
+				}
+				showTree(pathToTree(site.posts))
+			%>
+    </ul>
+
+
+      
+  <% } %>
+  <% } %>
+  
+
+  

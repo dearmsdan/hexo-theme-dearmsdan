@@ -1,0 +1,21 @@
+
+<%# 标签归档  %>
+
+<% if (site.tags.length){ %>
+  <% if (theme.side.tagcloud){ %>
+	  
+    <div class="tag-cloud">
+      
+      <%- tagcloud({
+        min_font: 15,
+        max_font: 30,
+        amount: 200,
+        color: true,
+        start_color: '#03c8a8',
+        end_color: '#0099cc'
+        }) %>
+    </div>
+    
+  <% } %>
+<% } %>
+
