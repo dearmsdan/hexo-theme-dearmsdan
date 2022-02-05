@@ -9,6 +9,7 @@
 <p align="center">
   </p>
 <h6 align="center">无需插件，直接下载即用 </h6>
+<h6 align="center"> 持续跟新中... </h6>
 <h1 align="center">HEXO 主题 宝钻蓝色 </h1>
 <h3 align="center">给你一种空灵的感觉 </h3><br/>
 <p align="center">
@@ -18,6 +19,7 @@
  <a href="https://codeload.github.com/ZHD99/hexo-theme-dearmsdan/zip/master"><img src="https://img.shields.io/badge/downloads-1.2MB-brightgreen?style=flat-square"></a> 
   <br/>
 </p>
+
 <br/>
 
 .  <br/>
@@ -33,7 +35,6 @@
 - 图片悬浮效果 
 - 搜索功能
 - katex 公式
-- 离线访问功能
 - 、自定义作者、时间统计等等...
 
 ## 安装
@@ -77,5 +78,3 @@ theme: dearmsdan
 
 
 
-
-</div>

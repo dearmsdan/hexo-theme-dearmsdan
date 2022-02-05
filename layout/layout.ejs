@@ -54,9 +54,7 @@ var nav =  JSON.stringify(theme.headerNav)
 		<!-- 引入配置js文件 -->
 		<%- js('SeablueUI.js') %>
 	</body>
-
 	<script>
-
 		var $ = Seablue.$;
 		var str = function () {
 		/*
@@ -205,6 +203,24 @@ var nav =  JSON.stringify(theme.headerNav)
 				$('.link').append(url);
 			});
 		<% } %>
+        countdown();
+        function countdown(){
+            var 
+                end = '2038/1/1 0:0:0'
+                ,s = '<%= theme.date.s %>'
+                ,date = Seablue._defTime().inverted(s)
+                ,day = date.day
+                ,hour = date.hour
+                ,minute= date.minute
+                ,second = date.second
+            ;
+            // Seablue._defTime().inverted("2018/11/25 0:0:0","2038/1/1 0:0:0"); // 测试规定时间段
+
+            $('.footbar-base-info').html("<style>.Seablue footer .footbar .footbar-base{font-size: 80%;} </style>博客运行: "
+			+day+"天"+hour+"小时"+minute+"分"+second
+			+"秒  <%- theme.footer.info.info1 %>");
+            setTimeout('countdown()',1000);
+        }
 		
 		
 		// 无用设置
@@ -212,8 +228,5 @@ var nav =  JSON.stringify(theme.headerNav)
 		Seablue.part.background(".headbar","<%= theme.SeablueImg.bg %>").before();
 		console.log(Seablue.util.getMultiLine(str));
 		console.log("\n %c vsb %c https://github.com/ZHD99/hexo-theme-dearmsdan \n", "color: #FFF; background:#89d8d3; padding:5px 0;", "background: #85adfede; padding:5px 0;");
-			  
-		
-		
 		</script>
 </html>
