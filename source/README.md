@@ -1,4 +1,30 @@
-> <center><a href="https://www.dearmsdan.com"></a>hi mogul  blog   </center>
+> <center><a href="https://www.dearmsdan.com"></a> blog   </center>
+
+# 9:39 2022/2/6
+
+体积: 1.1 MB  
+版本: 3.0 Version  
+ hexo-theme-dearmsdan 进行结构性的更改 完毕    
+使用自主开发SeablueUI框架，有利于开发实现博客内容前后端分离数据渲染，获取数据渲染视图，js置于底部加速页面访问速度,取消之前Pjax单页面显示，有利于SEO优化，使代码易于维护
+
+初始内容:  
+		多级菜单   
+		搜索功能  
+		作者功能  
+		评论功能  
+		版权脚注功能  
+		图片放大展示  
+		代码高亮  
+		外部框架自适应\(iframe\)  
+		外链拦截  
+		图片随机特效  
+		附加页面: 404、外链页面、云标签页面、年月日归档页面、分类页面、自适应页面示例、公式代码页面示例
+
+删除内容:    
+		推倒翻新，删除原有bootstrap+jquery结构
+
+
+
 
 13:02 2021/2/9
 
