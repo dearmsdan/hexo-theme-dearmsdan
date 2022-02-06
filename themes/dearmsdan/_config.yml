@@ -174,14 +174,14 @@ transitionImg: # 图片悬浮效果
 # https://segmentfault.com/a/1190000011917419
 # https://www.hahack.com/codes/local-search-engine-for-hexo/
 search:
-  enable: false  # [boolean]{false} 开启搜索功能  没安装插件启用 会报错
+  enable: true  # [boolean]{false} 开启搜索功能  没安装插件启用 会报错
 # ***注意，搜索也会有出错的时候，比如文章中的非法字符会导致搜索功能失效，与本主题无关
 # ***需要自己在localhost:4000/search.xml 索引寻找非法字符 在md编辑器删除就正常了
 
 # 评论
 # 请不要用这个功能，因为这个是dearmsdan个人评论项目
 comment: 
-  enable: true  # [boolean]{false} 开启评论功能  不管有没有用，你不用开就行了，开了也没用，除非你有对应后台数据对应前端渲染字段
+  enable: false  # [boolean]{false} 开启评论功能  不管有没有用，你不用开就行了，开了也没用，除非你有对应后台数据对应前端渲染字段
   url:
     link: 'http://localhost:3030'   # [String]{} 评论后台地址
     sort: '-1'    # [String]{-1/1} 获取评论的排序方式
