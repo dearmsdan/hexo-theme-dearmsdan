@@ -7,13 +7,12 @@
     "clean": "hexo clean",
     "deploy": "hexo deploy",
     "server": "hexo server",
-    "dev": "hexo clean && hexo generate && cloudbase framework deploy"
+    "dev": "hexo clean && hexo generate"
   },
   "hexo": {
     "version": "4.2.1"
   },
   "dependencies": {
-    "@cloudbase/js-sdk": "^1.7.1",
     "concurrently": "^7.0.0",
     "hexo": "^4.0.0",
     "hexo-deployer-git": "^2.1.0",
