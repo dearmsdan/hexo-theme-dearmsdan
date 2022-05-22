@@ -181,9 +181,9 @@ search:
 # 评论
 # 请不要用这个功能，因为这个是dearmsdan个人评论项目
 comment: 
-  enable: false  # [boolean]{false} 开启评论功能  不管有没有用，你不用开就行了，开了也没用，除非你有对应后台数据对应前端渲染字段
+  enable: true  # [boolean]{false} 开启评论功能  不管有没有用，你不用开就行了，开了也没用，除非你有对应后台数据对应前端渲染字段
   url:
-    link: 'http://localhost:3030'   # [String]{} 评论后台地址
+    link: 'http://101.43.69.179:3030'   # [String]{} 评论后台地址
     sort: '-1'    # [String]{-1/1} 获取评论的排序方式
 
 # katex 公式
