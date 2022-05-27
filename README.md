@@ -30,11 +30,12 @@
 
 - 基于 Hexo+SeablueUI
 - 文档有基本介绍，主题config注释有功能介绍
+- 内置行内、块级元素及Markdown语法糖
 - 多级菜单   
 - 搜索功能  
 - 作者功能  
 - 评论功能  
-- 版权脚注功能  
+- 版权角注功能  
 - 图片放大展示  
 - 代码高亮  
 - 背景及懒加载  
@@ -65,6 +66,9 @@ theme: dearmsdan
 就可以运行了，`hexo s`
 
 
+## Markdown 辅助语法糖
+
+详细地址 [辅助语法](http://www.dearmsdan.com/2022/05/%E6%B5%8B%E8%AF%95/test-elements.html)  
 
 ## 基本附加
 
@@ -83,7 +87,7 @@ theme: dearmsdan
 
 ## 展示
 
- [dearmsdan](https://www.dearmsdan.com/)    
+ [dearmsdan](http://blog.dearmsdan.com/)    
 
 
 
