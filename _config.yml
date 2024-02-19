@@ -123,6 +123,7 @@ post:
     bg: '#e5f4ff' # [String]{#e5f4ff} 背景颜色
   code: # 代码块
     hover: true # [boolean]{true} 开启当前行点击悬浮
+    wrap: false # [boolean]{true} 开启换行
     auto_copy: true # [boolean]{true} 开启当前行点击复制
     height: 500 # [Number]{500/0} 设置代码快最大高度,0为设置默认
 
